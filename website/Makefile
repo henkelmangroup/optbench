@@ -12,8 +12,9 @@ TEMPLATE_FILES=$(wildcard *.tmpl)
 HTML_FILES=$(TEMPLATE_FILES:.tmpl=.html)
 html: $(HTML_FILES)
 
+*.html: $(wildcard templates/*.tmpl)
 minimization.html: $(wildcard minimization/lj38/*/*.dat)
 
 .PHONY: clean html
 clean:
-	rm *.html *.d
+	rm *.html
