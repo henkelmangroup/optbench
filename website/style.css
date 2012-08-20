@@ -1,0 +1,17 @@
+table {
+    text-align: right;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid;
+    padding: 3px 7px 2px 7px;
+}
+
+td {
+    font-family: monospace;
+}
+
+tr:nth-child(even) {
+    background-color: #ddd;
+}

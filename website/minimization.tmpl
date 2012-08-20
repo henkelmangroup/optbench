@@ -1,0 +1,100 @@
+{% extends "templates/base.tmpl" %}
+{% block title %}Minimization Benchmark{% endblock %}
+{% block content %}
+<h1>Minimization Benchmarks</h1>
+Minimization benchmarks for optimization algorithms.
+
+<h2>Random Lennard-Jones 38 Cluster</h2>
+
+<p>This benchmark tests the performance of optimizers starting from 1000
+randomly generated Lennard-Jones 38 clusters. A tar file containing the
+structures is here: <a href="minimization/lj38/lj38-clusters.tgz">lj38.tgz</a>.</p>
+
+<p>The maximum force on an atom must be reduced to at least 0.01 energy /
+distance. The maximum number of force calls that may be made cannot exceed
+10,000.</p>
+
+<table>
+  <tr>
+    <th>Algorithm</th>
+    <th>Code</th>
+    <th>&lt;Force Calls&gt;</th>
+    <th>min(Force Calls)</th>
+    <th>max(Force Calls)</th>
+    <th>Force Calls/Second</th>
+  </tr>
+  <tr>
+    <td>Quick-min</td>
+    <td>Eon</td>
+    <td>{% include "minimization/lj38/eon-qm/force_calls.dat" %}</td>
+    <td>{% include "minimization/lj38/eon-qm/force_calls_min.dat" %}</td>
+    <td>{% include "minimization/lj38/eon-qm/force_calls_max.dat" %}</td>
+    <td>{% include "minimization/lj38/eon-qm/force_calls_per_second.dat" %}</td>
+  </tr>
+  <tr>
+    <td>Quick-min</td>
+    <td>ASE</td>
+    <td>{% include "minimization/lj38/ase-mdmin/force_calls.dat" %}</td>
+    <td>{% include "minimization/lj38/ase-mdmin/force_calls_min.dat" %}</td>
+    <td>{% include "minimization/lj38/ase-mdmin/force_calls_max.dat" %}</td>
+    <td>{% include "minimization/lj38/ase-mdmin/force_calls_per_second.dat" %}</td>
+  </tr>
+  <tr>
+    <td>FIRE</td>
+    <td>Eon</td>
+    <td>{% include "minimization/lj38/eon-fire/force_calls.dat" %}</td>
+    <td>{% include "minimization/lj38/eon-fire/force_calls_min.dat" %}</td>
+    <td>{% include "minimization/lj38/eon-fire/force_calls_max.dat" %}</td>
+    <td>{% include "minimization/lj38/eon-fire/force_calls_per_second.dat" %}</td>
+  </tr>
+  <tr>
+    <td>FIRE</td>
+    <td>ASE</td>
+    <td>{% include "minimization/lj38/ase-fire/force_calls.dat" %}</td>
+    <td>{% include "minimization/lj38/ase-fire/force_calls_min.dat" %}</td>
+    <td>{% include "minimization/lj38/ase-fire/force_calls_max.dat" %}</td>
+    <td>{% include "minimization/lj38/ase-fire/force_calls_per_second.dat" %}</td>
+  </tr>
+  <tr>
+    <td>Conjugate Gradients</td>
+    <td>Eon</td>
+    <td>{% include "minimization/lj38/eon-cg/force_calls.dat" %}</td>
+    <td>{% include "minimization/lj38/eon-cg/force_calls_min.dat" %}</td>
+    <td>{% include "minimization/lj38/eon-cg/force_calls_max.dat" %}</td>
+    <td>{% include "minimization/lj38/eon-cg/force_calls_per_second.dat" %}</td>
+  </tr>
+  <tr>
+    <td>LBFGS</td>
+    <td>Eon</td>
+    <td>{% include "minimization/lj38/eon-lbfgs/force_calls.dat" %}</td>
+    <td>{% include "minimization/lj38/eon-lbfgs/force_calls_min.dat" %}</td>
+    <td>{% include "minimization/lj38/eon-lbfgs/force_calls_max.dat" %}</td>
+    <td>{% include "minimization/lj38/eon-lbfgs/force_calls_per_second.dat" %}</td>
+  </tr>
+  <tr>
+    <td>LBFGS</td>
+    <td>ASE</td>
+    <td>{% include "minimization/lj38/ase-lbfgs/force_calls.dat" %}</td>
+    <td>{% include "minimization/lj38/ase-lbfgs/force_calls_min.dat" %}</td>
+    <td>{% include "minimization/lj38/ase-lbfgs/force_calls_max.dat" %}</td>
+    <td>{% include "minimization/lj38/ase-lbfgs/force_calls_per_second.dat" %}</td>
+  </tr>
+  <tr>
+    <td>LBFGSLineSearch</td>
+    <td>ASE</td>
+    <td>{% include "minimization/lj38/ase-lbfgslinesearch/force_calls.dat" %}</td>
+    <td>{% include "minimization/lj38/ase-lbfgslinesearch/force_calls_min.dat" %}</td>
+    <td>{% include "minimization/lj38/ase-lbfgslinesearch/force_calls_max.dat" %}</td>
+    <td>{% include "minimization/lj38/ase-lbfgslinesearch/force_calls_per_second.dat" %}</td>
+  </tr>
+  <tr>
+    <td>BFGSLineSearch</td>
+    <td>ASE</td>
+    <td>{% include "minimization/lj38/ase-bfgslinesearch/force_calls.dat" %}</td>
+    <td>{% include "minimization/lj38/ase-bfgslinesearch/force_calls_min.dat" %}</td>
+    <td>{% include "minimization/lj38/ase-bfgslinesearch/force_calls_max.dat" %}</td>
+    <td>{% include "minimization/lj38/ase-bfgslinesearch/force_calls_per_second.dat" %}</td>
+  </tr>
+</table>
+
+{% endblock %}
