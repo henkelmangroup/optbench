@@ -1,7 +1,6 @@
 .SUFFIXES: 
 .SUFFIXES: .tmpl .html
 RENDER = ../bin/render.py
-GENERATE_DEPENDS = ../bin/render.py -d 
 
 %.html:%.tmpl
 	$(RENDER) $< > $@
@@ -11,9 +10,9 @@ GENERATE_DEPENDS = ../bin/render.py -d
 
 TEMPLATE_FILES=$(wildcard *.tmpl)
 HTML_FILES=$(TEMPLATE_FILES:.tmpl=.html)
-DEPENDS = $(HTML_FILES:.html=.d)
-html: $(DEPENDS) $(HTML_FILES)
-sinclude $(DEPENDS)
+html: $(HTML_FILES)
+
+minimization.html: $(wildcard minimization/lj38/*/*.dat)
 
 .PHONY: clean html
 clean:
