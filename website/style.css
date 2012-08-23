@@ -1,11 +1,36 @@
+body {
+    padding: 10px;
+    font-size: 1em;
+}
+
+#navigation ul {
+    list-style: none;
+}
+
+#navigation li.first:before {
+    content: "";
+}
+
+#navigation li:before {
+    content: "\0020 \0020 \0020 \00BB \0020";
+}
+
+#navigation li {
+    font-size: 2em;
+    display: inline;
+}
+
+#navigation a {
+    color: #000;
+}
+
 table {
     text-align: right;
     border-collapse: collapse;
 }
 
 td, th {
-    border: 1px solid;
-    padding: 3px 7px 2px 7px;
+    padding: .2em 1em .2em 1em;
 }
 
 td {

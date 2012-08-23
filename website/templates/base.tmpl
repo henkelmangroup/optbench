@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html>
- <head>
-  <meta charset="UTF-8">
-  <title>{% block title %}{% endblock %}</title>
-  <link rel="stylesheet" href="style.css" type="text/css">
-  <script src="sorttable.js"></script>
- </head>
- <body>
-   {% block content %}{% endblock %}
- </body>
+  <head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="normalize.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="sorttable.js"></script>
+  </head>
+  <body>
+    <div id="navigation">
+      <ul>
+        {% block navigation %}
+        {% endblock %}
+      </ul>
+    </div>
+    {% block content %}{% endblock %}
+  </body>
 </html>

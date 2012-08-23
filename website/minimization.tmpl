@@ -1,5 +1,9 @@
 {% extends "templates/base.tmpl" %}
 {% block title %}Minimization Benchmark{% endblock %}
+{% block navigation %}
+<li class="first"><a href="index.html">Benchmark List</a></li>
+<li><a href="minimization.html">Minimization</a></li>
+{% endblock %}
 {% block content %}
 <h1>Minimization Benchmarks</h1>
 Minimization benchmarks for optimization algorithms.
@@ -36,11 +40,11 @@ distance. The maximum number of force calls that may be made cannot exceed
   <tr>
     <th>Algorithm</th>
     <th>Code</th>
-    <th>&lt;Force Calls&gt;</th>
-    <th>min(Force Calls)</th>
-    <th>max(Force Calls)</th>
+    <th>&lt;FCs&gt;</th>
+    <th>min(FCs)</th>
+    <th>max(FCs)</th>
     <th>Failed</th>
-    <th>Force Calls/Second</th>
+    <th>FCs per sec</th>
   </tr>
   {% for benchmark in lj38_benchmarks %}
     {% set path = "minimization/lj38/" + benchmark.directory + "/" %}
