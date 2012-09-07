@@ -1,0 +1,49 @@
+{% extends "templates/base.tmpl" %}
+{% block title %}Global Optimization Benchmark{% endblock %}
+{% block navigation %}
+<li class="first"><a href="index.html">Benchmark List</a></li>
+<li><a href="globalopt.html">global Optimization</a></li>
+{% endblock %}
+{% block content %}
+<h1>Global Optimization</h1>
+Benchmarks for Global Optimization.
+
+<h2>Random Lennard-Jones 38 Cluster</h2>
+
+<p>This benchmark tests the performance of global optimizers starting from a
+randomly generated Lennard-Jones 38 cluster which was first minimized. A tar file containing the random and minimized structures is here
+
+<a href="globalopt/lj38.tar.gz">lj38.tar.gz</a>.</p>
+
+<p>  The benchmark requires that the provided Lennard-Jones structure be optimized 100 times.  Runs that were greater than 0.1ev from the known global minimum were considered failures.  15,000 basin hopping steps were used. </p>
+
+{% set lj38_benchmarks = [ 
+    {'directory':'eon-basinhopping',   'algorithm':'basin_hopping', 'code':'Eon' },
+    
+  ] 
+%}
+
+<table class="sortable">
+  <tr>
+    <th>Algorithm</th>
+    <th>Code</th>
+    <th>&lt;FCs&gt;</th>
+    <th>min(FCs)</th>
+    <th>max(FCs)</th>
+    <th>Failed</th>
+    <th>FCs per sec</th>
+  </tr>
+  {% for benchmark in lj38_benchmarks %}
+    {% set path = "globalopt/" + benchmark.directory + "/" %}
+    <tr>
+      <td>{{ benchmark.algorithm }}</td>
+      <td>{{ benchmark.code }}</td>
+      <td>{% include path+"force_calls.dat" %}</td>
+      <td>{% include path+"force_calls_min.dat" %}</td>
+      <td>{% include path+"force_calls_max.dat" %}</td>
+      <td>{% include path+"nfailed.dat" %}</td>
+    </tr>
+  {% endfor %}
+</table>
+
+{% endblock %}
