@@ -1,0 +1,50 @@
+{% extends "templates/base.tmpl" %}
+{% block title %}Accelerated MD Benchmark{% endblock %}
+{% block navigation %}
+<li class="first"><a href="index.html">Benchmark List</a></li>
+<li><a href="accelerated-md.html">Accelerated MD Escape Rate</a></li>
+{% endblock %}
+{% block content %}
+<h1>Accelerated MD</h1>
+Accelerated MD Benchmarks for Escape Rates and Branching Ratios.
+
+<h2>Adatom on Al(100) Surface</h2>
+
+<p>This benchmark tests accelerated MD methods by calculating escape rates and product branching ratios. A tar file containing the minimized reactant state is found here:
+
+<a href="accelerated-md/lj38.tar.gz">lj38.tar.gz</a>.</p>
+
+<p>  The benchmark requires 5000 samples are obtained using an accelerated MD method.  Either the Langevin thermostat with a friction coefficient of 0.005-0.03 or the Anderson thermostat with a collision strength between 0.2-0.8 and a collision period between 125 and 225 should be used to insure convergence to the same rate.</p>
+
+{% set aladatom_benchmark = [ 
+    {'directory':'eon-parallelreplica',   'algorithm':'parallel_replica', 'code':'Eon','thermostat':'Langevin_0.02' },
+    
+  ] 
+%}
+
+<table class="sortable">
+  <tr>
+    <th>Algorithm</th>
+    <th>Code</th>
+    <th>Thermostat</th>
+    <th>&lt;FCs&gt;</th>
+    <th>Escape rate(1/s)</th>
+    <th>Error(1/s)</th>
+    <th>Percent error</th>
+    <th>FCs</th>
+  </tr>
+  {% for benchmark in aladatom_benchmark %}
+    {% set path = "accelerated-md/" + benchmark.directory + "/" %}
+    <tr>
+      <td>{{ benchmark.algorithm }}</td>
+      <td>{{ benchmark.code }}</td>
+      <td>{{ benchmark.thermostat }}</td>
+      <td>{% include path+"r.log" %}</td>
+      <td>{% include path+"e.log" %}</td>
+      <td>{% include path+"pe.log" %}</td>
+      <td>{% include path+"fc.log" %}</td>
+    </tr>
+  {% endfor %}
+</table>
+
+{% endblock %}

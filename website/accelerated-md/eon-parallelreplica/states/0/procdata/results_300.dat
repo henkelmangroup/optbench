@@ -1,0 +1,14 @@
+eam_al potential_type
+362452927 random_seed
+-469.064481 potential_energy_reactant
+17618 total_force_calls
+1559 force_calls_dephase
+15200 force_calls_dynamics
+417 force_calls_minimize
+442 force_calls_refine
+1 transition_found
+1.410000e-11 transition_time_s
+-469.144844 potential_energy_product
+3.101937 moved_distance
+1.520000e-11 simulation_time_s
+0.003040 speedup

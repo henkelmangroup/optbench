@@ -1,0 +1,79 @@
+EON Client
+
+Hostname: compute-0-23.local
+OS: Linux
+Arch: x86_64
+PID: 19625
+DIR: /home/jrduncan/eon/TRUE/compare_therm/langevin/fr0.02/jobs/scratch/0_204
+
+Loading parameter file config_passed.ini
+* [Main] job: parallel_replica
+* [Main] temperature: 300
+* [Main] random_seed: 266662742
+* [Potential] potential: eam_al
+* [Optimizer] opt_method: cg
+* [Optimizer] converged_force: 0.001
+* [Dynamics] time_step: 1.0
+* [Dynamics] time: 5000000.0
+* [Dynamics] thermostat: langevin
+* [Dynamics] langevin_friction: 0.02
+* [Parallel Replica] stop_after_transition: true
+* [Parallel Replica] dephase_time: 1500.0
+* [Parallel Replica] state_check_interval: 3000.0
+* [Parallel Replica] state_save_interval: 100.0
+* [Parallel Replica] post_transition_time: 200.0
+
+Minimizing initial reactant
+iter    step size    max force         energy
+   1      0.85904      0.50809     -467.75870
+   2      0.69333      0.24617     -468.34161
+   3      0.55740      0.22993     -468.56293
+   4      0.65486      0.22743     -468.70764
+   5      0.50549      0.18635     -468.86241
+   6      0.38716      0.21631     -468.98203
+   7      0.16754      0.14567     -469.01564
+   8      0.14948      0.07382     -469.03494
+   9      0.18394      0.04755     -469.05068
+  10      0.11105      0.04933     -469.05912
+  11      0.05187      0.02057     -469.06210
+  12      0.02566      0.01286     -469.06297
+  13      0.02321      0.01564     -469.06342
+  14      0.01728      0.01412     -469.06367
+  15      0.01591      0.00710     -469.06386
+  16      0.01598      0.00509     -469.06401
+  17      0.01606      0.00680     -469.06412
+  18      0.01804      0.01003     -469.06423
+  19      0.01105      0.00651     -469.06429
+  20      0.01303      0.00373     -469.06435
+  21      0.01098      0.00388     -469.06440
+  22      0.00869      0.00455     -469.06443
+  23      0.00751      0.00341     -469.06445
+  24      0.00676      0.00204     -469.06447
+  25      0.00402      0.00221     -469.06447
+  26      0.00249      0.00144     -469.06448
+  27      0.00200      0.00085     -469.06448
+
+Parallel Replica Dynamics, running
+
+Dephasing for 1500.00 fs
+Successfully Dephased for 1500.00 fs
+Starting MD run
+Temperature: 300.00 Kelvin
+Total Simulation Time: 5000000.00 fs
+Time Step: 1.00 fs
+Total Steps: 5000000
+
+MD buffer length: 30
+Found New State.
+
+Temperature : Average = 305.386164 ; Stddev = 25.657423 ; Factor = 1.069400
+
+[Parallel Replica] Refining transition time.
+Found transition at step 6100, now running another 200.00 fs to allocate the product state.
+Transition followed by a stable state.
+Transition time: 6.20e-12 s
+
+timing information:
+real     34.475 seconds
+user     34.388 seconds
+sys       0.052 seconds
