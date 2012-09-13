@@ -1,7 +1,0 @@
-[PR Metadata]
-wu_id = 400
-
-[Simulation Information]
-time_simulated = 8.7e-12
-current_state = 1
-
