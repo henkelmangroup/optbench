@@ -27,7 +27,6 @@ Accelerated MD Benchmarks for Escape Rates and Branching Ratios.
     <th>Algorithm</th>
     <th>Code</th>
     <th>Thermostat</th>
-    <th>&lt;FCs&gt;</th>
     <th>Escape rate(1/s)</th>
     <th>Error(1/s)</th>
     <th>Percent error</th>
@@ -39,10 +38,10 @@ Accelerated MD Benchmarks for Escape Rates and Branching Ratios.
       <td>{{ benchmark.algorithm }}</td>
       <td>{{ benchmark.code }}</td>
       <td>{{ benchmark.thermostat }}</td>
+      <td>{% include path+"fc.dat" %}</td>
       <td>{% include path+"r.dat" %}</td>
       <td>{% include path+"e.dat" %}</td>
       <td>{% include path+"pe.dat" %}</td>
-      <td>{% include path+"fc.dat" %}</td>
     </tr>
   {% endfor %}
 </table>
