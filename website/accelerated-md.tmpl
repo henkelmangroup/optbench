@@ -14,7 +14,7 @@ Accelerated MD Benchmarks for Escape Rates and Branching Ratios.
 
 <a href="accelerated-md/reactant.tar.gz">reactant.tar.gz</a>.</p>
 
-<p>  The benchmark requires 5000 samples are obtained using an accelerated MD method.  Either the Langevin thermostat with a friction coefficient of 0.005-0.03 or the Anderson thermostat with a collision strength between 0.2-0.8 and a collision period between 125 and 225 should be used to insure convergence to the same rate.</p>
+<p>  The benchmark requires 5000 sample escape rates are obtained using an accelerated MD method.  Either the Langevin thermostat with a friction coefficient of 0.005-0.03 or the Anderson thermostat with a collision strength between 0.2-0.8 and a collision period between 125 and 225 should be used.</p>
 
 {% set aladatom_benchmark = [ 
     {'directory':'eon-parallelreplica',   'algorithm':'parallel_replica', 'code':'Eon','thermostat':'Langevin_0.02' },
