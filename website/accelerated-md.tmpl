@@ -1,4 +1,4 @@
-{% extends "templates/base.tmpl" %}
+i% extends "templates/base.tmpl" %}
 {% block title %}Accelerated MD Benchmark{% endblock %}
 {% block navigation %}
 <li class="first"><a href="index.html">Benchmark List</a></li>
@@ -15,6 +15,8 @@ Accelerated MD Benchmarks for Escape Rates and Branching Ratios.
 <a href="accelerated-md/reactant.tar.gz">reactant.tar.gz</a>.</p>
 
 <p>  The benchmark requires 5000 sample escape rates are obtained using an accelerated MD method at 250K.  Either the Langevin thermostat with a friction coefficient of 0.005-0.03 or the Anderson thermostat with a collision strength between 0.2-0.8 and a collision period between 125 and 225 should be used.</p>
+
+<h3>Escape Rates</h3>
 
 {% set aladatom_benchmark = [ 
     {'directory':'eon-parallelreplica',   'algorithm':'parallel_replica', 'code':'Eon','thermostat':'Langevin_0.02' },
@@ -47,3 +49,60 @@ Accelerated MD Benchmarks for Escape Rates and Branching Ratios.
 </table>
 
 {% endblock %}
+
+<h3>Branching Ratios</h3>
+
+{% set aladatom_benchmark = [
+    {'directory':'eon-parallelreplica','algorithm':'parallel_replica', 'code':'Eon'},
+  ]
+%}
+
+<table class="sortable">
+ <tr>
+         	<th>Algorithm</th>
+		<th>Code</th>
+		<th>p0</th>
+		<th>p1</th>
+		<th>p2</th>
+		<th>p3</th>
+		<th>p4</th>
+		<th>p5</th>
+		<th>p6</th>
+		<th>p7</th>
+		<th>p8</th>
+		<th>p9</th>
+		<th>p10</th>
+		<th>p11</th>
+		<th>p12</th>
+		<th>p13</th>
+		<th>p14</th>
+		<th>p15</th>
+		<th>p16</th>
+ </tr>
+ {% for benchmark in aladatom_benchmark %}
+ <tr>
+         <td>benchmark.algorithm</td>
+         <td>benchmark.code</td>
+         <th>0.0004</th>
+         <th>0.3758</th>
+         <th>0.2372</th>
+         <th>0.1198</th>
+         <th>0.2518</th>
+         <th>0.0030</th>
+         <th>0.0020</th>
+         <th>0.0026</th>
+         <th>0.0010</th>
+         <th>0.0006</th>
+         <th>0.0020</th>
+         <th>0.0016</th>
+         <th>0.0006</th>
+         <th>0.0006</th>
+         <th>0.0006</th>
+         <th>0.0002</th>
+         <th>0.0002</th>
+ </tr>
+</table>
+
+
+{% endblock %}
+
