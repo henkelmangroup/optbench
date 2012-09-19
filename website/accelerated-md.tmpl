@@ -50,7 +50,7 @@ Accelerated MD Benchmarks for Escape Rates and Branching Ratios.
 
 <h3>Branching Ratios</h3>
 
-{% set aladatom_benchmark = [
+{% set aladatom_branchingratio = [
     {'directory':'eon-parallelreplica','algorithm':'parallel_replica', 'code':'Eon'},
   ]
 %}
@@ -77,10 +77,10 @@ Accelerated MD Benchmarks for Escape Rates and Branching Ratios.
 		<th>p15</th>
 		<th>p16</th>
  </tr>
- {% for benchmark in aladatom_benchmark %}
+ {% for b in aladatom_branchingratio %}
  <tr>
-         <td>benchmark.algorithm</td>
-         <td>benchmark.code</td>
+         <td>b.algorithm</td>
+         <td>b.code</td>
          <th>0.0004</th>
          <th>0.3758</th>
          <th>0.2372</th>
