@@ -32,7 +32,8 @@ Accelerated MD Benchmarks for Escape Rates and Branching Ratios.
     <th>Escape rate(1/s)</th>
     <th>Error(1/s)</th>
     <th>Percent error</th>
-    <th>FCs</th>
+    <th>total FCs</th>
+    <th>FCs per second</th>
   </tr>
   {% for benchmark in aladatom_benchmark %}
     {% set path = "accelerated-md/" + benchmark.directory + "/" %}
@@ -44,6 +45,7 @@ Accelerated MD Benchmarks for Escape Rates and Branching Ratios.
       <td>{% include path+"e.dat" %}</td>
       <td>{% include path+"pe.dat" %}</td>
       <td>{% include path+"fc.dat" %}</td>
+      <td>{% include path+"fcps.dat" %}</td>
     </tr>
   {% endfor %}
 </table>
