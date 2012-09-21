@@ -11,11 +11,15 @@ Benchmarks for Global Optimization.
 <h2>Random Lennard-Jones 38 Cluster</h2>
 
 <p>This benchmark tests the performance of global optimizers starting from a
-randomly generated Lennard-Jones 38 cluster which was first minimized. A tar file containing the random and minimized structures is here
+randomly generated Lennard-Jones clusters which were first minimized. A tar file containing the random and minimized structures is here
 
-<a href="globalopt/lj38.tar.gz">lj38.tar.gz</a>.</p>
+<a href="globalopt/lj38.tar.gz">lj38.tar.gz</a>.  The final structures are located here <a href=globalopt/final_lj38.tar.gz</p>
 
-<p>  The benchmark requires that the provided Lennard-Jones structure be optimized 100 times.  Runs that were greater than 0.1ev from the known global minimum were considered failures.  15,000 basin hopping steps were used. </p>
+<p>  The benchmark requires that the provided Lennard-Jones structure be optimized 100 times.  Runs that were greater than 0.001 from the known global minimum were considered failures.  If a run was successful, the number of forcecalls necessary to reach the global minimum the first time is recorded.</p>
+
+<p> Avg FCs: Average number of force calls needed to find global minimum (average over successful runs) <p>
+<p> min(FCs): Minimum number of force calls needed to find global minimum (best successful run) <p>
+<p> max(FCs): Maximum number of forcecalls needed to find the global minimum(worst successful run) <p>
 
 {% set lj38_benchmarks = [ 
     {'directory':'eon-basinhopping',   'algorithm':'basin_hopping', 'code':'Eon' },
@@ -27,11 +31,10 @@ randomly generated Lennard-Jones 38 cluster which was first minimized. A tar fil
   <tr>
     <th>Algorithm</th>
     <th>Code</th>
-    <th>&lt;FCs&gt;</th>
+    <th>&lt; Avg FCs&gt;</th>
     <th>min(FCs)</th>
     <th>max(FCs)</th>
     <th>Failed</th>
-    <th>FCs per sec</th>
   </tr>
   {% for benchmark in lj38_benchmarks %}
     {% set path = "globalopt/" + benchmark.directory + "/" %}
