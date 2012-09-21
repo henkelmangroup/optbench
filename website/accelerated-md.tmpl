@@ -54,12 +54,9 @@ Accelerated MD Benchmarks for Escape Rates and Branching Ratios.
 
 <p> A standard branching ratio @ 250K for this system was determined using parallel replica on Eon and sample size of 15000. A tar file containing all products found for this system can be found in the link below. The product numbers correspond to the branching ratio chart below.</p>  
 
-{% set aladatom_branchingratio = [
-    {'directory':'eon-parallelreplica','algorithm':'parallel_replica', 'code':'Eon'},
-  ]
-%}
 
-<table class="sortable">
+
+{%ass="sortable">
  <tr>
          <th>Algorithm</th>
 		<th>Code</th>
@@ -80,30 +77,72 @@ Accelerated MD Benchmarks for Escape Rates and Branching Ratios.
 		<th>p14</th>
 		<th>p15</th>
 		<th>p16</th>
+		<th>p17</th>
+		<th>p18</th>
+		<th>p19</th>
+		<th>p20</th>
+		<th>p21</th>
+		<th>p22</th>
+		<th>p23</th>
  </tr>
  <tr>
-         <td>parallel_replica</td>
+         <td>standard</td>
          <td>Eon</td>
-         <td>0.0004</td>
-         <td>0.3758</td>
-         <td>0.2372</td>
-         <td>0.1198</td>
-         <td>0.2518</td>
-         <td>0.0030</td>
-         <td>0.0020</td>
-         <td>0.0026</td>
-         <td>0.0010</td>
-         <td>0.0006</td>
-         <td>0.0020</td>
-         <td>0.0016</td>
-         <td>0.0006</td>
-         <td>0.0006</td>
-         <td>0.0006</td>
-         <td>0.0002</td>
-         <td>0.0002</td>
+         <td>0.00020</td>
+         <td>0.38127</td>
+         <td>0.23493</td>
+         <td>0.12473</td>
+         <td>0.24273</td>
+         <td>0.00200</td>
+         <td>0.00140</td>
+         <td>0.00280</td>
+         <td>0.00240</td>
+         <td>0.00087</td>
+         <td>0.00193</td>
+         <td>0.00147</td>
+         <td>0.00040</td>
+         <td>0.00113</td>
+         <td>0.00093</td>
+         <td>0.00020</td>
+         <td>0.00007</td>
+         <td>0.00013</td>
+         <td>0.00007</td>
+         <td>0.00007</td>
+         <td>0.00007</td>
+         <td>0.00007</td>
+         <td>0.00007</td>
+         <td>0.00007</td>
+ </tr>
+ <tr>
+         <td>bond_boost_hyperdynamics</td>
+         <td>Eon</td>
+         <td>0.00040</td>
+         <td>0.37080</td>
+         <td>0.23620</td>
+         <td>0.13280</td>
+         <td>0.24320</td>
+         <td>0.00160</td>
+         <td>0.00140</td>
+         <td>0.00240</td>
+         <td>0.00180</td>
+         <td>0.00100</td>
+         <td>0.00200</td>
+         <td>0.00200</td>
+         <td>0.00080</td>
+         <td>0.00140</td>
+         <td>0.00020</td>
+         <td>0.00100</td>
+         <td>0.00000</td>
+         <td>0.00020</td>
+         <td>0.00000</td>
+         <td>0.00000</td>
+         <td>0.00000</td>
+         <td>0.00000</td>
+         <td>0.00000</td>
+         <td>0.00000</td>
  </tr>
 </table>
 
 
-{% endblock %}
+endblock %}
 
