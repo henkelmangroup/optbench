@@ -10,49 +10,15 @@ Accelerated MD Benchmarks for Escape Rates and Branching Ratios.
 
 <h2>Adatom on Al(100) Surface</h2>
 
-<p>This benchmark tests accelerated MD methods by calculating escape rates and product branching ratios. A tar file containing the minimized reactant state is found here:
+<p>This benchmark tests accelerated MD methods by calculating product branching ratios. A tar file containing the minimized reactant state is found here:
 
 <a href="accelerated-md/reactant.tar.gz">reactant.tar.gz</a>.</p>
 
-<p>  The benchmark requires 5000 sample escape rates which obtained using an accelerated MD method at 250K.  Either the Langevin thermostat with a friction coefficient between 0.005 and 0.03 or the Anderson thermostat with a collision strength between 0.2 and 0.8 and a collision period between 200 and 1000 fs should be used.</p>
-
-<h3>Escape Rates</h3>
-
-{% set aladatom_benchmark = [ 
-    {'directory':'eon-parallelreplica',   'algorithm':'parallel_replica', 'code':'Eon','thermostat':'Langevin_0.02' },
-    {'directory':'eon-hyperdynamics',   'algorithm':'bond_boost_hyperdynamics', 'code':'Eon','thermostat':'Langevin_0.02' },    
-  ] 
-%}
-
-<table class="sortable">
-  <tr>
-    <th>Algorithm</th>
-    <th>Code</th>
-    <th>Thermostat</th>
-    <th>Escape rate(1/s)</th>
-    <th>Error(1/s)</th>
-    <th>Percent error</th>
-    <th>total FCs</th>
-    <th>FCs per second</th>
-  </tr>
-  {% for benchmark in aladatom_benchmark %}
-    {% set path = "accelerated-md/" + benchmark.directory + "/" %}
-    <tr>
-      <td>{{ benchmark.algorithm }}</td>
-      <td>{{ benchmark.code }}</td>
-      <td>{{ benchmark.thermostat }}</td>
-      <td>{% include path+"r.dat" %}</td>
-      <td>{% include path+"e.dat" %}</td>
-      <td>{% include path+"pe.dat" %}</td>
-      <td>{% include path+"fc.dat" %}</td>
-      <td>{% include path+"fcps.dat" %}</td>
-    </tr>
-  {% endfor %}
-</table>
+<p>  The benchmark requires 5000 sample products are which obtained using an accelerated MD method at 250K.  Either the Langevin thermostat with a friction coefficient between 0.005 and 0.03 or the Anderson thermostat with a collision strength between 0.2 and 0.8 and a collision period between 200 and 1000 fs should be used.</p>
 
 <h3>Branching Ratios</h3>
 
-<p> A standard branching ratio @ 250K for this system was determined using parallel replica on Eon and sample size of 15000. A tar file containing all products found for this system can be found here:
+<p> A standard branching ratio @ 250K for this system was determined using molecular dynamics on Eon and sample size of 15000. A tar file containing all products found for this system can be found here:
 <a href="accelerated-md/products.tar.gz">products.tar.gz</a>.
 The product numbers in the file correspond to the branching ratio chart below.</p>  
 
@@ -86,7 +52,7 @@ The product numbers in the file correspond to the branching ratio chart below.</
 		<th>p23</th>
  </tr>
  <tr>
-         <td>standard</td>
+         <td>MD_standard</td>
          <td>Eon</td>
          <td>0.00020</td>
          <td>0.38127</td>
