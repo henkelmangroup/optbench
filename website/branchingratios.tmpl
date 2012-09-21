@@ -1,0 +1,148 @@
+{% extends "templates/base.tmpl" %}
+{% block title %}Accelerated MD Benchmark{% endblock %}
+{% block navigation %}
+<li class="first"><a href="index.html">Benchmark List</a></li>
+<li><a href="accelerated-md.html">Accelerated MD Escape Rate</a></li>
+{% endblock %}
+{% block content %}
+<h1>Accelerated MD</h1>
+Accelerated MD Benchmarks for Escape Rates and Branching Ratios.
+
+<h2>Adatom on Al(100) Surface</h2>
+
+<p>This benchmark tests accelerated MD methods by calculating escape rates and product branching ratios. A tar file containing the minimized reactant state is found here:
+
+<a href="accelerated-md/reactant.tar.gz">reactant.tar.gz</a>.</p>
+
+<p>  The benchmark requires 5000 sample escape rates which obtained using an accelerated MD method at 250K.  Either the Langevin thermostat with a friction coefficient between 0.005 and 0.03 or the Anderson thermostat with a collision strength between 0.2 and 0.8 and a collision period between 200 and 1000 fs should be used.</p>
+
+<h3>Escape Rates</h3>
+
+{% set aladatom_benchmark = [ 
+    {'directory':'eon-parallelreplica',   'algorithm':'parallel_replica', 'code':'Eon','thermostat':'Langevin_0.02' },
+    {'directory':'eon-hyperdynamics',   'algorithm':'bond_boost_hyperdynamics', 'code':'Eon','thermostat':'Langevin_0.02' },    
+  ] 
+%}
+
+<table class="sortable">
+  <tr>
+    <th>Algorithm</th>
+    <th>Code</th>
+    <th>Thermostat</th>
+    <th>Escape rate(1/s)</th>
+    <th>Error(1/s)</th>
+    <th>Percent error</th>
+    <th>total FCs</th>
+    <th>FCs per second</th>
+  </tr>
+  {% for benchmark in aladatom_benchmark %}
+    {% set path = "accelerated-md/" + benchmark.directory + "/" %}
+    <tr>
+      <td>{{ benchmark.algorithm }}</td>
+      <td>{{ benchmark.code }}</td>
+      <td>{{ benchmark.thermostat }}</td>
+      <td>{% include path+"r.dat" %}</td>
+      <td>{% include path+"e.dat" %}</td>
+      <td>{% include path+"pe.dat" %}</td>
+      <td>{% include path+"fc.dat" %}</td>
+      <td>{% include path+"fcps.dat" %}</td>
+    </tr>
+  {% endfor %}
+</table>
+
+<h3>Branching Ratios</h3>
+
+<p> A standard branching ratio @ 250K for this system was determined using parallel replica on Eon and sample size of 15000. A tar file containing all products found for this system can be found here:
+<a href="accelerated-md/products.tar.gz">products.tar.gz</a>.
+The product numbers in the file correspond to the branching ratio chart below.</p>  
+
+<table class="sortable">
+ <tr>
+         <th>Algorithm</th>
+		<th>Code</th>
+		<th>p0</th>
+		<th>p1</th>
+		<th>p2</th>
+		<th>p3</th>
+		<th>p4</th>
+		<th>p5</th>
+		<th>p6</th>
+		<th>p7</th>
+		<th>p8</th>
+		<th>p9</th>
+		<th>p10</th>
+		<th>p11</th>
+		<th>p12</th>
+		<th>p13</th>
+		<th>p14</th>
+		<th>p15</th>
+		<th>p16</th>
+		<th>p17</th>
+		<th>p18</th>
+		<th>p19</th>
+		<th>p20</th>
+		<th>p21</th>
+		<th>p22</th>
+		<th>p23</th>
+ </tr>
+ <tr>
+         <td>standard</td>
+         <td>Eon</td>
+         <td>0.00020</td>
+         <td>0.38127</td>
+         <td>0.23493</td>
+         <td>0.12473</td>
+         <td>0.24273</td>
+         <td>0.00200</td>
+         <td>0.00140</td>
+         <td>0.00280</td>
+         <td>0.00240</td>
+         <td>0.00087</td>
+         <td>0.00193</td>
+         <td>0.00147</td>
+         <td>0.00040</td>
+         <td>0.00113</td>
+         <td>0.00093</td>
+         <td>0.00020</td>
+         <td>0.00007</td>
+         <td>0.00013</td>
+         <td>0.00007</td>
+         <td>0.00007</td>
+         <td>0.00007</td>
+         <td>0.00007</td>
+         <td>0.00007</td>
+         <td>0.00007</td>
+ </tr>
+ <tr>
+         <td>bond_boost_hyperdynamics</td>
+         <td>Eon</td>
+         <td>0.00040</td>
+         <td>0.37080</td>
+         <td>0.23620</td>
+         <td>0.13280</td>
+         <td>0.24320</td>
+         <td>0.00160</td>
+         <td>0.00140</td>
+         <td>0.00240</td>
+         <td>0.00180</td>
+         <td>0.00100</td>
+         <td>0.00200</td>
+         <td>0.00200</td>
+         <td>0.00080</td>
+         <td>0.00140</td>
+         <td>0.00020</td>
+         <td>0.00100</td>
+         <td>0.00000</td>
+         <td>0.00020</td>
+         <td>0.00000</td>
+         <td>0.00000</td>
+         <td>0.00000</td>
+         <td>0.00000</td>
+         <td>0.00000</td>
+         <td>0.00000</td>
+ </tr>
+</table>
+
+
+{% endblock %}
+
