@@ -19,8 +19,8 @@ Accelerated MD Benchmarks for Escape Rates and Branching Ratios.
 <h3>Escape Rates</h3>
 
 {% set aladatom_benchmark = [ 
-    {'directory':'eon-parallelreplica',   'algorithm':'molecular_dynamics', 'code':'Eon','thermostat':'Langevin_0.02' },
-    {'directory':'eon-hyperdynamics',   'algorithm':'bond_boost_hyperdynamics', 'code':'Eon','thermostat':'Langevin_0.02' },    
+    {'directory':'eon-md-langevin',   'algorithm':'molecular_dynamics', 'code':'Eon','thermostat':'Langevin_0.02' },
+    {'directory':'eon-md-anderson',   'algorithm':'molecular_dynamics', 'code':'Eon','thermostat':'Anderson_alpha0.5_pcol400' },    
   ] 
 %}
 
