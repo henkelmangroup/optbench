@@ -2,7 +2,9 @@
 from jinja2 import Environment, FileSystemLoader
 from jinja2.meta import find_referenced_templates
 from sys import argv, exit
-from os.path import dirname, basename
+from os.path import dirname, basename, isdir
+from os import listdir
+from os.path import isfile, join
 
 def get_dependencies(env, path):
     text = env.loader.get_source(env, path)[0]
@@ -16,6 +18,34 @@ def get_dependencies(env, path):
 def usage():
     print 'usage: render.py template'
 
+
+def load_benchmarks(suite):
+    benchmarks = {}
+    for benchmark in listdir(suite):
+        benchmark_path = join(suite, benchmark)
+        if isfile(benchmark_path) or benchmark[0] == '.':
+            continue
+        
+        benchmarks[benchmark] = []
+        for run in listdir(join(suite, benchmark)):
+            run_path = join(suite, benchmark, run)
+            if isfile(run_path) or run[0] == '.':
+                continue
+
+            benchmark_dat = join(run_path, 'benchmark.dat')
+            if not isfile(benchmark_dat):
+                continue
+            data = {}
+            f = open(benchmark_dat)
+            for line in f:
+                fields = line.strip().split()
+                data[fields[0]] = ' '.join(fields[1:])
+
+            benchmarks[benchmark].append(data)
+        if len(benchmarks[benchmark]) == 0:
+            del benchmarks[benchmark]
+    return benchmarks
+
 if len(argv) < 2:
     usage()
     exit(1)
@@ -23,16 +53,13 @@ if '-h' in argv:
     usage()
     exit(0)
 
-if '-d' in argv:
-    template_path = argv[2]
-else:
-    template_path = argv[1]
+template_path = argv[1]
 env = Environment(loader=FileSystemLoader(dirname(template_path)))
-if '-d' in argv:
-    deps = get_dependencies(env, basename(template_path))
-    print basename(template_path)[:basename(template_path).rfind('.')]+'.html:\\'
-    for dep in deps:
-        print dep+' \\'
+template = env.get_template(basename(template_path))
+
+suite_folder = template_path[:template_path.rfind('.')]
+if isdir(suite_folder):
+    benchmarks = load_benchmarks(suite_folder)
 else:
-    template = env.get_template(basename(template_path))
-    print template.render()
+    benchmarks = None
+print template.render(benchmarks=benchmarks)

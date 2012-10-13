@@ -14,24 +14,6 @@ structures is here: <a href="minimization/lj38/lj38-clusters.tgz">lj38.tgz</a>.<
 distance. The maximum number of force calls that may be made cannot exceed
 10,000.</p>
 
-{% set lj38_benchmarks = [ 
-    {'directory':'eon-qm',   'algorithm':'Quick-min', 'code':'Eon' },
-    {'directory':'eon-fire', 'algorithm':'FIRE', 'code':'Eon' } ,
-    {'directory':'eon-cg', 'algorithm':'Conjugate-Gradients', 'code':'Eon' } ,
-    {'directory':'eon-lbfgs', 'algorithm':'LBFGS', 'code':'Eon' } ,
-    {'directory':'ase-lbfgs', 'algorithm':'LBFGS', 'code':'ASE' } ,
-    {'directory':'ase-lbfgslinesearch', 'algorithm':'LBFGSLineSearch', 'code':'ASE' } ,
-    {'directory':'ase-bfgslinesearch', 'algorithm':'BFGSLineSearch', 'code':'ASE' } ,
-    {'directory':'ase-fire', 'algorithm':'FIRE', 'code':'ASE' } ,
-    {'directory':'ase-mdmin', 'algorithm':'Quick-min', 'code':'ASE' } ,
-    {'directory':'Alireza-bfgs', 'algorithm':'BFGS', 'code':'Alireza'}, 
-    {'directory':'Alireza-fire', 'algorithm':'FIRE', 'code':'Alireza'}, 
-    {'directory':'Alireza-sd', 'algorithm':'Steepest Descent', 'code':'Alireza'}, 
-    {'directory':'Alireza-sdcg', 'algorithm':'Conjugate Gradients', 'code':'Alireza'}, 
-    {'directory':'Nocedal-nlbfgs', 'algorithm':'LBFGS', 'code':'Nocedal'}, 
-  ] 
-%}
-
 <table class="sortable">
   <tr>
     <th>Algorithm</th>
@@ -41,17 +23,20 @@ distance. The maximum number of force calls that may be made cannot exceed
     <th>max(FCs)</th>
     <th>Failed</th>
     <th>FCs per sec</th>
+    <th>Date</th>
+    <th>Contributor</th>
   </tr>
-  {% for benchmark in lj38_benchmarks %}
-    {% set path = "minimization/lj38/" + benchmark.directory + "/" %}
+  {% for run in benchmarks['lj38'] %}
     <tr>
-      <td>{{ benchmark.algorithm }}</td>
-      <td>{{ benchmark.code }}</td>
-      <td>{% include path+"force_calls.dat" %}</td>
-      <td>{% include path+"force_calls_min.dat" %}</td>
-      <td>{% include path+"force_calls_max.dat" %}</td>
-      <td>{% include path+"nfailed.dat" %}</td>
-      <td>{% include path+"force_calls_per_second.dat" %}</td>
+      <td>{{ run.algorithm }}</td>
+      <td>{{ run.code }} {{ run.code_version }}</td>
+      <td>{{ run.force_calls }}</td>
+      <td>{{ run.force_calls_min }}</td>
+      <td>{{ run.force_calls_max }}</td>
+      <td>{{ run.nfailed }}</td>
+      <td>{{ run.force_calls_per_second }}</td>
+      <td>{{ run.date }}</td>
+      <td>{{ run.contributor }}</td>
     </tr>
   {% endfor %}
 </table>

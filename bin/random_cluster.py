@@ -66,7 +66,7 @@ if len(argv) > 4:
     prefix = argv[4]
 else:
     prefix = 'cluster'
-atoms = ase.Atoms('H'*natoms)
+atoms = ase.Atoms(symbol*natoms)
 atoms.set_cell((100.0,100.0,100.0))
 rs = RandomStructure(atoms)
 for i in range(nstructures):
