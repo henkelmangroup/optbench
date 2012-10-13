@@ -1,0 +1,10 @@
+force_calls 270
+force_calls_max 4450
+force_calls_min 133
+force_calls_per_second 213
+nfailed 22
+wall_time 1.2675
+code ase
+code_version 3.6.0
+algorithm LBFGS
+contributor Sam Chill

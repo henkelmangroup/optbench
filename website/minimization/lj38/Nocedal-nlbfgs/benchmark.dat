@@ -1,0 +1,9 @@
+force_calls 218
+force_calls_max 476
+force_calls_min 91
+force_calls_per_second 12907
+nfailed 
+wall_time 0.01686
+contributor Alireza Ghasemi
+algorithm L-BFGS
+code Alireza

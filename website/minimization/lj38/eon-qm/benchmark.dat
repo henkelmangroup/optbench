@@ -1,0 +1,11 @@
+force_calls 1921
+force_calls_max 7677
+force_calls_min 393
+force_calls_per_second 7078
+nfailed 0
+wall_time 0.2714
+algorithm MD Min
+code eon
+code_version r1789
+date 12 Oct 2012
+contributor Sam Chill

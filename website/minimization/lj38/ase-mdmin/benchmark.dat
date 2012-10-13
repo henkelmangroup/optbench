@@ -1,0 +1,10 @@
+force_calls 1853
+force_calls_max 9130
+force_calls_min 399
+force_calls_per_second 1325
+nfailed 0
+wall_time 1.39873
+code ase
+code_version 3.6.0
+algorithm MD Min
+contributor Sam Chill

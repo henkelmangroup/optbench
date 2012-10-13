@@ -1,0 +1,9 @@
+force_calls 480
+force_calls_max 1180
+force_calls_min 223
+force_calls_per_second 19061
+nfailed 
+wall_time 0.02517
+contributor Alireza Ghasemi
+algorithm Conjugate-Gradients
+code Alireza

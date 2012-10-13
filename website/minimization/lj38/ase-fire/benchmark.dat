@@ -1,0 +1,10 @@
+force_calls 645
+force_calls_max 2963
+force_calls_min 186
+force_calls_per_second 2020
+nfailed 0
+wall_time 0.3193
+code ase
+code_version 3.6.0
+algorithm fire
+contributor Sam Chill
