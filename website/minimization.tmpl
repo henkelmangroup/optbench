@@ -10,6 +10,15 @@ Minimization benchmarks for optimization algorithms.
 randomly generated Lennard-Jones 38 clusters. A tar file containing the
 structures is here: <a href="minimization/lj38/lj38-clusters.tgz">lj38.tgz</a>.</p>
 
+<p>
+Entries for this benchmark must record the average number number of force calls
+as <i>force_calls</i> in <tt>benchmark.dat</tt>, the maximum number of force
+calls as <i>force_calls_max</i>, the minimum number of force calls as
+<i>force_calls_min</i>, the number of force calls per second as
+<i>force_calls_per_second</i>, and the number of failed minimizations as
+<i>nfailed</i>
+</p>
+
 <p>The maximum force on an atom must be reduced to at least 0.01 energy /
 distance. The maximum number of force calls that may be made cannot exceed
 10,000.</p>
@@ -26,15 +35,15 @@ distance. The maximum number of force calls that may be made cannot exceed
     <th>Date</th>
     <th>Contributor</th>
   </tr>
-  {% for entry in benchmarks['lj38'] %}
+  {% for entry in benchmarks['lj38']|sort(attribute='force_calls') %}
     <tr>
       <td>{{ entry.algorithm }}</td>
       <td>{{ entry.code }} {{ entry.code_version }}</td>
-      <td>{{ '%.0f' % entry.force_calls|float }}</td>
-      <td>{{ '%.0f' % entry.force_calls_min|float }}</td>
-      <td>{{ '%.0f' % entry.force_calls_max|float }}</td>
-      <td>{{ entry.nfailed }}</td>
-      <td>{{ '%.0f' % entry.force_calls_per_second|float }}</td>
+      <td>{{ '%.0f' % entry.force_calls }}</td>
+      <td>{{ '%.0f' % entry.force_calls_min }}</td>
+      <td>{{ '%.0f' % entry.force_calls_max }}</td>
+      <td>{{ '%.0f' % entry.nfailed }}</td>
+      <td>{{ '%.0f' % entry.force_calls_per_second }}</td>
       <td>{{ entry.date }}</td>
       <td>{{ entry.contributor }}</td>
     </tr>
