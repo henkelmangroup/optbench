@@ -1,9 +1,21 @@
 #!/bin/bash
-awk '$2~/total_force_calls/{if ($1<10000){fc+=$1;n+=1}}END{printf("%.0f\n", fc/n)}' simulation/run-*/results.dat > force_calls.dat
-awk '$2~/total_force_calls/{if ($1<10000){printf("%.0f\n", $1)}}' simulation/run-*/results.dat | sort -g | tail -n 1 > force_calls_max.dat
-awk '$2~/total_force_calls/{if ($1<10000){printf("%.0f\n", $1)}}' simulation/run-*/results.dat | sort -gr | tail -n 1 > force_calls_min.dat
-awk 'BEGIN{n=0} $2~/total_force_calls/{if ($1>=10000){n+=1}}END{print n}' simulation/run-*/results.dat > nfailed.dat
-awk '$1 ~ /real/ && $3 ~ /seconds/ {sum+=$2;n+=1}END{printf("%.4f\n", sum/n)}' simulation/run-*/stdout.dat > wall_time.dat
-fcalls=$(cat force_calls.dat)
-walltime=$(cat wall_time.dat)
-printf "%.0f\n" `echo "scale=3;$fcalls / $walltime" | bc` > force_calls_per_second.dat
+if [ ! -d simulation ]; then
+    tar xfj simulation.tar.bz2
+fi
+
+fcalls=$(awk '$2~/total_force_calls/{if ($1<10000){fc+=$1;n+=1}}END{printf("%.0f\n", fc/n)}' simulation/run-*/results.dat)
+fcalls_max=$(awk '$2~/total_force_calls/{if ($1<10000){printf("%.0f\n", $1)}}' simulation/run-*/results.dat | sort -g | tail -n 1)
+fcalls_min=$(awk '$2~/total_force_calls/{if ($1<10000){printf("%.0f\n", $1)}}' simulation/run-*/results.dat | sort -gr | tail -n 1)
+nfailed=$(awk 'BEGIN{n=0} $2~/total_force_calls/{if ($1>=10000){n+=1}}END{print n}' simulation/run-*/results.dat)
+walltime=$(awk '$1 ~ /real/ && $3 ~ /seconds/ {sum+=$2;n+=1}END{printf("%.4f\n", sum/n)}' simulation/run-*/stdout.dat)
+
+echo "force_calls $fcalls" > benchmark.dat
+echo "force_calls_max $fcalls_max" >> benchmark.dat
+echo "force_calls_min $fcalls_min" >> benchmark.dat
+fc_per_second=$(awk "BEGIN {print $fcalls / $walltime}")
+echo "force_calls_per_second $fc_per_second" >> benchmark.dat
+echo "algorithm MD Min" >> benchmark.dat
+echo "code ASE" >> benchmark.dat
+echo "code_version 3.6.0" >> benchmark.dat
+echo "date $(date +'%d %b %Y')" >> benchmark.dat
+echo "contributor Sam Chill" >> benchmark.dat

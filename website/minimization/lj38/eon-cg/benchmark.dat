@@ -1,11 +1,9 @@
 force_calls 431
 force_calls_max 1139
 force_calls_min 197
-force_calls_per_second 6682
-nfailed 0
-wall_time 0.0645
+force_calls_per_second 6682.17
 algorithm Conjugate Gradients
-code eon
+code Eon
 code_version r1789
-date 12 Oct 2012
+date 15 Oct 2012
 contributor Sam Chill

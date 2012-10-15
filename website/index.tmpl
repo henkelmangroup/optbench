@@ -2,12 +2,46 @@
 {% block title %}List of Benchmarks{% endblock %}
 
 {% block content %}
-<h2>List of Benchmarks</h2>
+<h2>Benchmark Suites</h2>
 <ul>
   <li><a href="minimization.html">Minimization</a></li>
   <li><a href="globalopt.html">Global Optimization</a></li>
   <li>hTST Escape Rate</li>
-  <li><a href="accelerated-md.html">Accelerated MD Escape Rate</li>
-  <li><a href="branchingratios.html">Accelerated MD Branching Ratios</li>
+  <li><a href="accelerated-md.html">Accelerated MD Escape Rate</a></li>
+  <li><a href="branchingratios.html">Accelerated MD Branching Ratios</a></li>
 </ul>
+
+<h2>How to submit an entry</h2>
+<p>
+Each entry to a benchmark should contain source code, a shell script named run.sh 
+that will run the program to be benchmarked, a shell script named report.sh 
+that will examine the output of run.sh and write out the results to a file named benchmark.dat.
+The benchmark.dat file records the results for each of the metrics of the benchmark
+as well as other important data such as the name of the algorithm used, the name and version
+of the code, the date, and the name of the contributor to the benchmark. The file has a very 
+simple format. Each line contains a key value pair. The key and value are seperated by whitespace.
+Everything on the line after the first whitespace is considered the value. Here is an example:
+</p>
+
+<pre>
+force_calls 431
+force_calls_max 1139
+force_calls_min 197
+force_calls_per_second 6682.17
+algorithm Conjugate Gradients
+code Eon
+code_version r1789
+date 15 Oct 2012
+contributor Sam Chill
+</pre>
+
+<p>
+
+The required keys in the benchmark.dat file are defined by each benchmark.
+Additionally the keys code, code_version, date, and contributor should be
+specified.  All of the output files and directories should be included in a
+compressed (ideally bzip2) tar archive.
+
+</p>
+
 {% endblock %}

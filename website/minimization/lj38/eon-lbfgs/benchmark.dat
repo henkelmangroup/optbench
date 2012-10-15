@@ -1,11 +1,9 @@
 force_calls 445
 force_calls_max 2623
 force_calls_min 91
-force_calls_per_second 5626
-nfailed 0
-wall_time 0.0791
-algorithm L-BFGS
-code eon
+force_calls_per_second 5625.79
+algorithm Conjugate Gradients
+code Eon
 code_version r1789
-date 12 Oct 2012
+date 15 Oct 2012
 contributor Sam Chill

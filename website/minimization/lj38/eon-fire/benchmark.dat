@@ -1,11 +1,9 @@
 force_calls 1022
 force_calls_max 9357
 force_calls_min 243
-force_calls_per_second 6243
-nfailed 5
-wall_time 0.1637
-algorithm FIRE
-code eon
+force_calls_per_second 6243.13
+algorithm Conjugate Gradients
+code Eon
 code_version r1789
-date 12 Oct 2012
+date 15 Oct 2012
 contributor Sam Chill

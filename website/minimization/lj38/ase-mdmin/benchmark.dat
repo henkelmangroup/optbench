@@ -1,10 +1,9 @@
-force_calls 1853
-force_calls_max 9130
-force_calls_min 399
-force_calls_per_second 1325
-nfailed 0
-wall_time 1.39873
-code ase
-code_version 3.6.0
+force_calls 
+force_calls_max 
+force_calls_min 
+force_calls_per_second 
 algorithm MD Min
+code ASE
+code_version 3.6.0
+date 15 Oct 2012
 contributor Sam Chill

@@ -39,7 +39,8 @@ def load_benchmarks(suite):
             f = open(benchmark_dat)
             for line in f:
                 fields = line.strip().split()
-                data[fields[0]] = ' '.join(fields[1:])
+                value = ' '.join(fields[1:])
+                data[fields[0]] = value
 
             benchmarks[benchmark].append(data)
         if len(benchmarks[benchmark]) == 0:
