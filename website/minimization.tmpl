@@ -26,17 +26,17 @@ distance. The maximum number of force calls that may be made cannot exceed
     <th>Date</th>
     <th>Contributor</th>
   </tr>
-  {% for run in benchmarks['lj38'] %}
+  {% for entry in benchmarks['lj38'] %}
     <tr>
-      <td>{{ run.algorithm }}</td>
-      <td>{{ run.code }} {{ run.code_version }}</td>
-      <td>{{ run.force_calls }}</td>
-      <td>{{ run.force_calls_min }}</td>
-      <td>{{ run.force_calls_max }}</td>
-      <td>{{ run.nfailed }}</td>
-      <td>{{ run.force_calls_per_second }}</td>
-      <td>{{ run.date }}</td>
-      <td>{{ run.contributor }}</td>
+      <td>{{ entry.algorithm }}</td>
+      <td>{{ entry.code }} {{ entry.code_version }}</td>
+      <td>{{ '%.0f' % entry.force_calls|float }}</td>
+      <td>{{ '%.0f' % entry.force_calls_min|float }}</td>
+      <td>{{ '%.0f' % entry.force_calls_max|float }}</td>
+      <td>{{ entry.nfailed }}</td>
+      <td>{{ '%.0f' % entry.force_calls_per_second|float }}</td>
+      <td>{{ entry.date }}</td>
+      <td>{{ entry.contributor }}</td>
     </tr>
   {% endfor %}
 </table>
