@@ -1,9 +1,10 @@
-force_calls 2567
-force_calls_max 10020
-force_calls_min 569
-force_calls_per_second 20918
-nfailed 
-wall_time 0.12271
-contributor Alireza Ghasemi
-algorithm steepest-descent
+force_calls     2566.9
+force_calls_min      569.0
+force_calls_max    10020.0
+force_calls_per_second    20918.3
+wall_time    0.12271
+nfailed 2
 code Alireza
+contributor Alireza
+algorithm SD
+date  15 Oct 2012

@@ -2,6 +2,7 @@ force_calls 431
 force_calls_max 1139
 force_calls_min 197
 force_calls_per_second 6682.17
+nfailed 0
 algorithm Conjugate Gradients
 code Eon
 code_version r1789

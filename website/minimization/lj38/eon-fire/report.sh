@@ -14,7 +14,8 @@ echo "force_calls_max $fcalls_max" >> benchmark.dat
 echo "force_calls_min $fcalls_min" >> benchmark.dat
 fc_per_second=$(awk "BEGIN {print $fcalls / $walltime}")
 echo "force_calls_per_second $fc_per_second" >> benchmark.dat
-echo "algorithm Conjugate Gradients" >> benchmark.dat
+echo "nfailed $nfailed" >> benchmark.dat
+echo "algorithm FIRE" >> benchmark.dat
 echo "code Eon" >> benchmark.dat
 echo "code_version r1789" >> benchmark.dat
 echo "date $(date +'%d %b %Y')" >> benchmark.dat

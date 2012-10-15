@@ -1,9 +1,10 @@
-force_calls 419
-force_calls_max 1054
-force_calls_min 209
-force_calls_per_second 16135
-nfailed 
-wall_time 0.02594
-contributor Alireza Ghasemi
-algorithm FIRE
+force_calls      418.6
+force_calls_min      209.0
+force_calls_max     1054.0
+force_calls_per_second    16135.0
+wall_time    0.02594
+nfailed 0
 code Alireza
+contributor Alireza
+algorithm SD/FIRE
+date  

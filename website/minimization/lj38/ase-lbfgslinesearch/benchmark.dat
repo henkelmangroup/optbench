@@ -2,6 +2,7 @@ force_calls 278
 force_calls_max 369
 force_calls_min 199
 force_calls_per_second 467.305
+nfailed 0
 algorithm L-BFGS Line Search
 code ASE
 code_version 3.6.0

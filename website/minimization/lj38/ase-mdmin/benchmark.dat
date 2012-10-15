@@ -2,6 +2,7 @@ force_calls
 force_calls_max 
 force_calls_min 
 force_calls_per_second 
+nfailed 
 algorithm MD Min
 code ASE
 code_version 3.6.0

@@ -1,9 +1,10 @@
-force_calls 480
-force_calls_max 1180
-force_calls_min 223
-force_calls_per_second 19061
-nfailed 
-wall_time 0.02517
-contributor Alireza Ghasemi
-algorithm Conjugate-Gradients
+force_calls      479.8
+force_calls_min      223.0
+force_calls_max     1180.0
+force_calls_per_second    19060.7
+wall_time    0.02517
+nfailed 0
 code Alireza
+contributor Alireza
+algorithm SD/Conjugate Gradients
+date  15 Oct 2012

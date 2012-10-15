@@ -2,7 +2,8 @@ force_calls 445
 force_calls_max 2623
 force_calls_min 91
 force_calls_per_second 5625.79
-algorithm Conjugate Gradients
+algorithm L-BFGS
+nfailed 0
 code Eon
 code_version r1789
 date 15 Oct 2012

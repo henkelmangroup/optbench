@@ -2,7 +2,8 @@ force_calls 1921
 force_calls_max 7677
 force_calls_min 393
 force_calls_per_second 7078.11
-algorithm Conjugate Gradients
+algorithm QuickMin
+nfailed 0
 code Eon
 code_version r1789
 date 15 Oct 2012
