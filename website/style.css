@@ -3,24 +3,7 @@ body {
     font-size: 1em;
 }
 
-#navigation ul {
-    list-style: none;
-}
-
-#navigation li.first:before {
-    content: "";
-}
-
-#navigation li:before {
-    content: "\0020 \0020 \0020 \00BB \0020";
-}
-
-#navigation li {
-    font-size: 2em;
-    display: inline;
-}
-
-#navigation a {
+#title:visited {
     color: #000;
 }
 
@@ -39,4 +22,9 @@ td {
 
 tr:nth-child(even) {
     background-color: #ddd;
+}
+
+pre {
+    border: 1px solid black;
+    padding: .4em;
 }
