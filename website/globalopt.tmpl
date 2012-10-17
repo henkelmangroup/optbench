@@ -4,41 +4,52 @@
 <h2>Global Optimization</h2>
 Benchmarks for Global Optimization.
 
-<h3>Random Lennard-Jones 38 Cluster</h3>
+<h3>Lennard-Jones 38</h3>
 
-<p>This benchmark tests the performance of global optimizers starting from a
-randomly generated Lennard-Jones clusters which were first minimized. A tar file containing the random and minimized structures is here
+<p> 
 
-<a href="globalopt/lj38.tar.gz">lj38.tar.gz</a>.  The final structures are located here: <a href="globalopt/final_lj38.tar.gz">Final Structure</a>. </p>
+This benchmark requires that the global optimization algorithm is run starting
+from the 100 randomly generated (minimized) Lennard-Jones structures.  Runs
+that are greater than 0.001 energy units from the known global minimum are
+considered failures. If a run was successful, the number of force calls needed
+to reach the global minimum is recorded.
 
-<p>  The benchmark requires that the provided Lennard-Jones structure be optimized 100 times.  Runs that were greater than 0.001 from the known global minimum were considered failures.  If a run was successful, the number of forcecalls necessary to reach the global minimum the first time is recorded.</p>
+</p>
 
-<p> Avg FCs: Average number of force calls needed to find global minimum (average over successful runs) </p>
-<p> min(FCs): Minimum number of force calls needed to find global minimum (best successful run) </p>
-<p> max(FCs): Maximum number of forcecalls needed to find the global minimum(worst successful run) </p>
+<p>
 
-{% set lj38_benchmarks = [ 
-    {'directory':'eon-basinhopping',   'algorithm':'basin_hopping', 'code':'Eon' },
-    
-  ] 
-%}
+The starting structures can be downloaded <a href="globalopt/lj38/100_lj38.tar.gz">here</a>.
+
+</p>
+
+<p>
+
+Entries for this benchmark must record the average number number of force calls
+as <i>force_calls</i> in <tt>benchmark.dat</tt>, the maximum number of force
+calls as <i>force_calls_max</i>, and the minimum number of force calls as
+<i>force_calls_min</i>.
+
+</p>
 
 <table class="sortable">
   <tr>
     <th>Algorithm</th>
     <th>Code</th>
-    <th>&lt; Avg FCs&gt;</th>
+    <th>&lt;Avg FCs&gt;</th>
     <th>min(FCs)</th>
     <th>max(FCs)</th>
-    <th>Failed</th>
+    <th>Date</th>
+    <th>Contributor</th>
   </tr>
   {% for entry in benchmarks['lj38']|sort(attribute='force_calls') %}
     <tr>
       <td>{{ entry.algorithm }}</td>
-      <td>{{ entry.code }}</td>
-      <td>{{ entry.force_calls }}</td>
-      <td>{{ entry.force_calls_min }}</td>
-      <td>{{ entry.force_calls_max }}</td>
+      <td>{{ entry.code }} {{ entry.code_version }}</td>
+      <td>{{ '%.3e' % entry.force_calls }}</td>
+      <td>{{ '%.3e' % entry.force_calls_min }}</td>
+      <td>{{ '%.3e' % entry.force_calls_max }}</td>
+      <td>{{ entry.date }}</td>
+      <td>{{ entry.contributor }}</td>
     </tr>
   {% endfor %}
 </table>
