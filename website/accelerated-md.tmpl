@@ -30,7 +30,7 @@ Benchmark for calculating true rates of chemical reactions.
     <th>Date</th>
     <th>Contributer</th>
   </tr>
-  {% for entry in benchmarks['aladatom/standard']|sort(attribute='force_calls') %}
+  {% for entry in benchmarks['aladatom/true_standard']|sort(attribute='force_calls') %}
     <tr>
       <td>{{ entry.algorithm }}</td>
       <td>{{ entry.code }}</td>
