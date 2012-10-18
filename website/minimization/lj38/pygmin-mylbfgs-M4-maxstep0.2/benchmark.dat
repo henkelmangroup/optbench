@@ -1,0 +1,9 @@
+force_calls 2.25000e+02
+force_calls_min 1.0100e+02
+force_calls_max 5.5200e+02
+force_calls_per_second 9791
+nfailed 0
+algorithm L-BFGS M=4 maxstep=0.2
+code PyGMIN
+contributor Jacob Stevenson
+date 18 Oct 2012

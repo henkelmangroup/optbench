@@ -1,0 +1,8 @@
+force_calls 6.73000e+02
+force_calls_min 9.1000e+01
+force_calls_max 1.2732e+04
+nfailed 0
+algorithm Hybrid eigenvector following
+code PyGMIN
+contributor Jacob Stevenson
+date 18 Oct 2012

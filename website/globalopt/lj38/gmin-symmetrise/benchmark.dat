@@ -1,0 +1,7 @@
+force_calls 2.06550e+04
+force_calls_min 6.1700e+02
+force_calls_max 1.4066e+05
+algorithm basinhopping-symmetrize
+code GMIN
+contributor David Wales
+date 18 Oct 2012

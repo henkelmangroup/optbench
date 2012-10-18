@@ -1,0 +1,7 @@
+force_calls 4.36900e+03
+force_calls_min 2.6200e+02
+force_calls_max 1.6373e+04
+algorithm basinhopping-sym-csm
+code GMIN
+contributor David Wales
+date 18 Oct 2012
