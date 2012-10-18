@@ -28,7 +28,7 @@ Benchmark for calculating true rates of chemical reactions.
     <th>Uncertainty(1/s)</th>
     <th>Percent Uncertainty</th>
   </tr>
-  {% for benchmark in aladatom_benchmark %}
+  {% for benchmark in aladatom_standard %}
     {% set path = "accelerated-md/" + benchmark.directory + "/" %}
     <tr>
       <td>{{ benchmark.algorithm }}</td>
