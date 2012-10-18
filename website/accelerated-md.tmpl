@@ -27,16 +27,19 @@ Benchmark for calculating true rates of chemical reactions.
     <th>Escape rate(1/s)</th>
     <th>Uncertainty(1/s)</th>
     <th>Percent Uncertainty</th>
+    <th>Date</th>
+    <th>Contributer</th>
   </tr>
-  {% for benchmark in aladatom_standard %}
-    {% set path = "accelerated-md/" + benchmark.directory + "/" %}
+  {% for entry in benchmarks['aladatom/standard']|sort(attribute='force_calls') %}
     <tr>
-      <td>{{ benchmark.algorithm }}</td>
-      <td>{{ benchmark.code }}</td>
-      <td>{{ benchmark.thermostat }}</td>
-      <td>{% include path+"r.dat" %}</td>
-      <td>{% include path+"e.dat" %}</td>
-      <td>{% include path+"pe.dat" %}</td>
+      <td>{{ entry.algorithm }}</td>
+      <td>{{ entry.code }}</td>
+      <td>{{ entry.thermostat }}</td>
+      <td>{{ '%.3f' % entry.true_rate }}</td>
+      <td>{{ '%.3f' % entry.uncertainty }}</td>
+      <td>{{ '%.3f' % entry.percent_uncertianty}}</td>
+      <td>{{ entry.date }}</td>
+      <td>{{ entry.contributer }}</td>
     </tr>
   {% endfor %}
 </table>
