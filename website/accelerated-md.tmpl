@@ -30,8 +30,9 @@ Benchmark for calculating true rates of chemical reactions.
     <th>Date</th>
     <th>Contributer</th>
   </tr>
-  {% for entry in benchmarks['aladatom/true_standard']|sort(attribute='true_rate') %}
-    <tr>
+  {% for entry in benchmarks['true_standard']|sort(attribute='true_rate') %}
+   {% set path = "aladatom/" %} 
+   <tr>
       <td>{{ entry.algorithm }}</td>
       <td>{{ entry.code }}</td>
       <td>{{ entry.thermostat }}</td>
