@@ -1,16 +1,46 @@
 {% extends "templates/base.tmpl" %}
-{% block title %}Accelerated MD Benchmark{% endblock %}
+{% block title %}True Rate Benchmark{% endblock %}
 {% block content %}
-<h2>Accelerated MD</h2>
-Accelerated MD Benchmarks for Escape Rates and Branching Ratios.
+<h2>True Escape Rate</h2>
+Benchmark for calculating true rates of chemical reactions.
 
 <h3>Adatom on Al(100) Surface</h3>
 
-<p>This benchmark tests accelerated MD methods by calculating escape rates. A tar file containing the minimized reactant state is found here:
+<p>This benchmark tests various methods of calculating the true rate of escape. A tar file containing the minimized reactant state is found here:
 
 <a href="accelerated-md/reactant.tar.gz">reactant.tar.gz</a>.</p>
 
-<p>  The benchmark requires 150 sample escape rates which obtained using an accelerated MD method at 185K.  Either the Langevin thermostat with a friction coefficient between 0.005 and 0.03 or the Anderson thermostat with a collision strength between 0.2 and 0.8 and a collision period between 200 and 1000 fs should be used.</p>
+<p>  This benchmark requires that the langevin thermostat with the Verlet algorithm is used with a friction coefficient of 0.001 1/fs. Calculated rates will be compared with a standard true rate shown below. </p>
+
+<h3>Standard True Rate of Escape</h3>
+
+{% set aladatom_standard = [
+    {'directory':'eon-md-langevin',   'algorithm':'paralellel_replica', 'code':'Eon','thermostat':'Langevin_0.001' },
+  ]
+%}
+
+<table class="sortable">
+  <tr>
+    <th>Algorithm</th>
+    <th>Code</th>
+    <th>Thermostat</th>
+    <th>Escape rate(1/s)</th>
+    <th>Uncertainty(1/s)</th>
+    <th>Percent Uncertainty</th>
+  </tr>
+  {% for benchmark in aladatom_benchmark %}
+    {% set path = "accelerated-md/" + benchmark.directory + "/" %}
+    <tr>
+      <td>{{ benchmark.algorithm }}</td>
+      <td>{{ benchmark.code }}</td>
+      <td>{{ benchmark.thermostat }}</td>
+      <td>{% include path+"r.dat" %}</td>
+      <td>{% include path+"e.dat" %}</td>
+      <td>{% include path+"pe.dat" %}</td>
+    </tr>
+  {% endfor %}
+</table>
+
 
 <h3>Escape Rates</h3>
 
