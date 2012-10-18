@@ -14,11 +14,6 @@ Benchmark for calculating true rates of chemical reactions.
 
 <h3>Standard True Rate of Escape</h3>
 
-{% set aladatom_standard = [
-    {'directory':'eon-md-langevin',   'algorithm':'paralellel_replica', 'code':'Eon','thermostat':'Langevin_0.001' },
-  ]
-%}
-
 <table class="sortable">
   <tr>
     <th>Algorithm</th>
@@ -30,8 +25,7 @@ Benchmark for calculating true rates of chemical reactions.
     <th>Date</th>
     <th>Contributer</th>
   </tr>
-  {% set path = "aladatom/" %}
-  {% for entry in benchmarks['true_standard']|sort(attribute='true_rate') %}
+  {% for entry in benchmarks['standard_aladatom']|sort(attribute='true_rate') %}
    <tr>
       <td>{{ entry.algorithm }}</td>
       <td>{{ entry.code }}</td>
