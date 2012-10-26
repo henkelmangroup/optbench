@@ -10,7 +10,7 @@ Benchmark for calculating true rates of chemical reactions.
 
 <a href="accelerated-md/reactant.tar.gz">reactant.tar.gz</a>.</p>
 
-<p>  This benchmark requires that the langevin thermostat with the Verlet algorithm is used with a friction coefficient of 0.001 1/fs. Calculated rates will be compared with a standard true rate shown below. </p>
+<p>  This benchmark requires that rates are calculated at 150K with the langevin thermostat and the Verlet algorithm using a friction coefficient of 0.001 1/fs. Calculated rates will be compared with a standard true rate shown below. </p>
 
 <h3>Standard True Rate of Escape</h3>
 
@@ -42,37 +42,4 @@ Benchmark for calculating true rates of chemical reactions.
 
 <h3>Escape Rates</h3>
 
-{% set aladatom_benchmark = [ 
-    {'directory':'eon-md-langevin',   'algorithm':'molecular_dynamics', 'code':'Eon','thermostat':'Langevin_0.02' },
-    {'directory':'eon-md-anderson',   'algorithm':'molecular_dynamics', 'code':'Eon','thermostat':'Anderson_alpha0.5_pcol400' },    
-  ] 
-%}
-
-<table class="sortable">
-  <tr>
-    <th>Algorithm</th>
-    <th>Code</th>
-    <th>Thermostat</th>
-    <th>Escape rate(1/s)</th>
-    <th>Uncertainty(1/s)</th>
-    <th>Percent Uncertainty</th>
-    <th>total FCs</th>
-    <th>FCs per second</th>
-  </tr>
-  {% for benchmark in aladatom_benchmark %}
-    {% set path = "accelerated-md/" + benchmark.directory + "/" %}
-    <tr>
-      <td>{{ benchmark.algorithm }}</td>
-      <td>{{ benchmark.code }}</td>
-      <td>{{ benchmark.thermostat }}</td>
-      <td>{% include path+"r.dat" %}</td>
-      <td>{% include path+"e.dat" %}</td>
-      <td>{% include path+"pe.dat" %}</td>
-      <td>{% include path+"fc.dat" %}</td>
-      <td>{% include path+"fcps.dat" %}</td>
-    </tr>
-  {% endfor %}
-</table>
-
-{% endblock %}
 
