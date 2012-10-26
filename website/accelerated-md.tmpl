@@ -30,9 +30,9 @@ Benchmark for calculating true rates of chemical reactions.
       <td>{{ entry.algorithm }}</td>
       <td>{{ entry.code }}</td>
       <td>{{ entry.thermostat }}</td>
-      <td>{{ entry.true_rate }}</td>
-      <td>{{ entry.uncertainty }}</td>
-      <td>{{ entry.percent_uncertainty}}</td>
+      <td>{{ '%.3e' % entry.true_rate }}</td>
+      <td>{{ '%.3e' % entry.uncertainty }}</td>
+      <td>{{ '%.1e' % entry.percent_uncertainty}}</td>
       <td>{{ entry.date }}</td>
       <td>{{ entry.contributer }}</td>
     </tr>
