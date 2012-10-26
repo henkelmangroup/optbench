@@ -30,16 +30,13 @@ Benchmark for calculating true rates of chemical reactions.
       <td>{{ entry.algorithm }}</td>
       <td>{{ entry.code }}</td>
       <td>{{ entry.thermostat }}</td>
-      <td>{{ '%.3f' % entry.true_rate }}</td>
-      <td>{{ '%.3f' % entry.uncertainty }}</td>
-      <td>{{ '%.3f' % entry.percent_uncertainty}}</td>
+      <td>{{ entry.true_rate }}</td>
+      <td>{{ entry.uncertainty }}</td>
+      <td>{{ entry.percent_uncertainty}}</td>
       <td>{{ entry.date }}</td>
       <td>{{ entry.contributer }}</td>
     </tr>
   {% endfor %}
 </table>
-
-
-<h3>Escape Rates</h3>
 
 {% endblock %}
