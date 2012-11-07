@@ -12,8 +12,8 @@ do
     file=$(printf "cluster_%.4i.con" $i)
     mkdir run-$i
     echo run-$i
-    mv lj38-clusters/$file run-$i/reactant_passed.con
-    cp ../config_passed.ini run-$i
+    mv lj38-clusters/$file run-$i/pos.con
+    cp ../config.ini run-$i
     cd run-$i
     ../../client > stdout.dat
     cd ..

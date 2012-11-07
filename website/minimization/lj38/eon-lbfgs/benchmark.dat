@@ -1,10 +1,10 @@
-force_calls 445
-force_calls_max 2623
-force_calls_min 91
-force_calls_per_second 5625.79
+force_calls 219
+force_calls_max 531
+force_calls_min 103
+force_calls_per_second 7500
 algorithm L-BFGS
 nfailed 0
 code Eon
 code_version r1789
-date 15 Oct 2012
+date 07 Nov 2012
 contributor Sam Chill
