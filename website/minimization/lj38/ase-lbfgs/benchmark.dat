@@ -1,10 +1,10 @@
-force_calls 270
-force_calls_max 4450
-force_calls_min 133
-force_calls_per_second 213.018
-nfailed 22
-algorithm L-BFGS
+force_calls 208
+force_calls_max 674
+force_calls_min 100
+force_calls_per_second 1414.97
+nfailed 0
+algorithm L-BFGS M=5 maxstep=0.2
 code ASE
 code_version 3.6.0
-date 15 Oct 2012
+date 07 Nov 2012
 contributor Sam Chill

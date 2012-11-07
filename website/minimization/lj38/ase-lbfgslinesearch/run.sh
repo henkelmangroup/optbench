@@ -14,8 +14,9 @@ do
     echo run-$i
     mv lj38-clusters/$file run-$i/
     cd run-$i
-    ../../opt.py $file > stdout.dat
+    ../../opt.py $file > stdout.dat &
     cd ..
+    [ $(( $i % 16 )) == 0 ] && wait
 done
 rm -rf lj38-clusters*
 cd ..

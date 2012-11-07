@@ -12,7 +12,7 @@ atoms.center(100.0)
 calc = tsase.calculators.lj(cutoff=15.0)
 atoms.set_calculator(calc)
 
-opt = ase.optimize.LBFGS(atoms, maxstep=.2, alpha=1.0/0.003)
+opt = ase.optimize.LBFGS(atoms, maxstep=.2, alpha=1.0/0.004, memory=5)
 #opt = ase.optimize.FIRE(atoms, maxmove=0.2, dt=0.01, dtmax=0.1)
 #opt = ase.optimize.MDMin(atoms, dt=.0000001)
 #opt = ase.optimize.sciopt.SciPyFminCG(atoms)

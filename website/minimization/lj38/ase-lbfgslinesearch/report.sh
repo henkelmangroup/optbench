@@ -15,7 +15,7 @@ echo "force_calls_min $fcalls_min" >> benchmark.dat
 fc_per_second=$(awk "BEGIN {print $fcalls / $walltime}")
 echo "force_calls_per_second $fc_per_second" >> benchmark.dat
 echo "nfailed $nfailed" >> benchmark.dat
-echo "algorithm L-BFGS Line Search" >> benchmark.dat
+echo "algorithm L-BFGS Line Search M=5 maxstep=0.2" >> benchmark.dat
 echo "code ASE" >> benchmark.dat
 echo "code_version 3.6.0" >> benchmark.dat
 echo "date $(date +'%d %b %Y')" >> benchmark.dat
