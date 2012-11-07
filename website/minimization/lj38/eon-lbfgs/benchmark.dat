@@ -1,7 +1,7 @@
-force_calls 219
-force_calls_max 531
-force_calls_min 103
-force_calls_per_second 7474.4
+force_calls 209
+force_calls_max 544
+force_calls_min 101
+force_calls_per_second 4750
 algorithm L-BFGS M=5 maxstep=0.2
 nfailed 0
 code Eon
