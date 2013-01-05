@@ -1,0 +1,1985 @@
+    wuid       type    barrier   max-dist    sad-fcs   mins-fcs   pref-fcs    result
+-------------------------------------------------------------------------------------
+     220     random    0.60108    1.18405       3517        196          0    good-0
+     130     random    0.98707    1.26957       2785        238          0    good-1
+     327     random    0.98879    1.40872       3537        255          0    good-2
+      85     random    2.10616    1.25266       6397        281          0    barrier > max_thermal_window
+     452     random    0.98563    1.32475       1198        250          0    good-3
+     231     random    1.19647    1.54446       5303        258          0    good-4
+      74     random    0.98879    1.44500       1093        259          0    repeat-2
+     251     random    8.43469    1.24242      30001        251          0    barrier > max_thermal_window
+     431     random    0.61954    1.38251       2077        199          0    good-5
+     322     random    0.98879    1.51868       4297        260          0    good-6
+      67     random    3.44301    1.34939       3997        554          0    barrier > max_thermal_window
+     459     random    3.44370    1.45985       5018        349          0    barrier > max_thermal_window
+     365     random    1.48056    1.41704       3354        238          0    good-7
+      92     random    0.61954    1.49843       2857        199          0    repeat-5
+     253     random    4.21469    1.56524       4104        260          0    barrier > max_thermal_window
+      30     random    0.61954    1.45386       5072        199          0    repeat-5
+     451     random    0.60108    1.52116       5043        196          0    good-8
+     392     random    0.61954    1.29219       9529        200          0    repeat-5
+     197     random    1.20702    1.12093       5837        253          0    good-9
+     470     random    0.61954    1.28665       8509        199          0    repeat-5
+     145     random    0.60108    1.39156       4041        196          0    repeat-8
+     138     random    1.19558    1.29100       5878        268          0    good-10
+     179     random    0.98879    1.51381       2746        257          0    repeat-6
+      25     random    0.60108    1.42583       3352        196          0    repeat-8
+     498     random    0.61954    1.54740       4608        213          0    repeat-5
+     192     random    0.60108    0.89919       3692        196          0    repeat-8
+     161     random    2.18131    1.59331       5176        266          0    barrier > max_thermal_window
+     184     random    1.51266    1.08050       4512        255          0    good-11
+     422     random    4.19839    1.29382       4831        322          0    barrier > max_thermal_window
+     195     random    1.51192    1.58615       1987        237          0    good-12
+      90     random    0.61954    1.33217       1960        199          0    repeat-5
+     437     random    3.45874    1.30313       5547        316          0    barrier > max_thermal_window
+     209     random    3.01353    1.52772       5995        254          0    barrier > max_thermal_window
+      87     random    1.51191    1.08625       3053        259          0    good-13
+      56     random    1.19558    1.21403       5551        268          0    repeat-10
+     299     random    0.60108    1.47203       3093        196          0    repeat-0
+     445     random    1.61450    1.30377       6866        225          0    good-14
+     348     random    3.41210    1.49151       2286        352          0    barrier > max_thermal_window
+     133     random    4.21470    1.57296       5049        263          0    barrier > max_thermal_window
+     330     random    0.98707    1.40869       6164        266          0    good-15
+     154     random    0.98707    1.46079       3934        247          0    repeat-1
+     114     random    1.49328    1.32417       1271        270          0    good-16
+     469     random    1.19647    1.39054       5564        258          0    repeat-4
+      14     random    1.51191    1.08982       2110        260          0    repeat-12
+      82     random    3.69955    1.22302       4042        286          0    barrier > max_thermal_window
+     285     random    0.60108    1.19047       3902        196          0    repeat-8
+     246     random    1.48297    1.13841       4279        242          0    good-17
+     377     random    0.60108    1.46887       2777        196          0    repeat-8
+     296     random    1.51191    1.54582       3708        241          0    repeat-13
+      53     random    4.20342    1.62071       3502        271          0    barrier > max_thermal_window
+     168     random    4.20341    1.56254       3379        288          0    barrier > max_thermal_window
+     222     random    0.98707    1.57914       6350        247          0    repeat-1
+     143     random    2.10616    1.17201       4626        281          0    barrier > max_thermal_window
+     181     random    1.20702    1.71112       5857        253          0    good-18
+     447     random    3.44371    1.76004       3492        415          0    barrier > max_thermal_window
+     263     random    3.69958    1.57339       3111        294          0    barrier > max_thermal_window
+     129     random    1.51267    1.59075       3959        219          0    repeat-11
+     440     random    3.41052    1.41107       3092        350          0    barrier > max_thermal_window
+     159     random    3.01243    1.03791       4577        253          0    barrier > max_thermal_window
+      96     random    1.19558    1.43287       5898        268          0    repeat-10
+     137     random    1.61448    1.00453       2754        333          0    repeat-14
+     416     random    4.20342    1.18969       2477        272          0    barrier > max_thermal_window
+       3     random    1.20702    1.05652       5589        253          0    repeat-18
+     276     random    1.48013    1.40102      15950        246          0    good-19
+     370     random    0.60108    1.36019       3730        196          0    repeat-8
+      47     random    0.60108    0.97891       3877        196          0    repeat-0
+       0     random    0.98563    1.47428       5437        248          0    good-20
+     490     random    3.44301    1.04361       4868        536          0    barrier > max_thermal_window
+     255     random    0.98563    1.30642       3315        245          0    repeat-3
+     166     random    4.21469    1.06072       3704        302          0    barrier > max_thermal_window
+     442     random    1.51192    1.42506       2148        238          0    repeat-13
+     351     random    0.98879    1.28752       5914        257          0    repeat-2
+     127     random    3.44301    1.41254       4163        566          0    barrier > max_thermal_window
+     188     random    5.23178    1.36737       3363        366          0    barrier > max_thermal_window
+     406     random    1.51281    1.65271       2808        254          0    good-21
+     229     random    3.45875    1.73412       2158        302          0    barrier > max_thermal_window
+     118     random    0.98563    1.40349       3666        245          0    repeat-20
+     234     random    0.61955    1.28637       3568        201          0    repeat-5
+     272     random    1.19647    1.56387       5513        258          0    good-22
+     436     random    0.61954    1.33861       2698        199          0    repeat-5
+      38     random    1.48297    1.00137       4490        242          0    good-23
+     257     random    1.51266    1.46472       4397        250          0    repeat-11
+     302     random    0.60108    1.24528       4304        196          0    repeat-0
+     128     random    0.60108    1.12027       4208        196          0    repeat-8
+     458     random    3.44370    1.92072       3362        410          0    barrier > max_thermal_window
+      63     random    3.45841    1.51756       6623        265          0    barrier > max_thermal_window
+     338     random    0.60108    1.71215       1875        196          0    repeat-0
+     183     random    0.98563    0.87705       3730        244          0    repeat-3
+      83     random    3.45841    1.14084       4132        270          0    barrier > max_thermal_window
+     350     random    3.44371    1.21906       3276        396          0    barrier > max_thermal_window
+     430     random    0.60108    1.37497       4056        196          0    repeat-0
+      43     random    0.61954    1.30536       3863        201          0    repeat-5
+      40     random    2.10616    1.52058       7508        281          0    barrier > max_thermal_window
+      54     random    1.51192    1.33356       4300        229          0    repeat-12
+      93     random    0.98707    1.22197       1641        241          0    repeat-1
+     107     random    0.60108    0.88780       2614        196          0    repeat-8
+      48     random    0.98563    1.69109       2695        245          0    repeat-3
+     454     random    0.60108    1.19527       3431        196          0    repeat-0
+     277     random    2.10164    1.20932       4516        268          0    barrier > max_thermal_window
+     378     random    3.69955    1.39499       4022        286          0    barrier > max_thermal_window
+     259     random    0.60106    1.63300       3720        217          0    repeat-8
+     360     random    3.44371    1.44539       3430        407          0    barrier > max_thermal_window
+      66     random    0.98563    1.07237       4064        250          0    repeat-3
+     448     random    4.24427    1.27671       3496        284          0    barrier > max_thermal_window
+     279     random    0.61954    1.54424       4267        200          0    repeat-5
+     172     random    1.51282    1.29596       2705        250          0    good-24
+     446     random    2.10164    1.62665       3603        267          0    barrier > max_thermal_window
+     457     random    1.20702    1.00006       5941        253          0    repeat-18
+      61     random    0.60108    1.19626       2709        196          0    repeat-8
+     297     random    4.21471    1.00784        737        256          0    barrier > max_thermal_window
+     391     random    0.60108    1.46639       2976        196          0    repeat-0
+     435     random    2.10126    1.30269       4895        263          0    barrier > max_thermal_window
+     354     random    3.44371    1.37739       2131        358          0    barrier > max_thermal_window
+     496     random    3.41040    1.27743       6654        566          0    barrier > max_thermal_window
+     210     random    2.10616    1.73654       4904        281          0    barrier > max_thermal_window
+     290     random    2.10617    1.59789       3476        294          0    barrier > max_thermal_window
+     444     random    2.16303    1.47576       4591        279          0    barrier > max_thermal_window
+     288     random    0.98563    1.53098       2473        250          0    repeat-3
+     325     random    3.44371    1.24458       2918        359          0    barrier > max_thermal_window
+     314     random    1.20702    1.36143       5751        253          0    repeat-9
+      65     random    1.51191    1.53354       2766        276          0    repeat-13
+      52     random    1.20702    1.32289       5483        253          0    repeat-9
+     141     random    0.98563    1.53807       3968        264          0    repeat-20
+     273     random    0.98563    1.64481       4576        248          0    repeat-20
+     101     random    4.21471    1.59904        762        269          0    barrier > max_thermal_window
+     380     random    1.19558    1.47311       5618        268          0    repeat-10
+     140     random    1.51192    1.12748       1728        244          0    repeat-13
+     396     random    0.60108    1.40665       4992        196          0    repeat-0
+     428     random    3.44371    1.32927       3027        366          0    barrier > max_thermal_window
+     476     random    0.98563    1.10423       4676        263          0    repeat-3
+     100     random    1.19558    1.31213       5167        268          0    good-25
+     286     random   13.87738    1.51757      30000        283          0    barrier > max_thermal_window
+     240     random    0.60108    1.03896       3566        196          0    repeat-0
+     110     random    3.69955    1.17338       7453        329          0    barrier > max_thermal_window
+     178     random    0.98707    1.21719       5973        247          0    repeat-1
+     493     random    3.44367    1.23546       3870        358          0    barrier > max_thermal_window
+     239     random    1.20702    1.40584       6992        253          0    repeat-9
+     151     random    3.21462    1.21319       4695        285          0    barrier > max_thermal_window
+     413     random    0.60108    0.92176       4604        196          0    repeat-0
+     301     random    0.98879    1.05323       3649        257          0    repeat-6
+      18     random   10.15142    1.28718      30000        272          0    barrier > max_thermal_window
+     326     random    0.61954    1.49491       6288        199          0    repeat-5
+     293     random    0.98879    1.56192       3892        257          0    repeat-2
+     341     random    0.60108    1.32530       3079        196          0    repeat-8
+     409     random    0.60108    1.48151       3697        196          0    repeat-0
+     169     random    4.21470    1.15891        668        256          0    barrier > max_thermal_window
+     270     random    4.21470    1.64087       3350        263          0    barrier > max_thermal_window
+     390     random    0.60108    1.12492       3816        196          0    repeat-0
+     298     random    0.60108    1.22439       5010        196          0    repeat-0
+     461     random    0.98879    1.08091       5902        257          0    repeat-2
+     412     random    1.51282    1.09975       3430        221          0    repeat-24
+      31     random    1.51191    1.23679       2554        270          0    repeat-12
+     450     random    0.61954    1.37762       5476        199          0    repeat-5
+     238     random    1.48297    1.52369       4658        242          0    repeat-23
+     163     random    0.98880    1.24730       3269        249          0    repeat-2
+     472     random    2.10616    1.04015       7837        281          0    barrier > max_thermal_window
+     109     random    1.51281    1.55482       5076        249          0    repeat-24
+     165     random    0.98879    0.91421       6757        257          0    repeat-2
+     393     random    0.60108    1.69363       3506        196          0    repeat-8
+     230     random    0.98707    1.49220       4382        255          0    repeat-1
+     429     random    0.61955    1.31602       4255        201          0    repeat-5
+     131     random    1.19647    1.48293       5470        258          0    repeat-22
+      76     random    3.44371    1.65619       2421        342          0    barrier > max_thermal_window
+     441     random    0.98707    1.41268       1639        241          0    repeat-15
+     404     random    0.60108    1.69074       4037        196          0    repeat-8
+     487     random    0.60108    1.15282       4131        196          0    repeat-8
+     113     random    0.60108    0.95130       3499        196          0    repeat-0
+     433     random    0.60108    1.10300       1804        196          0    repeat-8
+     443     random    0.98707    1.51791       5406        264          0    repeat-1
+      37     random    0.98879    1.43908       2984        255          0    repeat-6
+      79     random    0.61954    1.35845       2805        199          0    repeat-5
+     462     random    1.48014    1.26812       4646        245          0    good-26
+     269     random    4.20363    1.66870       1863        252          0    barrier > max_thermal_window
+      21     random    1.51266    1.26875       3180        286          0    good-27
+     482     random    1.48297    0.81315       5636        242          0    repeat-23
+     158     random    0.60108    1.51622       2009        196          0    repeat-0
+       9     random    3.44301    1.26416       4755        536          0    barrier > max_thermal_window
+     103     random    3.44371    1.25114       3454        401          0    barrier > max_thermal_window
+     467     random    0.98879    0.93814       1642        250          0    repeat-6
+       5     random    2.10164    1.34148       4223        307          0    barrier > max_thermal_window
+     474     random    0.00000    1.39250         25        270          0    Not Connected
+     194     random    2.10616    1.59234       4426        281          0    barrier > max_thermal_window
+      26     random    1.78820    1.58747       6382        395          0    good-28
+     305     random    0.60108    1.40676       2539        196          0    repeat-8
+     212     random    3.21465    1.03645       5612        468          0    barrier > max_thermal_window
+     202     random    0.60108    1.02051       2813        196          0    repeat-0
+     142     random    0.60108    1.67437       2946        196          0    repeat-0
+     424     random    1.19647    1.26000       5649        258          0    repeat-22
+     189     random    0.98708    1.67395       3675        238          0    repeat-15
+      98     random    3.01094    1.24535       4900        247          0    barrier > max_thermal_window
+     281     random    1.19558    1.32338       5556        268          0    repeat-25
+     190     random    3.44367    1.37868       3879        365          0    barrier > max_thermal_window
+      12     random    3.41210    1.48812       7142        360          0    barrier > max_thermal_window
+     205     random    1.20702    1.74951       5688        253          0    repeat-9
+     460     random    0.98564    1.27965       1221        244          0    repeat-20
+     144     random    0.60106    1.41472       3880        239          0    repeat-8
+      71     random    0.60108    1.13313       6488        196          0    repeat-0
+     108     random    0.60108    1.49762       3722        196          0    repeat-8
+      80     random    0.98563    1.19402       5431        251          0    repeat-20
+      72     random    0.60108    1.36519       6379        196          0    repeat-0
+     466     random    0.60108    0.95450       5013        196          0    repeat-0
+     356     random    3.41040    1.25085       5780        576          0    barrier > max_thermal_window
+     224     random    1.20702    1.08679       6268        253          0    repeat-9
+     241     random    3.45931    1.16293       1044        302          0    barrier > max_thermal_window
+      36     random    0.98879    1.17800       4471        250          0    repeat-6
+     419     random    0.60108    1.40053       3274        196          0    repeat-8
+     233     random    3.69955    1.68114       4142        305          0    barrier > max_thermal_window
+      28     random    0.61954    1.39143       3257        199          0    repeat-5
+     331     random    0.98879    1.32542       4247        257          0    repeat-2
+     244     random    0.60108    1.58484       3425        196          0    repeat-0
+     120     random    0.61954    1.21365       2607        199          0    repeat-5
+     236     random    0.60106    0.91464       3628        212          0    repeat-8
+     328     random    1.19558    1.23531       5185        268          0    repeat-10
+     394     random    0.00000    1.33402       9327        443          0    Not Connected
+      68     random    1.51282    1.35673        983        239          0    repeat-24
+       1     random    0.98879    1.08357       4516        251          0    repeat-2
+     361     random    3.45874    1.37248       5427        265          0    barrier > max_thermal_window
+     374     random    1.84890    1.31697       6163        290          0    barrier > max_thermal_window
+     489     random    3.45931    1.39109       6274        273          0    barrier > max_thermal_window
+     247     random    1.51191    1.40204       4259        257          0    repeat-13
+     182     random    0.98563    1.79334       4172        262          0    repeat-3
+     150     random    1.51281    1.41015       2374        260          0    repeat-24
+      95     random    1.19558    1.30153       6307        268          0    repeat-25
+     303     random    0.98563    1.41264       1212        251          0    repeat-3
+      19     random    0.98707    1.55468      19043        247          0    repeat-15
+      44     random    1.20702    1.28752      10231        253          0    repeat-9
+     473     random    1.20702    1.40713       5076        253          0    repeat-9
+     309     random    0.61954    1.55143       2334        199          0    repeat-5
+     439     random    0.60108    0.96262       2548        196          0    repeat-8
+     284     random    0.98879    1.65816       4187        257          0    repeat-2
+     385     random    3.45931    1.25173       5040        278          0    barrier > max_thermal_window
+     495     random    2.10127    1.36840       8214        307          0    barrier > max_thermal_window
+     411     random    2.10164    1.05012       5991        267          0    barrier > max_thermal_window
+     494     random    1.20702    1.23631       7028        253          0    repeat-18
+     423     random    0.61954    1.26192       3017        199          0    repeat-5
+     155     random    1.20702    1.65694       5841        253          0    repeat-18
+     405     random    1.48014    0.99348       4669        245          0    repeat-26
+     347     random    4.21470    1.65257       4680        263          0    barrier > max_thermal_window
+     339     random    6.95208    1.58150      30002        363          0    barrier > max_thermal_window
+     196     random    0.61954    1.44883       3955        199          0    repeat-5
+     491     random    1.51192    1.80021       2904        229          0    repeat-12
+      55     random    0.60108    1.67414       3485        196          0    repeat-0
+      91     random    1.51282    1.07881       3406        246          0    repeat-24
+     480     random    3.45931    1.47245       4619        258          0    barrier > max_thermal_window
+     112     random    0.61954    1.85713       2512        199          0    repeat-5
+      42     random    0.60108    0.98241       3098        196          0    repeat-0
+     300     random    1.51191    1.29131       3074        253          0    repeat-13
+     415     random    3.45931    1.42939       4938        385          0    barrier > max_thermal_window
+     343     random    1.19558    1.40439       6451        268          0    repeat-10
+     160     random    3.41040    1.70492       1080        556          0    barrier > max_thermal_window
+     420     random    1.51266    1.78108       2882        318          0    repeat-11
+     389     random    2.10164    1.55486       3197        300          0    barrier > max_thermal_window
+     388     random    0.98879    1.63815       4491        252          0    repeat-6
+      70     random    4.18021    1.31924       2040        317          0    barrier > max_thermal_window
+     180     random    3.45874    1.06656       5532        264          0    barrier > max_thermal_window
+     268     random    0.60108    1.22627       2607        196          0    repeat-0
+     248     random    1.48297    1.28852       4646        242          0    repeat-23
+     283     random    0.98707    1.01910       2800        238          0    repeat-15
+     319     random    1.19558    1.29470       5926        268          0    repeat-10
+     250     random    2.10616    1.18830       5017        281          0    barrier > max_thermal_window
+      41     random    0.60109    1.43618       3374        196          0    repeat-8
+     397     random    0.60108    1.46989       2228        196          0    repeat-8
+     199     random    0.98707    1.32414      14261        252          0    repeat-15
+     484     random    1.19558    1.28963       8504        268          0    repeat-10
+      23     random    0.61954    1.23441       3112        199          0    repeat-5
+      13     random    1.19558    1.48924       5632        268          0    repeat-25
+     427     random    0.98880    1.50615       4313        248          0    repeat-2
+     318     random    4.20343    1.20299       2914        269          0    barrier > max_thermal_window
+     134     random    0.98879    1.49875       3224        257          0    repeat-6
+     287     random    0.98879    1.44977       4328        244          0    repeat-6
+     228     random    0.98563    1.11952       1637        250          0    repeat-20
+     426     random    3.45875    1.46554       6464        298          0    barrier > max_thermal_window
+      81     random    0.61954    1.21146       4094        199          0    repeat-5
+     294     random    0.98707    1.45613       5657        258          0    repeat-15
+     186     random    1.19558    1.37860       5810        268          0    repeat-10
+     384     random    1.19647    1.29751       5579        258          0    repeat-4
+     379     random    0.61954    1.60004       2330        217          0    repeat-5
+     363     random    1.48297    1.36226       3474        242          0    repeat-23
+       7     random    3.21465    1.11226       4339        509          0    barrier > max_thermal_window
+     271     random    0.60108    1.04671       2598        196          0    repeat-0
+     395     random    0.60108    1.21425       4333        196          0    repeat-0
+     173     random    3.41210    1.81041       5304        387          0    barrier > max_thermal_window
+     400     random    1.51282    1.16049       4641        221          0    repeat-24
+       8     random    0.98563    1.26614       2901        250          0    repeat-20
+     227     random    1.61631    1.01206       7857        236          0    good-29
+     463     random    0.98879    1.36555       4974        257          0    repeat-6
+     418     random    3.44371    1.57621       3468        410          0    barrier > max_thermal_window
+      59     random    3.69955    1.32263       4263        286          0    barrier > max_thermal_window
+      88     random    0.60108    1.18621       3970        196          0    repeat-0
+      32     random    1.48297    1.08908       6483        242          0    repeat-23
+      73     random    3.21462    1.65670       5148        278          0    barrier > max_thermal_window
+     344     random    0.61954    1.84304       3034        199          0    repeat-5
+      78     random    1.51192    1.45470       2560        229          0    repeat-12
+     340     random    2.10164    1.22114      15953        328          0    barrier > max_thermal_window
+     265     random    3.44368    1.41920       3616        374          0    barrier > max_thermal_window
+     256     random    8.43114    1.34885      30002        302          0    barrier > max_thermal_window
+     157     random    3.21462    1.11008       4277        277          0    barrier > max_thermal_window
+      16     random    0.60108    1.09508       4950        196          0    repeat-0
+     364     random    0.98563    1.37950       5791        245          0    repeat-3
+     262     random   11.61998    1.33045      30000        313          0    barrier > max_thermal_window
+     485     random    1.20702    1.35143       4995        253          0    repeat-18
+      46     random    1.19647    1.62664       7695        258          0    repeat-4
+     337     random    1.20702    1.44644       5148        253          0    repeat-18
+     135     random    2.18132    0.97224       4144        271          0    barrier > max_thermal_window
+     139     random    0.98563    1.22395      12633        250          0    repeat-20
+     252     random    0.98563    1.55016       5448        260          0    repeat-3
+     349     random    5.36936    1.63171       7230        407          0    barrier > max_thermal_window
+     368     random    1.48297    1.75303       4647        242          0    repeat-17
+     408     random    0.61954    1.18828       2175        199          0    repeat-5
+     177     random    0.98563    1.26925       6724        245          0    repeat-20
+     198     random    0.98879    1.58181       6299        244          0    repeat-2
+     232     random   14.41919    1.53066      30001        317          0    barrier > max_thermal_window
+     237     random    1.51191    1.27989       1581        242          0    repeat-13
+     383     random    1.51281    1.22931       4825        258          0    repeat-21
+     333     random    3.21465    1.34335       5929        545          0    barrier > max_thermal_window
+     486     random    3.45931    1.70871       3930        322          0    barrier > max_thermal_window
+     421     random    1.61547    1.16538       2904        284          0    good-30
+     475     random    0.98707    1.07037       6928        247          0    repeat-15
+     310     random    1.19647    1.78895       5537        258          0    repeat-22
+     111     random    0.98707    1.47553       6404        247          0    repeat-15
+     323     random    0.61954    1.45395       4346        199          0    repeat-5
+     226     random    0.60108    1.31249       3678        196          0    repeat-0
+      22     random    1.51282    1.78365       5856        221          0    repeat-21
+     307     random    0.60108    1.28122       2934        196          0    repeat-8
+      33     random    1.51266    1.29349       3370        303          0    repeat-11
+     206     random    0.00000    1.40051       3567        393          0    Not Connected
+     121     random    1.51192    1.22129       2425        239          0    repeat-13
+     176     random    0.98563    1.31475       5574        273          0    repeat-3
+      60     random    1.61631    1.17432       7320        236          0    repeat-29
+      51     random    0.60108    1.17130       5048        196          0    repeat-8
+     122     random    1.19558    0.96126       5677        268          0    repeat-10
+     264     random    1.19558    0.98779       5412        268          0    repeat-10
+      17     random    0.98879    1.55364       4595        257          0    repeat-2
+     381     random    0.98879    1.34820       6787        257          0    repeat-2
+     398     random    1.48013    1.35934      30002        302          0    repeat-26
+     355     random    3.44368    1.43038       2974        348          0    barrier > max_thermal_window
+     387     random    3.69980    1.33862       5361        309          0    barrier > max_thermal_window
+     164     random    1.48056    1.67647       4371        238          0    good-31
+     208     random    1.19558    1.24409       5778        268          0    repeat-10
+     191     random    3.45874    1.71031       8375        271          0    barrier > max_thermal_window
+      94     random    3.44301    1.47310       4019        536          0    barrier > max_thermal_window
+     438     random    1.51266    1.28476       2969        277          0    repeat-11
+      45     random    1.51267    1.40019       5936        219          0    repeat-11
+     289     random    0.61954    1.03624       3240        199          0    repeat-5
+     342     random    0.60106    1.55366       6733        228          0    repeat-8
+     217     random    0.60108    1.28269       2621        196          0    repeat-8
+     147     random    0.98707    1.29039       2838        247          0    repeat-1
+     243     random    1.48056    1.38764       3894        238          0    repeat-31
+     336     random    1.51192    1.42525       4743        242          0    repeat-12
+     266     random    0.61954    1.59990       4634        199          0    repeat-5
+     104     random    0.98563    1.16762       4590        253          0    repeat-20
+     324     random    0.98707    1.47220       5142        247          0    repeat-15
+     223     random    1.19558    1.33141       6785        268          0    repeat-10
+     316     random    4.21470    1.87054        790        268          0    barrier > max_thermal_window
+     219     random    0.98707    1.31980       4104        257          0    repeat-15
+     115     random    1.19558    1.56185       3207        268          0    repeat-10
+      99     random    1.19647    1.72741       6093        258          0    repeat-4
+     465     random    4.23412    1.34385       3494        274          0    barrier > max_thermal_window
+     477     random    1.19558    1.26553       5813        268          0    repeat-10
+     417     random    1.49141    1.25758       3355        286          0    good-32
+      89     random    3.45931    1.67206       5181        278          0    barrier > max_thermal_window
+     315     random    0.98707    0.97930       5312        235          0    repeat-1
+     167     random    0.60108    1.42896       2215        196          0    repeat-0
+     267     random    1.19558    1.46658      10948        268          0    repeat-25
+     275     random    3.45931    1.43063       5968        295          0    barrier > max_thermal_window
+     261     random    0.61954    1.46372       3042        199          0    repeat-5
+      58     random    1.51266    1.39845       2485        246          0    repeat-27
+     225     random    1.51266    1.60861       3420        272          0    repeat-11
+       2     random    0.98879    1.23866       4564        262          0    repeat-2
+     403     random    4.19346    1.62348       4220        330          0    barrier > max_thermal_window
+      29     random    0.60108    1.33136       3263        196          0    repeat-8
+     434     random    1.20702    1.20373       5554        253          0    repeat-18
+      49     random    1.19558    1.05072       5856        268          0    repeat-25
+     153     random    1.19558    1.23980       5978        268          0    repeat-10
+     125     random    3.44301    1.52398       3585        600          0    barrier > max_thermal_window
+     367     random    1.19647    1.05481       7327        258          0    repeat-22
+     282     random    0.60108    1.27162       4801        196          0    repeat-0
+     260     random    0.60108    1.07684       4945        196          0    repeat-0
+      62     random    0.60108    1.65224       3644        196          0    repeat-0
+      57     random    1.49349    1.10224       6482        307          0    good-33
+     372     random    4.20362    1.59690       4397        268          0    barrier > max_thermal_window
+     399     random    3.44370    1.48270       3545        369          0    barrier > max_thermal_window
+     382     random    0.98563    1.02446       4516        237          0    repeat-3
+     162     random    0.60108    1.41637       3052        196          0    repeat-8
+     203     random    1.61549    1.15362       5708        257          0    repeat-30
+     317     random    3.01244    1.19563       5494        252          0    barrier > max_thermal_window
+     214     random    0.60108    1.25392       3316        196          0    repeat-8
+      39     random    0.60108    1.37327       3170        196          0    repeat-0
+     152     random    1.48297    1.34196       4536        242          0    repeat-17
+     471     random    0.60108    1.72641       3778        196          0    repeat-0
+     170     random    1.19647    1.16393       7059        258          0    repeat-22
+     174     random    1.61448    1.06293       5223        248          0    repeat-14
+     216     random    1.51191    1.46154       4369        273          0    repeat-13
+     304     random    8.42805    1.27804      30001        308          0    barrier > max_thermal_window
+     311     random    3.41040    1.08211       5403        549          0    barrier > max_thermal_window
+     105     random    0.98563    1.41529       4285        254          0    repeat-20
+      10     random    3.44371    1.37909       3602        347          0    barrier > max_thermal_window
+     106     random    1.20702    1.62683       5432        253          0    repeat-9
+     291     random    3.44370    1.31450       2935        342          0    barrier > max_thermal_window
+     345     random    1.20702    1.40040       5376        253          0    repeat-18
+     492     random    3.45931    1.35354       4008        312          0    barrier > max_thermal_window
+     334     random    1.48297    1.48758       6465        242          0    repeat-23
+      64     random    0.61954    1.75820       3408        199          0    repeat-5
+     308     random    0.61954    1.11393       3374        199          0    repeat-5
+     366     random    1.48014    1.36111       4762        245          0    repeat-26
+     362     random    1.51267    1.33033       1079        232          0    repeat-11
+     126     random    3.44301    1.38829       3857        558          0    barrier > max_thermal_window
+     464     random    0.98563    1.26070       6705        256          0    repeat-3
+      35     random    0.98707    1.47395       4383        277          0    repeat-15
+     292     random    1.19558    1.22811       5559        268          0    repeat-25
+     245     random    1.51267    1.17100       1782        233          0    repeat-11
+     274     random    3.45841    0.97642       3809        270          0    barrier > max_thermal_window
+      77     random    4.20363    1.52954       2878        268          0    barrier > max_thermal_window
+     357     random    1.51192    1.42295       2372        229          0    repeat-13
+     249     random    1.19558    0.90883       5881        268          0    repeat-10
+     258     random    1.78820    1.26791       1744        314          0    good-34
+     235     random    1.19558    1.47318       7312        268          0    repeat-25
+     306     random    1.51281    1.35645       3622        274          0    repeat-21
+     201     random    0.98879    1.67094       3275        248          0    repeat-2
+      75     random    0.60108    1.62613       4490        196          0    repeat-8
+     401     random    1.51281    1.22476       3011        261          0    repeat-24
+     149     random    2.10126    1.36658       5483        263          0    barrier > max_thermal_window
+     215     random    0.60108    1.06231       4010        196          0    repeat-8
+     449     random    1.19647    1.42250       5520        258          0    repeat-4
+     193     random    3.44301    1.33334       3682        602          0    barrier > max_thermal_window
+      84     random    1.51266    1.49122       3536        281          0    repeat-27
+     119     random    0.98879    1.31414       3844        255          0    repeat-2
+     483     random    0.98707    1.25967       5971        258          0    repeat-1
+     478     random    0.60108    1.53391       5822        196          0    repeat-8
+     175     random    3.45874    1.10768       3641        300          0    barrier > max_thermal_window
+     407     random    0.61954    1.76974       3063        199          0    repeat-5
+       4     random    0.61954    1.25434       3008        199          0    repeat-5
+      15     random    0.60108    1.54624       5658        196          0    repeat-8
+      97     random    3.45875    1.23900       4194        297          0    barrier > max_thermal_window
+      24     random    0.60108    1.68942       3854        196          0    repeat-0
+     335     random    0.98707    1.58848       4685        247          0    repeat-1
+      86     random    0.98879    1.20127       2668        253          0    repeat-6
+       6     random    2.10126    1.50893       6813        291          0    barrier > max_thermal_window
+     497     random    0.61954    1.24235       5994        199          0    repeat-5
+      34     random    4.19841    1.58764        610        312          0    barrier > max_thermal_window
+     376     random    1.48297    1.58690       3561        242          0    repeat-17
+     488     random    1.19647    1.06546       3684        258          0    repeat-4
+     369     random    1.51192    1.46954       2243        229          0    repeat-12
+     123     random    3.41210    1.01185       6544        352          0    barrier > max_thermal_window
+     359     random    0.60108    0.94503       6738        196          0    repeat-8
+     171     random    0.61954    1.24697       2889        199          0    repeat-5
+     102     random    0.98879    1.14115       4883        260          0    repeat-6
+      11     random    0.60108    1.43421       1896        196          0    repeat-8
+     116     random    3.41040    1.31398       1171        550          0    barrier > max_thermal_window
+     373     random    1.51266    1.00648       5904        237          0    repeat-27
+     468     random    0.00000    0.98884       3942        271          0    Not Connected
+     320     random    2.10616    1.91128       3943        281          0    barrier > max_thermal_window
+     479     random    3.41210    1.30427       6410        356          0    barrier > max_thermal_window
+     254     random    0.61954    1.49458       4063        199          0    repeat-5
+     218     random    3.21465    1.47731       3869        438          0    barrier > max_thermal_window
+     213     random    0.61954    1.11443       2667        199          0    repeat-5
+     321     random    0.60108    1.26676       2365        196          0    repeat-8
+     432     random    0.60108    1.60569       3477        196          0    repeat-8
+     146     random    2.10616    1.15872       5260        334          0    barrier > max_thermal_window
+     481     random    0.60108    1.41216       2630        196          0    repeat-0
+     117     random    0.98563    1.26990       5199        248          0    repeat-3
+     313     random    0.60108    1.47476       3345        196          0    repeat-0
+      50     random    0.98707    1.13610       1580        241          0    repeat-1
+     156     random    0.98707    1.25767       1592        241          0    repeat-15
+     278     random    0.60106    0.99116       3872        228          0    repeat-8
+     346     random    2.10126    0.85239       5729        306          0    barrier > max_thermal_window
+     295     random    1.19558    1.34226       5507        268          0    repeat-25
+     187     random    0.60106    1.57278       4017        214          0    repeat-8
+     132     random    0.00000    1.33290       7708        424          0    Not Connected
+     332     random    0.60106    1.43649       4125        235          0    repeat-0
+     353     random    0.60106    1.46913       4777        228          0    repeat-8
+     211     random    0.98708    1.23436       1240        241          0    repeat-1
+     371     random    1.19558    1.49784       5492        268          0    repeat-25
+     455     random    0.98563    1.48008       4510        256          0    repeat-20
+     204     random    1.48014    1.35217       6654        245          0    repeat-26
+     499     random    0.61954    1.60450       3335        199          0    repeat-5
+     207     random    1.98029    1.36487       5701        283          0    barrier > max_thermal_window
+     221     random    0.60108    1.55606       2898        196          0    repeat-8
+     414     random    0.60108    1.39728       2547        196          0    repeat-0
+     124     random    1.84620    1.15382       3973        302          0    barrier > max_thermal_window
+      27     random    3.69955    1.30068       4291        333          0    barrier > max_thermal_window
+     280     random    1.51191    1.31726       5353        284          0    repeat-13
+     136     random    3.45931    1.55969       4362        295          0    barrier > max_thermal_window
+     185     random    0.60107    1.35255       3593        196          0    repeat-8
+     358     random    3.45842    1.34035        824        302          0    barrier > max_thermal_window
+     200     random    3.44368    1.50589       7475        392          0    barrier > max_thermal_window
+     352     random    1.20702    0.87935       9411        298          0    repeat-18
+     148     random    1.51191    1.38719       3155        253          0    repeat-12
+     456     random    1.51266    1.62355       3943        276          0    repeat-27
+      20     random    1.19647    1.08988       5838        258          0    repeat-22
+     425     random    0.60108    1.35719       3279        196          0    repeat-0
+     386     random    0.60108    1.20909       3416        196          0    repeat-0
+      69     random    3.44367    1.14484       3539        356          0    barrier > max_thermal_window
+     410     random    1.61450    1.25608       6471        225          0    repeat-14
+     402     random    1.20702    1.38318       5810        253          0    repeat-9
+     329     random    1.51282    1.51124        930        233          0    repeat-24
+     312     random    0.98563    1.46247       2569        251          0    repeat-3
+     375     random    4.20361    1.74811       2582        260          0    barrier > max_thermal_window
+     453     random    1.51281    1.58418       2600        261          0    repeat-21
+     242     random    0.60108    1.03059       3032        196          0    repeat-8
+     634     random    0.98707    1.31088       3765        247          0    repeat-1
+     539     random    4.21471    1.50297       1638        276          0    barrier > max_thermal_window
+     947     random    1.19558    1.13789       4927        268          0    repeat-25
+     726     random    0.98707    1.24925       1634        241          0    repeat-1
+     775     random    4.20362    1.10840       3168        253          0    barrier > max_thermal_window
+     766     random    0.98563    1.36465       4603        257          0    repeat-3
+     907     random    1.51267    1.50089       2429        219          0    repeat-11
+     685     random    0.60108    1.03859       3742        196          0    repeat-0
+     694     random    3.45841    1.49028       4649        312          0    barrier > max_thermal_window
+     638     random    0.60108    1.26128       3125        196          0    repeat-8
+     879     random    1.19647    1.41510       5391        258          0    repeat-4
+     840     random    0.60108    1.19151       3662        196          0    repeat-0
+     898     random    0.00000    1.39267       8817        333          0    Not Connected
+     968     random    0.60108    1.21692       3749        196          0    repeat-0
+     695     random    2.10126    1.41665       4949        263          0    barrier > max_thermal_window
+     733     random    3.21427    1.56324       2828        260          0    barrier > max_thermal_window
+     524     random    3.21427    1.66657       2631        316          0    barrier > max_thermal_window
+     761     random    0.60108    1.36013       3400        196          0    repeat-0
+     965     random    1.19647    1.30099       5846        258          0    repeat-4
+     611     random    3.41210    1.56725       5795        375          0    barrier > max_thermal_window
+     945     random    0.60108    1.23685       2385        196          0    repeat-0
+     660     random    3.41040    1.18851       4777        556          0    barrier > max_thermal_window
+     509     random    1.19647    1.21191       5665        258          0    repeat-22
+     614     random    0.98563    1.52604       5059        256          0    repeat-20
+     774     random    0.98707    2.02638       3451        247          0    repeat-15
+     900     random    0.98707    1.36017       4984        279          0    repeat-1
+     518     random    0.60108    1.40395       3687        196          0    repeat-0
+     709     random    0.98707    1.36506       4503        269          0    repeat-1
+     661     random    0.98879    1.18496       2718        263          0    repeat-6
+     535     random    1.97791    0.95883       5068        357          0    barrier > max_thermal_window
+     888     random    1.51191    1.36504       3257        246          0    repeat-12
+     534     random    3.21427    1.25723       5188        266          0    barrier > max_thermal_window
+     675     random    0.98707    1.30211       6507        277          0    repeat-15
+     699     random    0.60108    1.14303       3223        196          0    repeat-0
+     528     random    0.60108    1.33555       3960        196          0    repeat-0
+     782     random    0.98707    1.73819       5330        252          0    repeat-1
+     677     random    3.45841    1.36795       6662        312          0    barrier > max_thermal_window
+     893     random    1.51267    1.73222       2987        219          0    repeat-11
+     730     random    0.98707    1.70668       6535        278          0    repeat-1
+     527     random    0.98707    1.52880       4249        261          0    repeat-15
+     854     random    2.10164    1.52567      13356        315          0    barrier > max_thermal_window
+     604     random    0.60108    1.05000       3782        196          0    repeat-8
+     511     random    0.60108    1.47109       4145        196          0    repeat-0
+     889     random    0.98707    1.69016       3397        238          0    repeat-15
+     553     random    1.51191    1.46555       3034        266          0    repeat-13
+     636     random    3.44301    1.15360       4273        607          0    barrier > max_thermal_window
+     980     random    1.19647    1.42251       5658        258          0    repeat-22
+     667     random    1.19647    1.44153       5271        258          0    repeat-4
+     909     random    2.10616    1.45342       3990        293          0    barrier > max_thermal_window
+     595     random    0.98707    0.84560       4834        257          0    repeat-15
+     934     random    3.41051    1.38972      19159        369          0    barrier > max_thermal_window
+     582     random    0.60106    1.58085      11543        224          0    repeat-8
+     659     random    0.98563    1.35408       4168        245          0    repeat-20
+     865     random    1.19558    1.39308       5072        268          0    repeat-25
+     584     random    3.41040    1.34725       4933        550          0    barrier > max_thermal_window
+     748     random    1.51282    1.54486       2321        221          0    repeat-24
+     548     random    6.22414    1.17998       4933        389          0    barrier > max_thermal_window
+     848     random    1.51191    1.30950       3779        239          0    repeat-13
+     592     random    0.98563    1.43269       4018        245          0    repeat-3
+     770     random    0.61954    1.29493       3098        199          0    repeat-5
+     805     random    1.51267    1.15488       5034        219          0    repeat-11
+     610     random    1.51191    1.41165       3225        258          0    repeat-13
+     576     random    1.51281    1.28174       3537        287          0    repeat-24
+     768     random    1.51191    1.10762       4847        263          0    repeat-13
+     978     random    0.00000    1.00796        111        251          0    Not Connected
+     673     random    1.51192    1.38641       3838        229          0    repeat-12
+     649     random    1.51282    1.09300       4056        221          0    repeat-24
+     727     random    0.98563    1.28457       3382        250          0    repeat-20
+     732     random    1.51191    1.27686       3632        278          0    repeat-13
+     743     random    1.20702    1.24896       5204        253          0    repeat-9
+     643     random    1.51266    1.41502       2936        278          0    repeat-11
+     974     random    0.98879    1.37410       2810        249          0    repeat-2
+     894     random    0.60108    1.54783       4386        196          0    repeat-8
+     847     random    0.98563    1.23661       3800        245          0    repeat-3
+     920     random    0.60108    1.06520       3219        196          0    repeat-0
+     875     random    2.10616    1.40230       5703        290          0    barrier > max_thermal_window
+     933     random    0.61954    1.24956       5395        200          0    repeat-5
+     725     random    0.60108    1.29920       2532        196          0    repeat-8
+     622     random    0.98563    1.72129       3688        245          0    repeat-20
+     749     random    3.12549    1.27788      12802        299          0    barrier > max_thermal_window
+     983     random    0.98879    1.83503      10033        257          0    repeat-6
+     866     random    1.51191    1.43367       3605        240          0    repeat-13
+     755     random    1.20702    1.44231       5188        253          0    repeat-9
+     811     random    0.98707    1.55955       4519        247          0    repeat-15
+     776     random    0.98707    1.20711       4758        240          0    repeat-1
+     830     random    3.44371    1.17296       3412        374          0    barrier > max_thermal_window
+     803     random    0.60108    1.38548       2807        196          0    repeat-0
+     714     random    0.60108    1.72890       2737        196          0    repeat-0
+     566     random    0.98879    1.17902       3801        257          0    repeat-6
+     799     random    1.19647    1.05077       5631        258          0    repeat-22
+     618     random    0.60108    1.28657       1949        196          0    repeat-8
+     529     random    0.98879    1.53974      13380        257          0    repeat-6
+     860     random    3.44370    1.34595       4095        392          0    barrier > max_thermal_window
+     712     random    0.00000    1.38334        432        235          0    Not Connected
+     852     random    0.98707    1.41712       4638        247          0    repeat-1
+     859     random    1.48014    1.30252       4670        245          0    repeat-26
+     982     random    1.19558    1.50906       5332        268          0    repeat-25
+     564     random    1.20702    1.10457       5627        253          0    repeat-9
+     958     random    0.60108    1.68250       3105        196          0    repeat-8
+     831     random    1.51266    1.57004       3913        297          0    repeat-11
+     662     random    1.51281    1.23284       2385        306          0    repeat-21
+     754     random    1.19558    1.15395       5395        268          0    repeat-10
+     525     random    0.61954    1.04986       2433        199          0    repeat-5
+     971     random    1.19558    1.27597       5639        268          0    repeat-10
+     779     random    1.51191    1.42754       2961        233          0    repeat-12
+     908     random    3.45841    1.46882       4074        303          0    barrier > max_thermal_window
+     647     random    3.44301    1.28520       3402        571          0    barrier > max_thermal_window
+     763     random    3.45841    1.28197       2796        270          0    barrier > max_thermal_window
+     648     random    1.20702    1.25847       5424        253          0    repeat-18
+     717     random    0.98563    1.41586       3228        244          0    repeat-3
+     658     random    0.60108    1.40266       2982        196          0    repeat-8
+     979     random    0.60108    1.38922       2838        196          0    repeat-8
+     565     random    0.60108    1.46819       3459        196          0    repeat-8
+     843     random    1.19647    1.41327       3166        258          0    repeat-22
+     794     random    1.19558    1.12399       6479        268          0    repeat-25
+     549     random    1.51267    1.44469       4295        219          0    repeat-11
+     839     random    3.69957    1.35286       4712        288          0    barrier > max_thermal_window
+     697     random    1.61549    1.48618      10270        257          0    good-35
+     630     random    5.15954    1.49585       2871        307          0    barrier > max_thermal_window
+     972     random    0.61954    1.31938       2154        199          0    repeat-5
+     568     random    0.98879    1.58410       6054        257          0    repeat-6
+     646     random    1.51281    1.16724       3625        252          0    repeat-21
+     575     random    1.19647    1.73913       5743        258          0    repeat-4
+     906     random    0.60108    1.56068       4187        196          0    repeat-8
+     562     random    1.51281    1.06811       3739        250          0    repeat-21
+     656     random    1.51191    1.38278       2995        257          0    repeat-13
+     588     random    1.19558    1.39238       6051        268          0    repeat-25
+     780     random    0.60108    0.89954       3459        196          0    repeat-8
+     626     random    1.20702    1.52284       5515        253          0    repeat-9
+     753     random    3.44370    1.28928       4052        371          0    barrier > max_thermal_window
+     569     random    1.51281    1.27817       3004        278          0    repeat-24
+     635     random    1.51281    1.53876       2746        286          0    repeat-24
+     538     random    1.20702    1.02759       3374        253          0    repeat-18
+     952     random    0.60108    1.21498       3528        196          0    repeat-8
+     756     random    0.60108    1.70615       4657        196          0    repeat-8
+     607     random    0.60108    1.39267       4024        196          0    repeat-0
+     985     random    2.10164    1.38226      15739        267          0    barrier > max_thermal_window
+     838     random    4.19349    1.52645        847        317          0    barrier > max_thermal_window
+     927     random    0.60106    1.40134       2572        213          0    repeat-8
+     617     random    1.48297    1.31459       4560        242          0    repeat-23
+     627     random    0.98707    1.70933       5125        247          0    repeat-1
+     520     random    1.19647    1.27511       8117        258          0    repeat-4
+     619     random    0.60108    1.28156       3310        196          0    repeat-8
+     905     random    0.60108    1.32690       2836        196          0    repeat-0
+     653     random    3.44371    1.52501       3552        370          0    barrier > max_thermal_window
+     765     random    0.61954    1.16848       1505        199          0    repeat-5
+     760     random    3.45931    1.56576       4431        309          0    barrier > max_thermal_window
+     858     random    0.60108    1.42141      12070        196          0    repeat-0
+     703     random    0.98707    1.22494       1645        241          0    repeat-1
+     544     random    1.48014    1.30491       5049        245          0    repeat-26
+     833     random    0.60108    1.25225       4842        196          0    repeat-8
+     846     random    3.01353    1.31876       4992        254          0    barrier > max_thermal_window
+     729     random    3.45931    1.14236       5771        273          0    barrier > max_thermal_window
+     704     random    0.60108    1.32914       3797        196          0    repeat-8
+     862     random    0.98707    1.81266       3836        258          0    repeat-15
+     707     random    1.51281    1.35228       5099        258          0    repeat-24
+     924     random    0.61954    1.16385       2686        199          0    repeat-5
+     986     random    2.10616    1.73247       2237        303          0    barrier > max_thermal_window
+     836     random    1.84620    1.34932       4072        301          0    barrier > max_thermal_window
+     642     random    0.98879    1.15857       2907        241          0    repeat-6
+     758     random    1.48297    1.55137       5442        242          0    repeat-17
+     801     random    0.61954    1.64562       5594        199          0    repeat-5
+     624     random    0.60108    1.50920       3069        196          0    repeat-8
+     606     random    0.61954    1.10780       3104        199          0    repeat-5
+     789     random    1.48014    1.21250       4740        245          0    repeat-19
+     913     random    0.00000    1.46999        549        255          0    Not Connected
+     674     random    1.61632    1.07885       7522        236          0    good-36
+     545     random    1.51192    1.56769        935        242          0    repeat-13
+     935     random    0.98563    1.25613       4844        247          0    repeat-20
+     745     random    3.44301    1.53884       3418        669          0    barrier > max_thermal_window
+     706     random    3.45874    1.24119       4740        270          0    barrier > max_thermal_window
+     851     random    0.60108    1.06674       2454        196          0    repeat-8
+     853     random    0.98879    1.07116       5047        257          0    repeat-2
+     956     random    3.69980    1.21980       3640        302          0    barrier > max_thermal_window
+     890     random    3.21465    1.43951       5126        468          0    barrier > max_thermal_window
+     655     random    1.61631    1.06606       8088        236          0    repeat-29
+     719     random    0.60108    1.39837       4269        196          0    repeat-0
+     711     random    0.61954    1.34634       3090        199          0    repeat-5
+     586     random    1.19647    1.52284       5752        258          0    repeat-22
+     541     random    1.51281    1.24547       3378        261          0    repeat-24
+     820     random    1.61448    1.12634       3237        292          0    good-37
+     931     random    1.19647    1.24682       5465        258          0    repeat-4
+     808     random    3.44371    1.28018       3616        390          0    barrier > max_thermal_window
+     737     random    1.51191    1.95938       2388        250          0    repeat-13
+     505     random    1.48014    1.27667       4654        245          0    repeat-26
+     676     random    1.51266    1.44489       6416        259          0    repeat-11
+     880     random    1.20702    1.56325       5411        253          0    repeat-18
+     892     random    3.45931    1.52605       8180        304          0    barrier > max_thermal_window
+     625     random    1.19647    1.23533       5736        258          0    repeat-4
+     797     random    1.20702    1.26260       4979        253          0    repeat-9
+     587     random    0.98880    0.92346       5437        252          0    repeat-2
+     966     random    0.98563    1.32083       2930        245          0    repeat-3
+     621     random    3.45931    1.30883       3285        289          0    barrier > max_thermal_window
+     531     random    1.19647    1.26662       8159        258          0    repeat-4
+     793     random    2.56278    1.30625       9821        242          0    barrier > max_thermal_window
+     580     random    0.98563    1.02185       3629        251          0    repeat-3
+     702     random    1.84890    1.50167       4884        299          0    barrier > max_thermal_window
+     589     random    1.20702    1.03063       2019        262          0    repeat-9
+     683     random    2.10164    1.56378       6543        267          0    barrier > max_thermal_window
+     583     random    0.98880    1.17983       3154        269          0    repeat-2
+     764     random    0.60106    1.36773       2848        224          0    repeat-0
+     744     random    0.98879    1.54285       1596        246          0    repeat-2
+     816     random    1.51191    1.17090       4286        253          0    repeat-12
+     700     random    0.61954    1.13622       2904        199          0    repeat-5
+     740     random    0.60108    1.54035       2241        196          0    repeat-0
+     504     random    0.60108    1.38931       3508        196          0    repeat-8
+     922     random    0.98563    1.33245       7105        245          0    repeat-3
+     602     random    1.20702    1.44016       5533        253          0    repeat-18
+     542     random    0.61954    1.45322       4351        199          0    repeat-5
+     937     random    1.51281    1.40773       2565        279          0    repeat-24
+     823     random    0.98707    1.02525       5600        283          0    repeat-15
+     629     random    0.60106    1.32341      10292        232          0    repeat-0
+     948     random    1.19558    1.13385       6076        268          0    repeat-10
+     984     random    0.00000    1.32540       3337        309          0    Not Connected
+     567     random    0.61954    1.28817       4913        199          0    repeat-5
+     815     random    4.18016    1.21085      10175        324          0    barrier > max_thermal_window
+     876     random    3.44301    1.31416       4071        556          0    barrier > max_thermal_window
+     640     random    3.45875    1.68978       4395        297          0    barrier > max_thermal_window
+     932     random    0.98879    1.90971       6756        257          0    repeat-6
+     698     random    3.45931    1.31304       6955        309          0    barrier > max_thermal_window
+     882     random    0.98879    1.25762       6376        241          0    repeat-6
+     930     random    3.44301    1.23495       4100        659          0    barrier > max_thermal_window
+     963     random    0.61954    1.19642       3248        199          0    repeat-5
+     616     random    1.51281    1.82939       3272        275          0    repeat-24
+     746     random    0.60108    1.44895       3516        196          0    repeat-0
+     613     random    0.61954    1.06665       3070        199          0    repeat-5
+     713     random    0.98880    1.76768       1470        256          0    repeat-2
+     507     random    0.60108    1.41865       3453        196          0    repeat-0
+     998     random    1.51191    1.27517       3126        238          0    repeat-13
+     547     random    0.98707    1.60817       3332        247          0    repeat-1
+     950     random    1.19558    1.61005       6019        268          0    repeat-10
+     870     random    1.20702    1.22312       6343        253          0    repeat-18
+     728     random    4.23412    1.43219       2873        267          0    barrier > max_thermal_window
+     809     random    0.98563    1.18203       5758        238          0    repeat-3
+     994     random    0.61958    1.08318       3211        206          0    repeat-5
+     605     random    0.61954    1.12385       2985        199          0    repeat-5
+     926     random    0.60108    1.30720       2864        196          0    repeat-8
+     835     random    1.61549    1.61699       7647        257          0    repeat-30
+     637     random    1.20702    1.11292       4529        253          0    repeat-9
+     669     random    4.20362    1.48512       1543        251          0    barrier > max_thermal_window
+     857     random    1.19558    1.30139       5485        268          0    repeat-25
+     514     random    0.98880    1.27452       2390        262          0    repeat-6
+     718     random    1.49349    1.29956       7357        320          0    good-38
+     884     random    1.51192    1.54714        899        225          0    repeat-12
+     533     random    0.00000    1.60688        489        270          0    Not Connected
+     570     random    3.45874    1.47243       5586        270          0    barrier > max_thermal_window
+     552     random    0.61954    1.38643       2849        199          0    repeat-5
+     864     random    3.44368    1.07450       4129        361          0    barrier > max_thermal_window
+     668     random    1.99380    1.51174       1521        295          0    barrier > max_thermal_window
+     992     random    0.60108    0.95596       5594        196          0    repeat-8
+     901     random    1.51266    1.53811       2630        291          0    repeat-27
+     603     random    1.19647    1.38717       5355        258          0    repeat-22
+     530     random    1.51192    1.35058       1779        227          0    repeat-12
+     678     random    1.51192    1.16609       3634        229          0    repeat-12
+     973     random    3.41051    1.19959       5432        331          0    barrier > max_thermal_window
+     939     random    1.20702    1.48860       5682        253          0    repeat-18
+     556     random    0.60108    1.08327       5200        196          0    repeat-0
+     572     random    4.20343    1.20799       4648        271          0    barrier > max_thermal_window
+     705     random    0.60108    1.13072       3234        196          0    repeat-8
+     701     random    0.60108    1.28847       1978        196          0    repeat-8
+     872     random    4.21471    1.73725       2034        269          0    barrier > max_thermal_window
+     540     random    4.19838    1.61271      13440        331          0    barrier > max_thermal_window
+     532     random    3.44368    1.86639       3167        355          0    barrier > max_thermal_window
+     560     random    0.98707    0.99428       4659        266          0    repeat-1
+     690     random    0.61954    1.36789       2355        199          0    repeat-5
+     925     random    1.48056    1.09082       4637        238          0    repeat-7
+     827     random    1.20702    1.22599       6022        253          0    repeat-18
+     601     random    4.19347    1.86813       2171        336          0    barrier > max_thermal_window
+     804     random    3.44368    1.32537       3216        379          0    barrier > max_thermal_window
+     861     random    3.44368    0.97416       3826        383          0    barrier > max_thermal_window
+     942     random    1.61549    1.02303       5587        257          0    repeat-30
+     735     random    0.61954    1.58850       2750        199          0    repeat-5
+     742     random    0.98879    1.54606       3069        264          0    repeat-2
+     684     random    0.60108    1.34412       5456        196          0    repeat-8
+     663     random    3.45931    1.40475       2890        285          0    barrier > max_thermal_window
+     917     random    4.20361    1.40008       4313        268          0    barrier > max_thermal_window
+     506     random    0.98707    1.49932       5951        247          0    repeat-15
+     577     random    3.45841    1.55592       5904        265          0    barrier > max_thermal_window
+     571     random    2.10164    1.37721       4096        292          0    barrier > max_thermal_window
+     512     random    0.61954    1.17338       2855        199          0    repeat-5
+     791     random    2.10126    0.96777       4031        263          0    barrier > max_thermal_window
+     651     random    1.61547    1.15099       3602        327          0    repeat-35
+     996     random    0.60108    1.39819       2244        196          0    repeat-0
+     543     random    0.60108    1.48475       3636        196          0    repeat-0
+     878     random    3.44368    1.42143       3981        388          0    barrier > max_thermal_window
+     645     random    3.44301    1.54662       3604        587          0    barrier > max_thermal_window
+     824     random    4.20362    1.51066       1688        256          0    barrier > max_thermal_window
+     759     random    0.60106    1.20944       3100        204          0    repeat-8
+     747     random    1.51268    1.43486        530        235          0    repeat-11
+     608     random    1.19647    1.35151       5145        258          0    repeat-4
+     993     random    0.98707    1.38769       4214        244          0    repeat-15
+     881     random    4.18016    1.61071       2930        333          0    barrier > max_thermal_window
+     821     random    1.19647    1.19291       5610        258          0    repeat-4
+     536     random    0.60108    1.40053       3484        196          0    repeat-0
+     899     random    0.98563    1.17747       6914        245          0    repeat-3
+     516     random    1.51281    1.47410       3050        250          0    repeat-24
+     681     random    0.60106    1.19992       3361        213          0    repeat-0
+     871     random    1.20702    1.28252       5798        253          0    repeat-18
+     679     random    0.98879    1.47244       4595        245          0    repeat-6
+     579     random    2.08535    1.20073       7649        332          0    barrier > max_thermal_window
+     590     random    0.98880    1.67298       4671        263          0    repeat-2
+     652     random    0.60108    1.60931       5919        196          0    repeat-0
+     722     random    1.51266    1.45020       3499        265          0    repeat-27
+     521     random    0.60108    1.56130       2726        196          0    repeat-0
+     910     random    3.45874    1.16468       5559        270          0    barrier > max_thermal_window
+     914     random    3.45874    1.11499       4582        320          0    barrier > max_thermal_window
+     671     random    1.19647    1.36521       8770        258          0    repeat-4
+     867     random    0.98707    1.11942       4716        267          0    repeat-1
+     784     random    1.20702    1.37975       6423        253          0    repeat-9
+     911     random    0.60108    1.21524       3134        196          0    repeat-0
+     781     random    0.98879    1.18379       4962        253          0    repeat-2
+     807     random    3.45875    1.36429       7193        298          0    barrier > max_thermal_window
+     555     random    0.61954    1.29765       3387        199          0    repeat-5
+     944     random    3.44368    1.46716       3087        345          0    barrier > max_thermal_window
+     828     random    3.45931    1.49170       5327        278          0    barrier > max_thermal_window
+     578     random    0.98879    1.21147       4596        247          0    repeat-2
+     806     random    2.15702    1.37754       1344        276          0    barrier > max_thermal_window
+     834     random    1.20702    1.19275       5191        253          0    repeat-9
+     708     random    0.60106    1.27796       4879        237          0    repeat-8
+     891     random    0.60108    1.47666       2546        196          0    repeat-8
+     896     random    1.51267    0.96234       2299        232          0    repeat-27
+     919     random    0.61954    1.27033       5093        199          0    repeat-5
+     850     random    0.60108    1.51734       3766        196          0    repeat-0
+     724     random    0.98563    1.74633       4369        241          0    repeat-20
+     762     random    0.61954    1.21018       2706        209          0    repeat-5
+     877     random    2.10164    1.41349       6746        267          0    barrier > max_thermal_window
+     976     random    0.60108    1.29592       3581        196          0    repeat-8
+     810     random    1.48014    1.47091       4669        245          0    repeat-26
+     628     random    0.60108    1.26743       4015        196          0    repeat-0
+     739     random    0.60108    1.08193       3044        196          0    repeat-8
+     841     random    0.60108    1.39404       4313        196          0    repeat-0
+     503     random    0.98879    1.37747       4214        255          0    repeat-6
+     596     random    3.44371    1.37637       3280        370          0    barrier > max_thermal_window
+     873     random    1.20702    1.04431       5530        253          0    repeat-9
+     863     random    1.19558    1.09578       5051        268          0    repeat-10
+     923     random    3.44371    1.09852       3538        437          0    barrier > max_thermal_window
+     720     random    0.60108    1.76578       2268        196          0    repeat-0
+     591     random    1.51192    1.36260       2573        229          0    repeat-12
+     885     random    0.98880    1.25050       3993        252          0    repeat-2
+     773     random    1.48297    1.30226       4685        242          0    repeat-17
+     771     random    1.51191    1.37427       3007        251          0    repeat-13
+     508     random    0.60108    1.31517       3564        196          0    repeat-0
+     716     random    1.51266    1.09014       3357        262          0    repeat-11
+     962     random    1.51282    1.17301       2045        221          0    repeat-21
+     654     random    1.48297    1.42974       4422        242          0    repeat-23
+     741     random    0.61954    1.23748       3232        199          0    repeat-5
+     960     random    1.48014    1.55798       4969        245          0    repeat-26
+     941     random    1.48014    1.09346       4783        245          0    repeat-26
+     680     random    1.19558    1.45112       5788        268          0    repeat-25
+     989     random    0.60108    1.22551       3131        196          0    repeat-8
+     557     random    0.61954    1.68551       3974        200          0    repeat-5
+     818     random    0.60108    1.16686       4043        196          0    repeat-8
+     510     random    0.60108    1.32719       2768        196          0    repeat-8
+     844     random    0.98880    1.20211       4430        249          0    repeat-2
+     977     random    1.48297    1.75743       4301        242          0    repeat-23
+     814     random    0.60108    0.98922       3278        196          0    repeat-0
+     819     random    1.19647    1.43465       6778        258          0    repeat-4
+     620     random    0.61954    1.68239       3687        199          0    repeat-5
+     940     random    0.60108    1.47436       2743        196          0    repeat-0
+     943     random    0.98563    1.08368       2461        250          0    repeat-3
+     721     random    3.45874    1.53309       3262        322          0    barrier > max_thermal_window
+     949     random    3.44371    1.11762       3229        386          0    barrier > max_thermal_window
+     874     random    0.98563    1.20138       2856        245          0    repeat-3
+     955     random    3.45841    1.49703       3256        299          0    barrier > max_thermal_window
+     845     random    0.60108    1.53249       2509        196          0    repeat-8
+     783     random    0.61954    1.02395       3109        245          0    repeat-5
+     657     random    0.60108    1.05863       2818        196          0    repeat-0
+     946     random    1.19647    1.51007       5843        258          0    repeat-22
+     631     random    0.98707    1.36396       3606        247          0    repeat-15
+     951     random    1.51192    1.04100        984        235          0    repeat-13
+     981     random    1.51266    1.47376       4269        230          0    repeat-27
+     954     random    1.19558    1.77133       5403        268          0    repeat-25
+     537     random    0.60108    1.35696       2246        196          0    repeat-8
+     829     random    2.18131    1.39941       3229        267          0    barrier > max_thermal_window
+     886     random    0.98879    1.20118       4216        257          0    repeat-6
+     563     random    0.60108    1.63942       3286        196          0    repeat-0
+     967     random    3.44367    1.48493       4124        370          0    barrier > max_thermal_window
+     599     random    1.51281    1.34169       2752        276          0    repeat-24
+     517     random    0.60108    1.27935       3277        196          0    repeat-0
+     869     random    1.19647    1.59472       5490        258          0    repeat-4
+     682     random    1.20702    1.18612       5687        253          0    repeat-18
+     615     random    0.61954    0.93420       3193        199          0    repeat-5
+     736     random    3.45876    1.75525        756        296          0    barrier > max_thermal_window
+     800     random    0.98880    1.38248       1554        250          0    repeat-2
+     938     random    1.19647    1.29571       5762        258          0    repeat-4
+     650     random    0.98563    1.41461       1531        250          0    repeat-3
+     731     random    0.98707    1.33379       4736        244          0    repeat-15
+     757     random    1.19558    1.02277       7294        268          0    repeat-25
+     639     random    0.61954    1.36107       4682        199          0    repeat-5
+     787     random    1.19648    1.31755       3277        299          0    repeat-22
+     777     random    4.20343    1.27444        771        264          0    barrier > max_thermal_window
+     597     random    1.19647    1.19786       2114        267          0    repeat-22
+     501     random    4.20362    1.75525       3274        303          0    barrier > max_thermal_window
+     594     random    1.61632    1.32634      10542        236          0    repeat-36
+     519     random    1.51267    1.55065       2649        219          0    repeat-11
+     696     random    4.21469    1.36485       4907        277          0    barrier > max_thermal_window
+     686     random    0.98879    1.35215       4694        250          0    repeat-2
+     964     random    3.45874    1.46064       6336        271          0    barrier > max_thermal_window
+     522     random    1.19647    1.51119       4773        258          0    repeat-4
+     526     random    0.98707    1.55467       5398        247          0    repeat-1
+     975     random    0.98879    1.23168       2977        257          0    repeat-2
+     593     random    0.61954    1.64828       3166        199          0    repeat-5
+     855     random    3.21462    1.27979       3859        277          0    barrier > max_thermal_window
+     767     random    1.19558    1.23673       6321        268          0    repeat-25
+     665     random    1.51282    1.32648       3078        221          0    repeat-24
+     904     random    4.19347    1.24984       2656        324          0    barrier > max_thermal_window
+     912     random    0.98563    1.30183       6761        235          0    repeat-3
+     502     random    4.20341    1.18759       5580        272          0    barrier > max_thermal_window
+     798     random    2.71930    1.35230       8344        450          0    barrier > max_thermal_window
+     692     random    0.60108    1.40256       1963        196          0    repeat-0
+     796     random    0.61955    1.42957       4215        202          0    repeat-5
+     573     random    0.98879    1.29675       3129        246          0    repeat-2
+     632     random    0.60108    0.95390       2923        196          0    repeat-8
+     916     random    0.61954    1.46116       2898        199          0    repeat-5
+     959     random    1.51191    1.49264       3000        305          0    repeat-12
+     691     random    1.48014    1.54319       3275        245          0    repeat-26
+     842     random    0.61954    1.40883       2522        199          0    repeat-5
+     644     random    0.60108    1.23587       3567        196          0    repeat-0
+     957     random    0.98707    1.38230       3556        247          0    repeat-15
+     574     random    0.61957    1.30247       2229        201          0    repeat-5
+     961     random    0.60108    1.44585       6913        196          0    repeat-8
+     734     random    3.45874    1.58954       9439        296          0    barrier > max_thermal_window
+     999     random    3.44368    1.26576       4605        379          0    barrier > max_thermal_window
+     991     random    0.98879    1.46667       4972        257          0    repeat-2
+     670     random    0.60108    1.38943       3839        196          0    repeat-0
+     929     random    0.60108    1.44640       3993        196          0    repeat-0
+     970     random    3.45931    1.36564       4563        309          0    barrier > max_thermal_window
+     546     random    0.61954    1.18380       4848        199          0    repeat-5
+     902     random    3.45931    1.35592       6246        258          0    barrier > max_thermal_window
+     895     random    1.61448    1.01082       4960        369          0    repeat-14
+     936     random    2.10164    1.25917       4890        267          0    barrier > max_thermal_window
+     953     random    4.21471    1.43989       2087        267          0    barrier > max_thermal_window
+     832     random    1.48297    1.50393       4594        242          0    repeat-23
+     500     random    1.49349    1.25738       4011        268          0    repeat-33
+     837     random    1.19647    1.33374       5788        258          0    repeat-4
+     561     random    1.51267    1.00244       6261        219          0    repeat-27
+     802     random    0.60108    1.38263       2888        196          0    repeat-0
+     997     random    0.60108    1.16534       2770        196          0    repeat-0
+     928     random    1.19558    1.35167       5629        268          0    repeat-25
+     825     random    1.19558    1.61775       5586        268          0    repeat-10
+     559     random    1.48297    1.19192       4493        242          0    repeat-17
+     612     random    1.19647    1.04830       5491        258          0    repeat-4
+     523     random    0.98563    1.42900       1136        250          0    repeat-20
+     995     random    1.48297    1.41241       4556        242          0    repeat-23
+     581     random    0.60108    1.21736       3623        196          0    repeat-8
+     918     random    1.19647    1.50537       5675        258          0    repeat-22
+     600     random    1.51266    1.27348       3126        275          0    repeat-27
+     903     random    0.60108    0.91360       4092        196          0    repeat-8
+     723     random    0.60108    1.46334       5600        196          0    repeat-8
+     769     random    0.98563    1.17977       4025        252          0    repeat-3
+     752     random    1.19647    1.16529       5095        258          0    repeat-4
+     788     random    0.60108    1.43394       3569        196          0    repeat-0
+     813     random    0.98707    1.51691       3728        240          0    repeat-1
+     868     random    1.19647    1.35357       3978        258          0    repeat-22
+     849     random    0.61954    1.30187       2596        199          0    repeat-5
+     750     random    0.98563    1.43413       2395        251          0    repeat-20
+     598     random    1.19647    1.17987       5325        258          0    repeat-22
+     790     random    2.10128    1.42782       3530        303          0    barrier > max_thermal_window
+     987     random    1.20702    1.08348       4967        253          0    repeat-18
+     558     random    0.60108    1.40040       5565        196          0    repeat-8
+     812     random    0.98879    1.34886       4884        264          0    repeat-2
+     990     random    1.20702    0.87738       6414        253          0    repeat-18
+     672     random    0.60108    1.30150       3329        196          0    repeat-0
+     738     random    1.20702    1.06034       5996        253          0    repeat-9
+     688     random    1.20702    0.95250       5353        253          0    repeat-18
+     792     random    0.98879    1.47077       3923        259          0    repeat-2
+     689     random    0.60108    0.85075       2962        196          0    repeat-8
+     915     random    1.48014    1.36961       3593        245          0    repeat-26
+     786     random    1.19647    1.18203       5833        258          0    repeat-4
+     623     random    4.24927    1.12500       5945        293          0    barrier > max_thermal_window
+     641     random    1.48297    1.33006       6148        242          0    repeat-17
+     856     random    1.51267    1.23953       3706        219          0    repeat-27
+     772     random    0.98707    1.45464       3406        240          0    repeat-15
+     921     random    1.51192    1.62398       2376        229          0    repeat-12
+     687     random    0.60108    1.60436       3136        233          0    repeat-8
+     795     random    1.19647    1.23974       6532        258          0    repeat-4
+     664     random    3.41210    1.52552       4276        348          0    barrier > max_thermal_window
+     887     random    0.60106    1.52130       3244        244          0    repeat-8
+     751     random    0.60108    1.20531       2854        196          0    repeat-8
+     883     random    0.60108    1.39997       6014        196          0    repeat-0
+     513     random    0.60108    1.57957       5067        196          0    repeat-0
+     515     random    0.60108    1.71866       3230        196          0    repeat-0
+     785     random    0.61954    1.68757       2102        199          0    repeat-5
+     897     random    0.98880    1.30122       2161        250          0    repeat-2
+     585     random    2.10616    1.86133      12261        281          0    barrier > max_thermal_window
+     969     random    0.60108    0.96845       1648        196          0    repeat-8
+     988     random    0.60108    1.39399       8543        196          0    repeat-8
+     822     random    0.98879    1.41781       1492        253          0    repeat-6
+     633     random    1.48014    1.50694       4245        245          0    repeat-26
+     693     random    0.61954    1.36638       2726        199          0    repeat-5
+     826     random    3.45931    1.30351       3527        290          0    barrier > max_thermal_window
+     554     random    0.61954    1.73405       3089        199          0    repeat-5
+     817     random    0.98879    1.61206       6029        255          0    repeat-2
+     609     random    1.20702    1.13934       5493        253          0    repeat-9
+     551     random    1.19558    1.28530       5766        268          0    repeat-10
+    1007     random    0.61954    1.07504       2069        199          0    repeat-5
+    1203     random    1.19647    1.09170       5656        258          0    repeat-22
+    1392     random    0.60108    1.32532       3184        196          0    repeat-0
+    1431     random    0.60108    1.67529       6387        196          0    repeat-0
+    1463     random    3.45931    1.16031       3960        321          0    barrier > max_thermal_window
+    1429     random    0.60108    1.30864       3150        196          0    repeat-0
+    1249     random    0.98563    1.19084       2506        251          0    repeat-20
+    1189     random    0.00000    1.12129         85        259          0    Not Connected
+    1248     random    1.19647    1.26992       5678        258          0    repeat-22
+    1425     random    0.60108    1.56029       2205        196          0    repeat-8
+    1088     random    1.19558    1.44513       5968        268          0    repeat-10
+    1303     random    0.98563    1.48111       1618        250          0    repeat-3
+    1269     random    1.51282    1.39668       2994        221          0    repeat-21
+    1366     random    0.60108    1.42245       3013        196          0    repeat-0
+    1413     random    1.51191    1.77242       4691        233          0    repeat-13
+    1383     random    0.98707    1.45935       3526        247          0    repeat-15
+    1172     random    0.61954    1.13015       1842        195          0    repeat-5
+    1049     random    4.20361    1.66309        709        252          0    barrier > max_thermal_window
+    1417     random    1.48056    1.12757       4571        238          0    repeat-31
+    1170     random    1.51282    1.16735       3076        233          0    repeat-24
+    1105     random    3.41040    1.68627       4085        563          0    barrier > max_thermal_window
+    1113     random    1.19558    1.48448       6015        268          0    repeat-25
+    1361     random    3.45874    1.33765       6037        271          0    barrier > max_thermal_window
+    1238     random    1.20702    1.45854       3418        253          0    repeat-18
+    1054     random    0.61954    1.54337       1636        199          0    repeat-5
+    1378     random    3.45841    1.26231       3516        373          0    barrier > max_thermal_window
+    1307     random    0.98879    1.19772       3276        257          0    repeat-6
+    1065     random    0.61954    1.21447       4071        199          0    repeat-5
+    1209     random    0.98879    1.53675       3703        257          0    repeat-6
+    1329     random    1.20702    1.20050       5742        253          0    repeat-9
+    1128     random    0.60108    1.62980       2673        196          0    repeat-8
+    1073     random    1.51266    1.40333       3502        249          0    repeat-11
+    1488     random    1.51191    1.45736       9107        285          0    repeat-13
+    1060     random    0.60108    1.33425       2911        196          0    repeat-8
+    1035     random    1.61448    1.12691       2741        271          0    repeat-37
+    1206     random    0.98880    1.58855       2215        262          0    repeat-6
+    1185     random    0.98879    1.04700       5555        257          0    repeat-6
+    1196     random    3.41052    1.77636       3219        365          0    barrier > max_thermal_window
+    1191     random    1.51281    1.40258       7683        259          0    repeat-21
+    1173     random    4.20343    1.77417       4079        271          0    barrier > max_thermal_window
+    1451     random    1.48297    1.56824       5827        242          0    repeat-17
+    1074     random    1.51191    1.07513       7822        256          0    repeat-12
+    1428     random    0.60108    1.06532       6012        196          0    repeat-0
+    1391     random    0.98879    1.16312       3300        247          0    repeat-2
+    1363     random    1.19558    1.35097       5751        268          0    repeat-25
+    1418     random    2.10616    1.45410       6099        281          0    barrier > max_thermal_window
+    1050     random    4.20343    1.56891       2754        264          0    barrier > max_thermal_window
+    1252     random    0.61956    1.02025       5643        199          0    repeat-5
+    1262     random    4.20343    1.09430        766        264          0    barrier > max_thermal_window
+    1063     random    0.98707    1.31374       4179        247          0    repeat-1
+    1450     random    1.61450    1.69121       7200        225          0    repeat-14
+    1149     random    1.19647    1.77010       5477        258          0    repeat-22
+    1352     random    0.61954    1.36415       5095        199          0    repeat-5
+    1193     random    0.60108    1.58551       2594        196          0    repeat-8
+    1375     random    3.45874    1.41514       5398        271          0    barrier > max_thermal_window
+    1334     random    3.44368    1.26548       4729        438          0    barrier > max_thermal_window
+    1045     random    1.51266    0.84498       2801        283          0    repeat-11
+    1247     random    0.60108    1.12844       3249        196          0    repeat-0
+    1161     random    3.44371    1.31970       3559        378          0    barrier > max_thermal_window
+    1296     random    4.24427    1.67107       4378        284          0    barrier > max_thermal_window
+    1465     random    0.98563    1.00093       5001        244          0    repeat-20
+    1445     random    1.51191    1.57971       2977        258          0    repeat-13
+    1156     random    2.10164    1.96826       8120        268          0    barrier > max_thermal_window
+    1322     random    1.51281    1.58115       2857        274          0    repeat-21
+    1202     random    1.51267    1.40156       1025        233          0    repeat-27
+    1412     random    3.41210    1.43068      17978        360          0    barrier > max_thermal_window
+    1321     random    0.98563    1.26927       4132        252          0    repeat-20
+    1485     random    0.98563    1.17363       7499        245          0    repeat-3
+    1338     random    1.51281    1.51332       2479        242          0    repeat-24
+    1051     random    0.98563    1.62773       4099        250          0    repeat-3
+    1216     random    0.61954    1.60139       1784        199          0    repeat-5
+    1348     random    0.61954    1.44827       3185        199          0    repeat-5
+    1120     random    1.51281    1.28551       3336        270          0    repeat-24
+    1251     random    1.51191    1.57386       3234        250          0    repeat-12
+    1015     random    1.51282    1.26974       3284        221          0    repeat-24
+    1389     random    0.61954    1.39243       2731        199          0    repeat-5
+    1142     random    0.60108    1.04796       5371        196          0    repeat-0
+    1365     random    1.51281    1.53301       2838        268          0    repeat-24
+    1175     random    1.51191    1.42685       3711        242          0    repeat-12
+    1057     random    3.45841    1.17305       3386        327          0    barrier > max_thermal_window
+    1084     random    1.19647    1.64339       5785        258          0    repeat-4
+    1298     random    0.60108    1.86410       2944        196          0    repeat-0
+    1493     random    0.61954    1.49911       3049        199          0    repeat-5
+    1477     random    0.98563    1.26848       1573        250          0    repeat-3
+    1430     random    1.19647    1.06063       5251        258          0    repeat-4
+    1481     random    2.10164    1.19143      18087        290          0    barrier > max_thermal_window
+    1135     random    0.61954    1.36457       4459        199          0    repeat-5
+    1328     random    3.41040    1.19010       3390        550          0    barrier > max_thermal_window
+    1317     random    0.60108    1.31024       2604        196          0    repeat-8
+    1273     random    0.98707    1.32603        957        242          0    repeat-1
+    1137     random    0.98879    1.33671       5155        257          0    repeat-2
+    1188     random    0.60106    1.47444       3416        237          0    repeat-8
+    1377     random    1.51281    1.88736       2611        276          0    repeat-24
+    1190     random    0.98707    1.16831       1611        240          0    repeat-1
+    1095     random    0.98707    1.17555       3980        240          0    repeat-15
+    1382     random    0.98563    1.39288       3280        245          0    repeat-3
+    1405     random    0.60108    0.97947       3229        196          0    repeat-0
+    1091     random    0.98707    1.26790       4153        240          0    repeat-15
+    1476     random    2.27287    1.68170       1699        274          0    barrier > max_thermal_window
+    1211     random    1.20702    1.20051       5350        253          0    repeat-9
+    1395     random    3.45931    1.34558       6051        273          0    barrier > max_thermal_window
+    1069     random    0.61954    1.18434       2380        199          0    repeat-5
+    1422     random    0.98879    1.30426       1655        259          0    repeat-2
+    1093     random    1.48056    1.29273       4601        238          0    repeat-7
+    1047     random    0.61954    1.28492       2363        199          0    repeat-5
+    1487     random    2.10126    0.89933       1442        311          0    barrier > max_thermal_window
+    1192     random    0.61954    1.55190       2531        227          0    repeat-5
+    1052     random    0.60108    1.64800       2056        196          0    repeat-8
+    1024     random    0.60108    1.75835       3429        196          0    repeat-8
+    1286     random    0.61954    1.23544       2785        199          0    repeat-5
+    1288     random    0.60108    1.51450       3285        196          0    repeat-8
+    1233     random    2.10126    1.60060       8391        263          0    barrier > max_thermal_window
+    1232     random    1.51192    0.91192       2660        229          0    repeat-12
+    1159     random    0.98707    1.12823       4678        235          0    repeat-15
+    1473     random    1.19647    1.32419       5338        258          0    repeat-22
+    1439     random    4.44284    1.04189       3641        245          0    barrier > max_thermal_window
+    1122     random    1.51192    1.25762        776        250          0    repeat-12
+    1342     random    3.45931    1.47384       5690        281          0    barrier > max_thermal_window
+    1362     random    0.98707    1.21927       3721        247          0    repeat-15
+    1048     random    0.98563    1.10076       5085        277          0    repeat-20
+    1067     random    0.60106    1.40214       6969        224          0    repeat-0
+    1163     random    0.98563    0.94958       2493        251          0    repeat-3
+    1134     random    1.51281    1.52776       3537        274          0    repeat-21
+    1164     random    3.45841    1.06039       6227        265          0    barrier > max_thermal_window
+    1292     random    0.98563    1.47102       3316        250          0    repeat-20
+    1089     random    0.98707    1.09403       6039        247          0    repeat-1
+    1443     random    3.45931    1.60267       2987        308          0    barrier > max_thermal_window
+    1112     random    3.41040    1.41015       4975        566          0    barrier > max_thermal_window
+    1023     random    1.20702    1.55741       5842        253          0    repeat-18
+    1136     random    3.41210    1.26298       4748        355          0    barrier > max_thermal_window
+    1092     random    0.98707    1.55407       2896        240          0    repeat-15
+    1402     random    0.00000    1.24997        444        249          0    Not Connected
+    1409     random    0.60108    1.23230       2861        196          0    repeat-0
+    1380     random    1.19647    1.42109       5819        258          0    repeat-22
+    1182     random    0.60106    0.96678       3516        243          0    repeat-8
+    1437     random    1.51191    1.54241       4034        311          0    repeat-13
+    1184     random    1.20702    1.05108       5535        253          0    repeat-18
+    1117     random    0.98880    1.09052       3316        268          0    repeat-2
+    1359     random    3.44367    1.18828       3671        320          0    barrier > max_thermal_window
+    1076     random    1.48056    1.70017       4024        238          0    repeat-31
+    1360     random    1.51281    1.36441       3387        297          0    repeat-21
+    1480     random    0.60108    1.51881       3408        196          0    repeat-0
+    1151     random    0.98707    1.55675       2455        240          0    repeat-1
+    1165     random    0.98707    1.20879       4718        261          0    repeat-1
+    1254     random    0.60108    1.48864       5850        196          0    repeat-0
+    1075     random    0.60108    1.50265       3313        196          0    repeat-8
+    1144     random    1.48014    1.55836       4677        245          0    repeat-26
+    1390     random    0.98563    1.59146       4222        261          0    repeat-20
+    1475     random    3.45841    1.30282       2023        287          0    barrier > max_thermal_window
+    1080     random    0.98879    1.45781       4961        268          0    repeat-2
+    1470     random    0.98563    1.39553       4767        240          0    repeat-20
+    1176     random    0.61954    1.70191       2898        199          0    repeat-5
+    1108     random    0.60108    1.27708       3597        196          0    repeat-8
+    1005     random    0.98879    1.30136       5421        252          0    repeat-2
+    1229     random    1.51266    1.63998       3855        289          0    repeat-11
+    1314     random    0.60108    1.63751       3742        196          0    repeat-0
+    1059     random    0.98879    1.44203       3639        253          0    repeat-2
+    1452     random    0.98707    1.22888       3473        247          0    repeat-1
+    1347     random    1.51266    1.43543       3019        252          0    repeat-27
+    1442     random    0.98563    1.46450       3544        245          0    repeat-20
+    1289     random    1.51192    1.36827       4332        229          0    repeat-12
+    1002     random    0.61954    1.42668       3604        199          0    repeat-5
+    1180     random    1.19647    1.41045       3527        258          0    repeat-22
+    1346     random    0.60108    1.62308       1836        196          0    repeat-8
+    1090     random    0.60108    0.94987       2965        196          0    repeat-8
+    1446     random    1.51282    1.15574       3460        221          0    repeat-21
+    1234     random    1.51192    1.29869       2824        229          0    repeat-12
+    1301     random    1.19647    1.62647       5681        258          0    repeat-22
+    1116     random    1.51281    1.51374       3937        251          0    repeat-24
+    1426     random    1.19558    1.48988       5791        268          0    repeat-10
+    1325     random    1.51266    1.41949       2959        260          0    repeat-11
+    1308     random    0.98879    1.30037       5749        257          0    repeat-6
+    1152     random    0.98880    1.56692       1223        248          0    repeat-2
+    1293     random    1.19557    1.14752       1148        249          0    repeat-25
+    1123     random    0.61954    1.25221       5084        199          0    repeat-5
+    1333     random    0.61954    1.47645       2464        199          0    repeat-5
+    1265     random    1.19647    1.54647       6811        258          0    repeat-4
+    1433     random    0.98563    1.15388       3424        250          0    repeat-20
+    1379     random    3.45931    1.62047       3920        334          0    barrier > max_thermal_window
+    1083     random    1.48297    1.42752       3301        242          0    repeat-17
+    1000     random    0.60108    1.11594       7872        196          0    repeat-0
+    1121     random    0.61954    1.45985       2626        199          0    repeat-5
+    1077     random    3.45931    1.32641       5786        273          0    barrier > max_thermal_window
+    1032     random    1.19647    1.30837       5867        258          0    repeat-4
+    1335     random    0.98707    1.24502       3653        247          0    repeat-15
+    1003     random    1.19558    1.16375       5380        268          0    repeat-25
+    1018     random    4.18016    1.54411       2972        385          0    barrier > max_thermal_window
+    1284     random    0.98563    1.16718       5734        278          0    repeat-20
+    1066     random    1.51281    0.94857       3589        253          0    repeat-24
+    1324     random    1.51281    1.50131       2683        255          0    repeat-24
+    1079     random    0.61954    1.58602       1698        199          0    repeat-5
+    1318     random    0.98707    1.24648       2616        238          0    repeat-15
+    1277     random    1.51267    1.11913       3432        233          0    repeat-11
+    1268     random    1.20702    1.27238       6213        253          0    repeat-18
+    1014     random    4.43618    1.28431      12610        388          0    barrier > max_thermal_window
+    1013     random    0.60108    1.21717       3510        196          0    repeat-0
+    1131     random    0.61956    1.56146       3023        200          0    repeat-5
+    1021     random    0.60108    1.60923       2965        196          0    repeat-0
+     550     random    8.01242    1.03004      30001        324          0    barrier > max_thermal_window
+    1444     random    0.61954    1.43739       2603        199          0    repeat-5
+    1427     random    0.00000    1.14165         48        255          0    Not Connected
+    1179     random    2.10126    1.25132       3964        263          0    barrier > max_thermal_window
+    1208     random    0.98563    1.41524       4014        245          0    repeat-3
+    1305     random    1.48297    1.11817       4534        242          0    repeat-17
+    1306     random    1.51191    1.45273       2592        240          0    repeat-13
+    1169     random    0.98563    1.52354       2972        245          0    repeat-20
+    1072     random    0.98879    1.40150       1606        250          0    repeat-6
+    1369     random    0.98563    1.75090       4719        248          0    repeat-20
+    1101     random    1.51281    1.23150       2393        258          0    repeat-24
+    1464     random    0.61957    1.65243       2669        202          0    repeat-5
+    1399     random    0.61954    1.59962       4083        199          0    repeat-5
+    1283     random    0.60108    1.18487       3179        196          0    repeat-8
+    1256     random    1.51267    1.27386       3430        245          0    repeat-11
+    1031     random    0.60108    1.43551       1621        196          0    repeat-0
+    1323     random    0.61954    1.08509       6345        210          0    repeat-5
+    1374     random    1.19647    1.46190       5535        258          0    repeat-4
+    1356     random    0.60108    1.35905       6021        196          0    repeat-0
+    1421     random    3.45874    1.61967       3194        306          0    barrier > max_thermal_window
+    1394     random    0.60108    1.23186       3260        196          0    repeat-0
+    1171     random    0.98563    1.32945       3266        251          0    repeat-3
+    1327     random    3.45874    1.26551       3472        304          0    barrier > max_thermal_window
+    1457     random    1.51266    1.23186       3013        271          0    repeat-11
+    1300     random    0.60108    1.03435       5964        196          0    repeat-8
+    1302     random    0.98563    1.18689       4478        254          0    repeat-3
+    1160     random    0.98879    1.46845       4887        265          0    repeat-2
+    1343     random    0.98707    1.24448       2719        247          0    repeat-1
+    1398     random    1.51192    1.40101       3961        244          0    repeat-12
+    1118     random    2.10126    1.15437       5890        299          0    barrier > max_thermal_window
+    1279     random    0.61954    1.21359       2734        199          0    repeat-5
+    1345     random    0.98707    1.57162       3037        247          0    repeat-15
+    1330     random    1.48056    1.66455       4685        238          0    repeat-31
+    1466     random    3.21465    1.45376       9404        469          0    barrier > max_thermal_window
+    1212     random    1.61632    1.01704       5742        236          0    repeat-36
+    1349     random    1.48014    1.58877       4658        245          0    repeat-26
+    1410     random    0.98879    1.37810       5378        252          0    repeat-2
+    1368     random    3.41051    1.32652       5333        372          0    barrier > max_thermal_window
+    1146     random    0.61954    1.51908       2388        199          0    repeat-5
+    1388     random    1.51266    1.10724       2910        256          0    repeat-27
+    1039     random    1.48056    0.96093       4541        238          0    repeat-7
+    1411     random    0.98563    1.11666       4456        252          0    repeat-3
+    1246     random    3.45874    1.17538       5561        270          0    barrier > max_thermal_window
+    1042     random    0.60108    1.23948       4745        196          0    repeat-0
+    1315     random    1.51267    1.64618       3526        219          0    repeat-11
+    1471     random    0.60108    1.27555       3006        196          0    repeat-8
+    1219     random    4.19838    1.44137       3238        336          0    barrier > max_thermal_window
+    1099     random    0.61954    1.28707       3120        199          0    repeat-5
+    1278     random    1.48297    1.35462       4432        242          0    repeat-17
+    1351     random    1.61549    1.10753       4786        257          0    repeat-30
+    1271     random    1.20702    1.21280       5903        253          0    repeat-18
+    1181     random    1.48297    0.96495       4350        242          0    repeat-23
+    1239     random    0.60108    0.97119       1714        196          0    repeat-8
+    1242     random    0.61954    1.04954       3233        199          0    repeat-5
+    1281     random    1.48297    1.71806       3379        242          0    repeat-17
+    1036     random    0.61954    1.47825       5042        199          0    repeat-5
+    1098     random    1.61448    1.49868       4204        259          0    repeat-14
+    1130     random    0.98707    1.42246       4111        247          0    repeat-15
+    1174     random    3.44368    1.10045       6200        395          0    barrier > max_thermal_window
+    1205     random    0.60108    1.55451       5547        196          0    repeat-0
+    1447     random    3.44370    1.20156       4142        402          0    barrier > max_thermal_window
+    1110     random    0.98707    1.72077       6032        247          0    repeat-1
+    1147     random    1.51281    1.29332       3072        275          0    repeat-24
+    1354     random    0.60108    1.34591       2925        196          0    repeat-8
+    1441     random    0.60106    1.84611       3657        227          0    repeat-8
+    1316     random    1.48014    1.71586       4692        245          0    repeat-26
+    1373     random    1.48297    1.30130       4180        242          0    repeat-23
+    1250     random    0.98707    1.41308       3789        247          0    repeat-15
+    1458     random    3.45874    1.29405       3517        300          0    barrier > max_thermal_window
+    1275     random    3.41210    1.16535      11093        360          0    barrier > max_thermal_window
+    1236     random    3.44301    1.08767       4298        568          0    barrier > max_thermal_window
+    1226     random    2.10616    1.24678       9029        281          0    barrier > max_thermal_window
+    1081     random    4.19350    1.37271        943        318          0    barrier > max_thermal_window
+    1010     random    0.98563    1.22721       4082        265          0    repeat-20
+    1040     random    0.61954    1.38377       2679        199          0    repeat-5
+    1141     random    0.61954    1.18189       3241        199          0    repeat-5
+    1043     random    0.60106    1.61680       3455        233          0    repeat-0
+    1376     random    0.60108    1.55097       2917        196          0    repeat-8
+    1372     random    3.45874    1.02013       5674        270          0    barrier > max_thermal_window
+    1462     random    1.49328    1.38422       2280        269          0    repeat-16
+    1044     random    1.19558    1.44958       5715        268          0    repeat-10
+    1200     random    2.10616    1.19937       8231        281          0    barrier > max_thermal_window
+    1492     random    3.69955    1.30559       3637        286          0    barrier > max_thermal_window
+    1221     random    2.10616    1.51283      12992        281          0    barrier > max_thermal_window
+    1310     random    0.98879    1.26162       3845        255          0    repeat-2
+    1453     random    3.41040    1.53471       7480        683          0    barrier > max_thermal_window
+    1241     random    1.48297    1.37777       4527        242          0    repeat-23
+    1414     random    2.10164    1.33128       7461        261          0    barrier > max_thermal_window
+    1313     random    0.60108    1.59979       2542        196          0    repeat-0
+    1297     random    1.51191    1.48078       3148        264          0    repeat-13
+    1468     random    0.98563    1.19769       1676        272          0    repeat-3
+    1096     random    0.60108    1.61308       2992        196          0    repeat-0
+    1290     random    0.00000    1.13361         42        252          0    Not Connected
+    1235     random    2.10616    1.59537       6343        291          0    barrier > max_thermal_window
+    1207     random    0.61954    1.15377       2679        199          0    repeat-5
+    1436     random    0.98879    1.35364       2409        249          0    repeat-2
+    1019     random    1.19558    1.46250       5873        268          0    repeat-25
+    1145     random    1.19647    1.57815       3822        277          0    repeat-22
+    1006     random    0.98563    1.42006       4479        245          0    repeat-20
+    1353     random    0.61954    1.73126       3047        199          0    repeat-5
+    1460     random    3.45931    1.03522       6057        258          0    barrier > max_thermal_window
+    1143     random    1.20702    1.27260       5478        253          0    repeat-18
+    1472     random    1.19558    1.24705       5482        268          0    repeat-25
+    1162     random    0.98563    1.14180       6230        264          0    repeat-3
+    1058     random    0.60108    1.24197       6566        196          0    repeat-0
+    1086     random    0.60108    1.73048       5059        196          0    repeat-8
+    1260     random    0.98707    1.34327       4487        247          0    repeat-1
+    1240     random    3.44370    1.04224       4152        350          0    barrier > max_thermal_window
+    1319     random    0.98707    1.22826       4972        249          0    repeat-1
+    1127     random    0.98880    1.31323       3974        259          0    repeat-2
+    1053     random    0.60108    1.46993       3704        196          0    repeat-0
+    1224     random    3.45874    1.28811       5824        271          0    barrier > max_thermal_window
+    1287     random    0.98707    1.25557       4868        269          0    repeat-15
+    1385     random    0.60108    1.09631      14077        196          0    repeat-0
+    1178     random    0.61954    1.13622       3520        199          0    repeat-5
+    1320     random    0.98563    1.38299       3634        245          0    repeat-20
+    1416     random    0.60106    1.31347       3138        216          0    repeat-0
+    1020     random    1.51267    1.21517       2207        255          0    repeat-11
+    1355     random    0.60108    1.10153       3821        196          0    repeat-8
+    1259     random    0.98707    1.34772       5122        241          0    repeat-1
+    1055     random    1.51192    1.69226        701        240          0    repeat-12
+    1119     random    1.19558    1.11210       6088        268          0    repeat-25
+    1424     random    2.10165    1.37784        944        312          0    barrier > max_thermal_window
+    1124     random    0.61954    1.28032       1991        199          0    repeat-5
+    1125     random    1.51281    1.47266       3785        264          0    repeat-24
+    1114     random    3.69980    1.55993       3778        321          0    barrier > max_thermal_window
+    1420     random    0.60108    1.61863       2590        196          0    repeat-8
+    1448     random    3.45874    0.99773       6188        271          0    barrier > max_thermal_window
+    1370     random    0.98563    1.39858       5343        271          0    repeat-20
+    1294     random    4.20343    1.47896       3370        271          0    barrier > max_thermal_window
+    1231     random    4.20342    1.40924       3099        264          0    barrier > max_thermal_window
+    1103     random    4.20342    1.27059       4060        296          0    barrier > max_thermal_window
+    1061     random    0.98563    1.54396       4833        250          0    repeat-3
+    1484     random    0.60108    0.99279       1715        196          0    repeat-0
+    1419     random    1.19647    1.31769       5834        258          0    repeat-4
+    1129     random    1.19558    0.88957       5624        268          0    repeat-10
+    1004     random    1.49141    1.29842       7252        319          0    good-39
+    1100     random    3.45931    1.26162       3411        304          0    barrier > max_thermal_window
+    1253     random    0.98879    1.38208       2857        257          0    repeat-6
+    1340     random    0.60108    1.17713       3600        196          0    repeat-8
+    1312     random    0.98563    1.24649       3338        244          0    repeat-20
+    1148     random    1.20702    1.68352       5552        253          0    repeat-9
+    1386     random    0.98563    1.23561       4419        245          0    repeat-3
+    1107     random    2.10126    1.49606       5515        263          0    barrier > max_thermal_window
+    1097     random    3.41052    1.17523       5960        353          0    barrier > max_thermal_window
+    1272     random    4.24427    1.12324       3094        284          0    barrier > max_thermal_window
+    1220     random    1.19647    1.42680       6500        258          0    repeat-22
+    1183     random    0.61954    1.31682       2753        199          0    repeat-5
+    1257     random    1.51282    1.41963       4714        221          0    repeat-21
+    1017     random    3.44301    1.50346       4254        571          0    barrier > max_thermal_window
+    1434     random    0.60108    1.44492       2929        196          0    repeat-8
+    1070     random    0.61954    1.78953       2550        199          0    repeat-5
+    1022     random    3.45841    1.61765       6985        323          0    barrier > max_thermal_window
+    1198     random    5.36935    1.68451       2491        388          0    barrier > max_thermal_window
+    1264     random    0.60108    1.22221       2902        196          0    repeat-0
+    1400     random    1.62570    1.41594      11451        303          0    good-40
+    1266     random    0.98879    0.88361       4426        263          0    repeat-6
+    1204     random    4.20362    1.78227       3393        268          0    barrier > max_thermal_window
+    1336     random    1.51266    1.45222       2851        267          0    repeat-11
+    1344     random    1.48014    1.25610       4630        245          0    repeat-19
+    1459     random    0.60108    1.10539       2495        196          0    repeat-8
+    1016     random    0.60108    1.30153       4315        196          0    repeat-0
+    1167     random    0.61954    1.53092       2180        199          0    repeat-5
+    1339     random    4.20342    1.21875       3143        271          0    barrier > max_thermal_window
+    1350     random    0.98707    1.38850       5998        262          0    repeat-15
+    1104     random    0.60108    1.38902       3169        196          0    repeat-8
+    1154     random    3.45841    1.01987       3241        285          0    barrier > max_thermal_window
+    1432     random    1.51191    1.46494       3477        256          0    repeat-12
+    1469     random    1.20702    1.32899       8534        253          0    repeat-9
+    1479     random    0.60106    1.23463       2168        227          0    repeat-8
+    1186     random    0.98563    1.56828       4324        268          0    repeat-3
+    1033     random    1.19558    1.29868       5660        268          0    repeat-25
+    1068     random    0.60108    1.08128       7250        196          0    repeat-8
+    1491     random    0.98563    1.50742       4366        281          0    repeat-20
+    1438     random    1.20702    1.31147       5507        253          0    repeat-18
+    1218     random    0.61954    1.45143       3026        199          0    repeat-5
+    1291     random    1.78820    1.04718       3065        302          0    repeat-28
+    1094     random    1.19558    1.35628       5918        268          0    repeat-25
+    1225     random    0.60108    1.19346       3608        196          0    repeat-0
+    1153     random    3.45874    1.11269       5501        270          0    barrier > max_thermal_window
+    1478     random    0.61954    1.32944       6179        199          0    repeat-5
+    1244     random    1.51281    1.61705       4077        250          0    repeat-24
+    1215     random    1.48056    1.49235       4570        238          0    repeat-7
+    1197     random    1.51192    1.48147       1064        261          0    repeat-13
+    1085     random    1.51282    1.29612       2597        221          0    repeat-24
+    1258     random    3.45931    1.15473       2951        288          0    barrier > max_thermal_window
+    1030     random    1.19647    1.00671       6013        258          0    repeat-22
+    1331     random    4.20362    1.27499       3993        268          0    barrier > max_thermal_window
+    1337     random    0.98707    1.42745       4304        255          0    repeat-15
+    1467     random    1.51282    1.50059       2879        236          0    repeat-24
+    1295     random    3.45931    1.76420       8290        273          0    barrier > max_thermal_window
+    1029     random    0.60108    1.13458       2884        196          0    repeat-8
+    1187     random    0.60108    1.27268       3524        196          0    repeat-0
+    1199     random    1.61450    1.80739       5805        225          0    repeat-37
+    1357     random    0.61954    1.09091       5151        199          0    repeat-5
+    1150     random    0.60108    1.41453       4391        196          0    repeat-0
+    1406     random    0.98707    1.52819       5366        247          0    repeat-1
+    1111     random    0.98707    1.34788       2418        267          0    repeat-15
+    1106     random    3.21462    1.21545       4326        286          0    barrier > max_thermal_window
+    1403     random    0.60108    1.51887       3444        196          0    repeat-8
+    1034     random    3.69980    1.29617       3305        309          0    barrier > max_thermal_window
+    1299     random    1.19558    1.33988       5692        268          0    repeat-10
+    1326     random    1.51266    1.30425       4051        271          0    repeat-27
+    1483     random    0.60108    1.31069       3133        196          0    repeat-0
+    1482     random    0.60108    1.94355       6457        196          0    repeat-0
+    1071     random    3.44368    1.25010       2996        356          0    barrier > max_thermal_window
+    1486     random    1.51191    1.42999       3104        272          0    repeat-13
+    1381     random    0.60108    1.10249       2023        196          0    repeat-0
+    1255     random    4.20361    1.30562       3174        281          0    barrier > max_thermal_window
+    1276     random    0.98563    1.14307       3209        245          0    repeat-3
+    1009     random    3.21462    0.90679       5045        293          0    barrier > max_thermal_window
+    1230     random    0.61954    1.42791       3331        199          0    repeat-5
+    1227     random    1.49349    1.73893       4956        275          0    repeat-33
+    1285     random    0.60108    1.28826       3006        196          0    repeat-0
+    1041     random    1.19558    1.29510       6139        268          0    repeat-25
+    1237     random    0.61958    1.27672       1793        205          0    repeat-5
+    1214     random    2.10126    1.20398       4276        292          0    barrier > max_thermal_window
+    1223     random    3.44371    1.12272       3389        350          0    barrier > max_thermal_window
+    1404     random    1.51191    1.49295       3937        277          0    repeat-12
+    1407     random    0.98563    1.44612       4810        250          0    repeat-3
+    1157     random    1.19647    1.39938       6048        258          0    repeat-4
+    1139     random    1.51282    1.40923       3751        240          0    repeat-24
+    1082     random    1.51282    1.31473       2216        221          0    repeat-24
+    1155     random    3.45874    1.05215       6166        271          0    barrier > max_thermal_window
+    1140     random    3.45875    1.69210        796        296          0    barrier > max_thermal_window
+    1011     random    0.60106    0.96504       2313        219          0    repeat-0
+    1109     random    1.51191    1.37171       2526        242          0    repeat-13
+    1456     random    2.18131    1.37944       4141        272          0    barrier > max_thermal_window
+    1387     random    0.98879    1.32671       2573        257          0    repeat-6
+    1046     random    0.98563    1.28229       3720        245          0    repeat-20
+    1489     random    1.19558    1.42204       5656        268          0    repeat-25
+    1087     random    1.20702    1.36757       5579        253          0    repeat-9
+    1026     random    0.98879    1.49097       3570        257          0    repeat-2
+    1423     random    3.44370    1.42099       3959        365          0    barrier > max_thermal_window
+    1213     random    0.98563    0.93955       3615        250          0    repeat-3
+    1008     random    0.61954    1.43833       4774        199          0    repeat-5
+    1166     random    1.19558    1.57147       7522        268          0    repeat-10
+    1158     random    1.20702    1.44901       5423        253          0    repeat-9
+    1027     random    1.20702    1.42233       6111        253          0    repeat-9
+    1304     random    1.48013    1.34611       7757        336          0    repeat-19
+    1267     random    0.60108    1.40991       2722        196          0    repeat-0
+    1474     random    0.60108    1.67360       4347        196          0    repeat-8
+    1056     random    3.01244    1.65443       4899        253          0    barrier > max_thermal_window
+    1384     random    3.45874    1.30389       5590        271          0    barrier > max_thermal_window
+    1126     random    1.51281    1.42657       3272        259          0    repeat-21
+    1177     random    3.41210    1.27695       2058        360          0    barrier > max_thermal_window
+    1038     random    0.61954    1.48716       5085        199          0    repeat-5
+    1243     random    0.98563    1.62423       6090        252          0    repeat-3
+    1115     random    0.98707    1.07911       6112        247          0    repeat-15
+    1341     random    0.98879    1.75757       4680        258          0    repeat-6
+    1270     random    0.61954    1.47902       1513        199          0    repeat-5
+    1494     random    1.19558    1.34823       6762        268          0    repeat-10
+     666     random   11.13253    1.23219      30002        263          0    barrier > max_thermal_window
+    1138     random    0.60108    1.10090       2396        196          0    repeat-0
+    1217     random    0.60106    1.29746       3041        211          0    repeat-0
+    1401     random    0.61954    1.32364       2371        199          0    repeat-5
+    1025     random    0.98563    1.33899       4874        254          0    repeat-20
+    1012     random    1.20702    1.44584       5640        253          0    repeat-18
+    1332     random    1.20702    1.18788       5330        253          0    repeat-18
+    1309     random    1.19647    1.08581       5326        258          0    repeat-22
+    1263     random    1.48297    1.30320       8344        242          0    repeat-17
+    1358     random    3.44367    1.44092       4105        389          0    barrier > max_thermal_window
+    1228     random    3.45874    1.10843       2881        321          0    barrier > max_thermal_window
+    1415     random    0.00000    1.06848         33        252          0    Not Connected
+    1132     random    0.98707    1.38687       5305        240          0    repeat-1
+    1280     random    1.19558    1.43051       2897        268          0    repeat-10
+    1037     random    0.60108    1.05589       2924        196          0    repeat-0
+    1222     random    3.44371    0.90997       4064        375          0    barrier > max_thermal_window
+    1393     random    0.60108    1.10228       3591        196          0    repeat-0
+    1408     random    0.60108    1.41846       3377        196          0    repeat-0
+    1261     random    0.60108    1.37180       2607        196          0    repeat-0
+    1371     random    0.61954    1.80112       2632        200          0    repeat-5
+    1435     random    1.61453    1.64119       2692        235          0    repeat-14
+    1001     random    0.00000    1.06070        425        246          0    Not Connected
+    1195     random    2.10126    1.29039       3673        263          0    barrier > max_thermal_window
+    1062     random    0.60108    0.90985       3143        196          0    repeat-8
+    1274     random    0.60108    1.44474       4204        196          0    repeat-0
+    1194     random    3.21465    1.29895       4748        437          0    barrier > max_thermal_window
+    1455     random    3.45931    1.41958       4767        301          0    barrier > max_thermal_window
+    1028     random    0.00000    1.16732       9089        273          0    Not Connected
+    1364     random    3.45931    1.50547       5498        272          0    barrier > max_thermal_window
+    1397     random    0.60106    1.03185       4243        221          0    repeat-8
+    1282     random    1.51266    1.77158       6291        286          0    repeat-27
+    1168     random    3.45875    0.91240       5432        304          0    barrier > max_thermal_window
+    1367     random    0.98879    1.35317       5454        255          0    repeat-2
+    1311     random    1.19558    1.38426       5421        268          0    repeat-10
+    1102     random    0.60108    1.32445       2625        196          0    repeat-0
+     778     random    8.01152    1.33911      30000        324          0    barrier > max_thermal_window
+     710     random    8.47587    1.79160      30000        251          0    barrier > max_thermal_window
+     715     random   14.38840    1.61647      30002        281          0    barrier > max_thermal_window
+    1829     random    2.10164    1.37486       8389        267          0    barrier > max_thermal_window
+    1847     random    3.45841    1.36105       6774        312          0    barrier > max_thermal_window
+    1697     random    1.19647    1.23935       5843        258          0    repeat-4
+    1908     random    3.01243    1.63022       4761        252          0    barrier > max_thermal_window
+    1560     random    3.69980    1.48205       5372        315          0    barrier > max_thermal_window
+    1717     random    0.60106    1.31047       1908        251          0    repeat-8
+    1755     random    0.60108    0.94503       2955        196          0    repeat-0
+    1649     random   10.77757    1.40785      30001        265          0    barrier > max_thermal_window
+    1672     random    4.21470    1.61823        687        256          0    barrier > max_thermal_window
+    1890     random    2.10616    1.30444      13203        301          0    barrier > max_thermal_window
+    1524     random    3.45874    1.29819       6100        271          0    barrier > max_thermal_window
+    1590     random    0.61954    1.74251       3130        199          0    repeat-5
+    1544     random    0.98879    1.32450       1693        250          0    repeat-2
+    1720     random    0.60108    1.57216       4075        196          0    repeat-0
+    1862     random    1.19558    1.21110       5444        268          0    repeat-10
+    1527     random    3.45874    1.39948       5838        300          0    barrier > max_thermal_window
+    1728     random    0.61954    1.04837       2382        200          0    repeat-5
+    1609     random    1.51266    1.29799       3240        270          0    repeat-11
+    1631     random    0.60108    1.15513       3312        196          0    repeat-0
+    1776     random    0.98707    1.24915       6058        271          0    repeat-1
+    1867     random    0.61954    1.46795       2051        199          0    repeat-5
+    1959     random    3.44367    1.11273       3944        363          0    barrier > max_thermal_window
+    1788     random    3.45874    1.33594       3546        290          0    barrier > max_thermal_window
+    1932     random    1.19558    1.01550       5388        268          0    repeat-10
+    1944     random    0.60108    1.07729       3254        196          0    repeat-8
+    1552     random    4.19349    1.28761        884        311          0    barrier > max_thermal_window
+    1961     random    4.20362    1.60246       3027        268          0    barrier > max_thermal_window
+    1739     random    0.98708    0.83727       4960        238          0    repeat-1
+    1518     random    0.98879    1.37052       3456        257          0    repeat-2
+    1933     random    3.41210    1.80920       4964        351          0    barrier > max_thermal_window
+    1773     random    0.61954    1.28889       3111        199          0    repeat-5
+    1615     random    0.60108    1.67791       2056        196          0    repeat-0
+    1506     random    2.10127    1.19414       2450        307          0    barrier > max_thermal_window
+    1778     random    3.69955    1.59011       3948        287          0    barrier > max_thermal_window
+    1913     random    1.51266    1.39031       3431        262          0    repeat-11
+    1510     random    1.51282    1.43919       3936        221          0    repeat-24
+    1965     random    3.44301    1.12429       4012        572          0    barrier > max_thermal_window
+    1639     random    1.19558    2.10796       5344        268          0    repeat-10
+    1626     random    1.48014    1.50464       4640        245          0    repeat-26
+    1553     random    0.61954    1.14023       2844        199          0    repeat-5
+    1698     random    2.10164    1.63389       5161        267          0    barrier > max_thermal_window
+    1928     random    1.20702    1.31932       5427        253          0    repeat-9
+    1572     random    1.19647    1.75457       6976        258          0    repeat-22
+    1519     random    1.51266    1.16469       4226        275          0    repeat-11
+    1396     random    7.51725    1.34747      30002        333          0    barrier > max_thermal_window
+    1902     random   15.14579    1.98310      30002        270          0    barrier > max_thermal_window
+    1601     random    1.51282    1.13132       4478        221          0    repeat-24
+    1722     random    1.19647    1.78483       4505        258          0    repeat-4
+    1607     random    0.98707    1.45603       2912        238          0    repeat-15
+    1498     random    0.60108    1.12272       3896        196          0    repeat-0
+    1702     random    4.20343    1.30696        738        264          0    barrier > max_thermal_window
+    1525     random    3.44370    1.62988       2889        376          0    barrier > max_thermal_window
+    1856     random    2.10616    1.53818       7402        281          0    barrier > max_thermal_window
+    1652     random    1.51267    1.25742       2930        219          0    repeat-11
+    1911     random    1.49349    0.83031       3458        275          0    repeat-33
+    1878     random    3.44371    1.31532       3239        363          0    barrier > max_thermal_window
+    1775     random    0.98707    1.01866       4036        248          0    repeat-1
+    1537     random    3.01094    1.28785       4937        247          0    barrier > max_thermal_window
+    1665     random    3.41210    0.88359       3417        355          0    barrier > max_thermal_window
+    1922     random    0.98707    1.27234       3664        247          0    repeat-15
+    1666     random    0.61954    1.47413       2987        199          0    repeat-5
+    1935     random    0.60108    1.50732       3887        196          0    repeat-8
+    1509     random    1.20702    1.44889       5839        253          0    repeat-18
+    1891     random    1.48297    1.67663       3556        242          0    repeat-23
+    1547     random    3.44371    1.15891       4342        342          0    barrier > max_thermal_window
+    1858     random    0.60108    1.81323       4492        196          0    repeat-0
+    1973     random    0.98707    1.54142       3508        242          0    repeat-15
+    1942     random    0.98707    1.41162       3618        247          0    repeat-15
+    1927     random    1.19558    1.32082       5284        268          0    repeat-10
+    1846     random    0.60108    1.13598       3378        196          0    repeat-8
+    1888     random    3.45841    1.37833       5619        263          0    barrier > max_thermal_window
+    1754     random    0.61954    0.94102       3315        199          0    repeat-5
+    1658     random    0.60108    1.38086       3316        196          0    repeat-0
+    1840     random    3.41210    1.48156       6043        357          0    barrier > max_thermal_window
+    1865     random    3.44301    0.99197       3700        538          0    barrier > max_thermal_window
+    1675     random    1.48297    1.86252       4716        242          0    repeat-23
+    1957     random    0.60108    1.25471       3946        196          0    repeat-8
+    1886     random    1.19647    1.08815       6122        258          0    repeat-22
+    1736     random    0.61954    1.53086       7418        199          0    repeat-5
+    1900     random    3.44371    1.34186       3822        392          0    barrier > max_thermal_window
+    1917     random    0.60108    1.26207       5425        196          0    repeat-0
+    1502     random    0.98707    1.38073       6322        262          0    repeat-1
+    1763     random    1.61450    1.31663       6377        225          0    repeat-37
+    1593     random    1.19558    1.69876       7137        268          0    repeat-10
+    1834     random    0.98879    1.40421       2950        257          0    repeat-6
+    1613     random    3.44368    1.18757       3520        433          0    barrier > max_thermal_window
+    1844     random    3.21462    1.97668       4289        309          0    barrier > max_thermal_window
+    1976     random    1.48056    1.53025       4523        238          0    repeat-31
+    1842     random    0.98879    1.31243       4011        272          0    repeat-6
+    1943     random    0.61954    1.31525       1637        199          0    repeat-5
+    1869     random    0.60106    1.21666       4077        230          0    repeat-8
+    1617     random    1.47935    1.54198       9734        241          0    good-41
+    1500     random    0.98563    1.40694       3935        245          0    repeat-3
+    1600     random    1.51192    1.45883       3274        251          0    repeat-12
+    1981     random    0.98563    1.37820       6066        245          0    repeat-20
+    1884     random    0.98563    1.41135       5044        243          0    repeat-20
+    1784     random    1.51267    1.39549       2353        219          0    repeat-11
+    1792     random    1.51282    1.11289       4052        221          0    repeat-24
+    1729     random    1.19647    1.36591       5793        258          0    repeat-4
+    1644     random    3.01353    1.20031       7719        254          0    barrier > max_thermal_window
+    1737     random    2.10164    1.32640       4954        267          0    barrier > max_thermal_window
+    1850     random    1.19558    1.33066       5827        268          0    repeat-10
+    1974     random    0.60108    1.21568       1939        196          0    repeat-0
+    1530     random    0.61954    1.25821       2620        199          0    repeat-5
+    1806     random    1.19558    1.51320       5633        268          0    repeat-25
+    1619     random    0.61954    1.09217       4126        199          0    repeat-5
+    1946     random    0.98879    1.39226       4308        251          0    repeat-6
+    1848     random    0.60108    1.43464       3070        196          0    repeat-0
+    1958     random    0.60106    1.14832       4848        203          0    repeat-8
+    1735     random    0.61954    1.42270       5258        199          0    repeat-5
+    1499     random    1.51266    1.56077       2963        273          0    repeat-27
+    1811     random    3.45875    1.34371       6780        297          0    barrier > max_thermal_window
+    1670     random    0.61954    1.19707       3487        199          0    repeat-5
+    1751     random    3.45841    1.94358       5481        265          0    barrier > max_thermal_window
+    1920     random    0.98880    1.29403       5306        246          0    repeat-6
+    1676     random    3.45931    1.49750       7371        309          0    barrier > max_thermal_window
+    1686     random    0.98879    1.16808       3154        250          0    repeat-2
+    1582     random    0.60108    1.69268       2710        196          0    repeat-0
+    1594     random    0.98879    1.16598       8854        257          0    repeat-2
+    1663     random    1.51281    1.44349       2413        249          0    repeat-24
+    1740     random    1.20702    1.08017       5467        253          0    repeat-18
+    1910     random    0.98563    1.33051       1524        250          0    repeat-20
+    1581     random    3.45874    1.19603       3355        293          0    barrier > max_thermal_window
+    1529     random    0.60108    1.37579       3365        196          0    repeat-0
+    1971     random    1.19647    1.42810       5698        258          0    repeat-22
+    1520     random    1.51282    1.68196       3912        221          0    repeat-21
+    1591     random    1.51191    1.24259       2860        272          0    repeat-12
+    1621     random    0.61954    1.20399       2250        199          0    repeat-5
+    1772     random    0.61954    1.36619       4006        199          0    repeat-5
+    1542     random    0.98879    1.25441       1533        250          0    repeat-2
+    1758     random    4.20342    1.30697       3399        271          0    barrier > max_thermal_window
+    1507     random    3.01353    1.66451       8781        254          0    barrier > max_thermal_window
+    1638     random    0.98879    0.87721       2833        257          0    repeat-2
+    1550     random    1.19558    1.02986       6252        268          0    repeat-10
+    1245     random   12.48300    1.95100      30000        314          0    barrier > max_thermal_window
+    1893     random    0.98707    1.43372       1607        241          0    repeat-15
+    1708     random    0.98879    1.08148       5100        263          0    repeat-6
+    1759     random    0.98563    1.12182       3290        245          0    repeat-20
+    1497     random    3.45841    1.28274       3756        312          0    barrier > max_thermal_window
+    1904     random    3.69955    1.33803       4094        286          0    barrier > max_thermal_window
+    1561     random    3.45841    1.56963       2578        339          0    barrier > max_thermal_window
+    1690     random    0.98563    1.20129       5556        245          0    repeat-20
+    1567     random    3.44370    1.20361       4016        355          0    barrier > max_thermal_window
+    1654     random    1.48297    1.50173       4577        242          0    repeat-23
+    1711     random    0.98563    1.52923       1178        239          0    repeat-20
+    1563     random    3.01353    1.24736       5132        254          0    barrier > max_thermal_window
+    1603     random    1.20702    1.21483       5782        253          0    repeat-18
+    1623     random    0.60108    1.36683       1978        196          0    repeat-8
+    1583     random    0.98879    1.17016       4435        250          0    repeat-2
+    1940     random    0.60108    1.27570       3152        196          0    repeat-8
+    1939     random    1.19647    1.18552       5412        258          0    repeat-4
+    1133     random   10.16570    1.18327      30002        269          0    barrier > max_thermal_window
+    1628     random    0.61954    1.36177       3841        199          0    repeat-5
+    1679     random    3.45841    1.15040       3135        292          0    barrier > max_thermal_window
+    1694     random    1.19558    1.47621       5699        268          0    repeat-25
+    1809     random    1.51282    1.24154       2737        240          0    repeat-24
+    1785     random    5.13677    1.31858       3890        272          0    barrier > max_thermal_window
+    1614     random    0.60108    1.58140       3172        196          0    repeat-0
+    1511     random    0.60108    1.53065       3062        196          0    repeat-8
+    1783     random    1.51191    1.27641       5202        276          0    repeat-12
+    1791     random    0.60108    1.27750       2992        196          0    repeat-0
+    1570     random    0.60108    1.46666       2957        196          0    repeat-8
+    1503     random    0.60106    1.19070       3497        219          0    repeat-0
+    1078     random   12.68250    1.55821      30000        294          0    barrier > max_thermal_window
+    1725     random    0.98563    1.31965       3210        245          0    repeat-3
+    1703     random    0.60108    1.17869       4946        196          0    repeat-8
+    1647     random    1.61448    1.07279       5180        275          0    repeat-14
+    1822     random    3.41040    1.17970        842        558          0    barrier > max_thermal_window
+    1645     random    0.60108    1.33695       3719        196          0    repeat-8
+    1630     random    0.98879    1.32596       1374        259          0    repeat-6
+    1815     random    5.23178    1.53330       3515        324          0    barrier > max_thermal_window
+    1633     random    1.19558    1.25408       6160        268          0    repeat-25
+    1707     random    1.48297    1.50530       4529        242          0    repeat-23
+    1941     random    2.10164    0.92223       6745        267          0    barrier > max_thermal_window
+    1627     random    0.61954    1.13585       4304        199          0    repeat-5
+    1813     random    1.84890    1.40380       3921        295          0    barrier > max_thermal_window
+    1585     random    1.51191    1.14218       3389        269          0    repeat-12
+    1782     random    0.61954    1.38021       3281        199          0    repeat-5
+    1947     random    1.61448    1.19770       3567        368          0    repeat-37
+    1742     random    1.61450    1.73718       9110        225          0    repeat-37
+    1677     random    4.21469    1.34888       3380        267          0    barrier > max_thermal_window
+    1523     random    1.51282    1.19343       4022        221          0    repeat-24
+    1838     random    4.21471    1.45122       1717        263          0    barrier > max_thermal_window
+    1635     random    1.20702    1.17298       5743        253          0    repeat-9
+    1620     random    0.98707    1.01379       4348        251          0    repeat-1
+    1841     random    3.45875    1.72030       5854        297          0    barrier > max_thermal_window
+    1734     random    3.21462    1.19452       3186        396          0    barrier > max_thermal_window
+    1612     random   11.84475    1.28197      30000        284          0    barrier > max_thermal_window
+    1839     random    0.98880    1.39841       5115        260          0    repeat-2
+    1648     random    7.54587    1.28190      30001        334          0    barrier > max_thermal_window
+    1921     random    0.61954    1.77317       3183        199          0    repeat-5
+    1843     random    0.61954    1.56913       3017        199          0    repeat-5
+    1688     random    0.98707    1.41497       3486        250          0    repeat-15
+    1574     random    3.41040    1.28738       2638        564          0    barrier > max_thermal_window
+    1955     random    0.98879    1.21139       4351        260          0    repeat-6
+    1914     random    1.19558    1.33708       6030        268          0    repeat-25
+    1757     random    3.44367    1.40737       4022        353          0    barrier > max_thermal_window
+    1678     random    1.19558    1.54145       4944        268          0    repeat-10
+    1960     random    1.19558    1.62636       5682        268          0    repeat-10
+    1855     random    2.15799    1.52160       4850        268          0    barrier > max_thermal_window
+    1562     random    1.51191    1.45255       2136        247          0    repeat-12
+    1907     random    1.61450    1.12726       8263        225          0    repeat-37
+    1817     random    0.98563    1.19439       1584        250          0    repeat-20
+    1749     random    1.19647    1.52661       3355        258          0    repeat-22
+    1531     random    4.20363    1.18218       3566        268          0    barrier > max_thermal_window
+    1832     random    3.45841    1.30523       3481        302          0    barrier > max_thermal_window
+    1770     random    1.51267    1.47484       2373        219          0    repeat-11
+    1945     random    0.60108    1.71516       3522        196          0    repeat-8
+    1837     random    4.18016    1.24269       5596        336          0    barrier > max_thermal_window
+    1860     random    3.69957    1.65084       4470        288          0    barrier > max_thermal_window
+    1584     random    1.19647    1.26577       6268        258          0    repeat-4
+    1700     random    1.48297    1.39052       6067        242          0    repeat-23
+    1440     random    9.23512    1.54262      30001        331          0    barrier > max_thermal_window
+    1653     random    0.61954    1.41828       2171        199          0    repeat-5
+    1771     random    1.20702    1.53245       5422        253          0    repeat-18
+    1916     random    1.19558    1.27223       5524        268          0    repeat-25
+    1606     random    0.98707    1.01102       5959        229          0    repeat-1
+    1685     random    0.60108    1.29264       3009        196          0    repeat-0
+    1559     random    4.20342    1.41029       2370        367          0    barrier > max_thermal_window
+    1808     random    0.61954    1.50978       4404        199          0    repeat-5
+    1969     random    1.20702    1.48171       5475        253          0    repeat-9
+    1923     random    0.98879    1.30099       2815        250          0    repeat-2
+    1779     random    3.44371    1.47463       2622        342          0    barrier > max_thermal_window
+    1816     random    0.60108    1.21300       3204        196          0    repeat-0
+    1516     random    1.87556    1.10951       5553        244          0    barrier > max_thermal_window
+    1963     random    0.98707    1.24256       9285        247          0    repeat-1
+    1554     random    3.01244    1.49862       4871        255          0    barrier > max_thermal_window
+    1595     random    0.98708    1.40964       1182        240          0    repeat-1
+    1741     random    2.08417    1.24487       3176        327          0    barrier > max_thermal_window
+    1454     random    9.97773    1.49923      30001        232          0    barrier > max_thermal_window
+    1861     random    3.41040    1.10857       1168        554          0    barrier > max_thermal_window
+    1956     random    3.44301    1.38429       3601        580          0    barrier > max_thermal_window
+    1655     random    2.10126    1.21599       4729        263          0    barrier > max_thermal_window
+    1897     random    1.20702    1.62688       6574        253          0    repeat-18
+    1854     random    1.51266    1.01211       3033        290          0    repeat-11
+    1952     random    1.51282    1.03076       3187        221          0    repeat-21
+    1535     random    1.20702    1.40905       5596        253          0    repeat-9
+    1643     random    0.60108    1.33253       4236        196          0    repeat-8
+    1661     random    2.10616    1.13831       9277        372          0    barrier > max_thermal_window
+    1833     random    3.44301    1.21693       3703        561          0    barrier > max_thermal_window
+    1495     random    0.60108    1.29115       4456        196          0    repeat-0
+    1710     random    0.98707    1.47220       2792        247          0    repeat-1
+    1551     random   12.26766    1.27543      30002        269          0    barrier > max_thermal_window
+    1905     random    3.45841    1.14848       7082        265          0    barrier > max_thermal_window
+    1586     random    3.44368    1.25214       3981        377          0    barrier > max_thermal_window
+    1556     random    0.98707    1.30593      14959        247          0    repeat-1
+    1461     random    7.48397    1.29024      30002        333          0    barrier > max_thermal_window
+    1887     random    4.23412    1.28697       4886        273          0    barrier > max_thermal_window
+    1915     random    3.11141    1.35713       5551        342          0    barrier > max_thermal_window
+    1064     random   12.21621    1.64052      30002        269          0    barrier > max_thermal_window
+    1820     random    1.20702    1.37172       5356        253          0    repeat-9
+    1673     random    0.98707    1.38927       1604        240          0    repeat-15
+    1640     random    1.20702    1.41837       5708        253          0    repeat-18
+    1906     random    0.60106    1.33088       2366        215          0    repeat-0
+    1687     random    0.60108    1.32570       4481        196          0    repeat-8
+    1689     random    1.51266    1.63757       3792        280          0    repeat-11
+    1885     random    0.61954    1.25677       4006        200          0    repeat-5
+    1894     random    0.60108    1.57162       3432        196          0    repeat-0
+    1724     random    0.60108    1.27032       3256        196          0    repeat-0
+    1680     random    7.42189    1.18816      30001        338          0    barrier > max_thermal_window
+    1875     random    0.60108    1.29710       3222        196          0    repeat-0
+    1962     random    0.60108    1.40610       3053        196          0    repeat-8
+    1526     random    0.98879    1.18504       3697        245          0    repeat-2
+    1715     random    0.98707    1.10225       3299        247          0    repeat-1
+    1629     random    2.16892    1.50767        606        278          0    barrier > max_thermal_window
+    1780     random    4.20362    1.42325       4170        268          0    barrier > max_thermal_window
+    1634     random    0.60106    1.37720       3171        216          0    repeat-0
+    1805     random    1.51282    1.31008       2342        240          0    repeat-21
+    1950     random    2.08535    1.59593       6907        337          0    barrier > max_thermal_window
+    1618     random    4.21470    1.54072       3385        263          0    barrier > max_thermal_window
+    1548     random    1.51266    1.48676       3517        273          0    repeat-11
+    1899     random    3.45874    1.06230       6504        308          0    barrier > max_thermal_window
+    1877     random    3.45875    1.31862       2615        309          0    barrier > max_thermal_window
+    1646     random    0.98707    1.18778       3920        241          0    repeat-15
+    1881     random    1.19647    1.32040       7295        258          0    repeat-22
+    1938     random    0.60106    1.64640       6278        236          0    repeat-0
+    1727     random    0.98707    1.40861       4783        241          0    repeat-15
+    1968     random    0.60108    1.43076       2986        196          0    repeat-8
+    1701     random    0.60108    1.23013       5667        196          0    repeat-0
+    1691     random    1.51192    1.87574       3889        229          0    repeat-13
+    1528     random    0.61954    0.92047       2401        199          0    repeat-5
+    1616     random    4.21469    1.17169       4135        271          0    barrier > max_thermal_window
+    1599     random    0.98563    1.42139       2730        245          0    repeat-20
+    1978     random   10.77365    1.26182      30000        268          0    barrier > max_thermal_window
+    1636     random    0.98563    1.62434       3765        245          0    repeat-20
+    1898     random    3.01353    1.91487       5554        254          0    barrier > max_thermal_window
+    1786     random    0.61954    1.54039       3388        200          0    repeat-5
+    1924     random    0.98707    1.16041       9107        247          0    repeat-15
+    1546     random    0.61954    1.56930       3033        199          0    repeat-5
+    1747     random    2.10164    1.21455       8291        293          0    barrier > max_thermal_window
+    1533     random    0.61954    1.45878       4248        199          0    repeat-5
+    1681     random    1.51281    1.61301       2866        246          0    repeat-21
+    1824     random    3.44371    1.05587       3879        444          0    barrier > max_thermal_window
+    1849     random    1.51281    1.12818       3306        270          0    repeat-21
+    1575     random    0.61954    1.54285       3131        199          0    repeat-5
+    1804     random    3.01353    1.34165       5327        254          0    barrier > max_thermal_window
+    1587     random    3.45931    1.62994       6514        309          0    barrier > max_thermal_window
+    1596     random    0.61954    1.38132       9352        199          0    repeat-5
+    1513     random    0.61954    0.92964       3105        199          0    repeat-5
+    1578     random    0.60108    1.57925       4421        196          0    repeat-8
+    1870     random    0.98707    1.43718       5020        251          0    repeat-1
+    1597     random    4.19347    1.34377       2789        363          0    barrier > max_thermal_window
+    1836     random    0.61954    1.34159       2731        199          0    repeat-5
+    1761     random    1.51282    1.19483       2631        221          0    repeat-21
+    1501     random    1.51191    1.40031       3728        249          0    repeat-13
+    1767     random    1.20702    1.95318       5598        253          0    repeat-9
+    1664     random    0.61954    1.31803       2251        199          0    repeat-5
+    1774     random    0.98879    1.37765       5202        247          0    repeat-2
+    1706     random    4.20341    1.78473       3130        283          0    barrier > max_thermal_window
+    1901     random    1.51191    1.26396       2882        250          0    repeat-13
+    1835     random    0.60108    1.20122       2913        196          0    repeat-8
+    1970     random    5.36985    0.96793       9608        472          0    barrier > max_thermal_window
+    1588     random    3.44301    1.62804       3629        571          0    barrier > max_thermal_window
+    1845     random    0.98879    1.36034       4957        246          0    repeat-6
+    1903     random    1.19558    1.40956       8594        268          0    repeat-10
+    1810     random    0.60108    1.31490       2932        196          0    repeat-0
+    1508     random    0.98563    1.23986       5085        259          0    repeat-20
+    1857     random    0.98563    1.53722       3929        247          0    repeat-20
+    1564     random    2.10164    1.30821       7842        267          0    barrier > max_thermal_window
+    1496     random    0.60108    1.01896       3464        196          0    repeat-0
+    1798     random    0.98707    1.08240       3943        256          0    repeat-1
+    1801     random    0.61954    1.27302       2395        199          0    repeat-5
+    1883     random    0.98879    1.67862       5082        256          0    repeat-2
+    1794     random    3.45874    1.52662       5723        270          0    barrier > max_thermal_window
+    1831     random    1.19558    1.61640       9151        268          0    repeat-25
+    1719     random    0.60108    1.61029       2611        196          0    repeat-8
+    1912     random    0.98879    1.24513       4366        238          0    repeat-6
+    1657     random    3.69955    1.45457       5928        328          0    barrier > max_thermal_window
+    1536     random    0.60108    1.56152       3288        196          0    repeat-0
+    1699     random    0.98879    1.03928       1646        250          0    repeat-6
+    1576     random    3.44370    1.64989       3672        342          0    barrier > max_thermal_window
+    1803     random    1.51191    1.30383       3224        352          0    repeat-12
+    1764     random    0.60108    1.65101       3374        196          0    repeat-0
+    1781     random    1.51282    1.67692       2872        252          0    repeat-21
+    1756     random    1.19647    1.55675       6124        258          0    repeat-4
+    1549     random    3.69957    1.34404       4134        282          0    barrier > max_thermal_window
+    1828     random    0.61954    1.05413       3551        199          0    repeat-5
+    1879     random    1.19647    1.30201       4441        286          0    repeat-4
+    1641     random    0.98563    1.39937       4441        267          0    repeat-3
+    1951     random    4.20363    1.41379       1915        251          0    barrier > max_thermal_window
+    1826     random    0.60108    1.82732       3204        196          0    repeat-0
+    1577     random    0.98707    1.12126       3129        247          0    repeat-1
+    1872     random    1.19558    1.29691       8897        268          0    repeat-25
+    1555     random    4.21469    1.61691       2346        261          0    barrier > max_thermal_window
+    1864     random    1.51266    1.39928       3977        243          0    repeat-11
+    1534     random    1.51281    1.40971       3443        276          0    repeat-24
+    1723     random    0.61954    1.01696       2500        237          0    repeat-5
+    1515     random    0.61954    1.19916       2569        199          0    repeat-5
+    1611     random    1.48014    1.16394       4527        245          0    repeat-26
+    1863     random    0.98707    1.04665       5618        247          0    repeat-1
+    1610     random    0.60108    1.09453       2425        196          0    repeat-0
+    1602     random    0.60108    1.28018       4829        196          0    repeat-8
+    1693     random    0.60106    1.18528       3447        196          0    repeat-0
+    1892     random    0.98707    1.34603       5474        250          0    repeat-15
+    1793     random    1.51281    1.35387       3304        251          0    repeat-21
+    1919     random    0.60108    1.80230       3716        196          0    repeat-8
+    1732     random    3.45874    1.36434       6141        303          0    barrier > max_thermal_window
+    1571     random    0.60108    1.54322       6606        196          0    repeat-0
+    1762     random    0.61954    1.15036       3456        199          0    repeat-5
+    1799     random    0.60108    1.30015       4071        196          0    repeat-8
+    1777     random    0.98563    1.32817       4586        245          0    repeat-20
+    1753     random    0.60108    1.37351       4415        196          0    repeat-0
+    1568     random    0.98879    1.47477       2904        255          0    repeat-2
+    1909     random    0.98879    1.37475       3076        249          0    repeat-2
+    1696     random    0.60108    0.94884       3421        196          0    repeat-0
+    1683     random    3.21465    1.51023       3587        458          0    barrier > max_thermal_window
+    1589     random    1.51266    1.45609       4026        267          0    repeat-11
+    1895     random    0.60108    1.12676       2627        196          0    repeat-8
+    1873     random    0.60108    1.20284       4189        196          0    repeat-0
+    1514     random    2.10164    1.58369       7961        299          0    barrier > max_thermal_window
+    1825     random    2.10616    1.59288       6881        281          0    barrier > max_thermal_window
+    1931     random    0.60108    1.15072       3700        196          0    repeat-0
+    1709     random    0.60108    1.44414       2476        196          0    repeat-8
+    1859     random    0.61954    1.56936       3814        199          0    repeat-5
+    1558     random    3.44367    1.37344       5926        380          0    barrier > max_thermal_window
+    1936     random    0.98880    1.12391       3146        262          0    repeat-2
+    1592     random    3.44371    1.66237       2500        347          0    barrier > max_thermal_window
+    1830     random    0.60108    1.63588       3097        196          0    repeat-0
+    1625     random    1.51191    1.60831       3646        255          0    repeat-12
+    1662     random    1.48297    1.33463       4484        242          0    repeat-17
+    1953     random    0.60109    1.73962       4417        196          0    repeat-0
+    1695     random    0.60108    1.39799       2646        196          0    repeat-0
+    1539     random    0.98563    1.18524       5374        262          0    repeat-3
+    1671     random    1.61632    1.26104       6510        236          0    repeat-36
+    1718     random    1.19558    1.21487       3579        284          0    repeat-10
+    1733     random    1.51192    1.23198       4289        229          0    repeat-13
+    1827     random    4.20363    1.53748       1992        251          0    barrier > max_thermal_window
+    1210     random   10.82823    1.65865      30001        266          0    barrier > max_thermal_window
+    1512     random    0.98707    1.56458       1771        238          0    repeat-15
+    1966     random    0.60108    1.27773       6602        196          0    repeat-0
+    1746     random    9.24208    1.42841      30002        331          0    barrier > max_thermal_window
+    1730     random    0.61954    1.40770       7697        199          0    repeat-5
+    1565     random    4.21470    1.33075        654        268          0    barrier > max_thermal_window
+    1557     random    0.98707    1.31670       6014        279          0    repeat-15
+    1541     random    1.51266    1.33443       3786        256          0    repeat-27
+    1874     random    0.61954    1.34938       3415        242          0    repeat-5
+    1543     random    3.44301    1.15745       4161        592          0    barrier > max_thermal_window
+    1545     random    0.61954    1.30280       2443        199          0    repeat-5
+    1750     random    4.21471    1.57598       3165        256          0    barrier > max_thermal_window
+    1954     random    1.51266    1.30045       3744        264          0    repeat-11
+    1819     random    1.51281    1.40183       3013        305          0    repeat-24
+    1624     random    0.98563    1.55427       4570        250          0    repeat-20
+    1876     random    0.61954    1.16052       4397        199          0    repeat-5
+    1880     random    0.60108    1.54730       3073        196          0    repeat-0
+    1977     random    0.98879    1.22610       3362        257          0    repeat-2
+    1608     random    1.62570    1.35689      14014        321          0    good-42
+    1797     random    0.60108    1.50489       4872        196          0    repeat-0
+    1726     random    1.51281    1.39693       2731        246          0    repeat-24
+    1925     random    0.60108    1.53692       4662        196          0    repeat-8
+    1823     random    0.60108    1.77419       2674        196          0    repeat-0
+    1605     random    1.48056    0.98645       4194        238          0    repeat-31
+    1812     random    1.51266    1.29527       3053        267          0    repeat-27
+    1714     random    1.19558    1.51467       5353        268          0    repeat-10
+    1598     random    0.61954    1.46765      11185        199          0    repeat-5
+    1790     random    0.60108    1.68995       2386        196          0    repeat-8
+    1769     random    0.98708    1.37767       2390        252          0    repeat-15
+    1532     random    0.60108    1.02141       1899        196          0    repeat-8
+    1517     random    1.62351    1.27106       3382        287          0    good-43
+    1802     random    0.98879    1.48957       3576        257          0    repeat-6
+    1795     random    0.00000    1.36811         21        250          0    Not Connected
+    1934     random    1.51281    1.33657       3522        286          0    repeat-21
+    1807     random    0.60108    1.43015       3915        196          0    repeat-0
+    1490     random    7.48952    1.23608      30001        339          0    barrier > max_thermal_window
+    1660     random    0.60108    1.23712       4370        196          0    repeat-8
+    1760     random    1.20702    1.30027       7823        253          0    repeat-9
+    1642     random    0.60108    1.24751       2812        196          0    repeat-0
+    1668     random    4.19334    1.01694       4798        357          0    barrier > max_thermal_window
+    1796     random    0.60108    1.35189       3312        196          0    repeat-0
+    1669     random    3.44371    0.89594       3618        383          0    barrier > max_thermal_window
+    1765     random    0.60108    1.28817       4336        196          0    repeat-8
+    1566     random    1.48297    1.20587       4487        242          0    repeat-17
+    1505     random    3.45931    1.30018       4079        308          0    barrier > max_thermal_window
+    1929     random    1.48297    1.05054       4516        242          0    repeat-17
+    1684     random    0.98563    0.78845       2997        251          0    repeat-3
+    1818     random    1.49349    1.18578       4607        275          0    repeat-38
+    1766     random    0.60108    1.20285       3169        196          0    repeat-8
+    1853     random    0.60108    1.45398       2964        196          0    repeat-8
+    1637     random    1.20702    1.38911       6163        253          0    repeat-9
+    1972     random    0.60108    1.31053       4983        196          0    repeat-8
+    1667     random    1.19558    1.17904       5778        268          0    repeat-10
+    1937     random    2.08536    1.82971       1790        333          0    barrier > max_thermal_window
+    1579     random    0.60108    1.69215       3391        196          0    repeat-8
+    1896     random    3.69955    1.03118       3811        286          0    barrier > max_thermal_window
+    1871     random    0.61954    1.06603       1457        200          0    repeat-5
+    1744     random    0.61954    1.24774       5469        199          0    repeat-5
+    1768     random    1.19558    1.02399       5485        268          0    repeat-10
+    1713     random    3.41040    1.28056       1011        552          0    barrier > max_thermal_window
+    1716     random    3.21427    1.53266       4093        266          0    barrier > max_thermal_window
+    1632     random    4.19838    1.42619       2768        318          0    barrier > max_thermal_window
+    1721     random    1.51282    1.40639        857        237          0    repeat-24
+    1692     random    0.98707    1.40919       4378        248          0    repeat-15
+    1449     random    7.49739    1.39988      30000        339          0    barrier > max_thermal_window
+    1980     random    0.98880    1.48251       4435        248          0    repeat-2
+    1979     random    0.98879    1.35843       4229        258          0    repeat-2
+    1659     random    0.60108    1.32033       3028        196          0    repeat-0
+    1975     random    0.60108    1.35546       2792        196          0    repeat-8
+    1201     random    8.45906    1.25527      30001        230          0    barrier > max_thermal_window
+    1504     random    1.51266    1.27738       2255        259          0    repeat-11
+    1787     random    1.51191    1.27118       2868        304          0    repeat-13
+    1656     random    0.98563    1.01065       3735        245          0    repeat-20
+    1674     random    4.20362    1.33274       2563        252          0    barrier > max_thermal_window
+    1521     random    0.60106    1.49510       2195        217          0    repeat-8
+    1930     random    3.21462    1.44472       4580        305          0    barrier > max_thermal_window
+    1748     random    1.97791    0.94523       4083        290          0    barrier > max_thermal_window
+    1868     random    2.17858    1.58251       3580        254          0    barrier > max_thermal_window
+    1705     random    0.98563    1.22907       4847        250          0    repeat-20
+    1745     random    2.10616    1.47919       4949        281          0    barrier > max_thermal_window
+    1650     random    1.61448    1.34424       2248        263          0    repeat-37
+    1851     random    0.60108    1.27697       1816        196          0    repeat-0
+    1967     random    1.19647    1.54966       5577        258          0    repeat-22
+    1522     random    0.98707    1.46720       5667        247          0    repeat-15
+    1580     random    0.98879    1.45154       2476        262          0    repeat-2
+    1889     random    2.10616    1.62806       6336        312          0    barrier > max_thermal_window
+    1789     random    3.45931    1.33331       4285        287          0    barrier > max_thermal_window
+    1573     random    1.51266    1.29545       3790        252          0    repeat-27
+    1866     random    3.44368    1.43144       3796        369          0    barrier > max_thermal_window
+    1926     random    1.51282    0.95842       2339        240          0    repeat-21
+    1752     random    0.98707    1.40664       3105        247          0    repeat-15
+    1622     random    0.98879    1.24354       4211        257          0    repeat-2
+    1651     random    3.21465    1.70501       5508        469          0    barrier > max_thermal_window
+    1821     random    0.60108    1.22141       3704        196          0    repeat-0
+    1569     random    2.10616    1.57303       5455        281          0    barrier > max_thermal_window
+    1731     random    3.45841    1.47313       2737        317          0    barrier > max_thermal_window
+    1738     random    0.60106    1.00735       3261        218          0    repeat-8
+    1948     random    0.98707    1.34802       4809        258          0    repeat-1
+    1604     random    2.10164    1.63508       6746        267          0    barrier > max_thermal_window
+    1982     random    0.98879    1.38299       4987        246          0    repeat-6
+    1538     random    3.45874    1.70647       5464        271          0    barrier > max_thermal_window
+    1682     random    0.98563    1.20627       2280        251          0    repeat-3
+    1882     random    1.51266    1.42237       4108        258          0    repeat-27
+    1964     random    0.60108    1.15083       3507        196          0    repeat-8
+    1949     random    0.60108    1.53242       4351        196          0    repeat-0
+    1800     random    0.60108    1.14481       2037        196          0    repeat-0
+    1814     random    3.21465    1.27583       4399        468          0    barrier > max_thermal_window
+    1704     random    0.61954    1.20175       3185        199          0    repeat-5
+    1918     random    0.61954    1.42945       1814        200          0    repeat-5
+    1712     random    1.48014    1.38356       4764        245          0    repeat-26
+    1540     random    0.61954    1.26740       2664        199          0    repeat-5
+    1852     random    0.60108    1.47106       2923        196          0    repeat-0
+    1743     random    1.51266    1.13765       3905        257          0    repeat-27

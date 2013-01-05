@@ -1,0 +1,8 @@
+barrier_jobs 129
+barrier_force_calls 5.643e+05 
+rate_jobs 15
+rate_force_calls  8.965e+04 
+average over 1 
+algorithm quenchDimer+neb-QM
+code TSASE
+contributor Penghao Xiao

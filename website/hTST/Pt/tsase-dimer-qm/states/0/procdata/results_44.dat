@@ -1,0 +1,17 @@
+0 termination_reason
+saddle_search job_type
+1722 total_force_calls
+1406 force_calls_saddle
+316 force_calls_minimization
+1.22956463489 displacement_saddle_distance
+-1775.79116021 potential_energy_reactant
+-1774.00657097 potential_energy_saddle
+-1775.10639095 potential_energy_product
+1.78458924248 barrier_reactant_to_product
+1.09981998566 barrier_product_to_reactant
+0 iterations
+42 random_seed
+eam_al potential_type
+1.2e+12 prefactor_product_to_reactant
+1.2e+12 prefactor_reactant_to_product
+0 force_calls_prefactors

@@ -1,0 +1,8 @@
+barrier_jobs 1238
+barrier_force_calls 4.737e+05 
+rate_jobs 87
+rate_force_calls  3.274e+04 
+average over 1 
+algorithm Dimer-CG
+code Eon
+contributor Penghao Xiao
