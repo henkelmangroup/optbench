@@ -1,8 +1,9 @@
-barrier_jobs 1639
-barrier_force_calls 4.508e+06 
-rate_jobs 106
-rate_force_calls  2.977e+05 
-average over 1 
+barrier_jobs 1170
+barrier_force_calls 3.239e+06
+average over 4
+rate_jobs 91
+rate_force_calls  2.538e+05
+average over 62
 algorithm Dimer-QM
 code TSASE
 contributor Penghao Xiao
