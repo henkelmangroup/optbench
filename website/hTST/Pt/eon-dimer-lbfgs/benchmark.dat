@@ -1,0 +1,9 @@
+barrier_jobs 1173 
+barrier_force_calls 6.413e+05 
+average over 4 
+rate_jobs 55 
+rate_force_calls  3.009e+04 
+average over 90 
+algorithm Dimer-LBFGS rotation: max=50 tol=1
+code Eon
+contributor Penghao Xiao
