@@ -4,12 +4,17 @@
 <h2>hTST Escape Rate Benchmarks</h2>
 hTST escape rate  benchmarks for single end point saddle searching algorithms.
 
+<p>These benchmarks test the performances of single end point saddle searching 
+algorithms of finding all the saddles below certain barrier height, or reaching 
+99.9% of the true hTST rate assuming a constant prefactor of 1.2e+12 for each 
+process. The maximum force on any atom has to be reduced to 0.001 eV/A for any 
+successful searching. 
+
 <h3><a id="Pt" href="#Pt">Heptamer Island on Pt(111) Surface</a></h3>
 
-<p>This benchmark tests the performance of single end point saddle searching 
-algorithms starting from a give minimum for finding all the saddles below 
-the barrier height of 1.3 eV, or reaching 99.9% of the true hTST rate 
-assuming a constant prefactor of 1.2e+12 for all processes. 
+<p>All the 15 saddles below 1.3 eV are required to be found for this benchmark.  
+The barrier heights are: 
+[0.601, 0.601, 0.620, 0.986, 0.986, 0.987, 0.987, 0.989, 0.989, 1.196, 1.196, 1.196, 1.196, 1.207, 1.207]
 
 <table class="sortable">
   <tr>
@@ -36,16 +41,16 @@ assuming a constant prefactor of 1.2e+12 for all processes.
 
 <h3><a id="Al" href="#Al">Adatom on Al(100) Surface</a></h3>
 
-<p>This benchmark requires finding all the saddles below 
-the barrier height of 0.4 eV, or reaching 99.9% of the true hTST rate. 
-Still a constant prefactor of 1.2e+12 for is assumed for each process. 
+<p>All the 8 saddles below 0.4 eV are required to be found for this benchmark.  
+The barrier heights are: 
+[0.233, 0.233, 0.233, 0.233, 0.372, 0.372, 0.372, 0.372]
 
 <table class="sortable">
   <tr>
     <th>Algorithm</th>
     <th>Code</th>
-    <th>Barrier_&lt;1.3eV Jobs;</th>
-    <th>Barrier_&lt;1.3eV FCs;</th>
+    <th>Barrier_&lt;0.4eV Jobs;</th>
+    <th>Barrier_&lt;0.4eV FCs;</th>
     <th>Rate_0.999 Jobs</th>
     <th>Rate_0.999 FCs</th>
     <th>Contributor</th>
