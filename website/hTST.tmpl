@@ -34,4 +34,34 @@ assuming a constant prefactor of 1.2e+12 for all processes.
   {% endfor %}
 </table>
 
+<h3><a id="Al" href="#Al">Adatom on Al(100) Surface</a></h3>
+
+<p>This benchmark requires finding all the saddles below 
+the barrier height of 0.4 eV, or reaching 99.9% of the true hTST rate. 
+Still a constant prefactor of 1.2e+12 for is assumed for each process. 
+
+<table class="sortable">
+  <tr>
+    <th>Algorithm</th>
+    <th>Code</th>
+    <th>Barrier_&lt;1.3eV Jobs;</th>
+    <th>Barrier_&lt;1.3eV FCs;</th>
+    <th>Rate_0.999 Jobs</th>
+    <th>Rate_0.999 FCs</th>
+    <th>Contributor</th>
+  </tr>
+  {% for entry in benchmarks['Al']|sort(attribute='barrier_force_calls') %}
+    <tr>
+      <td>{{ entry.algorithm }}</td>
+      <td>{{ entry.code }} </td>
+      <td>{{ '%.0f' % entry.barrier_jobs }}</td>
+      <td>{{ '%.3e' % entry.barrier_force_calls }}</td>
+      <td>{{ '%.0f' % entry.rate_jobs }}</td>
+      <td>{{ '%.3e' % entry.rate_force_calls }}</td>
+      <td>{{ entry.contributor }}</td>
+    </tr>
+  {% endfor %}
+</table>
+
+
 {% endblock %}
