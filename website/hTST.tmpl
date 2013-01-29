@@ -24,6 +24,7 @@ The barrier heights are:
     <th>Barrier_&lt;1.3eV FCs;</th>
     <th>Rate_0.999 Jobs</th>
     <th>Rate_0.999 FCs</th>
+    <th>Date</th>
     <th>Contributor</th>
   </tr>
   {% for entry in benchmarks['Pt']|sort(attribute='barrier_force_calls') %}
@@ -34,6 +35,7 @@ The barrier heights are:
       <td>{{ '%.3e' % entry.barrier_force_calls }}</td>
       <td>{{ '%.0f' % entry.rate_jobs }}</td>
       <td>{{ '%.3e' % entry.rate_force_calls }}</td>
+      <td>{{ entry.date }}</td>
       <td>{{ entry.contributor }}</td>
     </tr>
   {% endfor %}
@@ -53,6 +55,7 @@ The barrier heights are:
     <th>Barrier_&lt;0.4eV FCs;</th>
     <th>Rate_0.999 Jobs</th>
     <th>Rate_0.999 FCs</th>
+    <th>Date</th>
     <th>Contributor</th>
   </tr>
   {% for entry in benchmarks['Al']|sort(attribute='barrier_force_calls') %}
@@ -63,6 +66,7 @@ The barrier heights are:
       <td>{{ '%.3e' % entry.barrier_force_calls }}</td>
       <td>{{ '%.0f' % entry.rate_jobs }}</td>
       <td>{{ '%.3e' % entry.rate_force_calls }}</td>
+      <td>{{ entry.date }}</td>
       <td>{{ entry.contributor }}</td>
     </tr>
   {% endfor %}
