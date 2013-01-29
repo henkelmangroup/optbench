@@ -15,7 +15,7 @@ barrier_list = [0.601, 0.601, 0.620, 0.986, 0.987, 0.989, 0.986, 0.987, 0.989, 1
 barrier_list0 = copy.copy(barrier_list)
 print barrier_list
 print len(barrier_list)
-rate_ref = 155015617.903
+rate_ref = 155055901.244
 
 f = open(join(path, 'processtable'))
 processes = {}
@@ -48,25 +48,25 @@ for line in f:
     if len(barrier_list) == 0 and last_barrier < 0: 
         last_barrier = number
 
-    rate_sum += rate * 1.2
+    rate_sum += rate 
     if rate_sum >= rate_ref * rate_accuracy and last_rate < 0:
         last_rate    = number
 
+#print rate_sum
 test_list.sort()
 print test_list
 print len(test_list)
 
 f.close()
 if last_barrier > 0:
-    print "Found all the barriers less than 1.5eV. Total number of processes examined:", last_barrier
+    print "Found all the barriers less than 1.5eV."
 else: 
     print "Failed, processes with the following barriers are missed:"
     print barrier_list
     print "Please run more searches."
 
 if last_rate > 0:
-    print "The escape rate reaches ", rate_accuracy, "of the reference hTST rate. Total number of processes examined:"
-    print last_rate
+    print "The escape rate reaches ", rate_accuracy, "of the reference hTST rate."
 else: 
     print "Failed, the escape rate did not reach the confidence of ", rate_accuracy
     print "Please run more searches."
@@ -131,16 +131,19 @@ print searchbarrier_num
 print "ForceCalls:"
 print fcsbarrier_sum
 
-print "Number of Rate Searches:"
-print searchrate_num 
-print "ForceCalls:"
-print fcsrate_sum
+#print "Number of Rate Searches:"
+#print searchrate_num 
+#print "ForceCalls:"
+#print fcsrate_sum
 
 barrier_jobs = np.mean(searchbarrier_num)
 barrier_fcs  = np.mean(fcsbarrier_sum)
 rate_jobs  = np.mean(searchrate_num)
 rate_fcs   = np.mean(fcsrate_sum)
 
+from datetime import date
+d     = date.today()
+today = d.strftime("%d %b %Y")
 resultfile = open('benchmark.dat','w')
 resultfile.write("barrier_jobs %i \n" % barrier_jobs)
 resultfile.write("barrier_force_calls %.3e \n" % barrier_fcs)
@@ -148,6 +151,9 @@ resultfile.write("average over %i \n" % len(searchbarrier_num))
 resultfile.write("rate_jobs %i \n" % rate_jobs)
 resultfile.write("rate_force_calls % .3e \n" % rate_fcs)
 resultfile.write("average over %i \n" % len(searchrate_num))
+resultfile.write("algorithm Dimer-LBFGS rotation: max=50, tol=1\n")
+resultfile.write("code Eon r2006\n")
+resultfile.write("date %s\n" % today)
 resultfile.write("contributor Penghao Xiao\n")
 resultfile.close()
 
