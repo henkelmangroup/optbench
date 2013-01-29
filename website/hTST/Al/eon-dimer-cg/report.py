@@ -141,6 +141,9 @@ barrier_fcs  = np.mean(fcsbarrier_sum)
 rate_jobs  = np.mean(searchrate_num)
 rate_fcs   = np.mean(fcsrate_sum)
 
+from datetime import date
+d     = date.today()
+today = d.strftime("%d %b %Y")
 resultfile = open('benchmark.dat','w')
 resultfile.write("barrier_jobs %i \n" % barrier_jobs)
 resultfile.write("barrier_force_calls %.3e \n" % barrier_fcs)
@@ -148,7 +151,9 @@ resultfile.write("average over %i \n" % len(searchbarrier_num))
 resultfile.write("rate_jobs %i \n" % rate_jobs)
 resultfile.write("rate_force_calls % .3e \n" % rate_fcs)
 resultfile.write("average over %i \n" % len(searchrate_num))
+resultfile.write("algorithm Dimer-CG rotation: max=50 tol=1\n")
+resultfile.write("code EON r2006\n")
+resultfile.write("date %s\n" % today)
 resultfile.write("contributor Penghao Xiao\n")
 resultfile.close()
-
 
