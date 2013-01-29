@@ -151,10 +151,9 @@ resultfile.write("average over %i \n" % len(searchbarrier_num))
 resultfile.write("rate_jobs %i \n" % rate_jobs)
 resultfile.write("rate_force_calls % .3e \n" % rate_fcs)
 resultfile.write("average over %i \n" % len(searchrate_num))
-resultfile.write("algorithm Lanczos-LBFGS rotation: max=50, tol=0.3\n")
+resultfile.write("algorithm Lanczos-LBFGS rotation: max=10, tol=0.05\n")
 resultfile.write("code Eon r2006\n")
 resultfile.write("date %s\n" % today)
 resultfile.write("contributor Penghao Xiao\n")
 resultfile.close()
-
 
