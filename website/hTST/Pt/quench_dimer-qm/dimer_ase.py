@@ -38,6 +38,83 @@ displacedis = vmag(p2.get_positions() - p1.get_positions())
 mode      = np.loadtxt('direction.dat')
 mode      = np.vstack(( mode, np.zeros((3,3)) ))
 
+"""
+##################################################
+# client generated random displacement for debug
+dis_radius  = 3.0
+#mean displacement distance in the configuration space
+dis_center = 2.5
+#standard deviation of the displacement radius
+scale      = 0.5
+
+repeat = True
+while repeat:
+    repeat = False
+
+    ##############################################
+
+    #random direction
+    mode = np.zeros((len(p1)+3,3))
+    mode = vrand(mode)
+    rtmp = p1.get_positions()
+    for ii in range(natom):
+         closeatom = False
+         for jj in range(7): 
+             drij = vmag(rtmp[ii] - rtmp[jj])
+             if drij < dis_radius:
+                   closeatom = True
+                   break
+         if not closeatom: 
+              mode[ii] *= 0.0
+    displacedis = np.random.normal(dis_center, scale, 1)[0]
+    mode = vunit(mode) * displacedis
+    mode[0] *=0
+    mode[-3]*=0
+    mode[-2]*=0
+    mode[-1]*=0
+    if displacedis < 0.1:
+        repeat = True
+        continue
+    print "displacement distance:", displacedis
+    print "mode:",mode
+
+    #displacement: need some improvement
+    p2 = p1.copy()
+    p2.set_calculator(calc)
+    r_p2    = p2.get_positions()
+    #p2.set_positions(r_p2 + mode[:-3])
+    #p2 = read_con('displacement.con')
+    p2 = read('displacement.con', format='vasp')
+    p2.set_calculator(calc)
+    print "energy after displacement:",p2.get_potential_energy()
+
+    np.savetxt('initialmode.dat', mode)
+    write("initialguess.CON", p2, format='vasp')
+    
+    
+    # check whether p2 is still in the same basin
+    pxt    = p2.copy()
+    pxt.set_calculator(calc)
+    dynt = FIRE(pxt, dt=0.2, maxmove=0.2, dtmax=0.2)
+    #dynt = MDMin(pxt)
+    dynt.run(fmax = opt_ediffg, steps = 5000)
+    write_con('reactant.con', pxt)
+
+    dEt  = pxt.get_potential_energy() - Ereactant 
+    tmpt = abs(dEt) <= EDIFF
+    if not tmpt:
+         repeat = True
+"""
+##############################################
+# initial ssneb_finswing search: modify initial position and mode
+#nim = 5
+#band   = neb.ssneb_finswing(pxt, p2, numImages = nim, finswing = True)
+#optneb = neb.fire_ssneb_finswing(band, maxmove =0.1, dtmax = 0.1, dt=0.1)
+#optneb.minimize(forceConverged=0.1, maxIterations = 200)
+#maxi   = band.Umaxi
+#mode   = band.path[maxi].n
+#p2     = band.path[maxi]
+#write("nebinitiate.CON", p2, format='vasp')
 
 ##############################################
 # start dimer search
@@ -52,7 +129,7 @@ d.search(minForce = dimer_ediffg, movie = "dimerSearch.movie", interval = 10 )
 #dyndimer.run(fmax = dimer_ediffg, steps = 5000)
 dimer_forceCalls = d.forceCalls
 #if vmag(d.dimer.get_forces()) > dimer_ediffg*3: 
-if dimer_forceCalls > 100000:
+if dimer_forceCalls >= 30000:
     status = 5 # maximum steps
 mode = d.get_mode()
 write_con("saddle.con", d.R0)

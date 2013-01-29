@@ -1,9 +1,7 @@
-barrier_jobs 6190
+barrier_jobs 6192 
 barrier_force_calls 1.908e+07 
 average over 1 
 rate_jobs 48 
 rate_force_calls  1.486e+05 
 average over 144 
-algorithm alphaDimer-QM
-code TSASE
 contributor Penghao Xiao

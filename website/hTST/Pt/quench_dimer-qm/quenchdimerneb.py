@@ -64,7 +64,7 @@ class nebDimer_atoms:
         self.express   = express
         self.weight    = weight
         self.checksteps = 100
-        self.quenchmax  = 3
+        self.quenchmax  = 1
         self.outbasin = 0
         self.outnoaction = 0
         self.checkneb = 0
@@ -210,13 +210,13 @@ class nebDimer_atoms:
             if self.objectCalls % self.checksteps == 1 and self.objectCalls > 1:
                 #update self.outbasin
                 self.checkbasin(self.Rmin)
+                print "Number of objectCalls:", self.objectCalls
             dimerForces   = self.dimer.get_forces()
             forces[midn]  = dimerForces
             #####need to pass to the optimizer
             self.normFtrans = vmag(forces[midn])
             self.forceCalls = self.dimer.forceCalls + self.opt_forceCalls
             print "=================still in ======================"
-            print "forces mag:",self.normFtrans
             return forces.reshape((-1, 3))
         if self.outbasin > self.quenchmax:
             self.nebCalls += 1
@@ -230,7 +230,6 @@ class nebDimer_atoms:
             #imax = midn
             imax = np.argsort(energies[:-1])[-1]
             self.emax  = energies[imax]
-            print "energies:",energies
             #####need to pass to the optimizer
             self.normFtrans = vmag(forces[imax])
 
@@ -244,7 +243,9 @@ class nebDimer_atoms:
                     if righthigh: tangent = copy.copy(tangent2)
                     else:         tangent = copy.copy(tangent1)
                 else:
-                    tangent = tangent1 + tangent2
+                    dEleft  = abs(energies[i - 1] - energies[i])
+                    dEright = abs(energies[i + 1] - energies[i])
+                    tangent = tangent1 * dEright + tangent2 * dEleft
 
                 tangent = vunit(tangent)
                 f  = forces[i]
@@ -253,27 +254,50 @@ class nebDimer_atoms:
                 self.path[i].tangent   = tangent
                 self.path[i].distance  = vmag(tangent1)
                 self.path[i].fparaproj = np.vdot(f, tangent)
-                if self.climb:
+                if self.climb or self.nebCalls > 50:
                     fspng = (vmag(tangent1) - vmag(tangent2)) * self.k * tangent
                 #fspng = (vmag(tangent1) - vmag(tangent2)) * self.k * tangent
                 
                 if i == imax and self.climb:
                     print "================= climbing ======================"
-                    print i
                     f -= 2.0 * fpara
                 else:
                     f -= fspng + fpara
                     
                 tangent1 = tangent2
             
+            #-----------------------------neb output--------------------------------
+            self.path[-1].distance  = vmag(tangent1)
+            self.path[-1].fparaproj = np.vdot(forces[-1], tangent)
+            self.path[0].distance  = 0.0
+            self.path[0].fparaproj = 0.0
+
+            fileneb = open('neb.dat', 'w')
+            R20 = 0.0
+            for i in range(self.numImages):
+                R20 += self.path[i].distance
+                realtotalf = self.path[i].fparaproj
+                fileneb.write( "%3i %13.6f %13.6f %13.6f %3i %s" % (i,float(R20),float(energies[i]-energies[0]),float(realtotalf),i,'\n'))
+
+            fMax = 0.0
+            for i in range(1, self.numImages - 1):
+                fi  = vmag(forces[i])
+                if fi > fMax:
+                    fMax = fi
+            fci = vmag(forces[imax])
+            output = str(self.nebCalls)+'     '+str(fMax)+'     ' \
+                 +str(energies[imax]-energies[0])+'     '+str(imax) \
+                 +'     '+str(fci) + '    '+str(self.dT)
+            print output
+            #---------------------------------------------------------------------
+            
             #set dimer center and the lowest mode for further reference
             self.dimer.R0 = self.path[imax]
             self.dimer.N  = self.path[imax].tangent
-            print "forces norm:", vmag(forces)
-            if vmag(forces) < 0.1:  
+            if vmag(forces) < 0.3:  
                 self.climb = True
-            #check if ther is intermedia minimum along the band
-            if vmag(forces) < 0.5 and self.checkneb < 5 and self.nebCalls % 200 == 0:  
+            #check if there is intermedia minimum along the band
+            if vmag(forces) < 1.5 and self.checkneb < 5 and self.nebCalls % 150 == 0:  
                 for i in range(1, self.numImages-1):
                     sign = copysign(1, self.path[i].fparaproj) 
                     sign = int(sign)
@@ -307,9 +331,11 @@ class nebDimer_atoms:
                         self.forceCalls += dyn0.nsteps
                         cell = px0.get_cell()
                         dRA  = vmag(cartesianPBC(px0.get_positions() - self.Rmin.get_positions(), cell)) 
-                        if dRA <= 0.3:
+                        dRB  = vmag(cartesianPBC(px0.get_positions() - self.path[-1].get_positions(), cell)) 
+                        if dRA <= 0.3 or dRB <= 0.3:
                             continue
                         else:
+                            ##### need to add cell here #####
                             print "found minimum along the path"
                             self.climb     = False
                             self.nebCalls  = 0
@@ -318,15 +344,18 @@ class nebDimer_atoms:
                             ##### to prevent conincide
                             rtmp1 = 0.1 * self.path[i].get_positions() + 0.9 * self.path[i-1].get_positions()
                             rtmp2 = px0.get_positions()
-                            drtmp  = cartesianPBC(rtmp1-rtmp0, cell)
-                            rtmp01 = rtmp0 + 0.5*drtmp
-                            drtmp  = cartesianPBC(rtmp2-rtmp1, cell)
-                            rtmp12 = rtmp1 + 0.5*drtmp
                             self.path[0].set_positions(rtmp0) 
-                            self.path[1].set_positions(rtmp01) 
-                            self.path[2].set_positions(rtmp1) 
-                            self.path[3].set_positions(rtmp12) 
-                            self.path[4].set_positions(rtmp2) 
+                            self.path[midn].set_positions(rtmp1) 
+                            self.path[-1].set_positions(rtmp2) 
+
+                            drtmp  = cartesianPBC(rtmp1-rtmp0, cell)
+                            for imgi in range(1, midn):
+                                rtmp01 = rtmp0 + imgi * drtmp / midn
+                                self.path[imgi].set_positions(rtmp01) 
+                            drtmp  = cartesianPBC(rtmp2-rtmp1, cell)
+                            for imgi in range(midn + 1, self.numImages - 1):
+                                rtmp12 = rtmp1 + (imgi - midn) * drtmp / midn
+                                self.path[imgi].set_positions(rtmp12) 
                             break
                     
             return forces.reshape((-1, 3))
@@ -373,12 +402,11 @@ class nebDimer_atoms:
                 self.dimer.R0.set_cell(self.checkR1.get_cell())
                 return
             elif self.outbasin <= self.quenchmax: 
-                if self.outbasin == self.quenchmax: self.checksteps = 2
                 pxt = self.checkR1.copy()
                 pxt.set_calculator(self.checkR1.get_calculator())
                 dynt = MDMin(pxt, dt = 0.1)
                 dynt.run(fmax = 0.1, steps = 1000)
-                optsteps = max(dynt.nsteps / 4, 5)
+                optsteps = max(dynt.nsteps / 6, 5)
                 dyn1 = MDMin(self.checkR1, dt = 0.1)
                 dyn1.run(fmax = opt_ediffg, steps = optsteps)
                 self.opt_forceCalls += dyn1.nsteps + dynt.nsteps
@@ -388,21 +416,23 @@ class nebDimer_atoms:
                 except: pass
                 return
             #set up neb run after quenching for the max times
+            midn = self.numImages / 2
             rtmp0 = pmin.get_positions()
             rtmp1 = self.checkR1.get_positions()
             if self.outnoaction > 1: rtmp2 = self.neighbor.get_positions() #set the neighbor min as final state
             else:                    rtmp2 = px0.get_positions()
-            drtmp  = cartesianPBC(rtmp1-rtmp0, cell)
-            rtmp01 = rtmp0 + 0.5*drtmp
-            drtmp  = cartesianPBC(rtmp2-rtmp1, cell)
-            rtmp12 = rtmp1 + 0.5*drtmp
             self.path[0].set_positions(rtmp0) 
-            self.path[1].set_positions(rtmp01) 
-            self.path[2].set_positions(rtmp1) 
-            self.path[3].set_positions(rtmp12) 
-            self.path[4].set_positions(rtmp2) 
-            #self.path[midn+1].set_positions(checkR2) 
-            #self.path[midn-1].set_positions(self.checkR1.get_positions()) 
+            self.path[midn].set_positions(rtmp1) 
+            self.path[-1].set_positions(rtmp2) 
+
+            drtmp  = cartesianPBC(rtmp1-rtmp0, cell)
+            for imgi in range(1, midn):
+                rtmp01 = rtmp0 + imgi * drtmp / midn
+                self.path[imgi].set_positions(rtmp01) 
+            drtmp  = cartesianPBC(rtmp2-rtmp1, cell)
+            for imgi in range(midn + 1, self.numImages - 1):
+                rtmp12 = rtmp1 + (imgi - midn) * drtmp / midn 
+                self.path[imgi].set_positions(rtmp12) 
         else:
             print "********==========================================************"
             print "out of basin without any action taken:", self.outbasin
@@ -416,7 +446,6 @@ class nebDimer_atoms:
 # The following part can be replaced by FIRE or MDMin optimizer in ase, see the ssdimer.py in examples
     def step(self):
         self.steps += 1
-        print "************************"
         self.Ftrans = self.get_forces() 
         Ftrans = self.Ftrans
         dV = Ftrans * self.dT

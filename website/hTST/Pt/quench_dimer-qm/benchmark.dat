@@ -1,9 +1,10 @@
-barrier_jobs 121 
-barrier_force_calls 5.723e+05 
-average over 15 
-rate_jobs 50 
-rate_force_calls  2.386e+05 
-average over 39 
+barrier_jobs 100 
+barrier_force_calls 2.932e+05 
+average over 10 
+rate_jobs 49 
+rate_force_calls  1.455e+05 
+average over 20 
 algorithm quenchDimer+neb-QM
-code TSASE
+code Eon r2006
+date 28 Jan 2013
 contributor Penghao Xiao
