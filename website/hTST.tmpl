@@ -13,31 +13,21 @@ successful searching.
 <h3><a id="Pt" href="#Pt">Heptamer Island on Pt(111) Surface</a></h3>
 
 <p>All the 15 saddles below 1.3 eV are required to be found for this benchmark.  
-The barrier heights are: 
-<p>[0.601, 0.601, 0.620, 0.986, 0.986, 0.987, 0.987, 0.989, 0.989, 1.196, 1.196, 1.196, 1.196, 1.207, 1.207]
-<p>The rates are calculated at 700K. 
+The barrier heights are: 0.601, 0.601, 0.620, 0.986, 0.986, 0.987, 0.987, 0.989, 0.989, 1.196, 1.196, 1.196, 1.196, 1.207, 1.207 eV. The rates are calculated at 700K. </p>
 
-<table class="sortable">
-  <tr>
-    <th>Algorithm</th>
+<table class="sortable table table-striped table-condensed table-bordered table-hover">
+  <thead>
+    <th>Entry</th>
     <th>Code</th>
-    <th>Barrier_&lt;1.3eV Jobs;</th>
-    <th>Barrier_&lt;1.3eV FCs;</th>
-    <th>Rate_0.999 Jobs</th>
-    <th>Rate_0.999 FCs</th>
-    <th>Date</th>
-    <th>Contributor</th>
-  </tr>
+    <th>Barriers &lt; 1.3 eV FCs</th>
+    <th>99.9% Rate FCs</th>
+  </thead>
   {% for entry in benchmarks['Pt']|sort(attribute='barrier_force_calls') %}
     <tr>
-      <td>{{ entry.algorithm }}</td>
+      <td>{% include 'templates/entry-popover.tmpl' %}</td>
       <td>{{ entry.code }} </td>
-      <td>{{ '%.0f' % entry.barrier_jobs }}</td>
       <td>{{ '%.3e' % entry.barrier_force_calls }}</td>
-      <td>{{ '%.0f' % entry.rate_jobs }}</td>
       <td>{{ '%.3e' % entry.rate_force_calls }}</td>
-      <td>{{ entry.date }}</td>
-      <td>{{ entry.contributor }}</td>
     </tr>
   {% endfor %}
 </table>
@@ -45,32 +35,21 @@ The barrier heights are:
 <h3><a id="Al" href="#Al">Adatom on Al(100) Surface</a></h3>
 
 <p>11 saddles below 0.5 eV are required to be found for this benchmark.  
-The barrier heights are: 
-<p>[0.233, 0.233, 0.233, 0.233, 0.372, 0.372, 0.372, 0.372, 0.438, 0.452, 0.460]
-<p>Actually there are 8 degenerated saddles at 0.438 eV, 16 at 0.452 eV and 16 at 0.460 eV, but it is too challenging to find all of them. 
-<p>The rates are calculated at 300K. 
+The barrier heights are: 0.233, 0.233, 0.233, 0.233, 0.372, 0.372, 0.372, 0.372, 0.438, 0.452, 0.460 eV. Actually there are 8 degenerated saddles at 0.438 eV, 16 at 0.452 eV and 16 at 0.460 eV, but it is too challenging to find all of them. The rates are calculated at 300K.</p>
 
-<table class="sortable">
-  <tr>
-    <th>Algorithm</th>
+<table class="sortable table table-striped table-condensed table-bordered table-hover">
+  <thead>
+    <th>Entry</th>
     <th>Code</th>
-    <th>Barrier_&lt;0.4eV Jobs;</th>
-    <th>Barrier_&lt;0.4eV FCs;</th>
-    <th>Rate_0.999 Jobs</th>
-    <th>Rate_0.999 FCs</th>
-    <th>Date</th>
-    <th>Contributor</th>
-  </tr>
+    <th>Barrier &lt; 0.4 eV FCs</th>
+    <th>99.9% Rate FCs</th>
+  </thead>
   {% for entry in benchmarks['Al']|sort(attribute='barrier_force_calls') %}
     <tr>
-      <td>{{ entry.algorithm }}</td>
+      <td>{% include 'templates/entry-popover.tmpl' %}</td>
       <td>{{ entry.code }} </td>
-      <td>{{ '%.0f' % entry.barrier_jobs }}</td>
       <td>{{ '%.3e' % entry.barrier_force_calls }}</td>
-      <td>{{ '%.0f' % entry.rate_jobs }}</td>
       <td>{{ '%.3e' % entry.rate_force_calls }}</td>
-      <td>{{ entry.date }}</td>
-      <td>{{ entry.contributor }}</td>
     </tr>
   {% endfor %}
 </table>

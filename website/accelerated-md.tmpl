@@ -14,8 +14,8 @@ Benchmark for calculating true rates of chemical reactions.
 
 <h3>Standard True Rate of Escape</h3>
 
-<table class="sortable">
-  <tr>
+<table class="sortable table table-striped table-condensed table-bordered table-hover">
+  <thead>
     <th>Algorithm</th>
     <th>Code</th>
     <th>Thermostat</th>
@@ -24,7 +24,7 @@ Benchmark for calculating true rates of chemical reactions.
     <th>Percent Uncertainty</th>
     <th>Date</th>
     <th>Contributer</th>
-  </tr>
+  </thead>
   {% for entry in benchmarks['standard_aladatom']|sort(attribute='true_rate') %}
    <tr>
       <td>{{ entry.algorithm }}</td>

@@ -1,33 +1,5 @@
-table {
-    text-align: right;
-    border-collapse: collapse;
-    border: 1px solid black;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-table, td, th {
-    border: 1px solid black;
-}
-
-.entry  {
-    display: block;
-}
-
-td, th {
-    padding: 3px;
-}
-
-th:hover {
-    background-color: #eee;
-}
-
 td {
     font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
-}
-
-tr:nth-child(even) {
-    background-color: #eee;
 }
 
 .popover {

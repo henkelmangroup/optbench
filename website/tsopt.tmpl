@@ -23,8 +23,8 @@ necessary to reach the global minimum the first time is recorded.</p>
 <p> max(FCs): Maximum number of forcecalls needed to find the global minimum(worst successful run) <p>
 
 
-<table class="sortable">
-  <tr>
+<table class="sortable table table-striped table-condensed table-bordered table-hover">
+  <thead>
     <th>Algorithm</th>
     <th>Code</th>
     <th>&lt;FCs&gt;</th>
@@ -32,7 +32,7 @@ necessary to reach the global minimum the first time is recorded.</p>
     <th>max(FCs)</th>
     <th>Date</th>
     <th>Contributor</th>
-  </tr>
+  </thead>
   {% for entry in benchmarks['LJ38']|sort(attribute='force_calls') %}
     <tr>
       <td>{{ entry.algorithm }}</td>

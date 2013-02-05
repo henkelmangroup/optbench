@@ -11,7 +11,7 @@ force calls as <i>force_calls_max</i>, the minimum number of force calls as
 <i>nfailed</i>
 </p>
 
-<h3><a id="lj38" href="#lj38">Random Lennard-Jones 38 Cluster</a></h3>
+<h3><a id="lj38" href="#lj38">Random Lennard-Jones 38 Clusters</a></h3>
 
 <p>This benchmark tests the performance of optimizers starting from 1000
 randomly generated Lennard-Jones 38 clusters. A tar file containing the
@@ -22,34 +22,17 @@ structures is here: <a href="minimization/lj38/lj38-clusters.tgz">lj38.tgz</a>.<
 distance. The maximum number of force calls that may be made cannot exceed
 10,000. Runs that exceed the maximum number of force calls or fail to converge for any other reason are considered failed.</p>
 
-<table class="sortable">
-  <tr>
+<table class="sortable table table-striped table-condensed table-bordered table-hover">
+  <thead>
     <th>Entry</th>
     <th>&lt;FCs&gt;</th>
     <th>min(FCs)</th>
     <th>max(FCs)</th>
     <th>Failed</th>
-  </tr>
+  </thead>
   {% for entry in benchmarks['lj38']|sort(attribute='force_calls') %}
     <tr>
-      <td>
-        <a href="#" class="entry" onclick="return false;"
-          data-content="
-          <p>
-          <b>Date:</b> {{ entry.date }} 
-          <br>
-          <b>Contributor:</b> {{ entry.contributor }}
-          <br>
-          <b>Code:</b> {{ entry.code }}
-          <br>
-          <b>Code Version:</b> {{ entry.code_version }}
-          <br>
-          <b>Comments:</b><br>
-          {{ entry.comments }}</p>
-          ">
-            {{ entry.entry_name }}
-          </a>
-      </td>
+      <td>{% include 'templates/entry-popover.tmpl' %}</td>
       <td>{{ '%.0f' % entry.force_calls }}</td>
       <td>{{ '%.0f' % entry.force_calls_min }}</td>
       <td>{{ '%.0f' % entry.force_calls_max }}</td>
