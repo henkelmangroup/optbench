@@ -26,25 +26,19 @@ distance. The maximum number of force calls that may be made cannot exceed
 
 <table class="sortable">
   <tr>
-    <th>Algorithm</th>
-    <th>Code</th>
+    <th>Entry</th>
     <th>&lt;FCs&gt;</th>
     <th>min(FCs)</th>
     <th>max(FCs)</th>
     <th>Failed</th>
-    <th>Date</th>
-    <th>Contributor</th>
   </tr>
   {% for entry in benchmarks['lj38']|sort(attribute='force_calls') %}
     <tr>
-      <td>{{ entry.algorithm }}</td>
-      <td>{{ entry.code }} {{ entry.code_version }}</td>
+      <td>{{ entry.entry_name }}</td>
       <td>{{ '%.0f' % entry.force_calls }}</td>
       <td>{{ '%.0f' % entry.force_calls_min }}</td>
       <td>{{ '%.0f' % entry.force_calls_max }}</td>
       <td>{{ '%.0f' % entry.nfailed }}</td>
-      <td>{{ entry.date }}</td>
-      <td>{{ entry.contributor }}</td>
     </tr>
   {% endfor %}
 </table>

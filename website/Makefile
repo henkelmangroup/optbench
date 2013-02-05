@@ -9,7 +9,7 @@ TEMPLATE_FILES=$(wildcard *.tmpl)
 HTML_FILES=$(TEMPLATE_FILES:.tmpl=.html)
 html: $(HTML_FILES)
 
-*.html: $(wildcard templates/*.tmpl)
+*.html: $(wildcard templates/*.tmpl) $(RENDER)
 minimization.html: $(wildcard minimization/*/*/*.dat)
 
 .PHONY: clean html
