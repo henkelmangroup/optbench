@@ -7,8 +7,8 @@ RENDER = ../bin/render.py
 
 TEMPLATE_FILES=$(wildcard *.tmpl)
 HTML_FILES=$(TEMPLATE_FILES:.tmpl=.html)
-website: html tar
 html: $(HTML_FILES)
+website: tar html
 
 *.html: $(wildcard templates/*.tmpl) $(wildcard */*/*/benchmark.dat) \
 	$(wildcard */*/*/comments.txt) $(RENDER) 
