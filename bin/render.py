@@ -27,15 +27,16 @@ def load_benchmarks(suite):
             continue
         
         benchmarks[benchmark] = []
-        for run in listdir(join(suite, benchmark)):
-            run_path = join(suite, benchmark, run)
-            if isfile(run_path) or run[0] == '.':
+        for entry_name in listdir(join(suite, benchmark)):
+            run_path = join(suite, benchmark, entry_name)
+            if isfile(run_path) or entry_name[0] == '.':
                 continue
 
             benchmark_dat = join(run_path, 'benchmark.dat')
             if not isfile(benchmark_dat):
                 continue
             data = {}
+            data['entry_name'] = entry_name
             f = open(benchmark_dat)
             for line in f:
                 fields = line.strip().split()
