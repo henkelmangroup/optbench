@@ -1,11 +1,11 @@
-force_calls 209
-force_calls_max 544
+force_calls 210
+force_calls_max 567
 force_calls_min 101
-force_calls_per_second 4750
+force_calls_per_second 8300.4
 algorithm L-BFGS M=5 maxstep=0.2
 nfailed 0
 code Eon
-code_version r1963
-code_file eon-r2006.tgz
-date 07 Nov 2012
+code_version r2025
+code_file eon-r2025.tgz
+date 05 Feb 2013
 contributor Sam Chill

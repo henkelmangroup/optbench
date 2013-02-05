@@ -37,14 +37,17 @@ def load_benchmarks(suite):
             if not isfile(benchmark_dat):
                 continue
 
-            comments_txt = join(run_path, 'comments.txt')
-            comments = ""
-            if isfile(comments_txt):
-                comments = open(comments_txt).read()
-
             data = {}
+            comments_txt = join(run_path, 'comments.txt')
+            if isfile(comments_txt):
+                data['comments'] = open(comments_txt).read()
+
+
+            input_files = join(run_path, entry_name+'.tgz')
+            if isfile(input_files):
+                data['input_files'] = input_files
+
             data['entry_name'] = entry_name
-            data['comments'] = comments
             data['id'] = '%s-%i' % (benchmark,index)
             index += 1
             f = open(benchmark_dat)
@@ -60,6 +63,7 @@ def load_benchmarks(suite):
                     pass
 
             benchmarks[benchmark].append(data)
+            
         if len(benchmarks[benchmark]) == 0:
             del benchmarks[benchmark]
     return benchmarks

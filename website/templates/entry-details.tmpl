@@ -14,9 +14,21 @@
 
             <span><b>Date:</b> {{ entry.date }}</span>
             <span><b>Contributor:</b> {{ entry.contributor }}</span>
-            <span><b>Code:</b>
-              <a href="codes/{{entry.code_file}}">{{ entry.code }} {{ entry.code_version }}</a>
-             </span>
+            {% if entry.code_file %} 
+            <span>
+              <b>Code:</b> 
+              <a href="codes/{{entry.code_file}}">
+                {{ entry.code_file }}
+              </a>
+            </span>
+            {% endif %}
+            {% if entry.input_files %} 
+            <span>
+              <b>Input files:</b>
+              <a href="{{ entry.input_files }}">
+                {{entry.entry_name}}.tgz
+              </a>
+            </span>
+            {% endif %}
           </p>
         </div>
-

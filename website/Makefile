@@ -7,12 +7,15 @@ RENDER = ../bin/render.py
 
 TEMPLATE_FILES=$(wildcard *.tmpl)
 HTML_FILES=$(TEMPLATE_FILES:.tmpl=.html)
+website: html tar
 html: $(HTML_FILES)
 
 *.html: $(wildcard templates/*.tmpl) $(wildcard */*/*/benchmark.dat) \
 	$(wildcard */*/*/comments.txt) $(RENDER) 
-minimization.html: $(wildcard minimization/*/*/*.dat)
 
-.PHONY: clean html
+tar:
+	../bin/package.sh
+
+.PHONY: clean html tar website
 clean:
 	rm *.html
