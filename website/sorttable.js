@@ -148,9 +148,10 @@ sorttable = {
 	          row_array[row_array.length] = [sorttable.getInnerText(rows[j].cells[col]), rows[j]];
 	        }
 	        /* If you want a stable sort, uncomment the following line */
-	        //sorttable.shaker_sort(row_array, this.sorttable_sortfunction);
+	        sorttable.shaker_sort(row_array, this.sorttable_sortfunction);
 	        /* and comment out this one */
-	        row_array.sort(this.sorttable_sortfunction);
+	        //row_array.sort(this.sorttable_sortfunction);
+	        row_array.reverse();
 	        
 	        tb = this.sorttable_tbody;
 	        for (var j=0; j<row_array.length; j++) {
@@ -260,9 +261,10 @@ sorttable = {
      each sort function takes two parameters, a and b
      you are comparing a[0] and b[0] */
   sort_numeric: function(a,b) {
-    aa = parseFloat(a[0].replace(/^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?$/g,''));
+    aa = parseFloat(a[0].replace(/[^0-9.-e]/g,''));
+    console.log(aa)
     if (isNaN(aa)) aa = 0;
-    bb = parseFloat(b[0].replace(/^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?$/g,'')); 
+    bb = parseFloat(b[0].replace(/[^0-9.-e]/g,'')); 
     if (isNaN(bb)) bb = 0;
     return aa-bb;
   },
