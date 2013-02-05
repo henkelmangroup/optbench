@@ -11,3 +11,8 @@ th {
 .entry-details {
     font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
+
+.entry-details span {
+    white-space: nowrap;
+    padding-right: 5px;
+}
