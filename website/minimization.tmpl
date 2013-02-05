@@ -34,17 +34,17 @@ distance. The maximum number of force calls that may be made cannot exceed
     <tr>
       <td class="entry" 
         data-content="
-        Date: {{ entry.date }} 
+        <b>Date:</b> {{ entry.date }} 
         <br>
-        Contributor: {{ entry.contributor }}
+        <b>Contributor:</b> {{ entry.contributor }}
         <br>
-        Code: {{ entry.code }}
+        <b>Code:</b> {{ entry.code }}
         <br>
-        Code Version: {{ entry.code_version }}
+        <b>Code Version:</b> {{ entry.code_version }}
         <br>
-        Comments: {{ entry.comments }}
-        " 
-        data-original-title="{{entry.entry_name}}">
+        <b>Comments:</b>
+        <p>{{ entry.comments }}</p>
+        ">
         <a href="#" onclick="return false;">{{ entry.entry_name }}</a>
       </td>
       <td>{{ '%.0f' % entry.force_calls }}</td>

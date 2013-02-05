@@ -21,6 +21,7 @@ def usage():
 
 def load_benchmarks(suite):
     benchmarks = {}
+    index = 0
     for benchmark in listdir(suite):
         benchmark_path = join(suite, benchmark)
         if isfile(benchmark_path) or benchmark[0] == '.':
@@ -35,8 +36,16 @@ def load_benchmarks(suite):
             benchmark_dat = join(run_path, 'benchmark.dat')
             if not isfile(benchmark_dat):
                 continue
+
+            comments_txt = join(run_path, 'comments.txt')
+            comments = ""
+            if isfile(comments_txt):
+                comments = open(comments_txt).read()
+
             data = {}
             data['entry_name'] = entry_name
+            data['comments'] = comments
+            index += 1
             f = open(benchmark_dat)
             for line in f:
                 fields = line.strip().split()

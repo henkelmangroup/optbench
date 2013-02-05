@@ -27,3 +27,7 @@ td {
 tr:nth-child(even) {
     background-color: #eee;
 }
+
+.popover {
+    width: 400px;
+}
