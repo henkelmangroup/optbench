@@ -262,7 +262,6 @@ sorttable = {
      you are comparing a[0] and b[0] */
   sort_numeric: function(a,b) {
     aa = parseFloat(a[0].replace(/[^0-9.-e]/g,''));
-    console.log(aa)
     if (isNaN(aa)) aa = 0;
     bb = parseFloat(b[0].replace(/[^0-9.-e]/g,'')); 
     if (isNaN(bb)) bb = 0;

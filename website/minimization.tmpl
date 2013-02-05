@@ -32,13 +32,28 @@ distance. The maximum number of force calls that may be made cannot exceed
   </tr>
   {% for entry in benchmarks['lj38']|sort(attribute='force_calls') %}
     <tr>
-      <td>{{ entry.entry_name }}</td>
+      <td class="entry" 
+        data-content="
+        Date: {{ entry.date }} 
+        <br>
+        Contributor: {{ entry.contributor }}
+        <br>
+        Code: {{ entry.code }}
+        <br>
+        Code Version: {{ entry.code_version }}
+        <br>
+        Comments: {{ entry.comments }}
+        " 
+        data-original-title="{{entry.entry_name}}">
+        <a href="#" onclick="return false;">{{ entry.entry_name }}</a>
+      </td>
       <td>{{ '%.0f' % entry.force_calls }}</td>
       <td>{{ '%.0f' % entry.force_calls_min }}</td>
       <td>{{ '%.0f' % entry.force_calls_max }}</td>
       <td>{{ '%.0f' % entry.nfailed }}</td>
     </tr>
   {% endfor %}
+
 </table>
 
 {% endblock %}

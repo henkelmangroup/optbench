@@ -9,6 +9,17 @@
     <script src="jquery.min.js"></script>
     <script src="bootstrap.min.js"></script>
     <script src="sorttable.js"></script>
+
+    <script>
+      $(function () {
+        options = {
+          placement: 'right',
+          html: true,
+        }
+        $('.entry').popover(options);
+      });
+    </script>
+
   </head>
   <body>
     <div class="container">
