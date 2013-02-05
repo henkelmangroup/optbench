@@ -14,7 +14,9 @@
 
             <span><b>Date:</b> {{ entry.date }}</span>
             <span><b>Contributor:</b> {{ entry.contributor }}</span>
-            <span><b>Code:</b> {{ entry.code }} {{ entry.code_version }}</span>
+            <span><b>Code:</b>
+              <a href="codes/{{entry.code_file}}">{{ entry.code }} {{ entry.code_version }}</a>
+             </span>
           </p>
         </div>
 

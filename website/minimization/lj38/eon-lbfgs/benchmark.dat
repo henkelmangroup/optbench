@@ -6,5 +6,6 @@ algorithm L-BFGS M=5 maxstep=0.2
 nfailed 0
 code Eon
 code_version r1963
+code_file eon-r2006.tgz
 date 07 Nov 2012
 contributor Sam Chill
