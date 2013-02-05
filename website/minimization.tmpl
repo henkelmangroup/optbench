@@ -25,9 +25,10 @@ distance. The maximum number of force calls that may be made cannot exceed
 <table class="sortable table table-striped table-condensed table-bordered table-hover">
   <thead>
     <th>Entry</th>
-    <th>&lt;FCs&gt;</th>
-    <th>min(FCs)</th>
-    <th>max(FCs)</th>
+<!--    <th>&lt;N&gt;</th> -->
+    <th>\(\left\lt N \right\gt\)</th>
+    <th>\(\min N\)</th>
+    <th>\(\max N\)</th>
     <th>Failed</th>
   </thead>
   {% for entry in benchmarks['lj38']|sort(attribute='force_calls') %}

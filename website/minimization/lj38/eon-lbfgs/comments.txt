@@ -1,1 +1,1 @@
-L-BFGS with an initial diagonal inverse hessian equal to 0.004 distance squared per energy. The memory length was set to 5 and the maximum move distance was 0.2 distance units.
+L-BFGS with an initial diagonal inverse hessian ($H^{-1}$) equal to 0.004 distance squared per energy. The memory length was set to 5 and the maximum move distance was 0.2 distance units.
