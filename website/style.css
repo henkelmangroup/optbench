@@ -2,8 +2,12 @@ td {
     font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
 }
 
-.popover {
-    width: 300px;
+th {
+    cursor: pointer;
+    -webkit-user-select: none;
+    white-space: nowrap;
+}
+
+.entry-details {
     font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size:14px;
 }

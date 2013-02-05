@@ -45,6 +45,7 @@ def load_benchmarks(suite):
             data = {}
             data['entry_name'] = entry_name
             data['comments'] = comments
+            data['id'] = '%s-%i' % (benchmark,index)
             index += 1
             f = open(benchmark_dat)
             for line in f:

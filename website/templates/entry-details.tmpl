@@ -1,0 +1,22 @@
+
+        <a href="#" onclick="return false;" 
+           data-target="#{{entry.id}}" data-toggle="collapse">
+          {{ entry.entry_name }}
+        </a>
+
+        <div id="{{entry.id}}" class="collapse entry-details">
+          <p>
+            {% if entry.comments %}
+            <b>Comments:</b>
+            {{ entry.comments }}
+            <br>
+            {% endif %}
+
+            <b>Date:</b> {{ entry.date }} 
+            &nbsp;&nbsp;
+            <b>Contributor:</b> {{ entry.contributor }}
+            &nbsp;&nbsp;
+            <b>Code:</b> {{ entry.code }} {{ entry.code_version }}
+          </p>
+        </div>
+

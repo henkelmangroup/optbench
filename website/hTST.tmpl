@@ -24,7 +24,7 @@ The barrier heights are: 0.601, 0.601, 0.620, 0.986, 0.986, 0.987, 0.987, 0.989,
   </thead>
   {% for entry in benchmarks['Pt']|sort(attribute='barrier_force_calls') %}
     <tr>
-      <td>{% include 'templates/entry-popover.tmpl' %}</td>
+      <td>{% include 'templates/entry-details.tmpl' %}</td>
       <td>{{ entry.code }} </td>
       <td>{{ '%.3e' % entry.barrier_force_calls }}</td>
       <td>{{ '%.3e' % entry.rate_force_calls }}</td>
@@ -46,7 +46,7 @@ The barrier heights are: 0.233, 0.233, 0.233, 0.233, 0.372, 0.372, 0.372, 0.372,
   </thead>
   {% for entry in benchmarks['Al']|sort(attribute='barrier_force_calls') %}
     <tr>
-      <td>{% include 'templates/entry-popover.tmpl' %}</td>
+      <td>{% include 'templates/entry-details.tmpl' %}</td>
       <td>{{ entry.code }} </td>
       <td>{{ '%.3e' % entry.barrier_force_calls }}</td>
       <td>{{ '%.3e' % entry.rate_force_calls }}</td>
