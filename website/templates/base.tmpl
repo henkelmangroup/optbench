@@ -11,24 +11,33 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/sorttable.js"></script>
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-        processEscapes: true
-      },
-      "HTML-CSS": {scale: 95},
-    });
-  </script>
-  <script type="text/javascript"
-    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
-  </script>
-  <script type="text/javascript">
-    $(function () {
-        $('[rel=tooltip]').tooltip();
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+          processEscapes: true
+        },
+        "HTML-CSS": {scale: 95},
       });
-  </script>
+    </script>
+    <script type="text/javascript"
+      src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+    </script>
+    
+    <script type="text/javascript">
+      $(function () {
+          $('[rel=tooltip]').tooltip();
+          
+          $('.collapse').hide();
+
+          $('.collapse').on('show', function () {
+            $(this).show();
+          }).on('hidden', function () {
+            $(this).hide();
+          });
+      });
+    </script>
 
   </head>
   <body>

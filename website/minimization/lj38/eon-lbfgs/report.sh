@@ -14,7 +14,6 @@ echo "force_calls_max $fcalls_max" >> benchmark.dat
 echo "force_calls_min $fcalls_min" >> benchmark.dat
 fc_per_second=$(awk "BEGIN {print $fcalls / $walltime}")
 echo "force_calls_per_second $fc_per_second" >> benchmark.dat
-echo "algorithm L-BFGS M=5 maxstep=0.2" >> benchmark.dat
 echo "nfailed $nfailed" >> benchmark.dat
 echo "code Eon" >> benchmark.dat
 echo "code_version r2025" >> benchmark.dat
