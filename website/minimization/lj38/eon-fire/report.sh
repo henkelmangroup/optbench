@@ -17,6 +17,7 @@ echo "force_calls_per_second $fc_per_second" >> benchmark.dat
 echo "nfailed $nfailed" >> benchmark.dat
 echo "algorithm FIRE" >> benchmark.dat
 echo "code Eon" >> benchmark.dat
-echo "code_version r1789" >> benchmark.dat
+echo "code_version r2025" >> benchmark.dat
 echo "date $(date +'%d %b %Y')" >> benchmark.dat
 echo "contributor Sam Chill" >> benchmark.dat
+echo "code_file eon-r2025.tgz" >> benchmark.dat

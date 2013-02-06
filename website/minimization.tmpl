@@ -39,7 +39,33 @@ distance. The maximum number of force calls that may be made cannot exceed
       <td>{{ '%.0f' % entry.nfailed }}</td>
     </tr>
   {% endfor %}
-
 </table>
+
+<div id="placeholder"></div>
+
+<script>
+  $(function() {
+    var data = [
+      {% for entry in benchmarks['lj38'] %}
+      [ "{{entry.entry_name}}", {{ entry.force_calls }}  ], 
+      {% endfor %}
+    ];
+    
+    $.plot("#placeholder", [ data ], {
+      series: {
+        bars: {
+          show: true,
+          barWidth: 0.6,
+          align: "center",
+        }
+      },
+      xaxis: {
+        mode: "categories",
+        tickLength: 0,
+      }
+    });
+  
+  });
+</script>
 
 {% endblock %}
