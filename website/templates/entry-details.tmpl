@@ -1,11 +1,9 @@
 
         <a href="#" onclick="return false;" 
            data-target="#{{entry.id}}" data-toggle="collapse">
-          {{ entry.entry_name }}
-        </a>
-        
-        {% if not entry.code_file %} 
-        <a href="#" rel="tooltip" title="Missing source code"><sup>1</sup></a>
+           {{ entry.entry_name }}</a>
+         {%- if not entry.code_file -%}
+              <a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
         {% endif %}
  
         <div id="{{entry.id}}" class="collapse entry-details">
