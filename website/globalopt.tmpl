@@ -33,23 +33,19 @@ calls as <i>force_calls_max</i>, and the minimum number of force calls as
 
 <table class="sortable table table-striped table-condensed table-bordered table-hover">
   <thead>
-    <th>Algorithm</th>
+    <th>Entry</th>
     <th>Code</th>
-    <th>&lt;Avg FCs&gt;</th>
-    <th>min(FCs)</th>
-    <th>max(FCs)</th>
-    <th>Date</th>
-    <th>Contributor</th>
+    <th>$\left\lt N \right\gt$</th>
+    <th>$\min N$</th>
+    <th>$\max N$</th>
   </thead>
   {% for entry in benchmarks['lj38']|sort(attribute='force_calls') %}
     <tr>
-      <td>{{ entry.algorithm }}</td>
-      <td>{{ entry.code }} {{ entry.code_version }}</td>
+      <td>{% include 'templates/entry-details.tmpl' %}</td>
+      <td>{{ entry.code }}</td>
       <td>{{ '%.3e' % entry.force_calls }}</td>
       <td>{{ '%.3e' % entry.force_calls_min }}</td>
       <td>{{ '%.3e' % entry.force_calls_max }}</td>
-      <td>{{ entry.date }}</td>
-      <td>{{ entry.contributor }}</td>
     </tr>
   {% endfor %}
 </table>

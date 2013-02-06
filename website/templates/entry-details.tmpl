@@ -3,7 +3,11 @@
            data-target="#{{entry.id}}" data-toggle="collapse">
           {{ entry.entry_name }}
         </a>
-
+        
+        {% if not entry.code_file %} 
+        <a href="#" rel="tooltip" title="Missing source code"><sup>1</sup></a>
+        {% endif %}
+ 
         <div id="{{entry.id}}" class="collapse entry-details">
           <p>
             {% if entry.comments %}

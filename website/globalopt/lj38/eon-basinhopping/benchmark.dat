@@ -2,7 +2,7 @@ force_calls 1.3579e+06
 force_calls_min 1.9440e+03
 force_calls_max 7.1608e+06
 algorithm basin hopping
-code eon
-code_version unknown version
+code Eon
+code_version unknown
 contributor Marco Howard
 date 17 Oct 2012
