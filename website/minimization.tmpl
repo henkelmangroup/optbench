@@ -41,4 +41,35 @@ distance. The maximum number of force calls that may be made cannot exceed
   {% endfor %}
 </table>
 
+<h3><a id="morse-bulk" href="#morse-bulk">Morse Bulk</a></h3>
+
+<p>This benchmark tests the performance of optimizers starting from 100 FCC
+bulk Morse structures that have been slightly perturbed from their equilibrium
+lattice positions. A tar file containing the structures is here: 
+<a href="minimization/lj38/morse-bulk.tgz">morse-bulk.tgz</a>.</p>
+
+$$ U(r) = D_e ( 1 - e^{-a(r-r_e)})^2 $$
+
+
+<p>The maximum force on an atom must be reduced to at least 1e-4 energy /
+distance.</p> 
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover">
+  <thead>
+    <th>Entry</th>
+    <th>&lt;N&gt;</th>
+    <th>min N</th>
+    <th>max N</th>
+    <th>Failed</th>
+  </thead>
+  {% for entry in benchmarks['morse-bulk']|sort(attribute='force_calls') %}
+    <tr>
+      <td>{% include 'templates/entry-details.tmpl' %}</td>
+      <td>{{ '%.0f' % entry.force_calls }}</td>
+      <td>{{ '%.0f' % entry.force_calls_min }}</td>
+      <td>{{ '%.0f' % entry.force_calls_max }}</td>
+      <td>{{ '%.0f' % entry.nfailed }}</td>
+    </tr>
+  {% endfor %}
+</table>
 {% endblock %}

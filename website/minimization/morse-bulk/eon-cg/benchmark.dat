@@ -1,7 +1,7 @@
-force_calls 33
-force_calls_max 37
-force_calls_min 27
-force_calls_per_second 500.759
+force_calls 49
+force_calls_max 53
+force_calls_min 39
+force_calls_per_second 629.82
 nfailed 0
 code Eon
 code_version r2030

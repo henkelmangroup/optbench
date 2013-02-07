@@ -6,5 +6,5 @@ atoms = FaceCenteredCubic(size=(4,4,4), symbol='Pt', pbc=(1,1,1),latticeconstant
 
 for i in xrange(100):
     atoms_disordered = atoms.copy()
-    atoms.rattle(.05, seed=100*i)
+    atoms.rattle(.025, seed=i+1024*i)
     write_con('pos_%.4i.con'%i, atoms)

@@ -62,6 +62,9 @@ def load_benchmarks(suite):
                 except:
                     pass
 
+            if 'code_file' in data and not isfile(join('codes',data['code_file'])):
+                del data['code_file']
+
             benchmarks[benchmark].append(data)
             
         if len(benchmarks[benchmark]) == 0:
