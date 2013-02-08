@@ -16,3 +16,10 @@ th {
     white-space: nowrap;
     padding-right: 5px;
 }
+
+.benchmark-table {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 60%;
+}

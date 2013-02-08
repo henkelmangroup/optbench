@@ -1,0 +1,8 @@
+force_calls_min 27
+code ASE
+code_file python-ase-3.6.0.2515.tar.gz
+code_version 3.6.0
+force_calls_max 45
+date 07 Feb 2013
+contributor Sam Chill
+force_calls 32.68
