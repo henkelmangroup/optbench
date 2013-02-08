@@ -1,5 +1,5 @@
 L-BFGS with an initial diagonal inverse hessian equal to 0.01 distance squared
-per energy. At each step after the initial the initial hessian, which 
+per energy. At each step after the initial, the initial inverse hessian, which
 determines the scale of the problem, is updated according to:
 
 $$ H_0 = \frac{\Delta x \cdot \Delta x}{\Delta x \cdot \Delta g} $$
