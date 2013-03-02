@@ -1,0 +1,11 @@
+force_calls 661
+force_calls_max 2677
+force_calls_min 200
+force_calls_per_second 4292.21
+nfailed 0
+algorithm FIRE
+code Eon
+code_version r2025
+date 02 Mar 2013
+contributor Sam Chill
+code_file eon-r2025.tgz
