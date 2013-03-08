@@ -1,0 +1,10 @@
+<p>This entry uses a min-mode following method to locate saddle points.
+The minimum mode was estimated with the dimer method. The dimer 
+was rotated until the angle of rotation was smaller than 5 degrees or 
+10 rotations had been made.</p>
+
+<p>The rotational and translational optimization problems were solved using
+conjugate-gradients. The step size was determined by taking a Newton step along
+the search direction using a finite difference step size of 0.01 Angstrom. No
+atom was allowed to move further than a distance of 0.2 Angstroms in a single
+step.</p>

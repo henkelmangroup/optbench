@@ -5,11 +5,21 @@
 
 <h3><a id="pt-heptamer" href="#pt-heptamer">Pt Heptamer Island</a></h3>
 
+<p>This benchmark measure the effiency of finding saddles for a Pt heptamer island. The potential energy is given by a Morse potential:
+
+\[ V(r) = D(e^{-2\alpha(r-r_0)} - 2 e^{-\alpha(r-r_0)}) \]
+
+with $D=0.7102$, $\alpha=1.6047$, and $r_0=2.897$.</p>
+
+<p>The goal of the benchmark is to deterimine how many force calls on average a saddle search method requires. Each saddle search is started from a displacement from the minimum. Each displacement should be made by adding a gaussian random number to each cartesian coordinate of the island atoms. The saddle search is considered complete when the maximum force on an atom is reduced to below $10^{-5}$ eV/Angstrom.</p>
+
+<p>Entries to this benchmark should average over at least 100 saddle searches in order to have good statistics.</p>
+
 <table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
   <thead>
     <th>Entry</th>
     <th>&rho;</th>
-    <th>N<sub>s</sub></th>
+    <th>n<sub>s</sub></th>
     <th>N<sub>saddle</sub></th>
     <th>N<sub>relax</sub></th>
     <th>N<sub>total</sub></th>
