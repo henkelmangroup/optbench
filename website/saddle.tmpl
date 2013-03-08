@@ -1,0 +1,29 @@
+{% extends "templates/base.tmpl" %}
+{% block title %}Saddle Search Benchmark{% endblock %}
+{% block content %}
+<h2>Saddle Search Benchmark</h2>
+
+<h3><a id="pt-heptamer" href="#pt-heptamer">Pt Heptamer Island</a></h3>
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
+  <thead>
+    <th>Entry</th>
+    <th>&rho;</th>
+    <th>N<sub>s</sub></th>
+    <th>N<sub>saddle</sub></th>
+    <th>N<sub>relax</sub></th>
+    <th>N<sub>total</sub></th>
+  </thead>
+  {% for entry in benchmarks['pt-heptamer-island']|sort(attribute='force_calls') %}
+    <tr>
+      <td>{% include 'templates/entry-details.tmpl' %}</td>
+      <td>{{'%.2f' % entry.rho}}</td>
+      <td>{{'%.0f' % entry.ns}}</td>
+      <td>{{'%.0f' % entry.nsaddle}}</td>
+      <td>{{'%.0f' % entry.nrelax}}</td>
+      <td>{{'%.0f' % entry.ntotal}}</td>
+    </tr>
+  {% endfor %}
+</table>
+
+{% endblock %}
