@@ -15,6 +15,9 @@ with $D=0.7102$, $\alpha=1.6047$, and $r_0=2.897$.</p>
 
 <p>Entries to this benchmark should average over at least 100 saddle searches in order to have good statistics.</p>
 
+<p>In the table below &rho; is the fraction of saddles found that were connected to the initial minimum, n<sub>s</sub> is the number of unique connected saddles, N<sub>saddle</sub> is the average number of force calls to converge to a saddle point, N<sub>relax</sub> is the average number of force calls to minimize from the saddle to the two adjacent minima, and &rho;<sup>-1</sup> N<sub>total</sub>
+represents the average number of force calls to find a connected saddle</p>
+
 <table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
   <thead>
     <th>Entry</th>
@@ -23,6 +26,7 @@ with $D=0.7102$, $\alpha=1.6047$, and $r_0=2.897$.</p>
     <th>N<sub>saddle</sub></th>
     <th>N<sub>relax</sub></th>
     <th>N<sub>total</sub></th>
+    <th>&rho;<sup>-1</sup> N<sub>total</sub></th>
   </thead>
   {% for entry in benchmarks['pt-heptamer-island']|sort(attribute='force_calls') %}
     <tr>
@@ -32,6 +36,7 @@ with $D=0.7102$, $\alpha=1.6047$, and $r_0=2.897$.</p>
       <td>{{'%.0f' % entry.nsaddle}}</td>
       <td>{{'%.0f' % entry.nrelax}}</td>
       <td>{{'%.0f' % entry.ntotal}}</td>
+      <td>{{'%.0f' % (entry.ntotal/entry.rho)}}</td>
     </tr>
   {% endfor %}
 </table>
