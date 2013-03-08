@@ -7,8 +7,9 @@ do
     input_tar_file=$(printf "%s.tgz" $(basename $(dirname $entry)))
     path=$(dirname $entry)
     echo $path
-    cd $path
-    [ -e $input_tar_file ] && rm $input_tar_file
-    tar czf $input_tar_file *
-    cd ../../..
+    cd $path/..
+    entry_name=$(basename $path)
+    [ -e $entry_name/$input_tar_file ] && rm $entry_name/$input_tar_file
+    tar czf $input_tar_file $entry_name
+    cd ../..
 done
