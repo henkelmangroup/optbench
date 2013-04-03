@@ -1,0 +1,36 @@
+{% extends "templates/base.tmpl" %}
+{% block title %}NEB Optimizer Benchmark{% endblock %}
+{% block content %}
+<h2>NEB Optimizer Benchmarks</h2>
+
+<p>
+Entries for these benchmarks must record the average number number of force
+calls as <i>force_calls</i> in <tt>benchmark.dat</tt>, the maximum number of
+force calls as <i>force_calls_max</i>, the minimum number of force calls as
+<i>force_calls_min</i>, and the number of failed minimizations as
+<i>nfailed</i>
+</p>
+
+<h3><a id="Pt" href="#Pt">Heptamer Island on Pt(111) Surface</a></h3>
+
+<p>The maximum force on an atom must be reduced to at least 0.01 energy /
+distance.</p>
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
+  <thead>
+    <th>Entry</th>
+    <th>&lt;N&gt;</th>
+    <th>min N</th>
+    <th>max N</th>
+  </thead>
+  {% for entry in benchmarks['Pt-heptamer']|sort(attribute='force_calls') %}
+    <tr>
+      <td>{% include 'templates/entry-details.tmpl' %}</td>
+      <td>{{ '%.0f' % entry.force_calls }}</td>
+      <td>{{ '%.0f' % entry.force_calls_min }}</td>
+      <td>{{ '%.0f' % entry.force_calls_max }}</td>
+    </tr>
+  {% endfor %}
+</table>
+
+{% endblock %}

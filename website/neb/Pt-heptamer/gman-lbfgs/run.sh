@@ -1,2 +1,2 @@
-tar -xvf ../minima.tgz
+tar -xvf minima.tgz
 python opt.py

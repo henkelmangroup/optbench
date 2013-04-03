@@ -62,4 +62,4 @@ f.write("code Gman\n")
 f.write("code_version r235\n")
 f.write("date %s\n" % time.ctime())
 f.write("contributor Rye Terrell")
-
+f.close()
