@@ -14,4 +14,5 @@ do
     awk '/neb/{print " ", $1/8}' results.dat
     cd ..
 done
+cd ..
 ./report.sh
