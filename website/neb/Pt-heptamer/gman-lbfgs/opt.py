@@ -23,7 +23,7 @@ for i in range(13):
     #opt.init(maxmove=0.2, alpha=0.05, memory=50, min='line')
 
     opt = Gopt.lbfgs()
-    opt.init(maxmove = 0.2, alpha = 0.05, memory = 25, min = 'hess')
+    opt.init(maxmove = 0.2, alpha = 0.05, memory = 25, min = 'line')
 
     #opt=Gopt.glbfgs()
     #opt.init(maxmove=0.2, min='line', alpha=0.05, memory=50)
@@ -50,18 +50,19 @@ for i in range(13):
     io.loadcon(p2, "minima/"+minb[i])
     neb = Gneb.neb()
     neb.new(p1, p2, images = 8)
-    neb.relax(potential, opt.step, k=5.0, tangent="new", itrmax = 100, ppd = 1, fmax = 0.01, fsaddle = 'off', method = "ci", converge="Fmag")
+    neb.relax(potential, opt.step, k=5.0, tangent="new", itrmax = 1000, ppd = 1, fmax = 0.01, fsaddle = 'off', method = "ci", converge="Fmag")
     
-    forceCalls.append(pot.count())
+    forceCalls.append(pot.count()/8.0)
     pot.countReset()
 
+
 f = open("benchmark.dat", 'w')
-f.write("force_calls %d\n" % int(sum(forceCalls)/13.0/8.0))
+f.write("force_calls %d\n" % (sum(forceCalls)/13.0))
 f.write("force_calls_max %d\n" % max(forceCalls))
 f.write("force_calls_min %d\n" % __builtins__.min(forceCalls))
 f.write("algorithm lbfgs\n")
 f.write("code Gman\n")
 f.write("code_version r235\n")
 f.write("date %s\n" % time.ctime())
-f.write("contributor Rye Terrell")
+f.write("contributor Rye Terrell\n")
 f.close()
