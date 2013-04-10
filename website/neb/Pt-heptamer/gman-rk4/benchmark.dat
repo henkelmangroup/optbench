@@ -1,8 +1,0 @@
-force_calls 779
-force_calls_max 1177
-force_calls_min 345
-algorithm lbfgs
-code Gman
-code_version r235
-date Wed Apr 10 14:33:33 2013
-contributor Rye Terrell
