@@ -1,0 +1,9 @@
+dump
+debug
+benchmark
+steps 0
+SLOPPYCONV .01
+TIGHTCONV 1.0D-1
+MAXBFGS   0.1
+MAXIT 10000 10000
+save 1
