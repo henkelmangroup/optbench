@@ -10,6 +10,6 @@ do
     cd $path/..
     entry_name=$(basename $path)
     [ -e $entry_name/$input_tar_file ] && rm $entry_name/$input_tar_file
-    tar czf $entry_name/$input_tar_file $entry_name
+    tar chzf $entry_name/$input_tar_file $entry_name
     cd ../..
 done

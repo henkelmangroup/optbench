@@ -18,6 +18,20 @@ def get_dependencies(env, path):
 def usage():
     print 'usage: render.py template'
 
+def parse_dat(path, data):
+    f = open(path)
+    for line in f:
+        fields = line.strip().split()
+        key = fields[0]
+        value = ' '.join(fields[1:])
+        data[key] = value
+
+        try:
+            data[key] = float(value)
+        except:
+            pass
+    f.close()
+
 
 def load_benchmarks(suite):
     benchmarks = {}
@@ -50,17 +64,14 @@ def load_benchmarks(suite):
             data['entry_name'] = entry_name
             data['id'] = '%s-%i' % (benchmark,index)
             index += 1
-            f = open(benchmark_dat)
-            for line in f:
-                fields = line.strip().split()
-                key = fields[0]
-                value = ' '.join(fields[1:])
-                data[key] = value
 
-                try:
-                    data[key] = float(value)
-                except:
-                    pass
+            parse_dat(benchmark_dat, data)
+
+            admin_dat = join(run_path, 'admin.dat')
+            if isfile(admin_dat):
+                parse_dat(admin_dat, data)
+            if 'hidden' not in data:
+                data['hidden'] = False
 
             if 'code_file' in data and not isfile(join('codes',data['code_file'])):
                 del data['code_file']
