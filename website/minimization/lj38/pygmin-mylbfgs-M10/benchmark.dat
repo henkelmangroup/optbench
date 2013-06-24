@@ -1,9 +1,8 @@
 force_calls 2.28000e+02
 force_calls_min 1.1200e+02
 force_calls_max 5.1700e+02
-force_calls_per_second 9142
 nfailed 0
 algorithm L-BFGS M=10 maxstep=0.1
-code PyGMIN
+code pele
 contributor Jacob Stevenson
-date 18 Oct 2012
+date 24 Jun 2013
