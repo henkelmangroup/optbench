@@ -45,7 +45,7 @@ with open("benchmark.dat", "w") as fout:
     fout.write( "force_calls %.5e\n" % round( np.mean(data[:,ic])))
     fout.write( "force_calls_min %.4e\n" % round( np.min(data[:,ic])))
     fout.write( "force_calls_max %.4e\n" % round( np.max(data[:,ic])))
-#    fout.write( "force_calls_per_second %d\n" % int(ncalls/timetot) )
+    fout.write( "force_calls_per_second %d\n" % int(ncalls/timetot) )
     fout.write( "nfailed %d\n" % int(nfailed) )
     fout.write( "algorithm %s\n" % algorithm )
     fout.write( "code %s\n" % code )
