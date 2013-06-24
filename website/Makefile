@@ -11,6 +11,7 @@ html: $(HTML_FILES)
 website: tar html
 
 *.html: $(wildcard templates/*.tmpl) $(wildcard */*/*/benchmark.dat) \
+	$(wildcard */*/*/admin.dat) \
 	$(wildcard */*/*/comments.txt) $(RENDER) 
 
 tar:
