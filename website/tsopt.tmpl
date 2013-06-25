@@ -25,23 +25,20 @@ necessary to reach the global minimum the first time is recorded.</p>
 
 <table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
   <thead>
-    <th>Algorithm</th>
-    <th>Code</th>
-    <th>&lt;FCs&gt;</th>
-    <th>min(FCs)</th>
-    <th>max(FCs)</th>
-    <th>Date</th>
-    <th>Contributor</th>
+    <th>Entry</th>
+    <th>&lt;N&gt;</th>
+    <th>min N</th>
+    <th>median N</th>
+    <th>max N</th>
+    <th>Failed</th>
   </thead>
   {% for entry in benchmarks['LJ38']|sort(attribute='force_calls') %}
     <tr>
-      <td>{{ entry.algorithm }}</td>
-      <td>{{ entry.code }} {{ entry.code_version }}</td>
+      <td>{% include 'templates/entry-details.tmpl' %}</td>
       <td>{{ '%.0f' % entry.force_calls }}</td>
       <td>{{ '%.0f' % entry.force_calls_min }}</td>
       <td>{{ '%.0f' % entry.force_calls_max }}</td>
-      <td>{{ entry.date }}</td>
-      <td>{{ entry.contributor }}</td>
+      <td>{{ '%.0f' % entry.nfailed }}</td>
     </tr>
   {% endfor %}
 </table>
