@@ -9,7 +9,7 @@ datef = date.strftime("%d %b %Y")
 datafile = "results.txt"
 algorithm = "hybrid eigenvector following"
 code = "pele"
-contributor = "Jacob Stevenson & Victor Ruehle"
+contributor = "Victor Ruehle"
 
 data = np.genfromtxt(datafile)
 for i in range(data.shape[0]):
