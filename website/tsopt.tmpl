@@ -2,7 +2,6 @@
 {% block title %}Transition State Optimization Benchmark{% endblock %}
 {% block content %}
 <h1>Transition State Optimization</h1>
-Benchmarks for Transition State Optimization
 
 <p>This benchmark tests the performance of algorithms for finding the nearest
 transition state.  The starting point are structures taken from the highest
@@ -25,21 +24,27 @@ necessary to reach the global minimum the first time is recorded.</p>
 
 <table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
   <thead>
-    <th>Entry</th>
-    <th>&lt;N&gt;</th>
-    <th>min N</th>
-    <th>median N</th>
-    <th>max N</th>
-    <th>Failed</th>
+    <th>Algorithm</th>
+    <th>Code</th>
+    <th>&lt;FCs&gt;</th>
+    <th>median(FCs)</th>
+    <th>min(FCs)</th>
+    <th>max(FCs)</th>
+    <th>nfailed</th>
+    <th>Date</th>
+    <th>Contributor</th>
   </thead>
   {% for entry in benchmarks['LJ38']|sort(attribute='force_calls') %}
     <tr>
       <td>{% include 'templates/entry-details.tmpl' %}</td>
       <td>{{ '%.0f' % entry.force_calls }}</td>
+      <td>{{ '%.0f' % entry.force_calls_median }}</td>
       <td>{{ '%.0f' % entry.force_calls_min }}</td>
       <td>{{ '%.0f' % entry.force_calls_median }}</td>
       <td>{{ '%.0f' % entry.force_calls_max }}</td>
-      <td>{{ '%.0f' % entry.nfailed }}</td>
+      <td>{{ '%d' % entry.nfailed }}</td>
+      <td>{{ entry.date }}</td>
+      <td>{{ entry.contributor }}</td>
     </tr>
   {% endfor %}
 </table>
