@@ -35,8 +35,8 @@
 <p>
 
 Each entry to a benchmark should contain source code, a shell script named
-<tt>run.sh</tt> that will run the program to be benchmarked, and a shell script
-named <tt>report.sh</tt> that will examine the output of <tt>run.sh</tt> and
+<tt>run.sh</tt> that will run the program to be benchmarked and
+that will examine the output of <tt>run.sh</tt> and
 write out the results to a file named <tt>benchmark.dat</tt>.  The
 <tt>benchmark.dat</tt> file describes the results for each of the metrics of
 the benchmark as well as other important data such as the name of the algorithm
@@ -53,7 +53,6 @@ force_calls 431
 force_calls_max 1139
 force_calls_min 197
 nfailed 0
-algorithm Conjugate Gradients
 code Eon
 code_version r1789
 date 15 Oct 2012
@@ -64,9 +63,7 @@ contributor Sam Chill
 
 The required keys in the <tt>benchmark.dat</tt> file are defined by each
 benchmark.  Additionally the keys <i>code</i>, <i>code_version</i>,
-<i>date</i>, and <i>contributor</i> should be specified.  All of the output
-files and directories should be included in a compressed (ideally bzip2) tar
-archive.
+<i>date</i>, and <i>contributor</i> should be specified.  
 
 </p>
 
