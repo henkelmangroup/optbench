@@ -81,13 +81,22 @@ class Minimizer(object):
         print "ncalls", self.pot.ncalls, self.label
 
         #test tolerance
+        tol_max_force = False
         newcoords = ret.coords
         e, G = self.pot.getEnergyGradient(newcoords)
-        tester = MaxForceOnAtom()
-        success = tester(gradient=G, tol=self.newtol) 
-        success = int(success)
+        if tol_max_force:
+            tester = MaxForceOnAtom()
+            success = tester(gradient=G, tol=self.newtol) 
+            success = int(success)
+        else:
+            rms = np.std(G)
+            tol = self.kwargs["tol"]
+            success = int(rms <= tol)
+#            print "rms", rms, "tol", tol
+            
 
         rms = np.std(G)
+#        print "std", rms, "rms", np.linalg.norm(G) / np.sqrt(len(G))
         G = np.reshape(G, [-1,3])
         maxgrad = np.max( np.abs( G.sum(1) ) )
         maxgrad_component = np.max( np.abs( G ) )

@@ -1,7 +1,7 @@
-force_calls 2.83000e+02
-force_calls_min 1.3400e+02
-force_calls_max 6.5800e+02
-nfailed 1000
+force_calls 2.28000e+02
+force_calls_min 1.1500e+02
+force_calls_max 4.6400e+02
+nfailed 0
 algorithm Fire
 code pele
 contributor Jacob Stevenson

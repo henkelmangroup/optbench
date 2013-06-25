@@ -32,7 +32,7 @@ if __name__ == "__main__":
         kwargs["alternate_stop_criterion"]=stop_crit
     else:
         # use the norm of the gradient.  This is sqrt(natoms) times the rms
-        tol *= np.sqrt(args.natoms)
+        tol *= np.sqrt(3. * args.natoms)
     
 
     
