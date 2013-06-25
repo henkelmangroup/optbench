@@ -1,8 +1,8 @@
-force_calls 980
-force_calls_max 9940
-force_calls_min 136
-force_calls_median 736
-nfailed 1
+force_calls 667
+force_calls_max 4196
+force_calls_min 105
+force_calls_median 510.5
+nfailed 3
 code Eon
 code_version r2149
 date 25 Jun 2013
