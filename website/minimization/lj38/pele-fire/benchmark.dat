@@ -1,9 +1,8 @@
-force_calls 1.12800e+03
-force_calls_min 2.4000e+02
-force_calls_max 1.0002e+04
-force_calls_per_second 8199
-nfailed 5
-algorithm FIRE
-code PyGMIN
+force_calls 6.53000e+02
+force_calls_min 1.8900e+02
+force_calls_max 2.0530e+03
+nfailed 0
+algorithm Fire
+code pele
 contributor Jacob Stevenson
-date 18 Oct 2012
+date 25 Jun 2013
