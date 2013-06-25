@@ -11,6 +11,7 @@ if __name__ == "__main__":
     
 #    parser.add_argument("fname", type=str, help="Database file name")
     parser.add_argument("-M", type=int, default=4, help="lbfgs history length")
+    parser.add_argument("-natoms", type=int, default=38, help="number of atoms")
     parser.add_argument("--maxstep", type=float, default=0.1, help="lbfgs maximum step size")
     args = parser.parse_args()
     
@@ -23,11 +24,20 @@ if __name__ == "__main__":
     structuredir = "../lj38-clusters"
     nstructures = 1000
     benchmarker = opt.QuenchBenchmark(structuredir, nstructures)
-    stop_crit = opt.MaxForceOnAtom()
+    
+    kwargs = dict()
+    if False:
+        # use the maximum force on an atom as the stop criterion
+        stop_crit = opt.MaxForceOnAtom()
+        kwargs["alternate_stop_criterion"]=stop_crit
+    else:
+        # use the norm of the gradient.  This is sqrt(natoms) times the rms
+        tol *= np.sqrt(args.natoms)
+    
 
     
-    minimizer = opt.Minimizer("lbfgs_data", pot, mylbfgs, alternate_stop_criterion=stop_crit,
-                               M=args.M, tol=tol, maxstep=args.maxstep )
+    minimizer = opt.Minimizer("results_data", pot, mylbfgs,
+                               M=args.M, tol=tol, maxstep=args.maxstep, **kwargs )
     benchmarker.addMinimizer(minimizer)
 
 

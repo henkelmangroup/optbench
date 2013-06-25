@@ -22,6 +22,7 @@ contributor = "Jacob Stevenson"
 
 if len(sys.argv) > 1:
     datafile_orig = sys.argv[1]
+    datafile = datafile_orig
     if False and os.path.isfile(datafile_orig):
         if datafile_orig != datafile:
             shutil.copy2(datafile_orig, datafile)

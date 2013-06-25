@@ -1,8 +1,8 @@
-force_calls 2.25000e+02
-force_calls_min 1.0100e+02
-force_calls_max 5.5200e+02
-nfailed 0
+force_calls 1.49000e+02
+force_calls_min 6.7000e+01
+force_calls_max 3.0800e+02
+nfailed 1000
 algorithm L-BFGS M=4 maxstep=0.2
 code pele
 contributor Jacob Stevenson
-date 24 Jun 2013
+date 25 Jun 2013
