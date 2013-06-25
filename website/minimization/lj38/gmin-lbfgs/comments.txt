@@ -1,0 +1,1 @@
+this still uses the old convergence criterion of max force on atom
