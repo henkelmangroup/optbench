@@ -11,7 +11,7 @@ echo "force_calls_min $fcalls_min" >> benchmark.dat
 echo "force_calls_median $fcalls_median" >> benchmark.dat
 echo "nfailed $nfailed" >> benchmark.dat
 echo "code Eon" >> benchmark.dat
-echo "code_version r2149" >> benchmark.dat
+echo "code_version r2156" >> benchmark.dat
 echo "date $(date +'%d %b %Y')" >> benchmark.dat
 echo "contributor Sam Chill" >> benchmark.dat
-echo "code_file eon-r2149.tgz" >> benchmark.dat
+echo "code_file eon-r2156.tgz" >> benchmark.dat
