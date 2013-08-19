@@ -1,10 +1,10 @@
-force_calls 267
-force_calls_max 909
-force_calls_min 101
-force_calls_per_second 8754.1
+force_calls 181
+force_calls_max 405
+force_calls_min 90
+force_calls_per_second 6779.03
 nfailed 0
 code Eon
 code_version r2025
-date 24 Jun 2013
+date 19 Aug 2013
 contributor Sam Chill
 code_file eon-r2025.tgz
