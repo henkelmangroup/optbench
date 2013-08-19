@@ -3,6 +3,8 @@
 {% block content %}
 <h1>Transition State Optimization</h1>
 
+<h2>Lennard-Jones 38</h2>
+
 <p>This benchmark tests the performance of algorithms for finding the nearest
 transition state.  The starting point are structures taken from the highest
 energy image in a DNEB run.  Idealy they should all be reasonably close to a
@@ -32,6 +34,29 @@ necessary to reach the global minimum the first time is recorded.</p>
     <th>nfailed</th>
   </thead>
   {% for entry in benchmarks['LJ38']|sort(attribute='force_calls') %}
+    <tr>
+      <td>{% include 'templates/entry-details.tmpl' %}</td>
+      <td>{{ '%.0f' % entry.force_calls }}</td>
+      <td>{{ '%.0f' % entry.force_calls_min }}</td>
+      <td>{{ '%.0f' % entry.force_calls_median }}</td>
+      <td>{{ '%.0f' % entry.force_calls_max }}</td>
+      <td>{{ '%d' % entry.nfailed }}</td>
+    </tr>
+  {% endfor %}
+</table>
+
+<h2>Pt(111) Heptamer Island</h2>
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
+  <thead>
+    <th>Algorithm</th>
+    <th>&lt;FCs&gt;</th>
+    <th>min(FCs)</th>
+    <th>median(FCs)</th>
+    <th>max(FCs)</th>
+    <th>nfailed</th>
+  </thead>
+  {% for entry in benchmarks['pt-island']|sort(attribute='force_calls') %}
     <tr>
       <td>{% include 'templates/entry-details.tmpl' %}</td>
       <td>{{ '%.0f' % entry.force_calls }}</td>
