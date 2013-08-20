@@ -17,6 +17,7 @@ do
     cp ../in.lammps run-$i
     cd run-$i
     eonclient > stdout.dat
+    #serialsub eonclient
     grep total_force_calls results.dat | awk '{print " ", $1}'
     cd ..
 done
