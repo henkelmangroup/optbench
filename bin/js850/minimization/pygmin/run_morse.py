@@ -2,28 +2,12 @@ import argparse
 import numpy as np
 
 import opt
+from tools import read_con_file
 
 from pele.optimize import mylbfgs
 from pele.potentials import Morse
 
 
-
-def read_con_file(fname):
-    with open(fname, "r") as fin:
-        for i, line in enumerate(fin):
-            sline = line.split() 
-            if i == 2:
-                boxvec = np.array(map(float, sline[:3]))
-            elif i == 7:
-                natoms = int(sline[0])
-                x = np.zeros([natoms, 3])
-                j = 0
-            elif i >= 11:
-                if j >= natoms:
-                    raise Exception("input error")
-                x[j,:] = map(float, sline[:3])
-                j += 1
-        return x, boxvec
 
 def mkname(n):
     return "pos_%04d.con" % n
@@ -47,7 +31,7 @@ if __name__ == "__main__":
 
     structuredir = "../morse-bulk/"
     nstructures = 100
-    reader = lambda fname: read_con_file(fname)[0]
+    reader = lambda fname: read_con_file(fname).coords
     benchmarker = opt.QuenchBenchmark(structuredir, nstructures, make_name=mkname, read_coords=reader)
     
     kwargs = dict()

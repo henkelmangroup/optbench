@@ -9,6 +9,8 @@ from pele.optimize import lbfgs_py
 from pele.optimize import fire
 from pele.optimize import mylbfgs
 
+from tools import PotWrapper
+
 def getXYZ(fname):
     with open(fname, "r") as fin:
         coords = None
@@ -27,17 +29,7 @@ def getXYZ(fname):
 def mkname(n):
     return "cluster_%04d.xyz" % n
 
-class PotWrapper():
-    """a LJ potential wrapper to count the number of function calls"""
-    ncalls = 0
-    def __init__(self, pot):
-        self.pot = pot
-    def getEnergy(self, coords):
-        self.ncalls += 1
-        return self.pot.getEnergy(coords)
-    def getEnergyGradient(self, coords):
-        self.ncalls += 1
-        return self.pot.getEnergyGradient(coords)
+
 
 class QuenchResult(object):
     def __init__(self):
@@ -72,6 +64,8 @@ class Minimizer(object):
 
     def quench( self, coords ):
         coords = np.copy(coords)
+        e = self.pot.getEnergy(coords)
+        print "energy of initial configuration"
         self.pot.ncalls = 0
         #kwargs = dict( self.kwargs.items() + self.morekwargs.items() )
         t0 = time.clock()
