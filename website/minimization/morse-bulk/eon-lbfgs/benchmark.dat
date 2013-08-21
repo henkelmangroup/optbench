@@ -1,10 +1,10 @@
 force_calls 33
 force_calls_max 37
 force_calls_min 27
-force_calls_per_second 635.838
+force_calls_per_second 650.888
 nfailed 0
 code Eon
 code_version r2030
-date 07 Feb 2013
+date 11 Feb 2013
 contributor Sam Chill
 code_file eon-r2030.tgz
