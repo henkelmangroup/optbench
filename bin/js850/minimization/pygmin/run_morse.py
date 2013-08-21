@@ -25,8 +25,8 @@ if __name__ == "__main__":
 
     boxl = 16.387907
     boxvec = np.ones(3) * boxl
-    potLJ = Morse(rho=1.6047, A=0.7102, r0=2.8970, boxvec=boxvec)
-    pot = opt.PotWrapper(potLJ)
+    potm = Morse(rho=1.6047, A=0.7102, r0=2.8970, boxvec=boxvec, rcut=9.5)
+    pot = opt.PotWrapper(potm)
 
 
     structuredir = "../morse-bulk/"

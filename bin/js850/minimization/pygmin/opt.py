@@ -65,7 +65,7 @@ class Minimizer(object):
     def quench( self, coords ):
         coords = np.copy(coords)
         e = self.pot.getEnergy(coords)
-        print "energy of initial configuration"
+        print "energy of initial configuration", e
         self.pot.ncalls = 0
         #kwargs = dict( self.kwargs.items() + self.morekwargs.items() )
         t0 = time.clock()

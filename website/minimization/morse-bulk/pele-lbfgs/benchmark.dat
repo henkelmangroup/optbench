@@ -5,4 +5,4 @@ nfailed 0
 algorithm L-BFGS M=100 maxstep=2.0
 code pele
 contributor Jacob Stevenson
-date 19 Aug 2013
+date 21 Aug 2013
