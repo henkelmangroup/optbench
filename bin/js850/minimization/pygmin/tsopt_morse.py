@@ -15,8 +15,8 @@ class MorseBulkFrozen(MorseBulk):
         self.frozen_atoms = kwargs.pop("frozen_atoms")
         self.reference_coords = kwargs.pop("reference_coords")
         super(MorseBulkFrozen, self).__init__(*args, **kwargs)
-        
-        
+
+
         self.frozen_dof = [range(i*3,i*3+3) for i in self.frozen_atoms]
         self.frozen_dof = np.array(self.frozen_dof, np.integer).flatten()
         self.frozen_dof.sort()
@@ -99,30 +99,31 @@ class MorseBulkFrozen(MorseBulk):
         return [range(self.nfree)]
 
 
-def findTS(coords, pot):
+def findTS(coords, pot, vec0=None):
     ''' routine to execute a single transition state refinement for the benchmark ''' 
     lowestEigenvectorQuenchParams={"nsteps":100, "tol":0.1}
-    lowestEigenvectorQuenchParams={"iprint":-1}
+    lowestEigenvectorQuenchParams={"iprint":-1, "tol":0.01}
     
     natoms = coords.size / 3
-    return findTransitionState(coords, pot, 
+    return findTransitionState(coords, pot,
                                orthogZeroEigs=None,
                                tol=1e-3/sqrt(3.*natoms),
+                               eigenvec0=vec0,
                                verbosity=5, 
                                iprint=1,
                                lowestEigenvectorQuenchParams=lowestEigenvectorQuenchParams,
+                               nsteps_tangent1=3, 
+                               nsteps_tangent2=25, 
                                )
 #    , 
 #                               tangentSpaceQuenchParams={"tol": 0.05},
 #                               demand_initial_negative_vec=False,
-#                               nsteps_tangent1=3, 
-#                               nsteps_tangent2=25, 
 #                               nfail_max=200,
 #                               nsteps=1000,
 #                               max_uphill_step=0.1,
 #                               )
 
-def run(fname):
+def run(fname, reactant_file=None):
     ''' run benchmark for a single configuration '''
     res = read_con_file(fname)
     x = res.coords.flatten()
@@ -133,18 +134,26 @@ def run(fname):
     
     system = MorseBulkFrozen(natoms, boxvec, rho=1.6047, r0=2.8970, A=0.7102, 
                              frozen_atoms=frozen_atoms, reference_coords=x)
+    xfree = system.coords_converter.get_reduced_coords(x)
     
     if False:
         from pele.gui import run_gui
 #        db = system.create_database("test.sqlite")
         run_gui(system, "test.sqlite")
         exit(1)
-    
-    xfree = system.coords_converter.get_reduced_coords(x)
+
+    if reactant_file is not None:
+        # get a starting vector
+        reactantfile = ""
+        res = read_con_file(reactant_file)
+        x0 = res.coords.flatten()
+        x0 = system.coords_converter.get_reduced_coords(x0)
+        vec0 = xfree - x0
+        vec0 /= np.linalg.norm(vec0)
     
     pot = PotWrapper(system.get_potential())
     print "running ", fname
-    ret = findTS(xfree, pot)
+    ret = findTS(xfree, pot, vec0=vec0)
     ncalls = pot.ncalls
     print "ncalls for %s:" % fname, ncalls, "success", ret.success
 
@@ -152,9 +161,10 @@ def run(fname):
 
 def main():
     results = []
-    for i in range(200):
+    reactant_file = "../pt-island-con/reactant.con"
+    for i in range(50):
         print "\n"
-        results.append(run("../pt-island-con/initial_%d.con" % i))
+        results.append(run("../pt-island-con/initial_%d.con" % i, reactant_file=reactant_file))
     
     with open("results.txt", "w") as fout:
         for fname, ncalls, energy, eigenval, rms, nsteps, success in results:
