@@ -113,14 +113,14 @@ def findTS(coords, pot, vec0=None):
                                iprint=1,
                                lowestEigenvectorQuenchParams=lowestEigenvectorQuenchParams,
                                nsteps_tangent1=3, 
-                               nsteps_tangent2=25, 
+                               nsteps_tangent2=25,
+                               nsteps=10, 
+                               max_uphill_step=0.1,
                                )
 #    , 
 #                               tangentSpaceQuenchParams={"tol": 0.05},
 #                               demand_initial_negative_vec=False,
 #                               nfail_max=200,
-#                               nsteps=1000,
-#                               max_uphill_step=0.1,
 #                               )
 
 def run(fname, reactant_file=None):
@@ -132,7 +132,8 @@ def run(fname, reactant_file=None):
     frozen = res.frozen
     frozen_atoms = np.where(frozen)[0]
     
-    system = MorseBulkFrozen(natoms, boxvec, rho=1.6047, r0=2.8970, A=0.7102, 
+    system = MorseBulkFrozen(natoms, boxvec, rho=1.6047, r0=2.8970, A=0.7102,
+                             rcut=9.5, 
                              frozen_atoms=frozen_atoms, reference_coords=x)
     xfree = system.coords_converter.get_reduced_coords(x)
     
