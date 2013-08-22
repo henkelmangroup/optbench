@@ -15,6 +15,11 @@ class MorseBulkFrozenWrap(MorseBulkFrozen):
 
 def set_params(system, natoms):
     system.params.double_ended_connect.local_connect_params.NEBparams.image_density = 1
+    system.params.double_ended_connect.local_connect_params.NEBparams.iter_density = 30
+    system.params.double_ended_connect.local_connect_params.NEBparams.reinterpolate = 50
+    system.params.double_ended_connect.local_connect_params.NEBparams.adjustk_freq = 50
+    system.params.double_ended_connect.local_connect_params.NEBparams.k = 0.05
+    system.params.double_ended_connect.local_connect_params.NEBparams.verbose = True
     system.params.double_ended_connect.local_connect_params.NEBparams.NEBquenchParams["tol"] = 0.01 
     system.params.double_ended_connect.local_connect_params.NEBparams.NEBquenchParams["maxstep"] = 2. 
     tsparams = system.params.double_ended_connect.local_connect_params.tsSearchParams
@@ -23,13 +28,15 @@ def set_params(system, natoms):
     tsparams.tol = 1e-3 / np.sqrt(3.*natoms)
 #    nfail_max=200,
 #    nsteps=1000,
-    tsparams.max_uphill_step = 2.
+    tsparams.max_uphill_step = .4
     tsparams.iprint = 1
+    tsparams.verbosity=5
+    tsparams.demand_initial_negative_vec = False
 
     tsparams.nsteps_tangent1=3
     tsparams.nsteps_tangent2=20
     tangent_quench = tsparams.tangentSpaceQuenchParams
-    tangent_quench["maxstep"] = 2.
+    tangent_quench["maxstep"] = .4
     tangent_quench["iprint"] = -1
 
     print "tolerance", tsparams.tol
@@ -83,9 +90,11 @@ def run(i, usegui=False):
 
 def main():
     results = []
-    for i in range(50):
+    for i in range(1,59):
         print i
-#        if i == 42: continue
+#        if i == 50: continue
+#        if i == 54: continue
+#        if i == 59: continue
         res = run(i)
         results.append(res)
     
@@ -96,5 +105,7 @@ def main():
         
 
 if __name__ == "__main__":
-#    run(47, usegui=True)
+#    run(3, usegui=False)
+#    run(9, usegui=False)
+#    run(10, usegui=True)
     main()

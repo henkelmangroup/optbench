@@ -1,0 +1,9 @@
+force_calls 3.80000e+02
+force_calls_median 3.22000e+02
+force_calls_min 1.4100e+02
+force_calls_max 2.2670e+03
+nfailed 3
+algorithm hybrid eigenvector following
+code pele
+contributor Jacob Stevenson
+date 22 Aug 2013
