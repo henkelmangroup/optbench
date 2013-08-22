@@ -57,6 +57,35 @@ def do_local_connect(system, db):
     fres.tsres = ret
     return fres
 
+def set_params(system, natoms):
+    system.params.double_ended_connect.local_connect_params.NEBparams.image_density = 4
+    system.params.double_ended_connect.local_connect_params.NEBparams.iter_density = 20
+    system.params.double_ended_connect.local_connect_params.NEBparams.reinterpolate = 50
+    system.params.double_ended_connect.local_connect_params.NEBparams.adjustk_freq = 50
+    system.params.double_ended_connect.local_connect_params.NEBparams.k = 1.5
+    system.params.double_ended_connect.local_connect_params.NEBparams.verbose = True
+
+    system.params.double_ended_connect.local_connect_params.NEBparams.NEBquenchParams["tol"] = 0.1 
+    tsparams = system.params.double_ended_connect.local_connect_params.tsSearchParams
+
+    
+    tsparams.lowestEigenvectorQuenchParams={"nsteps":20, "tol":0.1}
+    tsparams.tol = 1e-3 / np.sqrt(3.*natoms)
+    tsparams.nsteps_tangent1=3
+    tsparams.nsteps_tangent2=35 
+#    nfail_max=200
+#    nsteps=1000
+    tsparams.max_uphill_step = 0.4
+    tsparams.iprint = 1
+    tsparams.verbosity = 5
+    
+    tangent_quench = tsparams.tangentSpaceQuenchParams
+    tangent_quench["maxstep"] = .05
+    tangent_quench["iprint"] = -1
+    
+    print "tolerance", tsparams.tol
+
+
 def run(i, usegui=False):
     f1 = "../coords/start_%02d.xyz" % i
     f2 = "../coords/end_%02d.xyz" % i
@@ -83,21 +112,8 @@ def run(i, usegui=False):
         run_gui(system, "test.db")
     
     natoms = db.minima()[0].coords.size / 3
-    system.params.double_ended_connect.local_connect_params.NEBparams.image_density = 4
-    system.params.double_ended_connect.local_connect_params.NEBparams.NEBquenchParams["tol"] = 0.01 
-    tsparams = system.params.double_ended_connect.local_connect_params.tsSearchParams
-
     
-    tsparams.lowestEigenvectorQuenchParams={"nsteps":20, "tol":0.4}
-    tsparams.tol = 1e-3 / np.sqrt(3.*natoms)
-#    tsparams.nsteps_tangent1=10, 
-#    tsparams.nsteps_tangent2=45, 
-#    nfail_max=200,
-#    nsteps=1000,
-    tsparams.max_uphill_step = 0.2
-    tsparams.iprint = 1
-    
-    print "tolerance", tsparams.tol
+    set_params(system, natoms)
     
     res = do_local_connect(system, db)
     res.i = i
@@ -110,6 +126,7 @@ def main():
     i = 0
     results = []
     for i in range(50):
+        print "\n"
         print i
         res = run(i)
         results.append(res)
