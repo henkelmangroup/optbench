@@ -12,7 +12,7 @@ mkdir simulation && cd simulation
 
 tar xzf ../../coords-xyz.tar.gz
 
-python ../run.py
+python ../tsopt_lj.py
 python ../getdata.py
 
 mv benchmark.dat ..

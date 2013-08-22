@@ -9,12 +9,16 @@ from math import sqrt
 def findTS(coords, pot):
     ''' routine to execute a single transition state refinement for the benchmark ''' 
     lowestEigenvectorQuenchParams={"nsteps":100, "tol":0.1}
-    return findTransitionState(coords, pot, tol=1e-3/sqrt(3.*38.), nsteps_tangent1=3, 
-                              nsteps_tangent2=25, nfail_max=200,nsteps=1000,
-                              max_uphill_step=0.1,
-                              tangentSpaceQuenchParams={"tol": 0.05},
-                              lowestEigenvectorQuenchParams=lowestEigenvectorQuenchParams,
-                              demand_initial_negative_vec=False)
+    return findTransitionState(coords, pot, tol=1e-3/sqrt(3.*38.), 
+                               lowestEigenvectorQuenchParams=lowestEigenvectorQuenchParams,
+                               tangentSpaceQuenchParams={"tol":0.05},#, "maxstep":.05},
+                               demand_initial_negative_vec=False,
+                               nsteps_tangent1=3, 
+                               nsteps_tangent2=25, 
+                               nfail_max=200,
+                               nsteps=1000,
+                               max_uphill_step=0.051,
+                               )
 
 class PotWrapper(BasePotential):
     ''' a LJ potential wrapper to count the number of function calls '''
