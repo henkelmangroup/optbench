@@ -1,6 +1,6 @@
 import numpy as np
 
-from pele.potentials import LJ
+from pele.potentials import LJ, BasePotential
 from pele.systems import LJCluster
 from pele.utils.xyz import read_xyz
 from pele.transition_states import findTransitionState
@@ -8,7 +8,7 @@ from pele.optimize import Result
 #from tools import PotWrapper
 
 
-class PotWrapperIncr():
+class PotWrapperIncr(BasePotential):
     """a LJ potential wrapper to count the number of function calls"""
     ncalls = 0
     def __init__(self, pot, incriment):
@@ -135,5 +135,5 @@ def main():
         
 
 if __name__ == "__main__":
-#    run(10)
+#    run(3)
     main()
