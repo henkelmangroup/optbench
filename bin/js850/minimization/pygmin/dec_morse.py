@@ -23,7 +23,7 @@ def set_params(system, natoms):
     tsparams.tol = 1e-3 / np.sqrt(3.*natoms)
 #    nfail_max=200,
 #    nsteps=1000,
-    tsparams.max_uphill_step = 1.2
+    tsparams.max_uphill_step = 2.
     tsparams.iprint = 1
 
     tsparams.nsteps_tangent1=3
@@ -85,7 +85,7 @@ def main():
     results = []
     for i in range(50):
         print i
-        if i == 42: continue
+#        if i == 42: continue
         res = run(i)
         results.append(res)
     
@@ -96,5 +96,5 @@ def main():
         
 
 if __name__ == "__main__":
-    run(47, usegui=True)
-#    main()
+#    run(47, usegui=True)
+    main()

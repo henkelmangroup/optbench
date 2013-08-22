@@ -15,7 +15,9 @@ import tools
 def findTS(coords, pot, vec0=None):
     ''' routine to execute a single transition state refinement for the benchmark ''' 
     lowestEigenvectorQuenchParams={"nsteps":100, "tol":0.1}
-    lowestEigenvectorQuenchParams={"iprint":-1, "tol":0.01}
+    lowestEigenvectorQuenchParams={"iprint":-1, "tol":0.02, "maxstep":3. }
+    
+    tangentSpaceQuenchParams = {"maxstep":2.}
     
     natoms = coords.size / 3
     return findTransitionState(coords, pot,
@@ -25,14 +27,15 @@ def findTS(coords, pot, vec0=None):
                                verbosity=5, 
                                iprint=1,
                                lowestEigenvectorQuenchParams=lowestEigenvectorQuenchParams,
+                               tangentSpaceQuenchParams=tangentSpaceQuenchParams,
                                nsteps_tangent1=3, 
                                nsteps_tangent2=25,
                                nsteps=10, 
-                               max_uphill_step=0.1,
+                               max_uphill_step=2.1,
+                               demand_initial_negative_vec=False,
                                )
 #    , 
 #                               tangentSpaceQuenchParams={"tol": 0.05},
-#                               demand_initial_negative_vec=False,
 #                               nfail_max=200,
 #                               )
 
@@ -65,7 +68,12 @@ def run(fname, reactant_file=None):
         vec0 = xfree - x0
         vec0 /= np.linalg.norm(vec0)
     
+    
     pot = PotWrapper(system.get_potential())
+    if False: # for testing only
+        e, g = pot.getEnergyGradient(xfree)
+        print "recalc rms", np.linalg.norm(g) / np.sqrt(float(g.size)), "norm", np.linalg.norm(g)
+    
     print "running ", fname
     ret = findTS(xfree, pot, vec0=vec0)
     ncalls = pot.ncalls
@@ -76,13 +84,20 @@ def run(fname, reactant_file=None):
 def main():
     results = []
     reactant_file = "../pt-island-con/reactant.con"
-    for i in range(50):
+    for i in range(49):
         print "\n"
+        print i
         results.append(run("../pt-island-con/initial_%d.con" % i, reactant_file=reactant_file))
     
     with open("results.txt", "w") as fout:
         for fname, ncalls, energy, eigenval, rms, nsteps, success in results:
             fout.write( "%s %d %f %g %g %d %d\n" % (fname, ncalls, energy, eigenval, rms, nsteps, success) )
 
+def run_one(i):
+    reactant_file = "../pt-island-con/reactant.con"
+    return run("../pt-island-con/initial_%d.con" % i, reactant_file=reactant_file)
+
+    
 if __name__ == "__main__":
+#    run_one(32)
     main()
