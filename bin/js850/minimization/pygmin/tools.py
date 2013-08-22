@@ -1,9 +1,25 @@
 import numpy as np
 
 from pele.systems.morse_bulk import MorseBulk
+from pele.potentials import BasePotential
+from pele.systems import BaseSystem
 
 class _Result(object):
     pass
+
+class PotWrapperIncr(BasePotential):
+    """a LJ potential wrapper to count the number of function calls"""
+    ncalls = 0
+    def __init__(self, pot, incriment):
+        self.pot = pot
+        self.incriment = incriment
+    def getEnergy(self, coords):
+        self.incriment()
+        return self.pot.getEnergy(coords)
+    def getEnergyGradient(self, coords):
+        self.incriment()
+        return self.pot.getEnergyGradient(coords)
+
 
 class MorseBulkFrozen(MorseBulk):
     def __init__(self, *args, **kwargs):
@@ -27,7 +43,6 @@ class MorseBulkFrozen(MorseBulk):
     
     def get_potential(self):
         pot = super(MorseBulkFrozen, self).get_potential()
-        
         fpot = FrozenCCPotWrapper(pot, self.reference_coords, self.frozen_dof)
         return fpot
     

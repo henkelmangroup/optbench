@@ -5,21 +5,11 @@ from pele.systems import LJCluster
 from pele.utils.xyz import read_xyz
 from pele.transition_states import findTransitionState
 from pele.optimize import Result
+
+from tools import PotWrapperIncr
 #from tools import PotWrapper
 
 
-class PotWrapperIncr(BasePotential):
-    """a LJ potential wrapper to count the number of function calls"""
-    ncalls = 0
-    def __init__(self, pot, incriment):
-        self.pot = pot
-        self.incriment = incriment
-    def getEnergy(self, coords):
-        self.incriment()
-        return self.pot.getEnergy(coords)
-    def getEnergyGradient(self, coords):
-        self.incriment()
-        return self.pot.getEnergyGradient(coords)
 
 
 class LJClusterWrap(LJCluster):
@@ -35,25 +25,6 @@ def get_from_file(fname):
     return ret1.coords
 
 def do_local_connect(system, db):
-    natoms = db.minima()[0].coords.size / 3
-    system.params.double_ended_connect.local_connect_params.NEBparams.image_density = 4
-    system.params.double_ended_connect.local_connect_params.NEBparams.NEBquenchParams["tol"] = 0.01 
-    tsparams = system.params.double_ended_connect.local_connect_params.tsSearchParams
-
-    
-    tsparams.lowestEigenvectorQuenchParams={"nsteps":20, "tol":0.4}
-    tsparams.tol = 1e-3 / np.sqrt(3.*natoms)
-#    tsparams.nsteps_tangent1=10, 
-#    tsparams.nsteps_tangent2=45, 
-#    nfail_max=200,
-#    nsteps=1000,
-    tsparams.max_uphill_step = 0.2
-    tsparams.iprint = 1
-    
-    print "tolerance", tsparams.tol
-
-
-
 
     min1, min2 = db.minima()[:2]
     system.ncalls = 0
@@ -86,13 +57,12 @@ def do_local_connect(system, db):
     fres.tsres = ret
     return fres
 
-def run(i):
+def run(i, usegui=False):
     f1 = "../coords/start_%02d.xyz" % i
     f2 = "../coords/end_%02d.xyz" % i
     ret1 = read_xyz(open(f1))
     ret2 = read_xyz(open(f2))
     
-    usegui = False
     natoms = ret1.coords.flatten().size / 3
     system = LJClusterWrap(natoms)
     if usegui:
@@ -112,6 +82,22 @@ def run(i):
         from pele.gui import run_gui
         run_gui(system, "test.db")
     
+    natoms = db.minima()[0].coords.size / 3
+    system.params.double_ended_connect.local_connect_params.NEBparams.image_density = 4
+    system.params.double_ended_connect.local_connect_params.NEBparams.NEBquenchParams["tol"] = 0.01 
+    tsparams = system.params.double_ended_connect.local_connect_params.tsSearchParams
+
+    
+    tsparams.lowestEigenvectorQuenchParams={"nsteps":20, "tol":0.4}
+    tsparams.tol = 1e-3 / np.sqrt(3.*natoms)
+#    tsparams.nsteps_tangent1=10, 
+#    tsparams.nsteps_tangent2=45, 
+#    nfail_max=200,
+#    nsteps=1000,
+    tsparams.max_uphill_step = 0.2
+    tsparams.iprint = 1
+    
+    print "tolerance", tsparams.tol
     
     res = do_local_connect(system, db)
     res.i = i
@@ -135,5 +121,5 @@ def main():
         
 
 if __name__ == "__main__":
-#    run(3)
+#    run(13, usegui=True)
     main()
