@@ -7,7 +7,7 @@ fi
 mkdir -p runs
 cd runs
 tar xfz ../pt-island-con.tgz
-for i in {0..62}
+for i in {0..58}
 do
     product=$(printf "product_%i.con" $i)
     mkdir -p run-$i
