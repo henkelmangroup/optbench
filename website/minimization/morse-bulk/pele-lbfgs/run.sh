@@ -1,4 +1,5 @@
 #!/bin/bash
+./refresh_scripts.sh
 
 M=100
 maxstep=2.0

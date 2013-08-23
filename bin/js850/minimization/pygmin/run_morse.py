@@ -21,7 +21,7 @@ if __name__ == "__main__":
     parser.add_argument("--maxstep", type=float, default=0.1, help="lbfgs maximum step size")
     args = parser.parse_args()
     
-    tol = 0.01
+    tol = 1e-3
 
     boxl = 16.387907
     boxvec = np.ones(3) * boxl
