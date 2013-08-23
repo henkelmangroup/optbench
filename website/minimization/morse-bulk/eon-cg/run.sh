@@ -13,7 +13,7 @@ do
     mkdir run-$i
     echo run-$i
     mv morse-bulk/$file run-$i/pos.con
-    cp ../{config.ini,in.lammps} run-$i
+    cp ../config.ini run-$i
     cd run-$i
     eonclient > stdout.dat
     cd ..

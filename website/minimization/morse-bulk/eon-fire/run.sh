@@ -15,7 +15,7 @@ do
     mv morse-bulk/$file run-$i/pos.con
     cp ../{config.ini,in.lammps} run-$i
     cd run-$i
-    ~/work/eon-vs-vtstcode/eon/client/eonclient > stdout.dat
+    eonclient > stdout.dat
     cd ..
 done
 rm -rf morse-bulk
