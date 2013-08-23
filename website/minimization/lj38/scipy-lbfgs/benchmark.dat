@@ -7,3 +7,4 @@ algorithm L-BFGS
 code SciPy
 contributor Jacob Stevenson
 date 18 Oct 2012
+hidden true

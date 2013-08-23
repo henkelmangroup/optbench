@@ -6,3 +6,4 @@ algorithm L-BFGS M=4 maxstep=0.05
 code pele
 contributor Jacob Stevenson
 date 25 Jun 2013
+hidden true
