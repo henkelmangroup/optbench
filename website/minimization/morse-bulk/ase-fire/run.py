@@ -16,12 +16,16 @@ for i in xrange(100):
     stdout.flush()
     
     atoms = read('morse-bulk/POSCAR_%i' % i)
-    calc = morse(rc=7.0)
+    calc = morse(rc=9.5)
     atoms.set_calculator(calc)
 
     opt = FIRE(atoms, maxmove=.2, logfile=None)
     t0 = time()
-    opt.run(fmax=1e-4, steps=10000)
+    for i in xrange(1000):
+        cc = np.linalg.norm(atoms.get_forces())
+        if cc <= 1e-3:
+            break
+        opt.run(fmax=0, steps=1)
     t1 = time()
 
     fc = calc.force_calls
