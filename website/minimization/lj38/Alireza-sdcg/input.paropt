@@ -1,9 +1,0 @@
-sdcg       #approach
-1.d-3      #alphax
-1.d-2      #fmaxtol
-50.d0      #condnum
-low        #precaution
-10000      #nit
-2.d-3      #dt_start
-0.1d0      #dxmax
-5          #nsatur

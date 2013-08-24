@@ -73,10 +73,12 @@ $$ U(r) = D_e ( 1 - e^{-a(r-r_e)})^2 $$
     <th>min N</th>
     <th>max N</th>
   </thead>
+  {% set any_hidden = False %}
   {% for entry in benchmarks['morse-bulk']|sort(attribute='force_calls') %}
     {% if entry.hidden == False %}
     <tr>
     {% else %}
+    {% set any_hidden = True %}
     <tr class="hidden-morse" style="display: none;">
     {% endif %}
       <td>{% include 'templates/entry-details.tmpl' %}</td>
@@ -85,10 +87,12 @@ $$ U(r) = D_e ( 1 - e^{-a(r-r_e)})^2 $$
       <td>{{ '%.0f' % entry.force_calls_max }}</td>
     </tr>
   {% endfor %}
+  {% if any_hidden %}
   <tr>
     <td colspan="5">
       <a href="#" onclick="$('.hidden-morse').toggle();return false;">Show/Hide Additional Entries...</a>
     </td>
   </tr>
+  {% endif %}
 </table>
 {% endblock %}

@@ -1,11 +1,10 @@
-force_calls 645
-force_calls_max 2963
-force_calls_min 186
-force_calls_per_second 2020.04
+force_calls 656
+force_calls_max 1000
+force_calls_min 208
+force_calls_per_second 2262.85
 nfailed 0
 algorithm FIRE
 code ASE
 code_version 3.6.0
-date 15 Oct 2012
+date 23 Aug 2013
 contributor Sam Chill
-hidden true

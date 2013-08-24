@@ -12,13 +12,16 @@ atoms.center(100.0)
 calc = tsase.calculators.lj(cutoff=15.0)
 atoms.set_calculator(calc)
 
-#opt = ase.optimize.LBFGS(atoms, maxstep=.2, alpha=1.0/0.003)
-opt = ase.optimize.FIRE(atoms, maxmove=0.2, dt=0.25)
+opt = ase.optimize.FIRE(atoms, maxmove=0.2, dt=1.00)
 #opt = ase.optimize.MDMin(atoms, dt=.0000001)
 #opt = ase.optimize.sciopt.SciPyFminCG(atoms)
 #opt = ase.optimize.sciopt.SciPyFminBFGS(atoms, alpha=33333.0)
 t0 = time()
-opt.run(fmax=0.01, steps=10000)
+for i in xrange(1000):
+    cc = np.linalg.norm(atoms.get_forces())
+    if cc <= 1e-2:
+        break
+    opt.run(fmax=0, steps=1)
 t1 = time()
 print 'real %f seconds' % (t1-t0)
 
