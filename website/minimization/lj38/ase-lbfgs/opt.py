@@ -2,25 +2,26 @@
 import ase
 import ase.io
 import tsase
-from sys import argv
+from sys import argv, stderr
 import numpy as np
 from time import time
-from ase.optimize.sciopt import SciPyFminBFGS, SciPyFminCG
 
 atoms = ase.io.read(argv[1])
 atoms.center(100.0)
-calc = tsase.calculators.lj(cutoff=15.0)
+calc = tsase.calculators.lj(cutoff=35.0)
 atoms.set_calculator(calc)
 
-opt = ase.optimize.LBFGS(atoms, maxstep=.2, alpha=1.0/0.004, memory=5)
-#opt = ase.optimize.FIRE(atoms, maxmove=0.2, dt=0.01, dtmax=0.1)
-#opt = ase.optimize.MDMin(atoms, dt=.0000001)
-#opt = ase.optimize.sciopt.SciPyFminCG(atoms)
-#opt = ase.optimize.sciopt.SciPyFminBFGS(atoms, alpha=33333.0)
+opt = ase.optimize.LBFGS(atoms, maxstep=.1, alpha=1.0/0.001, memory=10)
 t0 = time()
-opt.run(fmax=0.01, steps=10000)
+#for i in xrange(10000):
+#    cc = np.linalg.norm(atoms.get_forces())
+#    if cc <= 1e-2:
+#        break
+#    opt.run(fmax=0, steps=1)
+opt.run(fmax=1e-4,steps=1000)
 t1 = time()
 print 'real %f seconds' % (t1-t0)
+stderr.write('%s\n'%calc.force_calls)
 
 f = open('results.dat', 'w')
 f.write('%i total_force_calls\n' % calc.force_calls)
