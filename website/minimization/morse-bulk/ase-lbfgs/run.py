@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 from ase.io import read
 from ase.optimize import BFGSLineSearch
+from ase.optimize import LBFGSLineSearch
+from ase.optimize import LBFGS
 from tsase.calculators import morse
 import numpy as np
 from time import time
@@ -8,7 +10,7 @@ from os import system
 from sys import stdout
 import datetime
 
-system("tar xf morse-bulk.tgz")
+system("tar xfz morse-bulk.tgz")
 
 fcs = []
 for i in xrange(100):
@@ -19,7 +21,7 @@ for i in xrange(100):
     calc = morse(rc=9.5)
     atoms.set_calculator(calc)
 
-    opt = BFGSLineSearch(atoms, maxstep=.2, alpha=1.0/0.04, logfile=None)
+    opt = LBFGS(atoms, memory=20, maxstep=.2, alpha=1.0/0.04, logfile=None)
     t0 = time()
     for i in xrange(1000):
         cc = np.linalg.norm(atoms.get_forces())
