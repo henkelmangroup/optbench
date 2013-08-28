@@ -1,7 +1,9 @@
 #!/bin/bash
-./refresh_scripts.sh
+tar -xzf morse-bulk.tgz
 
 M=100
 maxstep=2.0
-python run_morse.py -M $M --maxstep=$maxstep
-./report.sh $M $maxstep
+python minimization_morse.py -M $M --maxstep=$maxstep
+python minimization_getdata.py "results_data.ncalls" "L-BFGS M=$M maxstep=$maxstep" pele
+
+rm -r morse-bulk/

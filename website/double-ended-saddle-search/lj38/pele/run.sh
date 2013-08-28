@@ -1,4 +1,7 @@
 #!/bin/bash
-./refresh_scripts.sh
+tar -xzf coords.tgz
+
 python dec_lj38.py
 python getdata.py
+
+rm -r coords/

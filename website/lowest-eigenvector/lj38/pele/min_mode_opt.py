@@ -59,7 +59,7 @@ def do_one_run(i):
     
     overlap_tol = 0.99
     
-    datadir = "../coords"
+    datadir = "./coords"
     
     # get coordinates
     fname = datadir + "/%04d.xyz" % i
