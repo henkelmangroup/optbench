@@ -6,7 +6,7 @@ if [ -e runs ]; then
 fi
 mkdir -p runs
 cd runs
-tar xfz ../../coords-con.tar.gz
+tar xfz ../coords-con.tar.gz
 for i in {0..199}
 do
     file=$(printf "%.4i.con" $i)
