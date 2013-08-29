@@ -1,0 +1,9 @@
+debug
+comment bfgsts 50 3 25 0.0001
+comment bfgsts 500 10 100 0.0005
+bfgsts 500 3 25 0.1 100
+bfgssteps 100
+bfgsconv 0.05
+comment bfgsmin 9.36d-05
+nohess
+comment maxmax 0.05

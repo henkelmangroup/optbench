@@ -2,11 +2,18 @@ import numpy as np
 import sys, os
 import shutil
 import datetime
+import argparse
+
+parser = argparse.ArgumentParser(description="create file benchmarks.dat from a results file",
+                                 )
+parser.add_argument("--datafile", type=str, help="results file to read from", 
+                    default="results.txt")
+args = parser.parse_args()
 
 date = datetime.date.today()
 datef = date.strftime("%d %b %Y")
 
-datafile = "results.txt"
+datafile = args.datafile
 algorithm = "hybrid eigenvector following"
 code = "pele"
 contributor = "Jacob Stevenson"
@@ -26,8 +33,8 @@ with open("benchmark.dat", "w") as fout:
     fout.write( "force_calls_min %.4e\n" % round( np.min(ncalls)))
     fout.write( "force_calls_max %.4e\n" % round( np.max(ncalls)))
     fout.write( "nfailed %d\n" % np.sum(1. - data[:,-1]) )
-    fout.write( "algorithm %s\n" % algorithm )
-    fout.write( "code %s\n" % code )
-    fout.write( "contributor %s\n" % contributor )
+#    fout.write( "algorithm %s\n" % algorithm )
+#    fout.write( "code %s\n" % code )
+#    fout.write( "contributor %s\n" % contributor )
     fout.write( "date %s\n" % datef )
 
