@@ -1,8 +1,9 @@
 import numpy as np
 
+
 from pele.systems.morse_bulk import MorseBulk
-from pele.potentials import BasePotential
-from pele.systems import BaseSystem
+from pele.potentials import BasePotential, LJ
+from pele.systems import BaseSystem, LJCluster
 
 class _Result(object):
     pass
@@ -197,3 +198,10 @@ def read_con_file(fname):
         res.frozen = np.array(frozen)
         return res
 
+class LJClusterWrap(LJCluster):
+    ncalls = 0
+    def get_potential(self):
+        lj = LJ()
+        def incr(): self.ncalls += 1
+        pot = PotWrapperIncr(lj, incr)
+        return pot

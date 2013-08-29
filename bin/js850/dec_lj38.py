@@ -1,28 +1,20 @@
 import numpy as np
 
-from pele.potentials import LJ, BasePotential
-from pele.systems import LJCluster
+#from pele.systems import LJCluster
 from pele.utils.xyz import read_xyz
 from pele.transition_states import findTransitionState
 from pele.optimize import Result
 
-from tools import PotWrapperIncr
+from tools import LJClusterWrap
 #from tools import PotWrapper
 
 
 
 
-class LJClusterWrap(LJCluster):
-    ncalls = 0
-    def get_potential(self):
-        lj = LJ()
-        def incr(): self.ncalls += 1
-        pot = PotWrapperIncr(lj, incr)
-        return pot
 
-def get_from_file(fname):
-    ret1 = read_xyz(open(f1))
-    return ret1.coords
+#def get_from_file(fname):
+#    ret1 = read_xyz(open(f1))
+#    return ret1.coords
 
 def do_local_connect(system, db):
 
