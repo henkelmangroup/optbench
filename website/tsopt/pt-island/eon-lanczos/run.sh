@@ -6,7 +6,7 @@ if [ -e runs ]; then
 fi
 mkdir -p runs
 cd runs
-tar xfz ../../pt-island-con.tgz
+tar xfz ../pt-island-con.tgz
 for i in {0..48}
 do
     file=$(printf "initial_%i.con" $i)
