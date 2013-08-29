@@ -1,1 +1,0 @@
-../../../../bin/js850/getdata.py

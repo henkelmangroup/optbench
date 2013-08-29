@@ -2,8 +2,6 @@ force_calls 3.48760e+04
 force_calls_median 2.53400e+04
 force_calls_min 1.3650e+03
 force_calls_max 2.0737e+05
+transition_states 8.0000e+00
 nfailed 5
 date 29 Aug 2013
-algorithm DNEB + hybrid eigenvector following
-code pele
-contributor Jacob Stevenson

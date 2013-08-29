@@ -20,7 +20,7 @@ do
     cd ..
 done
 
-python ../getdata.py
+python ../getdata_ts.py
 
 echo "algorithm DNEB + hybrid eigenvector following + Djikstra shortest path" >> benchmark.dat
 echo "code OPTIM" >> benchmark.dat

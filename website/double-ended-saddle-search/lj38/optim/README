@@ -1,0 +1,2 @@
+this benchmark should do only 1 DNEB and 1 transition state refinement.  It should not do a pushoff, and should not continue
+to connect the minima

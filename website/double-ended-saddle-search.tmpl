@@ -4,6 +4,12 @@
 <h1>Double Ended Saddle Search</h1>
 
 <h2>LJ 38</h2>
+For this benchmark we require simply a refined saddle point that is in between
+the starting and ending minima.  The termination condition is that the norm of
+the gradient at the saddle point be less than 0.001.  An example method to find
+that saddle point is (D)NEB + climbing image or (D)NEB + hybrid eigenvector
+following.  The saddle point need not be a transition state directly separating
+the start and end minima.
 
 <table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
   <thead>
@@ -50,6 +56,14 @@
 </table>
 
 <h2>LJ 38 with one intermediate minimum</h2>
+For this benchmark we require a connected path of minima and transition states
+between the starting and ending points.  For this benchmark the starting and
+ending point are not directly connected.  There exists a path with one
+intermediate minimum, however we do not require this path to be found. A
+successful benchmark is one which finds any path between the starting and
+ending minima.  Because the final path is not specified, we require the number
+of transition states in the found path to be reported.
+(note: this benchmark should be separated from those above.  perhaps in "double ended pathway search")
 
 <table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
   <thead>
@@ -58,6 +72,7 @@
     <th>min(FCs)</th>
     <th>median(FCs)</th>
     <th>max(FCs)</th>
+    <th>&lt;TSs&gt;</th>
     <th>nfailed</th>
   </thead>
   {% for entry in benchmarks['lj38_2ts_separation']|sort(attribute='force_calls') %}
@@ -67,6 +82,7 @@
       <td>{{ '%.0f' % entry.force_calls_min }}</td>
       <td>{{ '%.0f' % entry.force_calls_median }}</td>
       <td>{{ '%.0f' % entry.force_calls_max }}</td>
+      <td>{{ '%.0f' % entry.transition_states }}</td>
       <td>{{ '%d' % entry.nfailed }}</td>
     </tr>
   {% endfor %}
