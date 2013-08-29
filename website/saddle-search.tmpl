@@ -26,12 +26,10 @@ with $D=0.7102$, $\alpha=1.6047$, and $r_0=2.897$.</p>
   {% for entry in benchmarks['pt-island']|sort(attribute='force_calls') %}
     <tr>
       <td>{% include 'templates/entry-details.tmpl' %}</td>
-      <td>{{'%.2f' % entry.rho}}</td>
-      <td>{{'%.0f' % entry.ns}}</td>
-      <td>{{'%.0f' % entry.nsaddle}}</td>
-      <td>{{'%.0f' % entry.nrelax}}</td>
-      <td>{{'%.0f' % entry.ntotal}}</td>
-      <td>{{'%.0f' % (entry.ntotal/entry.rho)}}</td>
+      <td>{{'%.1e' % entry.force_calls}}</td>
+      <td>{{'%.2f' % entry.fraction_connected }}</td>
+      <td>{{'%.0f' % entry.total_searches }}</td>
+      <td>{{'%.0f' % entry.unique_saddles }}</td>
     </tr>
   {% endfor %}
 </table>
