@@ -13,10 +13,11 @@ def test(G, m1, m2):
     print path
 
 def main():
-    write = False
+    write = True
     natoms = 38
     system = LJCluster(natoms)
-    db = system.create_database("lj38.big.sqlite")
+#    db = system.create_database("lj38.big.sqlite")
+    db = system.create_database("/scratch/scratch2/js850/LJ38/lj38.sqlite")
 #    db = system.create_database("lj38.small.sqlite")
 
     
@@ -50,8 +51,8 @@ def main():
         
         if write:
             dir = "dec_lj38_dist%d" % dist
-            write_xyz(open(dir + "/start_%d.xyz"%count, "w"), x1, title="energy %f" % m.energy)
-            write_xyz(open(dir + "/end_%d.xyz"%count, "w"), x2, title="energy %f" % m2.energy)
+            write_xyz(open(dir + "/start_%d.xyz"%count, "w"), x1, title="energy %f id %d dist %f" % (m.energy, m._id, xdist))
+            write_xyz(open(dir + "/end_%d.xyz"%count, "w"), x2, title="energy %f id %d" % (m2.energy, m2._id))
         
     
 

@@ -1,12 +1,13 @@
 import numpy as np
 import os
 
-from dec_lj38 import LJClusterWrap
+from tools import LJClusterWrap
 
 from pele.optimize import Result
 from pele.utils.xyz import read_xyz
 
 def set_params(system, natoms):
+    # NEB params
     system.params.double_ended_connect.local_connect_params.NEBparams.image_density = 3
     system.params.double_ended_connect.local_connect_params.NEBparams.iter_density = 10
     system.params.double_ended_connect.local_connect_params.NEBparams.reinterpolate = 50
@@ -17,9 +18,9 @@ def set_params(system, natoms):
     system.params.double_ended_connect.local_connect_params.NEBparams.verbose = False
 
     system.params.double_ended_connect.local_connect_params.NEBparams.NEBquenchParams["tol"] = 0.01 
-    tsparams = system.params.double_ended_connect.local_connect_params.tsSearchParams
-
     
+    # set transition state search params
+    tsparams = system.params.double_ended_connect.local_connect_params.tsSearchParams
     tsparams.lowestEigenvectorQuenchParams={"nsteps":20, "tol":0.1}
     tsparams.tol = 1e-3 / np.sqrt(3.*natoms)
     tsparams.nsteps_tangent1=3
@@ -30,6 +31,7 @@ def set_params(system, natoms):
     tsparams.iprint = 1
     tsparams.verbosity = 5
     
+    # set tangent space quench params
     tangent_quench = tsparams.tangentSpaceQuenchParams
     tangent_quench["maxstep"] = .05
     tangent_quench["iprint"] = -1
