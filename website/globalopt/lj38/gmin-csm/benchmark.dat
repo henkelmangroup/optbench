@@ -1,7 +1,10 @@
-force_calls 4.36900e+03
-force_calls_min 2.6200e+02
-force_calls_max 1.6373e+04
-algorithm basinhopping-sym-csm
+force_calls 6.42100e+03
+force_calls_median 4.77100e+03
+force_calls_min 7.7000e+01
+force_calls_max 2.6977e+04
+nfailed 0
+date 30 Aug 2013
+algorithm basin-hopping with symmetrise csm moves
 code GMIN
-contributor David Wales
-date 18 Oct 2012
+contributor Jacob Stevenson and David Wales
+

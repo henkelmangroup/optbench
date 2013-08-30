@@ -22,6 +22,7 @@ def parse_dat(path, data):
     f = open(path)
     for line in f:
         fields = line.strip().split()
+        if len(fields) == 0: continue
         key = fields[0]
         value = ' '.join(fields[1:])
         data[key] = value

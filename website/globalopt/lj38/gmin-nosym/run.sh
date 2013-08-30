@@ -19,9 +19,7 @@ done
 
 python ../getdata.py --datafile=results.txt
 
-echo "algorithm basin-hopping" >> benchmark.dat
-echo "code GMIN" >> benchmark.dat
-echo "contributor Jacob Stevenson and David Wales" >> benchmark.dat
+cat ../admin.dat >> benchmark.dat
 
 
 mv benchmark.dat ..
