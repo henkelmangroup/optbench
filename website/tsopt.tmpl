@@ -14,7 +14,7 @@ structure database?) A tar file containing the random and minimized structures
 is (will be) here <a href="tsopt/LJ38/lj38.tar.gz">lj38.tar.gz</a>. </p>
 
 <p>  The benchmark requires that each provided Lennard-Jones starting
-structures be optimized until the rms gradient is less that 0.001.  Runs that
+structures be optimized until the norm of the gradient is less that 0.001.  Runs that
 don't reach the required tolerance or those with positive zero eigenvalue are
 considered failures.  If a run was successful, the number of forcecalls
 necessary to reach the global minimum the first time is recorded.</p>

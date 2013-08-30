@@ -7,7 +7,7 @@ sed -n '3,$p' $1 | awk '{print "AX  ", $2,$3,$4}' >> odata
 OPTIM > OPTIM.log
 
 ncalls=$(grep "energy+gradient calls" OPTIM.log  | tail -1 | awk '{print $6}' || echo $tmp)
-rms=$(grep "energy+gradient calls" OPTIM.log  | tail -1 | awk '{print $6}')
+rms=$(grep "bfgsts> RMS grad=" OPTIM.log  | tail -1 | awk '{print $4}')
 energy=$(grep "mylbfgs> Final energy is" OPTIM.log  | tail -1 | awk '{print $5}')
 eigenval=$(grep "xmylbfgs> Eigenvalue and RMS=" OPTIM.log  | tail -1 | awk '{print $5}')
 success=$(grep "**** CONVERGED ****" OPTIM.log > /dev/null && echo 1 || echo 0)
