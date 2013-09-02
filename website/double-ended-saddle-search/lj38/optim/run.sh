@@ -22,7 +22,7 @@ done
 
 python ../getdata.py
 
-echo "algorithm DNEB + hybrid eigenvector following + Djikstra shortest path" >> benchmark.dat
+echo "algorithm DNEB + hybrid eigenvector following" >> benchmark.dat
 echo "code OPTIM" >> benchmark.dat
 echo "contributor Jacob Stevenson" >> benchmark.dat
 
