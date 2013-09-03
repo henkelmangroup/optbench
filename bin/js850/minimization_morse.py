@@ -17,7 +17,7 @@ if __name__ == "__main__":
     
 #    parser.add_argument("fname", type=str, help="Database file name")
     parser.add_argument("-M", type=int, default=4, help="lbfgs history length")
-    parser.add_argument("-natoms", type=int, default=38, help="number of atoms")
+    parser.add_argument("-natoms", type=int, default=256, help="number of atoms")
     parser.add_argument("--maxstep", type=float, default=0.1, help="lbfgs maximum step size")
     args = parser.parse_args()
     
@@ -42,6 +42,8 @@ if __name__ == "__main__":
     else:
         # use the norm of the gradient.  This is sqrt(natoms) times the rms
         tol /= np.sqrt(3. * args.natoms)
+
+    #print "tolerance", tol, args.natoms
     
 
     

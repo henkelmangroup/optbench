@@ -1,0 +1,8 @@
+debug
+bfgssteps 10000
+bfgsmin 3.6084391D-05
+comment convergence tolerance is norm(gradient)=1e-2, or that RMS(gradient)=1e-3 / sqrt(3*natoms) = 3.6084391824351612d-05
+updates 100
+maxbfgs 2.
+bulk
+params 1.0 16.387907    16.387907    16.387907  9.5
