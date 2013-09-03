@@ -4,7 +4,7 @@ if [ -e simulation ]; then
     rm -rf simulation
 fi
 mkdir simulation && cd simulation
-tar xzf ../../lj38-clusters.tgz
+tar xzf ../lj38-clusters.tgz
 
 for i in {0..999}
 do

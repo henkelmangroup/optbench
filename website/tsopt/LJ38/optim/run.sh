@@ -4,7 +4,7 @@ if [ -e simulation ]; then
     rm -rf simulation
 fi
 mkdir simulation && cd simulation
-tar xzf ../../coords-xyz.tar.gz
+tar xzf ../coords-xyz.tar.gz
 
 for i in {0..199}
 do
