@@ -1,8 +1,8 @@
-force_calls 3.33000e+02
-force_calls_median 2.86000e+02
-force_calls_min 2.1400e+02
-force_calls_max 6.3800e+02
-nfailed 2
+force_calls 1.57000e+02
+force_calls_median 1.24000e+02
+force_calls_min 2.9000e+01
+force_calls_max 5.5200e+02
+nfailed 0
 date 04 Sep 2013
 algorithm hybrid eigenvector following
 code OPTIM

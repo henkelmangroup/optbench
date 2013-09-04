@@ -1,3 +1,4 @@
+comment natoms = 343
 comment !R0 =  2.8970
 comment !A =   0.7102
 comment !rho = 1.6047
@@ -12,12 +13,12 @@ comment scaled rcut = rcut / R0 = 3.2792544011
 debug
 bfgssteps 10000
 steps 200
-comment bfgsmin 5.08087747456D-05
 updates 100
-maxbfgs 0.690369347601
+maxbfgs 0.690369347601 .7 .7 .7
 comment params 4.6488159 31.066620642043496 31.066620642043496 31.066620642043496 3.2792544011 this line will be written in the run.sh
 bulk
-bfgsts 500 3 25 0.1 100
+bfgsts 100 3 25 0.2 100
 nohess
-bfgsconv 5.08087747456D-05
+bfgsconv 3.12D-0
 permdist
+maxmax .7
