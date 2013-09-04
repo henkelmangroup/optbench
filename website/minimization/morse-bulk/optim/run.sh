@@ -1,5 +1,8 @@
 #!/bin/bash -e
 
+r0=2.8970
+scale=`bc -l <<< "1. / $r0"`
+
 if [ -e simulation ]; then
     rm -rf simulation
 fi
@@ -12,7 +15,7 @@ do
     mkdir run-$i && cd run-$i
     echo run-$i
     cp ../../odata.preamble odata
-    python ../../con2coords.py ../morse-bulk/$file coords
+    python ../../con2coords.py ../morse-bulk/$file coords --scale=$scale
     echo "points" >> odata
     awk '{print "M", $1, $2, $3}' coords >> odata
     ../../run_optim.sh $file 
