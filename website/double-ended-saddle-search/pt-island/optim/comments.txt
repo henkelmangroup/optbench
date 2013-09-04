@@ -1,0 +1,2 @@
+This method uses DNEB to get an image close to the saddle point, then uses
+hybrid eigenvector following method to optimize to that saddle point.
