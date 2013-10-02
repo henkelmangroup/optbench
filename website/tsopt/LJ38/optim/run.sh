@@ -20,7 +20,7 @@ python ../getdata.py
 
 echo "algorithm hybrid eigenvector following" >> benchmark.dat
 echo "code OPTIM" >> benchmark.dat
-echo "contributor Victor Ruehle and Jacob Stevenson" >> benchmark.dat
+echo "contributor Victor Ruehle, Jacob Stevenson and Cheng Shang" >> benchmark.dat
 
 
 mv benchmark.dat ..
