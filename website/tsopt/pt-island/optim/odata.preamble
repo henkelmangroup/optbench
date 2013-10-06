@@ -17,8 +17,9 @@ updates 100
 maxbfgs 0.690369347601
 comment params 4.6488159 31.066620642043496 31.066620642043496 31.066620642043496 3.2792544011 this line will be written in the run.sh
 bulk
-bfgsts 40 5 19 0.07 100
+bfgsts 34    9   30    0.0440 100
 nohess
 bfgsconv 3.12D-5
 permdist
 comment maxmax .1
+usediag 3
