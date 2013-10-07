@@ -33,6 +33,8 @@ def findTS(coords, pot, vec0=None):
                                nsteps=10, 
                                max_uphill_step=2.1,
                                demand_initial_negative_vec=False,
+                               check_negative=False,
+                               first_order=True,
                                )
 #    , 
 #                               tangentSpaceQuenchParams={"tol": 0.05},
