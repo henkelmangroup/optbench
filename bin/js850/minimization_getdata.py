@@ -26,12 +26,12 @@ if len(sys.argv) > 1:
     if False and os.path.isfile(datafile_orig):
         if datafile_orig != datafile:
             shutil.copy2(datafile_orig, datafile)
-if len(sys.argv) > 2:
-    algorithm = sys.argv[2]
-if len(sys.argv) > 3:
-    code = sys.argv[3]
-if len(sys.argv) > 4:
-    contributor = sys.argv[4]
+#if len(sys.argv) > 2:
+#    algorithm = sys.argv[2]
+#if len(sys.argv) > 3:
+#    code = sys.argv[3]
+#if len(sys.argv) > 4:
+#    contributor = sys.argv[4]
 
 data = np.genfromtxt(datafile)
 ic=0
@@ -48,8 +48,8 @@ with open("benchmark.dat", "w") as fout:
     fout.write( "force_calls_max %.4e\n" % round( np.max(data[:,ic])))
 #    fout.write( "force_calls_per_second %d\n" % int(ncalls/timetot) )
     fout.write( "nfailed %d\n" % int(nfailed) )
-    fout.write( "algorithm %s\n" % algorithm )
-    fout.write( "code %s\n" % code )
-    fout.write( "contributor %s\n" % contributor )
+#    fout.write( "algorithm %s\n" % algorithm )
+#    fout.write( "code %s\n" % code )
+#    fout.write( "contributor %s\n" % contributor )
     fout.write( "date %s\n" % datef )
 

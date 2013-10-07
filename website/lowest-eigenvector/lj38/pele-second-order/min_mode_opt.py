@@ -51,6 +51,7 @@ def main(outfile="results.dat"):
         
 
 def do_one_run(i):
+    np.random.seed(0)
     natoms = 38
     system = LJCluster(natoms)
     pot = PotWrapper(LJ())
@@ -77,7 +78,10 @@ def do_one_run(i):
     kwargs["alternate_stop_criterion"] = stop_crit
     
     kwargs["tol"] = overlap_tol
-    
+    kwargs["M"] = 100
+    kwargs["maxstep"] = 2.
+    kwargs["first_order"] = False
+
     ret = findLowestEigenVector(coords, pot, orthogZeroEigs=orthogZeroEigs, iprint=100, **kwargs)
     return ret, eval, mode, pot.ncalls
         
