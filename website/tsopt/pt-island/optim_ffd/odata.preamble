@@ -23,3 +23,5 @@ bfgsconv 3.12D-5
 permdist
 comment maxmax .1
 usediag 3
+READVEC    
+DUMPVECTOR 
