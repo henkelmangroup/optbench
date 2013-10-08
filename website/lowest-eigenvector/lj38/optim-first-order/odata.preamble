@@ -5,3 +5,5 @@ comment bfgsconv 9.36585D-05
 nohess
 eigenonly 1D-13 0.99
 USEDIAG 3
+BFGSCONV 1D10
+CONVERGE 1D10
