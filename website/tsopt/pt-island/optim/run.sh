@@ -24,7 +24,9 @@ do
     # read the coordinates, the frozen atoms, and the box lengths from the con file.  
     # also, scale the coordinates by r0 to convert to natural units
     python ../../con2coords.py ../pt-island-con/$file coords --scale=$scale --frozen=frozen --box-lengths=boxvec
-
+    cp ../pt-island-con/$file fort.11
+    cp ../pt-island-con/reactant.con fort.12
+    ../../genmode.x
     # write the box lenghts to the odata file
     boxvec=`cat boxvec`
     echo "PARAMS $rho_scaled $boxvec $rcut_scaled" >> odata

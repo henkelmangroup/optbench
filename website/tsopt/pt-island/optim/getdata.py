@@ -1,1 +1,1 @@
-../../../../bin/js850/getdata.py
+/home/cs778/benchmarks/bin/js850/getdata.py

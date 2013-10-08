@@ -1,2 +1,2 @@
-The hybrid eigenvector following method.  We did not use reactant.con to
+The hybrid eigenvector following method. Using reactant.con to
 provide an initial guess for the lowest eigenvector.

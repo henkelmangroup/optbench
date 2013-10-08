@@ -10,15 +10,17 @@ comment scaled tolerance is tol / A = 5.08087747456e-05
 comment scaled maxstep = maxstep / R0 = 0.690369347601
 comment scaled boxl = boxl / R0 = 31.066620642043496
 comment scaled rcut = rcut / R0 = 3.2792544011
+comment params 4.6488159 31.066620642043496 31.066620642043496 31.066620642043496 3.2792544011 this line will be written in the run.sh
+comment maxmax .1
 debug
+bfgsts 30 3 11 0.11 100
 bfgssteps 10000
 steps 200
 updates 100
 maxbfgs 0.690369347601
-comment params 4.6488159 31.066620642043496 31.066620642043496 31.066620642043496 3.2792544011 this line will be written in the run.sh
 bulk
-bfgsts 40 5 19 0.07 100
 nohess
 bfgsconv 3.12D-5
 permdist
-comment maxmax .1
+READVEC
+DUMPVECTOR
