@@ -20,6 +20,7 @@ def main():
     
     if args.scale is not None:
         coords *= args.scale
+        res.boxvec *= args.scale
     
     
     np.savetxt(args.outfile, coords, fmt="%.16f")
