@@ -7,3 +7,5 @@ eigenonly 1D-13 0.99
 USEDIAG 3
 BFGSCONV 1D10
 CONVERGE 1D10
+maxbfgs 0.2 0.3
+updates 4 30

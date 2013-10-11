@@ -22,6 +22,7 @@ python ../getdata.py
 echo "algorithm hybrid eigenvector following" >> benchmark.dat
 echo "code OPTIM" >> benchmark.dat
 echo "contributor Jacob Stevenson and Cheng Shang" >> benchmark.dat
+echo "hidden True" >> benchmark.dat
 
 
 mv benchmark.dat ..
