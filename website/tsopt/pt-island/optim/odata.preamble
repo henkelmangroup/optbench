@@ -5,22 +5,22 @@ comment !rho = 1.6047
 comment !cubic box with boxl = 90.
 comment rcut = 9.5
 comment ! rho scaled = rho * r0 = 4.6488159
-comment convergence tolerance is norm(gradient)=1e-3, or that RMS(gradient)=1e-3 / sqrt(3*natoms) = 3.6084391824351612d-05
-comment scaled tolerance is tol / A = 5.08087747456e-05
+comment convergence tolerance is norm(gradient)=1e-3, or that RMS(gradient)=1e-3 / sqrt(3*natoms) = 3.12D-5
+comment scaled tolerance is tol / A = 4.3895D-5
 comment scaled maxstep = maxstep / R0 = 0.690369347601
-comment scaled boxl = boxl / R0 = 31.066620642043496
+comment scaled boxl = boxl / R0 = 6.630583 6.562582 10.355540
 comment scaled rcut = rcut / R0 = 3.2792544011
-comment params 4.6488159 31.066620642043496 31.066620642043496 31.066620642043496 3.2792544011 this line will be written in the run.sh
-comment maxmax .1
+comment params 4.6488159 6.630583 6.562582 10.355540 3.2792544011 this line will be written in the run.sh
+maxmax .1
 debug
-bfgsts 30 3 11 0.11 100
+bfgsts 10 1 4 0.2 100
 bfgssteps 10000
 steps 200
-updates 100
-maxbfgs 0.690369347601
+updates 100 
+maxbfgs 0.3 1.0
 bulk
 nohess
-bfgsconv 3.12D-5
+bfgsconv 4.3895D-5
 permdist
 READVEC
 DUMPVECTOR

@@ -13,15 +13,15 @@ comment scaled rcut = rcut / R0 = 3.2792544011
 comment params 4.6488159 6.630583 6.562582 10.355540 3.2792544011 this line will be written in the run.sh
 maxmax .1
 debug
-bfgsts 20 11 30 0.060 100
+bfgsts 30 11 30 0.063 100
 bfgssteps 10000
 steps 200
-updates 100 
-maxbfgs 0.2 0.2
+updates 30 10 
+maxbfgs 0.3 0.3
 bulk
 nohess
 bfgsconv 4.3895D-5
 permdist
 READVEC
 DUMPVECTOR
-usediag 3
+usediag 2
