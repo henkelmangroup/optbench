@@ -1,9 +1,9 @@
-force_calls 1.73000e+02
-force_calls_median 1.50000e+02
-force_calls_min 6.4000e+01
-force_calls_max 5.3400e+02
-nfailed 0
-date 04 Oct 2013
+force_calls 1.50000e+02
+force_calls_median 1.18000e+02
+force_calls_min 5.8000e+01
+force_calls_max 6.3400e+02
+nfailed 1
+date 14 Oct 2013
 algorithm hybrid eigenvector following
 code OPTIM
 contributor Jacob Stevenson and Cheng Shang
