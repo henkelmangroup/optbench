@@ -9,5 +9,5 @@ bfgsconv 9.36585D-05
 comment bfgsmin 9.36d-05
 nohess
 maxmax 0.2
-maxbfgs 0.2 0.45
+maxbfgs 0.2 
 usediag 3
