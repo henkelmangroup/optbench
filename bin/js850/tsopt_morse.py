@@ -14,10 +14,13 @@ import tools
 
 def findTS(coords, pot, vec0=None):
     ''' routine to execute a single transition state refinement for the benchmark ''' 
-    lowestEigenvectorQuenchParams={"nsteps":100, "tol":0.1}
-    lowestEigenvectorQuenchParams={"iprint":-1, "tol":0.02, "maxstep":3. }
+    lowestEigenvectorQuenchParams=dict(iprint=-1, tol=0.02, maxstep=3.,
+                                       nsteps=20,
+                                       first_order=True,
+                                       M=10,
+                                       )
     
-    tangentSpaceQuenchParams = {"maxstep":2.}
+    tangentSpaceQuenchParams = dict(maxstep=2., M=10,)
     
     natoms = coords.size / 3
     return findTransitionState(coords, pot,
@@ -28,13 +31,13 @@ def findTS(coords, pot, vec0=None):
                                iprint=1,
                                lowestEigenvectorQuenchParams=lowestEigenvectorQuenchParams,
                                tangentSpaceQuenchParams=tangentSpaceQuenchParams,
-                               nsteps_tangent1=3, 
-                               nsteps_tangent2=25,
+                               nsteps_tangent1=11, 
+                               nsteps_tangent2=30,
                                nsteps=10, 
-                               max_uphill_step=2.1,
+                               max_uphill_step=1.1,
+                               max_uphill_step_initial=1.1,
                                demand_initial_negative_vec=False,
                                check_negative=False,
-                               first_order=True,
                                )
 #    , 
 #                               tangentSpaceQuenchParams={"tol": 0.05},
