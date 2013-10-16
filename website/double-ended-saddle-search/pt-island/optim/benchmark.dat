@@ -1,9 +1,9 @@
-force_calls 3.87000e+02
-force_calls_median 3.60000e+02
-force_calls_min 3.0700e+02
-force_calls_max 7.3600e+02
-nfailed 3
-date 04 Sep 2013
+force_calls 1.03000e+02
+force_calls_median 9.80000e+01
+force_calls_min 5.9000e+01
+force_calls_max 1.9400e+02
+nfailed 0
+date 16 Oct 2013
 algorithm DNEB + hybrid eigenvector following
 code OPTIM
-contributor Jacob Stevenson
+contributor Jacob Stevenson & Cheng Shang

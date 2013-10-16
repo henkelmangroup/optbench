@@ -11,28 +11,20 @@ comment scaled maxstep = maxstep / R0 = 0.690369347601
 comment scaled boxl = boxl / R0 = 31.066620642043496
 comment scaled rcut = rcut / R0 = 3.2792544011
 debug
-bfgssteps 10000
-steps 200
-updates 100
-maxbfgs 0.690369347601
-comment params 4.6488159 31.066620642043496 31.066620642043496 31.066620642043496 3.2792544011 this line will be written in the run.sh
-bulk
-bfgsts 500 3 25 0.1 100
-nohess
-bfgsconv 3.12D-5
-permdist
-comment maxmax .1
+ADJUSTK 1 5 1.5
+maxbfgs  1.2 0.3                              
+NEBK 5.0                                      
+MAXSTEP 0.3                                   
+NEWNEB 2  6  0.03                             
+updates 100 100                               
+bfgsts 14 10 30 0.050 100
+maxmax 0.13
+bfgssteps 10000                               
+steps 200                                     
+bulk                                          
+nohess                                        
+bfgsconv 4.3895D-5                            
+usediag 3                                     
+optimizets                                    
+comment TRAD 2.0                  
 
-ADJUSTK 5 10.0D0 1.05D0
-USEDIAG 2
-USEDIAG 2
-NEBK 1.5
-NEWNEB 3 40 0.01
-optimizets
-DIJKSTRA 2
-MAXBFGS  0.2 0.2
-EDIFFTOL 0.000001
-GEOMDIFFTOL 0.05
-MAXSTEP 0.15
-TRAD 0.12
-UPDATES 10 10
