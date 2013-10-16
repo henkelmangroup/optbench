@@ -1,2 +1,5 @@
 this benchmark should do only 1 DNEB and 1 transition state refinement.  It should not do a pushoff, and should not continue
 to connect the minima
+This uses Rayleigh-Ritz minimization to find the lowest eigenvector and moves
+using the hybrid eigenvector following method. The Rayleigh-Ritz minimization
+uses a first order (forward finite differences) expansion.

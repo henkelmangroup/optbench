@@ -24,7 +24,7 @@ python ../getdata.py
 
 echo "algorithm DNEB + hybrid eigenvector following" >> benchmark.dat
 echo "code OPTIM" >> benchmark.dat
-echo "contributor Jacob Stevenson" >> benchmark.dat
+echo "contributor Jacob Stevenson & Cheng Shang" >> benchmark.dat
 
 
 mv benchmark.dat ..
