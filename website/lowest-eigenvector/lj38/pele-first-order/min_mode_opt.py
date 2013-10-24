@@ -82,7 +82,10 @@ def do_one_run(i):
     kwargs["maxstep"] = 2.
     kwargs["first_order"] = True
 
-    ret = findLowestEigenVector(coords, pot, orthogZeroEigs=orthogZeroEigs, iprint=100, **kwargs)
+    eigenvec0 = np.genfromtxt(datadir + "/initial_mode")
+
+    ret = findLowestEigenVector(coords, pot, orthogZeroEigs=orthogZeroEigs, iprint=100, eigenvec0=eigenvec0, **kwargs)
+    assert stop_crit(coords=ret.eigenvec, tol=overlap_tol)
     return ret, eval, mode, pot.ncalls
         
 
