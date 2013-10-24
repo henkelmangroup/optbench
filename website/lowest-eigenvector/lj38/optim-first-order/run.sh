@@ -5,6 +5,8 @@ if [ -e simulation ]; then
 fi
 mkdir simulation && cd simulation
 tar -xzf ../coords.tar.gz 
+echo "100" >vector.dump 
+cat coords/initial_mode >>vector.dump
 
 for i in {0..199}
 do
@@ -13,6 +15,7 @@ do
     mkdir run-$i && cd run-$i
     echo run-$i
     cp ../../odata.preamble .
+    cp ../vector.dump  .
     ../../run_optim.sh ../coords/$file ../coords/$file2 
     cd ..
 done
@@ -22,7 +25,6 @@ python ../getdata.py
 echo "algorithm hybrid eigenvector following" >> benchmark.dat
 echo "code OPTIM" >> benchmark.dat
 echo "contributor Jacob Stevenson and Cheng Shang" >> benchmark.dat
-
 
 mv benchmark.dat ..
 cd ..
