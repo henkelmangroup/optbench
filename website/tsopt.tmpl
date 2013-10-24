@@ -34,7 +34,11 @@ necessary to reach the global minimum the first time is recorded.</p>
     <th>nfailed</th>
   </thead>
   {% for entry in benchmarks['LJ38']|sort(attribute='force_calls') %}
+    {% if entry.hidden == False %}
     <tr>
+    {% else %}
+    <tr class="hidden-lj38" style="display: none;">
+    {% endif %}
       <td>{% include 'templates/entry-details.tmpl' %}</td>
       <td>{{ '%.0f' % entry.force_calls }}</td>
       <td>{{ '%.0f' % entry.force_calls_min }}</td>
@@ -43,6 +47,13 @@ necessary to reach the global minimum the first time is recorded.</p>
       <td>{{ '%d' % entry.nfailed }}</td>
     </tr>
   {% endfor %}
+
+  <tr>
+    <td colspan="5"> 
+      <a href="#" onclick="$('.hidden-lj38').toggle();return false;">Show/Hide Additional Entries...</a>
+    </td>
+  </tr>
+
 </table>
 
 <h2>Pt(111) Heptamer Island</h2>
@@ -64,7 +75,11 @@ reactant.con can be used to provide an initial guess for the lowest eigenvector.
     <th>nfailed</th>
   </thead>
   {% for entry in benchmarks['pt-island']|sort(attribute='force_calls') %}
+    {% if entry.hidden == False %}
     <tr>
+    {% else %}
+    <tr class="hidden-pt" style="display: none;">
+    {% endif %}
       <td>{% include 'templates/entry-details.tmpl' %}</td>
       <td>{{ '%.0f' % entry.force_calls }}</td>
       <td>{{ '%.0f' % entry.force_calls_min }}</td>
@@ -73,6 +88,13 @@ reactant.con can be used to provide an initial guess for the lowest eigenvector.
       <td>{{ '%d' % entry.nfailed }}</td>
     </tr>
   {% endfor %}
+
+  <tr>
+    <td colspan="5"> 
+      <a href="#" onclick="$('.hidden-pt').toggle();return false;">Show/Hide Additional Entries...</a>
+    </td>
+  </tr>
+
 </table>
 
 {% endblock %}
