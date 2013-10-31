@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+#$ -cwd
+#$ -j y
+#$ -N dimer
+#$ -m es
+#$ -V
+#$ -pe mpi1 1
+#$ -o ll_out
+#$ -e ll_err
+#$ -S /bin/bash
+
+python dimer_rotate.py
