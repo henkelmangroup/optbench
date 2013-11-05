@@ -6,7 +6,8 @@
 <h3><a id="pt-heptamer" href="#pt-heptamer">Pt Heptamer Island</a></h3>
 
 <p>This benchmark measure the effiency of finding saddles for a Pt heptamer
-island. The potential energy is given by a Morse potential:
+island. The initial geometry is provided in <a href="saddle-search/pt-island/pt-island.con">con</a> and <a href="saddle-search/pt-island/POSCAR_pt_island">POSCAR</a> formats. The potential energy is
+given by a Morse potential:
 
 \[ V(r) = D(e^{-2\alpha(r-r_0)} - 2 e^{-\alpha(r-r_0)}) \]
 
@@ -14,8 +15,8 @@ with $D=0.7102$, $\alpha=1.6047$, and $r_0=2.897$.</p>
 
 <p>The goal of the benchmark is to deterimine how many force calls it takes to
 find the 27 connected saddles with a barrier below 1.5 eV. The saddle search is
-considered complete when the norm of the force is reduced to below 10<sup>-3</sup>
-eV/Angstrom.</p>
+considered complete when the norm of the force is reduced to below
+10<sup>-3</sup> eV/Angstrom.</p>
 
 <p>In the table below &rho; is the fraction of saddles found that were
 connected to the initial minimum, N<sub>u</sub> is the number of unique
