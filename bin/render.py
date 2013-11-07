@@ -41,7 +41,7 @@ def load_benchmarks(suite):
         benchmark_path = join(suite, benchmark)
         if isfile(benchmark_path) or benchmark[0] == '.':
             continue
-        
+
         benchmarks[benchmark] = []
         for entry_name in listdir(join(suite, benchmark)):
             run_path = join(suite, benchmark, entry_name)
@@ -78,7 +78,7 @@ def load_benchmarks(suite):
                 del data['code_file']
 
             benchmarks[benchmark].append(data)
-            
+
         if len(benchmarks[benchmark]) == 0:
             del benchmarks[benchmark]
     return benchmarks

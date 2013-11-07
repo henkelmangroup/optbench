@@ -50,4 +50,60 @@ calls as <i>force_calls_max</i>, and the minimum number of force calls as
   {% endfor %}
 </table>
 
+<h3><a id="lj100" href="#lj100">Binary Lennard-Jones 100</a></h3>
+
+<p>
+
+This benchmark test the performance of global optimization algorithms on a
+binary Lennard-Jones A<sub>42</sub>B<sub>58</sub> system with a size ratio of 1.3. 
+The form of the potential is
+</p>
+
+$$
+E = 4 \sum_{i < j}
+  \left[
+    \frac{\sigma_{\alpha \beta}}{r_{ij}}^{12}
+        - \frac{\sigma_{\alpha \beta}}{r_{ij}}^{6}
+  \right]
+$$
+
+<p>
+where $\alpha$ and $\beta$ are the atom type of atoms $i$ and $j$, respectively.
+Here $\epsilon_{AA}$=$\epsilon_{AB}$=$\epsilon_{BB}$=1, $\sigma_{AA}$=1,
+$\sigma_{BB}$=1.3, and $\sigma_{AB}$=($\sigma_{AA}$+$\sigma_{BB}$)/2.
+Previous studies have reported a putative global minimum energy of -604.796307.
+</p>
+
+<p>
+This benchmark requires that the global optimization algorithm is run starting
+from the 100 randomly generated (minimized) Lennard-Jones structures.  The
+starting structures can be downloaded <a href="globalopt/lj100-binary/lj100-binary-con.tgz">here</a>.
+</p>
+
+<p>
+Entries for this benchmark must record the average lowest energy found at the
+end of each run as <i>average_energy</i> in <tt>benchmark.dat</tt> as well as
+the largest and smallest energies (<i>min_energy</i> and <i>max_energy</i>)
+found at the end of the 100 runs.
+</p>
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
+  <thead>
+    <th>Entry</th>
+    <th>Code</th>
+    <th>&lt;E&gt;</th>
+    <th>min E</th>
+    <th>max E</th>
+  </thead>
+  {% for entry in benchmarks['lj100-binary']|sort(attribute='force_calls') %}
+    <tr>
+      <td>{% include 'templates/entry-details.tmpl' %}</td>
+      <td>{{ entry.code }}</td>
+      <td>{{ '%.3e' % entry.avg_energy }}</td>
+      <td>{{ '%.3e' % entry.min_energy }}</td>
+      <td>{{ '%.3e' % entry.max_energy }}</td>
+    </tr>
+  {% endfor %}
+</table>
+
 {% endblock %}

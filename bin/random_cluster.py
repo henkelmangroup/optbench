@@ -15,12 +15,11 @@ class RandomStructure:
     def generate(self):
         indexes = range(len(self.atoms))
         random.shuffle(indexes)
-         
+
         rs = ase.Atoms()
         first = indexes[0]
         rs += ase.Atom(self.atoms.get_chemical_symbols()[first])
 
-        failures = 0
         INDEX=1
         for i in indexes[1:]:
             rs += ase.Atom(self.atoms.get_chemical_symbols()[i])
