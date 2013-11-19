@@ -1,7 +1,10 @@
-force_calls 3.06090e+04
-force_calls_median 2.36020e+04
-force_calls_min 2.5900e+03
-force_calls_max 1.3851e+05
-transition_states 6.0000e+00
+force_calls 2.88500e+03
+force_calls_median 2.56500e+03
+force_calls_min 6.6500e+02
+force_calls_max 7.1380e+03
+transition_states 5.0000e+00
 nfailed 0
-date 29 Aug 2013
+date 19 Nov 2013
+algorithm DNEB + hybrid eigenvector following + Djikstra shortest path
+code OPTIM
+contributor Jacob Stevenson & Cheng Shang
