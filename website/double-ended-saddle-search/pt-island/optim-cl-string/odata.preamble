@@ -1,0 +1,15 @@
+debug
+maxbfgs 1.2 0.3
+MAXSTEP 0.3
+updates 100 100
+bfgsts 17 5 31 0.090
+maxmax 0.16
+bfgssteps 10000
+steps 200
+bulk
+nohess
+bfgsconv 4.3895D-5
+usediag 3
+optimizets
+CLSTRING
+GROWSTRING 2 3 0.75 0.05 2D-2 100
