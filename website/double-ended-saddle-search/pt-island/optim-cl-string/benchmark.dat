@@ -1,9 +1,9 @@
-force_calls 1.17000e+02
-force_calls_median 1.17000e+02
-force_calls_min 6.2000e+01
-force_calls_max 2.1100e+02
+force_calls 3.18000e+02
+force_calls_median 2.86000e+02
+force_calls_min 3.4000e+01
+force_calls_max 1.0730e+03
 nfailed 0
-date 10 Dec 2013
-algorithm climbing string + hybrid eigenvector following
+date 19 Dec 2013
+algorithm climbing string 
 code OPTIM
-contributor Jacob Stevenson & Cheng Shang
+contributor  Cheng Shang

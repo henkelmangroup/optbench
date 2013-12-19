@@ -22,9 +22,9 @@ done
 
 python ../getdata.py
 
-echo "algorithm climbing string + hybrid eigenvector following" >> benchmark.dat
+echo "algorithm climbing string " >> benchmark.dat
 echo "code OPTIM" >> benchmark.dat
-echo "contributor Jacob Stevenson & Cheng Shang" >> benchmark.dat
+echo "contributor Cheng Shang" >> benchmark.dat
 
 
 mv benchmark.dat ..

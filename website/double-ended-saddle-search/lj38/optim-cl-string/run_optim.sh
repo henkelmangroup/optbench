@@ -4,7 +4,7 @@ cp odata.preamble odata
 echo points >> odata
 awk '(NR>2){print "AX", $2,$3,$4}' $1 | sed 's/[eE]/D/g' >> odata
 
-/home/cs778/trunk/OPTIM/bin/build/OPTIM > OPTIM.log
+OPTIM > OPTIM.log
 
 ncalls=$(grep "energy+gradient calls" OPTIM.log  | tail -1 | awk '{print $6}' || echo $tmp)
 #rms=$(grep "energy+gradient calls" OPTIM.log  | tail -1 | awk '{print $6}')
