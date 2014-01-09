@@ -50,6 +50,40 @@ calls as <i>force_calls_max</i>, and the minimum number of force calls as
   {% endfor %}
 </table>
 
+<h3><a id="lj75" href="#lj75">Lennard-Jones 75</a></h3>
+
+<p> 
+
+This benchmark is a global optimization benchmark for a Lennard-Jones cluster
+with 75 atoms.  The same criterion apply as in the LJ38 benchmark above.
+
+</p>
+
+<p>
+
+The starting structures can be downloaded <a href="globalopt/lj75/lj75_clusters.tgz">here</a>.
+
+</p>
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
+  <thead>
+    <th>Entry</th>
+    <th>Code</th>
+    <th>&lt;N&gt;</th>
+    <th>min N</th>
+    <th>max N</th>
+  </thead>
+  {% for entry in benchmarks['lj75']|sort(attribute='force_calls') %}
+    <tr>
+      <td>{% include 'templates/entry-details.tmpl' %}</td>
+      <td>{{ entry.code }}</td>
+      <td>{{ '%.3e' % entry.force_calls }}</td>
+      <td>{{ '%.3e' % entry.force_calls_min }}</td>
+      <td>{{ '%.3e' % entry.force_calls_max }}</td>
+    </tr>
+  {% endfor %}
+</table>
+
 <h3><a id="lj100" href="#lj100">Binary Lennard-Jones 100</a></h3>
 
 <p>
@@ -62,8 +96,8 @@ The form of the potential is
 $$
 E = 4 \sum_{i < j}
   \left[
-    \frac{\sigma_{\alpha \beta}}{r_{ij}}^{12}
-        - \frac{\sigma_{\alpha \beta}}{r_{ij}}^{6}
+    \left( \frac{\sigma_{\alpha \beta}}{r_{ij}} \right)^{12}
+        - \left( \frac{\sigma_{\alpha \beta}}{r_{ij}} \right)^{6}
   \right]
 $$
 
