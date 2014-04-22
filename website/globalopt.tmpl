@@ -129,7 +129,7 @@ found at the end of the 100 runs.
     <th>min E</th>
     <th>max E</th>
   </thead>
-  {% for entry in benchmarks['lj100-binary']|sort(attribute='force_calls') %}
+  {% for entry in benchmarks['lj100-binary']|sort(attribute='avg_energy') %}
     <tr>
       <td>{% include 'templates/entry-details.tmpl' %}</td>
       <td>{{ entry.code }}</td>
