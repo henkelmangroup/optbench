@@ -1,4 +1,7 @@
-min_energy -602.712 
-max_energy -587.352
-avg_energy -594.678
-date 22 Apr 2014
+min_energy -5.97739e+02
+max_energy -5.80269e+02
+avg_energy -5.89530e+02
+date 03 May 2014
+algorithm basin-hopping
+code GMIN
+contributor David Wales and Jacob Stevenson

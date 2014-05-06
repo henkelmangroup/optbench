@@ -17,7 +17,6 @@ datafile = args.datafile
 
 data = np.genfromtxt(datafile)
 energies = data[:,1]
-print energies
 
 emean = np.mean(energies)
 emax = np.max(energies)
