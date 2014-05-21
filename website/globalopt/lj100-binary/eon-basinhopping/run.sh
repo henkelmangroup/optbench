@@ -16,8 +16,8 @@ do
     cp ../config.ini run-$i
     cp ../in.lammps run-$i
     cd run-$i
-    eonclient > stdout.dat
-    #serialsub eonclient
+    #eonclient > stdout.dat
+    serialsub eonclient
     cd ..
 done
 cd ..
