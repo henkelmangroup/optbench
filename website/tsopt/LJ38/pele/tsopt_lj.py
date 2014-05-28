@@ -1,1 +1,1 @@
-/home/js850/projects/benchmarks/bin/js850/tsopt_lj.py
+../../../../bin/js850/tsopt_lj.py

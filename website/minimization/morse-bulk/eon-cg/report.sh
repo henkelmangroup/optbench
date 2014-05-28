@@ -19,4 +19,4 @@ echo "code Eon" >> benchmark.dat
 echo "code_version r2030" >> benchmark.dat
 echo "date $(date +'%d %b %Y')" >> benchmark.dat
 echo "contributor Sam Chill" >> benchmark.dat
-echo "code_file eon-r2030.tgz" >> benchmark.dat
+echo "code_file eon-r2204.tgz" >> benchmark.dat

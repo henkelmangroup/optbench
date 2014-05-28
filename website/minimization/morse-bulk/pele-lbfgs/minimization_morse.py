@@ -1,1 +1,1 @@
-/home/js850/projects/benchmarks/bin/js850/minimization_morse.py
+../../../../bin/js850/minimization_morse.py
