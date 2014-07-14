@@ -50,6 +50,92 @@ calls as <i>force_calls_max</i>, and the minimum number of force calls as
   {% endfor %}
 </table>
 
+<h3><a id="tip4p" href="#lj38">TIP4Pn(n=10,15,20)</a></h3>
+
+<p> 
+
+This benchmark requires that the global optimization algorithm is run starting
+from the supplied randomly generated (minimized) structures.  Runs
+that are greater than 0.001 energy units from the known global minimum are
+considered failures. If a run was successful, the number of force calls needed
+to reach the global minimum is recorded.
+
+</p>
+
+<p>
+
+The starting structures can be downloaded <a href="globalopt/tip4p10/10000_tip4p10.tar.gz">here</a>,
+<a href="globalopt/tip4p15/500_tip4p15.tar.gz">here</a>, and
+<a href="globalopt/tip4p20/100_tip4p20.tar.gz">here</a>.
+
+</p>
+
+<p>
+
+Entries for this benchmark must record the average number number of force calls
+as <i>force_calls</i> in <tt>benchmark.dat</tt>, the maximum number of force
+calls as <i>force_calls_max</i>, and the minimum number of force calls as
+<i>force_calls_min</i>.
+
+</p>
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
+  <thead>
+    <th>Entry</th>
+    <th>Code</th>
+    <th>&lt;N&gt;</th>
+    <th>min N</th>
+    <th>max N</th>
+  </thead>
+  {% for entry in benchmarks['tip4p10']|sort(attribute='force_calls') %}
+    <tr>
+      <td>{% include 'templates/entry-details.tmpl' %}</td>
+      <td>{{ entry.code }}</td>
+      <td>{{ '%.3e' % entry.force_calls }}</td>
+      <td>{{ '%.3e' % entry.force_calls_min }}</td>
+      <td>{{ '%.3e' % entry.force_calls_max }}</td>
+    </tr>
+  {% endfor %}
+</table>
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
+  <thead>
+    <th>Entry</th>
+    <th>Code</th>
+    <th>&lt;N&gt;</th>
+    <th>min N</th>
+    <th>max N</th>
+  </thead>
+  {% for entry in benchmarks['tip4p15']|sort(attribute='force_calls') %}
+    <tr>
+      <td>{% include 'templates/entry-details.tmpl' %}</td>
+      <td>{{ entry.code }}</td>
+      <td>{{ '%.3e' % entry.force_calls }}</td>
+      <td>{{ '%.3e' % entry.force_calls_min }}</td>
+      <td>{{ '%.3e' % entry.force_calls_max }}</td>
+    </tr>
+  {% endfor %}
+</table>
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
+  <thead>
+    <th>Entry</th>
+    <th>Code</th>
+    <th>&lt;N&gt;</th>
+    <th>min N</th>
+    <th>max N</th>
+  </thead>
+  {% for entry in benchmarks['tip4p20']|sort(attribute='force_calls') %}
+    <tr>
+      <td>{% include 'templates/entry-details.tmpl' %}</td>
+      <td>{{ entry.code }}</td>
+      <td>{{ '%.3e' % entry.force_calls }}</td>
+      <td>{{ '%.3e' % entry.force_calls_min }}</td>
+      <td>{{ '%.3e' % entry.force_calls_max }}</td>
+    </tr>
+  {% endfor %}
+</table>
+
 <h3><a id="lj75" href="#lj75">Lennard-Jones 75</a></h3>
 
 <p> 
