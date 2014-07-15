@@ -3,6 +3,14 @@
 {% block content %}
 <h2>Saddle Search Benchmark</h2>
 
+<p>
+Entries for these benchmarks must record the average number number of force
+calls as <i>force_calls</i> in <tt>benchmark.dat</tt>, the standard error of the mean force calls as <i>force_calls_mean_error</i>, 
+the average fraction of saddles that are connected to the initial minimum as <i>fraction_connected</i>,
+the average total number of saddle searches <i>total_searches</i>,
+and the average number of unique saddles found <i>unique_saddles</i>.
+</p>
+
 <h3><a id="pt-heptamer" href="#pt-heptamer">Pt Heptamer Island</a></h3>
 
 <p>This benchmark measure the effiency of finding saddles for a Pt heptamer
@@ -14,7 +22,7 @@ given by a Morse potential:
 with $D=0.7102$, $\alpha=1.6047$, and $r_0=2.897$.</p>
 
 <p>The goal of the benchmark is to deterimine how many force calls it takes to
-find the 27 connected saddles with a barrier below 1.5 eV. The saddle search is
+find the 27 connected saddles with a barrier below 1.5 eV. A individual saddle search is
 considered complete when the norm of the force is reduced to below
 10<sup>-3</sup> eV/Angstrom.</p>
 
