@@ -34,7 +34,7 @@ N<sub>f</sub> is the total number of force calls.</p>
   {% for entry in benchmarks['pt-island']|sort(attribute='force_calls') %}
     <tr>
       <td>{% include 'templates/entry-details.tmpl' %}</td>
-      <td>{{'%.1e' % entry.force_calls}}</td>
+      <td>{{'%.1e &plusmn; %.1e' % (entry.force_calls, entry.force_calls_mean_error)}}</td>
       <td>{{'%.2f' % entry.fraction_connected }}</td>
       <td>{{'%.0f' % entry.total_searches }}</td>
       <td>{{'%.0f' % entry.unique_saddles }}</td>
