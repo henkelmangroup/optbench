@@ -1,8 +1,13 @@
 #!/bin/bash
+set -e
 
-while true
+for i in {1..10}
 do
-    eon
-    eon -n
-    ./done.py && break
+    mkdir run-$i
+    cp config.ini run-$i
+    cp pos.con run-$i
+    cd run-$i
+    #../singlerun.sh
+    autosub --no-mpi ../singlerun.sh
+    cd ..
 done

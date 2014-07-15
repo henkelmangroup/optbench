@@ -1,9 +1,10 @@
-force_calls 5361651
-unique_saddles 127
-fraction_connected 0.745924
-total_searches 15519
 code Eon
-code_version r2156
-date 29 Aug 2013
+code_version r2205
+date 15 Jul 2014
 contributor Sam Chill
-code_file eon-r2156.tgz
+code_file eon-r2205.tgz
+force_calls 3.77888e+06
+force_calls_stddev 527337
+unique_saddles 109.222
+fraction_connected 0.746017
+total_searches 11366.8
