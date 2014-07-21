@@ -1,9 +1,9 @@
-force_calls 4.44000e+02
-force_calls_median 3.41000e+02
-force_calls_min 1.8900e+02
-force_calls_max 1.4150e+03
-nfailed 2
+force_calls 3.02000e+02
+force_calls_median 2.24000e+02
+force_calls_min 1.1100e+02
+force_calls_max 7.8200e+02
+nfailed 0
 algorithm hybrid eigenvector following
 code pele
 contributor Jacob Stevenson
-date 22 Aug 2013
+date 21 Jul 2014

@@ -62,7 +62,7 @@ def set_params(system, natoms):
     
     # transition state search params
     tsparams = system.params.double_ended_connect.local_connect_params.tsSearchParams
-    tsparams.lowestEigenvectorQuenchParams={"nsteps":20, "tol":0.1}
+    tsparams.lowestEigenvectorQuenchParams = dict(nsteps=20, tol=0.1, first_order=True)
     tsparams.tol = 1e-3 / np.sqrt(3.*natoms)
     tsparams.nsteps_tangent1=3
     tsparams.nsteps_tangent2=35 
