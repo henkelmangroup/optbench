@@ -4,7 +4,9 @@ force_calls_min 8.0000e+01
 force_calls_max 1.0960e+03
 transition_states -1.6800e+02
 nfailed 0
-date 14 Oct 2013
+date 06 Aug 2014
 code pele
 contributor Jacob Stevenson
 algorithm hybrid eigenvector following
+hidden True
+code_file pele-a68ec5.tgz

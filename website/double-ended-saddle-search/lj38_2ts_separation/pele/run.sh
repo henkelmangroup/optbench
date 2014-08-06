@@ -10,3 +10,5 @@ echo "contributor Jacob Stevenson" >> benchmark.dat
 
 rm -r coords
 
+
+echo "code_file pele-$(python get_pele_version.py).tgz" >> benchmark.dat

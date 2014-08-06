@@ -105,4 +105,5 @@ def run_one(i):
     
 if __name__ == "__main__":
 #    run_one(32)
+    np.random.seed(0)
     main()

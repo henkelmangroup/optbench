@@ -7,3 +7,5 @@ python globalopt.py
 
 rm -r 100_lj38
 rm lj38_gmin.con
+
+echo "code_file pele-$(python get_pele_version.py).tgz" >> benchmark.dat

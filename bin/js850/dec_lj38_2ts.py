@@ -126,4 +126,5 @@ def main():
 
 if __name__ == "__main__":
 #    run(4, usegui=True)
+    np.random.seed(0)
     main()
