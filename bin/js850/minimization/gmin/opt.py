@@ -67,8 +67,8 @@ def doQuench( tol = 0.01, GMIN = "/home/js850/git/GMIN/source/build/GMIN" ):
     subprocess.call( GMIN )
     t1 = time.clock()
 
-    GMINout = "GMIN_out"
-    #now try to extract the important information from the GMIN_out file
+    GMINout = "output"
+    #now try to extract the important information from the output file
     if False:
         with open(GMINout, "r") as fin:
             for line in fin:

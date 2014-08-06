@@ -3,13 +3,13 @@
 
 GMIN
 
-# js850> note: the -a flag is necessary because some of the GMIN_out files might have binary characters which confuses grep
-ncalls=$(grep -a "Target hit after" GMIN_out  | tail -1 | awk '{print $7}' || echo $tmp)
-nquenches=$(grep -a "Target hit after" GMIN_out  | tail -1 | awk '{print $5}' || echo $tmp)
-niter=$(grep -a "Target hit after" GMIN_out  | tail -1 | awk '{print $5}' || echo $tmp)
-success=$(grep -a "Target hit after" GMIN_out > /dev/null && echo 1 || echo 0)
-rms=$(grep -a "Final Quench" GMIN_out | tail -1 | awk '{print $10}')
-energy=$(grep -a "Final Quench" GMIN_out | tail -1 | awk '{print $5}')
+# js850> note: the -a flag is necessary because some of the output files might have binary characters which confuses grep
+ncalls=$(grep -a "Target hit after" output  | tail -1 | awk '{print $7}' || echo $tmp)
+nquenches=$(grep -a "Target hit after" output  | tail -1 | awk '{print $5}' || echo $tmp)
+niter=$(grep -a "Target hit after" output  | tail -1 | awk '{print $5}' || echo $tmp)
+success=$(grep -a "Target hit after" output > /dev/null && echo 1 || echo 0)
+rms=$(grep -a "Final Quench" output | tail -1 | awk '{print $10}')
+energy=$(grep -a "Final Quench" output | tail -1 | awk '{print $5}')
 
 if [ "$ncalls" == "" ]; then ncalls="-1"; fi
 if [ "$nquenches" == "" ]; then nquenches="-1"; fi
