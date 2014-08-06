@@ -1,1 +1,0 @@
-../../../../bin/js850/con2coords.py
