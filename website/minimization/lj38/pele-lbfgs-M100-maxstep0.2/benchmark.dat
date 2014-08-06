@@ -1,8 +1,6 @@
-force_calls 1.77000e+02
-force_calls_min 8.8000e+01
-force_calls_max 4.0800e+02
+force_calls 1.79000e+02
+force_calls_min 9.0000e+01
+force_calls_max 5.4000e+02
 nfailed 0
-algorithm L-BFGS M=100 maxstep=0.2
-code pele
-contributor Jacob Stevenson
-date 27 Aug 2013
+date 06 Aug 2014
+code_file pele-a68ec5.tgz

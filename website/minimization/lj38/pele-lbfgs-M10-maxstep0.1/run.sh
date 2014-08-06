@@ -10,3 +10,5 @@ python minimization_getdata.py "results_data.ncalls" "L-BFGS M=$M maxstep=$maxst
 cat admin.dat >> benchmark.dat
 
 rm -r lj38-clusters
+
+echo "code_file pele-$(python get_pele_version.py).tgz" >> benchmark.dat
