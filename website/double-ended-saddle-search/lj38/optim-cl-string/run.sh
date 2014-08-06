@@ -30,3 +30,5 @@ echo "contributor Cheng Shang" >> benchmark.dat
 mv benchmark.dat ..
 cd ..
 
+
+echo "code_file wales-$(OPTIM 2> /dev/null | awk '(/version/){print $3}' | sed 's/,//').tar.bz2" >> benchmark.dat

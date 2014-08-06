@@ -4,7 +4,8 @@ force_calls_min 6.6500e+02
 force_calls_max 7.1380e+03
 transition_states 5.0000e+00
 nfailed 0
-date 19 Nov 2013
+date 06 Aug 2014
 algorithm DNEB + hybrid eigenvector following + Djikstra shortest path
 code OPTIM
 contributor Jacob Stevenson & Cheng Shang
+code_file wales-27058.tar.bz2
