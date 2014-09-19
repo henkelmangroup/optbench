@@ -1,10 +1,10 @@
-force_calls 2.07000e+02
-force_calls_median 1.44000e+02
-force_calls_min 5.8000e+01
-force_calls_max 2.2940e+03
+force_calls 1.92000e+02
+force_calls_median 1.50000e+02
+force_calls_min 5.9000e+01
+force_calls_max 1.4880e+03
 transition_states -1.6800e+02
 nfailed 0
-date 06 Aug 2014
+date 19 Sep 2014
 code pele
 contributor Jacob Stevenson
 algorithm hybrid eigenvector following

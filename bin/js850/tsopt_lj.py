@@ -7,7 +7,6 @@ sys.path.insert(0, os.path.dirname(__file__))
 
 from pele.optimize import mylbfgs
 from pele.transition_states import findTransitionState, findLowestEigenVector
-from pele.transition_states import GeneralizedDimer
 from pele.systems import LJCluster
 from pele.potentials import BasePotential
 from pele.utils.xyz import read_xyz, write_xyz
@@ -78,6 +77,7 @@ def run(fname, generalized_dimer=False, first_order=False):
     ''' run benchmark for a single configuration '''
     system = LJCluster(38)
     pot = PotWrapper(system.get_potential())
+    print ""
     print "running ", fname
     xyz = read_xyz(open(fname))
     ret = findTS(xyz.coords.flatten(), pot)
