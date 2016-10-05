@@ -17,6 +17,6 @@ echo "force_calls_per_second $fc_per_second" >> benchmark.dat
 echo "nfailed $nfailed" >> benchmark.dat
 echo "algorithm L-BFGS M=5 maxstep=0.2" >> benchmark.dat
 echo "code ASE" >> benchmark.dat
-echo "code_version $(python -c 'import ase.version;print ase.version.version')" >> benchmark.dat
+echo "code_version 3.6.0" >> benchmark.dat
 echo "date $(date +'%d %b %Y')" >> benchmark.dat
 echo "contributor Sam Chill" >> benchmark.dat
