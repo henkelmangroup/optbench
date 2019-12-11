@@ -1,0 +1,8 @@
+force_calls 17.8
+min_force_calls 4.0
+max_force_calls 37.0
+nfailed 0
+code Sella
+code_version 0.1.1
+date 2019-12-10
+contributor Eric D. Hermes, Khachik Sargsyan, Habib Najm, Judit Zádor
