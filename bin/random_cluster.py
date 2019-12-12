@@ -38,13 +38,13 @@ class RandomStructure:
 
                 if 0.8*bond_length < d_min < 1.3*bond_length:
                     break
-            print INDEX
+            print(INDEX)
             INDEX += 1
 
         rs.set_cell(self.atoms.get_cell())
         #XXX: shift to center of box, only correct for cubic cells
         rs.positions += rs.cell.diagonal()/2.0
-        print "RandomStructure made new structure"
+        print("RandomStructure made new structure")
         return rs
 
     def box_p(self, rs):
@@ -53,7 +53,7 @@ class RandomStructure:
         return numpy.array( ((a,0,0),(0,a,0),(0,0,a)) )
 
 if len(argv) < 3 or '-h' in argv:
-    print 'usage: random_cluster.py natoms symbol [nstructures] [prefix]'
+    print('usage: random_cluster.py natoms symbol [nstructures] [prefix]')
     exit()
 natoms = int(argv[1])
 symbol = argv[2]

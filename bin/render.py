@@ -16,7 +16,7 @@ def get_dependencies(env, path):
     return list(set(deps))
 
 def usage():
-    print 'usage: render.py template'
+    print('usage: render.py template')
 
 def parse_dat(path, data):
     f = open(path)
@@ -99,4 +99,4 @@ if isdir(suite_folder):
     benchmarks = load_benchmarks(suite_folder)
 else:
     benchmarks = None
-print template.render(benchmarks=benchmarks)
+print(template.render(benchmarks=benchmarks))
