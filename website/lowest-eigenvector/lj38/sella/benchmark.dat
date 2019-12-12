@@ -1,6 +1,6 @@
 force_calls 17.8
-min_force_calls 4.0
-max_force_calls 37.0
+force_calls_min 4.0
+force_calls_max 37.0
 nfailed 0
 code Sella
 code_version 0.1.1

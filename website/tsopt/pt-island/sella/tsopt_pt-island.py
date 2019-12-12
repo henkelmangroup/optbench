@@ -147,9 +147,9 @@ else:
             f.write('{:>2}: {:20.16f} {:5d} {:20.16f} {:20.16e}\n'
                     ''.format(prefix, E, opt_calls, lam, gnorm))
     bench.write('force_calls ' + '{:.0f}'.format(np.average(results)) + '\n')
-    bench.write('min_force_calls ' + str(np.min(results)) + '\n')
-    bench.write('median_force_calls ' + str(np.median(results)) + '\n')
-    bench.write('max_force_calls ' + str(np.max(results)) + '\n')
+    bench.write('force_calls_min ' + str(np.min(results)) + '\n')
+    bench.write('force_calls_median ' + str(np.median(results)) + '\n')
+    bench.write('force_calls_max ' + str(np.max(results)) + '\n')
     bench.write('nfailed ' + str(nfailed) + '\n')
     bench.write('code Sella\ncode_version 0.1.1\ndate ' + str(datetime.datetime.today()).split()[0] + '\ncontributor Eric D. Hermes, Khachik Sargsyan, Habib Najm, Judit Zádor')
     #print('Code  |  mean  |   min  |   max ')
