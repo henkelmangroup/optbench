@@ -15,6 +15,6 @@ echo "force_calls_min $fcalls_min" >> benchmark.dat
 fc_per_second=$(awk "BEGIN {print $fcalls / $walltime}")
 echo "force_calls_per_second $fc_per_second" >> benchmark.dat
 echo "nfailed $nfailed" >> benchmark.dat
-echo "algorithm tsase-SDLBFGS maxstep=0.1" >> benchmark.dat
+echo "algorithm tsase-SDLBFGS maxstep=0.1 optimizer='maxatom'" >> benchmark.dat
 echo "date $(date +'%d %b %Y')" >> benchmark.dat
 echo "contributor R Ciufo" >> benchmark.dat

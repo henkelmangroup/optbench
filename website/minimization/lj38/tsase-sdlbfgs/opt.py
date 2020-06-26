@@ -13,26 +13,36 @@ import ase.io
 from sys import argv, stderr
 from ase.io import read, write
 np.set_printoptions(threshold=sys.maxsize)
+#from ase.calculators.lj import LennardJones
 import pickle
 import tsase
+from ase.optimize import BFGS
 from tsase.calculators import lj
-
 #Read the cluster structure from lj38 clusters.
-
 atoms = ase.io.read(argv[1])
 atoms.center(100.0)
 calc = lj(cutoff=35.0)
 atoms.set_calculator(calc)
 
 
+f1 = open('forces.dat', 'w')
 t0 = time.time()
 opt = tsase.optimize.SDLBFGS(atoms, maxstep=0.1, memory=100)
 
-opt.run(fmax=0.01, steps=10000)
+#for i in range(10000):
+
+#forces = atoms.get_forces()
+#f1.write('forces formula from ase  %5.8f \n' %((forces**2).sum(axis=1).max()**0.5))
+#f1.flush()
+     
+#    if ((forces**2).sum(axis=1).max()**0.5) < 1e-2:
+#        break
+opt.run(fmax=0.01, emax=0.0001, steps=10000, optimizer='maxatom')
     
 
 
 t1 = time.time()
+f1.close()
 print('real %5.8f seconds' %(t1-t0))
 write('atoms.xyz',atoms,format='xyz')
 f3 = open("results.dat", 'w')
