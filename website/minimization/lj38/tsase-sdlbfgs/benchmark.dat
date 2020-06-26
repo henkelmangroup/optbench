@@ -1,0 +1,8 @@
+force_calls 171
+force_calls_max 435
+force_calls_min 92
+force_calls_per_second 852.443
+nfailed 0
+algorithm tsase-SDLBFGS maxstep=0.1
+date 26 Jun 2020
+contributor R Ciufo
