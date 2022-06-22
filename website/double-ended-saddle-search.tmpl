@@ -3,13 +3,16 @@
 {% block content %}
 <h1>Double Ended Saddle Search</h1>
 
-<h2>LJ 38</h2>
 For this benchmark we require simply a refined saddle point that is in between
 the starting and ending minima.  The termination condition is that the norm of
 the gradient at the saddle point be less than 0.001.  An example method to find
 that saddle point is (D)NEB + climbing image or (D)NEB + hybrid eigenvector
 following.  The saddle point need not be a transition state directly separating
 the start and end minima.
+
+<h2>LJ 38</h2>
+A tar file containing the structures between which a saddle should be computed
+is here: <a href="double-ended-saddle-search/lj38/coords.tgz">coords.tgz</a>
 
 <table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
   <thead>
@@ -33,6 +36,9 @@ the start and end minima.
 </table>
 
 <h2>Pt(111) Heptamer Island</h2>
+
+A tar file containing the structures between which a saddle should be computed
+is here: <a href="double-ended-saddle-search/pt-island/pt-island-con.tgz">pt-island-con.tgz</a>
 
 <table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
   <thead>
@@ -64,6 +70,9 @@ successful benchmark is one which finds any path between the starting and
 ending minima.  Because the final path is not specified, we require the number
 of transition states in the found path to be reported.
 (note: this benchmark should be separated from those above.  perhaps in "double ended pathway search")
+
+A tar file containing the structures between which a saddle should be computed
+is here: <a href="double-ended-saddle-search/lj38_2ts_separation/coords.tgz">coords.tgz</a>
 
 <table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
   <thead>
