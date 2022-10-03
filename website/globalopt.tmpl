@@ -84,6 +84,79 @@ The starting structures can be downloaded <a href="globalopt/lj75/lj75_clusters.
   {% endfor %}
 </table>
 
+<h3><a id="lj98" href="#lj98">Lennard-Jones 98</a></h3>
+
+<p> 
+
+This benchmark is a global optimization benchmark for a Lennard-Jones cluster
+with 98 atoms. The criteria are similar to LJ38 and 75, but entries are benchmarked
+on their CPU time [t] and the number of energy steps [V].
+
+</p>
+
+<p>
+
+The starting structures can be downloaded <a href="globalopt/lj98/lj98_clusters.tgz">here</a>.
+
+</p>
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
+  <thead>
+    <th>Entry</th>
+    <th>Code</th>
+    <th>mean t</th>
+    <th>stddev of t</th>
+    <th>mean V</th>
+    <th>stddev of V</th>	
+  </thead>
+  {% for entry in benchmarks['lj98'] %}
+    <tr>
+      <td>{% include 'templates/entry-details.tmpl' %}</td>
+      <td>{{ entry.code }}</td>
+      <td>{{ '%.3e' % entry.cpu_time_mean }}</td>
+      <td>{{ '%.3e' % entry.cpu_time_stddev }}</td>
+      <td>{{ '%.3e' % entry.energy_calls_mean }}</td>
+      <td>{{ '%.3e' % entry.energy_calls_stddev }}</td>
+    </tr>
+  {% endfor %}
+</table>
+
+<h3><a id="lj150" href="#lj150">Lennard-Jones 150</a></h3>
+
+<p> 
+
+This benchmark is a global optimization benchmark for a Lennard-Jones cluster
+with 150 atoms. It is analogous to LJ98.
+
+</p>
+
+<p>
+
+The starting structures can be downloaded <a href="globalopt/lj150/lj150_clusters.tgz">here</a>.
+
+</p>
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
+  <thead>
+    <th>Entry</th>
+    <th>Code</th>
+    <th>mean t</th>
+    <th>stddev of t</th>
+    <th>mean V</th>
+    <th>stddev of V</th>	
+  </thead>
+  {% for entry in benchmarks['lj150'] %}
+    <tr>
+      <td>{% include 'templates/entry-details.tmpl' %}</td>
+      <td>{{ entry.code }}</td>
+      <td>{{ '%.3e' % entry.cpu_time_mean }}</td>
+      <td>{{ '%.3e' % entry.cpu_time_stddev }}</td>
+      <td>{{ '%.3e' % entry.energy_calls_mean }}</td>
+      <td>{{ '%.3e' % entry.energy_calls_stddev }}</td>
+    </tr>
+  {% endfor %}
+</table>
+
 <h3><a id="lj100" href="#lj100">Binary Lennard-Jones 100</a></h3>
 
 <p>
@@ -142,7 +215,7 @@ found at the end of the 100 runs.
   {% endfor %}
 </table>
 
-<h3><a id="tip4p" href="#lj38">TIP4Pn(n=10,15,20)</a></h3>
+<h3><a id="tip4p" href="#tip4p">TIP4Pn(n=10,15,20)</a></h3>
 
 <center>
 	<img
