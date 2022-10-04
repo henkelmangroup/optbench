@@ -90,7 +90,7 @@ The starting structures can be downloaded <a href="globalopt/lj75/lj75_clusters.
 
 This benchmark is a global optimization benchmark for a Lennard-Jones cluster
 with 98 atoms. The criteria are similar to LJ38 and 75, but entries are benchmarked
-on their CPU time [t] and the number of energy steps [V].
+on the number of quenches [Q] and the number of energy steps [V].
 
 </p>
 
@@ -104,8 +104,8 @@ The starting structures can be downloaded <a href="globalopt/lj98/lj98_clusters.
   <thead>
     <th>Entry</th>
     <th>Code</th>
-    <th>mean t</th>
-    <th>stddev of t</th>
+    <th>mean Q</th>
+    <th>stddev of Q</th>
     <th>mean V</th>
     <th>stddev of V</th>	
   </thead>
@@ -113,8 +113,8 @@ The starting structures can be downloaded <a href="globalopt/lj98/lj98_clusters.
     <tr>
       <td>{% include 'templates/entry-details.tmpl' %}</td>
       <td>{{ entry.code }}</td>
-      <td>{{ '%.3e' % entry.cpu_time_mean }}</td>
-      <td>{{ '%.3e' % entry.cpu_time_stddev }}</td>
+      <td>{{ '%.3e' % entry.basin_hopping_steps_mean }}</td>
+      <td>{{ '%.3e' % entry.basin_hopping_steps_stddev }}</td>
       <td>{{ '%.3e' % entry.energy_calls_mean }}</td>
       <td>{{ '%.3e' % entry.energy_calls_stddev }}</td>
     </tr>
