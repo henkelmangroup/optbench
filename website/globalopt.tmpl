@@ -140,8 +140,8 @@ The starting structures can be downloaded <a href="globalopt/lj150/lj150_cluster
   <thead>
     <th>Entry</th>
     <th>Code</th>
-    <th>mean t</th>
-    <th>stddev of t</th>
+    <th>mean Q</th>
+    <th>stddev of Q</th>
     <th>mean V</th>
     <th>stddev of V</th>	
   </thead>
@@ -149,8 +149,8 @@ The starting structures can be downloaded <a href="globalopt/lj150/lj150_cluster
     <tr>
       <td>{% include 'templates/entry-details.tmpl' %}</td>
       <td>{{ entry.code }}</td>
-      <td>{{ '%.3e' % entry.cpu_time_mean }}</td>
-      <td>{{ '%.3e' % entry.cpu_time_stddev }}</td>
+      <td>{{ '%.3e' % entry.basin_hopping_steps_mean }}</td>
+      <td>{{ '%.3e' % entry.basin_hopping_steps_stddev }}</td>
       <td>{{ '%.3e' % entry.energy_calls_mean }}</td>
       <td>{{ '%.3e' % entry.energy_calls_stddev }}</td>
     </tr>
