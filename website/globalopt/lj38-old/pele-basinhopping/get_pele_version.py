@@ -1,1 +1,0 @@
-../../../../bin/js850/get_pele_version.py

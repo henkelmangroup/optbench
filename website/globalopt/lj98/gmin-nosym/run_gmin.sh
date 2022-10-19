@@ -1,8 +1,7 @@
 #!/bin/bash -e
 
 
-# GMIN
-/home/kg33564/wales/gmin-install/wales/GMIN/source/build/GMIN
+GMIN
 
 # js850> note: the -a flag is necessary because some of the output files might have binary characters which confuses grep
 ncalls=$(grep -a "Target hit after" output  | tail -1 | awk '{print $7}' || echo $tmp)

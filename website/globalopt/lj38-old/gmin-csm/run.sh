@@ -1,1 +1,0 @@
-../gmin-nosym/run.sh

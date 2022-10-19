@@ -1,1 +1,0 @@
-../../../../bin/js850/globalopt.py
