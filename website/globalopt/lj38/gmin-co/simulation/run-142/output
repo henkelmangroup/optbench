@@ -1,0 +1,211 @@
+Starting serial execution
+keyword> WARNING - temperature unspecified for NEWRESTART. Default for high T MD is 1000K
+ reallocating MSBCOORDS
+ reallocating MSBE
+ keyword> Distance tolerance for distinguising atoms in the same orbit=        0.00500
+ keyword> Maximum number of secondary sets in perm.allow file= 70
+ keyword> Number of groups of permutable atoms=     1
+ keyword> group      1 contains     38 atoms with      0 additional atom sets:
+     1     2     3     4     5     6     7     8     9    10    11    12    13    14    15    16    17    18    19    20    21    22
+    23    24    25    26    27    28    29    30    31    32    33    34    35    36    37    38 
+io1> Initial coordinates:
+       50.0000000000       50.0000000000       50.0000000000
+       50.3484043687       49.5403986539       49.5864568996
+       49.9265234510       50.6080091828       50.4010296071
+       49.5355008466       49.5586294551       49.9371582439
+       49.1685689562       48.9397353527       49.6198680233
+       49.9980219504       49.8799716564       50.7343604229
+       50.2825757254       49.6659081347       51.4030204860
+       49.7355373870       50.4470277003       49.5950976422
+       49.9850276048       49.3726280963       51.8101489240
+       49.0701352982       48.3429155544       49.3490255046
+       49.3024094779       49.2788166619       51.5076146512
+       49.5911170765       49.0662015845       51.1397097872
+       48.9799259312       48.9664761096       52.1536304740
+       50.6642885266       49.2870446460       51.4309406123
+       49.9576155365       50.3015749482       48.9785224327
+       50.4817559606       50.0041240592       51.7704530131
+       49.5444793407       50.9623010783       50.7545029965
+       50.1086505950       51.2991807379       50.2043316708
+       49.6668274569       50.6515269714       48.7173494080
+       48.8298052910       49.5548514812       52.2835259150
+       48.4697438142       49.7998958510       51.8972605351
+       49.9407236306       50.4095962189       51.2367052758
+       49.6459486616       50.5987437057       51.8361695947
+       50.3820705697       49.5748090574       50.2983606661
+       48.6497284367       48.1366350439       49.6625679532
+       50.0850381359       51.9042528536       50.5481625714
+       51.4289067937       49.3232014367       51.6411494216
+       49.6551355910       51.1981603191       49.4427370687
+       49.2797359055       50.4865612501       49.3883294188
+       50.8312755060       49.8040864402       49.1204119332
+       51.6282265416       49.0386229761       51.2220812818
+       50.4302355819       48.8932416844       49.6796546881
+       50.1126578099       51.0834387685       48.5394056601
+       50.0643980454       51.4393138207       48.9833413943
+       51.5964453921       49.7520843536       51.1740314398
+       48.8555890218       48.8475030191       51.3876117213
+       49.9802207461       48.5182499391       50.1528060774
+       49.2208702411       47.8005836596       48.9809911761
+  38 LJ atoms
+Searching for approximate symmetry elements every      1 steps
+Distance tolerances:         0.04000        0.03000        0.09000        0.09000        0.40000
+Threshold for distinguishing transformation matrices:         0.40000
+Exponential factor in core-weighted centre of mass calculation:         1.70000
+Maximum number of quenches for floater/hole permutations=   18
+io1> Container radius=        4.3305271907
+In run   1 temperature will be fixed - see below for value
+Step size and angular threshold will be adjusted for acceptance ratio       0.5000 initial values=      0.4300      0.5200
+Configuration will be reset to quench geometry
+Sampling using Boltzmann weights
+Nocedal LBFGS minimisation
+Number of updates before reset in LBFGS=     4
+Maximum step size=        0.4000000000
+Guess for initial diagonal elements in LBFGS=  0.1000    
+Sloppy quench tolerance for RMS gradient     0.2000000000E-02
+Final  quench tolerance for RMS gradient     0.1000000000E-04
+Energy difference criterion for minima=        0.0030000000
+Maximum number of iterations: sloppy quenches  1000 final quenches  1000
+Run   1:  90000000 steps with temperature scaled by  0.10000000E+01
+Maximum allowed energy rise during a minimisation=    0.1000000000E-09
+Target energies:      -173.9284264418 
+Runs will be reseeded if the energy does not decrease by at least      0.00300 within     13 steps
+Runs will be reseeded if the current minimum comes within       1.25 of up to     20 previous minima
+mc> Calculating initial energy
+mc calling initial quench
+saveit> putting this minimum into the list at position       1 EREAL,QMIN=    -166.9811778        0.1000000000E+11
+ Qu          0 E=    -166.9811778     steps=  217 RMS= 0.17405E-02 Markov E=    -166.9811778     t=        0.0
+ mc> Starting run of   90000000 BH steps
+ mc> Temperature will be multiplied by      1.00000000 at every step
+saveit> putting this minimum into the list at position       1 EREAL,QMIN=    -168.6912397        -166.9811778    
+ Qu          1 E=    -168.6912397     steps=  184 RMS= 0.17762E-02 Markov E=    -166.9811778     t=        0.0
+symmetry> symmetry analysis for point group C s number of generators=   1
+symmetry> using point group of order     2 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     8 was     1
+saveit> putting this minimum into the list at position       1 EREAL,QMIN=    -169.0618494        -168.6912397    
+Qu          2 E=     -169.0618493531 steps=   26 RMS= 0.12889E-02                               t=        0.0
+saveit> putting this minimum into the list at position       1 EREAL,QMIN=    -169.1540730        -169.0618494    
+Qu          3 E=     -169.1540730326 steps=   23 RMS= 0.13675E-02                               t=        0.0
+Qu          4 E=     -168.9611070862 steps=   23 RMS= 0.14923E-02                               t=        0.0
+Qu          5 E=     -167.1351996223 steps=   27 RMS= 0.18502E-02                               t=        0.0
+Qu          6 E=     -168.8009602751 steps=   24 RMS= 0.15061E-02                               t=        0.0
+Qu          7 E=     -167.1351964196 steps=   24 RMS= 0.15775E-02                               t=        0.0
+Qu          8 E=     -168.9611052758 steps=   22 RMS= 0.17755E-02                               t=        0.0
+Qu          9 E=     -166.9766663487 steps=   33 RMS= 0.12427E-02                               t=        0.0
+Qu         10 E=     -166.9303485422 steps=   23 RMS= 0.17679E-02                               t=        0.0
+Qu         11 E=     -166.7989518224 steps=   28 RMS= 0.14413E-02                               t=        0.0
+Qu         12 E=     -167.1351987517 steps=  114 RMS= 0.12045E-02                               t=        0.0
+symmetry> number of core atoms=      30 core symmetry C s  after       12 quenches
+ Qu         13 E=    -167.8823724     steps=   63 RMS= 0.19250E-02 Markov E=    -169.1540730     t=        0.0
+symmetry> initialising origin for     30 atoms
+symmetry> symmetry analysis for point group C s number of generators=   1
+symmetry> using point group of order     2 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     9 was     1
+Qu         14 E=     -169.1540730388 steps=   20 RMS= 0.14852E-02                               t=        0.0
+Qu         15 E=     -169.1540730388 steps=   20 RMS= 0.14852E-02                               t=        0.0
+symmetry> number of core atoms=      34 core symmetry C s  after       15 quenches
+ Qu         16 E=    -167.0337456     steps=   57 RMS= 0.16509E-02 Markov E=    -169.1540730     t=        0.0
+symmetry> initialising origin for     34 atoms
+symmetry> symmetry analysis for point group C2v number of generators=   3
+symmetry> using point group of order     4 constructed from generators, time taken=           0.00
+symmetry> symmetry of core is consistent with the overall symmetry
+ Qu         17 E=    -169.1540737     steps=   47 RMS= 0.10793E-02 Markov E=    -169.1540730     t=        0.0
+ Qu         18 E=    -169.1540722     steps=   43 RMS= 0.19002E-02 Markov E=    -169.1540737     t=        0.1
+ Qu         19 E=    -169.1540742     steps=   39 RMS= 0.14705E-02 Markov E=    -169.1540722     t=        0.1
+ Qu         20 E=    -169.1540748     steps=   31 RMS= 0.11227E-02 Markov E=    -169.1540742     t=        0.1
+ Qu         21 E=    -157.4976717     steps=   50 RMS= 0.18545E-02 Markov E=    -169.1540748     t=        0.1
+ Qu         22 E=    -169.1540741     steps=   28 RMS= 0.15020E-02 Markov E=    -169.1540748     t=        0.1
+ Qu         23 E=    -169.1540735     steps=   34 RMS= 0.16405E-02 Markov E=    -169.1540741     t=        0.1
+ Qu         24 E=    -169.1540726     steps=   46 RMS= 0.17331E-02 Markov E=    -169.1540735     t=        0.1
+ Qu         25 E=    -163.8846585     steps=  107 RMS= 0.16797E-02 Markov E=    -169.1540726     t=        0.1
+symmetry> symmetry analysis for point group C2v number of generators=   3
+symmetry> using point group of order     4 constructed from generators, time taken=           0.00
+symmetry> symmetry of core is consistent with the overall symmetry
+ Qu         26 E=    -163.8846612     steps=   71 RMS= 0.12943E-02 Markov E=    -163.8846585     t=        0.1
+ Qu         27 E=    -163.8846623     steps=   48 RMS= 0.11632E-02 Markov E=    -163.8846612     t=        0.1
+ Qu         28 E=    -163.8846606     steps=   51 RMS= 0.15672E-02 Markov E=    -163.8846623     t=        0.1
+ Qu         29 E=    -163.8846616     steps=   49 RMS= 0.10416E-02 Markov E=    -163.8846606     t=        0.1
+newres> Moving current best minimum to position      1 in the AVOID list E=    -169.1540748    
+newres> Energy has not improved since step        2 - reseeding
+newres> Parallel run      1 has the highest energy      -169.1540748364
+newres> Full reseeding
+ Qu         30 E=    -166.3982592     steps=  164 RMS= 0.14986E-02 Markov E=    -164.9732417     t=        0.1
+ Qu         31 E=    -166.5891471     steps=  240 RMS= 0.13215E-02 Markov E=    -166.3982592     t=        0.1
+ Qu         32 E=    -163.6576463     steps=  157 RMS= 0.16855E-02 Markov E=    -166.5891471     t=        0.1
+ Qu         33 E=    -167.6795475     steps=  236 RMS= 0.16675E-02 Markov E=    -163.6576463     t=        0.1
+ Qu         34 E=    -169.1306944     steps=  208 RMS= 0.16461E-02 Markov E=    -167.6795475     t=        0.2
+ Qu         35 E=    -168.5418717     steps=  202 RMS= 0.17047E-02 Markov E=    -169.1306944     t=        0.2
+ Qu         36 E=    -168.8814630     steps=  147 RMS= 0.16191E-02 Markov E=    -168.5418717     t=        0.2
+saveit> putting this minimum into the list at position       1 EREAL,QMIN=    -169.1580912        -169.1540748    
+ Qu         37 E=    -169.1580912     steps=  167 RMS= 0.17064E-02 Markov E=    -168.8814630     t=        0.2
+ Qu         38 E=    -168.9510521     steps=  167 RMS= 0.17160E-02 Markov E=    -169.1580912     t=        0.2
+saveit> putting this minimum into the list at position       1 EREAL,QMIN=    -169.3792557        -169.1580912    
+ Qu         39 E=    -169.3792557     steps=  275 RMS= 0.17320E-02 Markov E=    -168.9510521     t=        0.2
+ Qu         40 E=    -166.1489942     steps=  167 RMS= 0.17979E-02 Markov E=    -169.3792557     t=        0.2
+ Qu         41 E=    -167.7075017     steps=  156 RMS= 0.19142E-02 Markov E=    -169.3792557     t=        0.2
+ Qu         42 E=    -167.7065325     steps=  185 RMS= 0.16909E-02 Markov E=    -169.3792557     t=        0.2
+ Qu         43 E=    -163.2688139     steps=  173 RMS= 0.18833E-02 Markov E=    -167.7065325     t=        0.2
+ Qu         44 E=    -167.1783824     steps=  191 RMS= 0.18083E-02 Markov E=    -167.7065325     t=        0.2
+ Qu         45 E=    -166.7622094     steps=  172 RMS= 0.19608E-02 Markov E=    -167.1783824     t=        0.3
+ Qu         46 E=    -167.3556319     steps=  207 RMS= 0.14115E-02 Markov E=    -166.7622094     t=        0.3
+ Qu         47 E=    -168.2082615     steps=  233 RMS= 0.19324E-02 Markov E=    -167.3556319     t=        0.3
+ Qu         48 E=    -166.2592875     steps=   97 RMS= 0.17950E-02 Markov E=    -168.2082615     t=        0.3
+ Qu         49 E=    -166.8668355     steps=  326 RMS= 0.14246E-02 Markov E=    -166.2592875     t=        0.3
+ Qu         50 E=    -167.7841563     steps=  316 RMS= 0.18574E-02 Markov E=    -166.8668355     t=        0.3
+symmetry> symmetry analysis for point group C3v number of generators=   2
+symmetry> using point group of order     6 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     9 was     5
+Qu         51 E=     -168.2453676914 steps=   77 RMS= 0.18238E-02                               t=        0.3
+symmetry> no possibilities with complete orbits filled, number in core=      36
+symmetry> number of core atoms=      36 core symmetry C3v  after       51 quenches
+ Qu         52 E=    -168.2452576     steps=   79 RMS= 0.19997E-02 Markov E=    -168.2453677     t=        0.3
+symmetry> initialising origin for     36 atoms
+ Qu         53 E=    -167.5137757     steps=  266 RMS= 0.18428E-02 Markov E=    -168.2452576     t=        0.3
+ Qu         54 E=    -167.5058577     steps=   78 RMS= 0.19585E-02 Markov E=    -167.5137757     t=        0.3
+newres> Moving current best minimum to position      2 in the AVOID list E=    -169.3792557    
+newres> Energy has not improved since step       26 - reseeding
+newres> Parallel run      1 has the highest energy      -169.3792557329
+newres> Full reseeding
+symmetry> symmetry analysis for point group C2 number of generators=   1
+symmetry> using point group of order     2 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     4 was     1
+Qu         55 E=     -161.8470678524 steps=   70 RMS= 0.13421E-02                               t=        0.4
+Qu         56 E=     -164.5693012828 steps=  171 RMS= 0.16867E-02                               t=        0.4
+Qu         57 E=     -163.7675105534 steps=  189 RMS= 0.17790E-02                               t=        0.4
+Qu         58 E=     -168.3837647295 steps=  172 RMS= 0.14519E-02                               t=        0.4
+Qu         59 E=     -168.0898311145 steps=  168 RMS= 0.17927E-02                               t=        0.4
+saveit> putting this minimum into the list at position       1 EREAL,QMIN=    -170.9620239        -169.3792557    
+Qu         60 E=     -170.9620239231 steps=  214 RMS= 0.15136E-02                               t=        0.4
+Qu         61 E=     -163.1328891894 steps=  163 RMS= 0.13855E-02                               t=        0.4
+Qu         62 E=     -169.2848268566 steps=  183 RMS= 0.17254E-02                               t=        0.4
+Qu         63 E=     -169.2367036959 steps=  110 RMS= 0.17559E-02                               t=        0.4
+Qu         64 E=     -168.1912930727 steps=  220 RMS= 0.18899E-02                               t=        0.4
+Qu         65 E=     -169.7069145342 steps=  195 RMS= 0.18913E-02                               t=        0.4
+Qu         66 E=     -168.1944375889 steps=  200 RMS= 0.13519E-02                               t=        0.4
+Qu         67 E=     -168.1944372828 steps=  173 RMS= 0.18853E-02                               t=        0.5
+Qu         68 E=     -169.4234726685 steps=  291 RMS= 0.17572E-02                               t=        0.5
+Qu         69 E=     -168.7400607748 steps=  142 RMS= 0.13196E-02                               t=        0.5
+Qu         70 E=     -169.8217651161 steps=  137 RMS= 0.18092E-02                               t=        0.5
+Qu         71 E=     -167.3244312033 steps=  203 RMS= 0.18692E-02                               t=        0.5
+Qu         72 E=     -166.1506948623 steps=  143 RMS= 0.18502E-02                               t=        0.5
+symmetry> number of core atoms=       6 core symmetry C2   after       72 quenches
+ Qu         73 E=    -169.8446526     steps=  240 RMS= 0.17232E-02 Markov E=    -170.9620239     t=        0.5
+ Qu         74 E=    -167.5471983     steps=  265 RMS= 0.15328E-02 Markov E=    -169.8446526     t=        0.5
+ Qu         75 E=    -167.8877021     steps=  148 RMS= 0.18358E-02 Markov E=    -169.8446526     t=        0.5
+ Qu         76 E=    -170.6902563     steps=  139 RMS= 0.11270E-02 Markov E=    -167.8877021     t=        0.5
+symmetry> symmetry analysis for point group T h number of generators=  14
+symmetry> using point group of order    48 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     7 was     1
+saveit> putting this minimum into the list at position       1 EREAL,QMIN=    -173.9284243        -170.9620239    
+saveit> Target hit after              77 quenches           11779 function calls.
+saveit> Energy=     -173.9284243442 target=     -173.9284264418
+Qu         77 E=     -173.9284243442 steps=   83 RMS= 0.12880E-02                               t=        0.5
+Acceptance ratio for run=     0.00000 Step=     0.43000 Angular step factor=     0.52000 T=     3.20000
+1 78 11779         0.5387460000
+Tightly converging the SAVE lowest energy minima found
+NOTE: these may NOT match the other output files - see below for a sorted list of Lowest minima
+Final Quench      1 energy=    -173.9284266     steps=   16 RMS force=  0.6422109E-05 time=        0.54
+After re-sorting, the lowest found minima are (lowest free energy subtracted if applicable):
+Lowest Minimum      1 Energy=     -173.9284266    
+time elapsed                0.5 seconds
+Number of potential calls              11799

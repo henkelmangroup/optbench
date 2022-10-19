@@ -1,0 +1,10 @@
+basin_hopping_steps_mean 1.68000e+02
+basin_hopping_steps_stddev 1.89000e+02
+force_calls_mean 2.42990e+04
+force_calls_stddev 2.85200e+04
+nfailed 0
+date 14 Oct 2022
+algorithm no symmetrisation
+code GMIN
+contributor David Wales
+

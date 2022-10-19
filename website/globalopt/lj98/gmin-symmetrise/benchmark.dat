@@ -1,11 +1,9 @@
-cpu_time_mean 4.369e+01
-cpu_time_stddev 3.601e+01
-basin_hopping_steps_mean 1.28192e+03
-basin_hopping_steps_stddev 1.06356e+03
-energy_calls_mean 2.4953780e+05
-energy_calls_stddev 2.0578948e+05
+basin_hopping_steps_mean 5.61000e+02
+basin_hopping_steps_stddev 4.59000e+02
+force_calls_mean 1.27545e+05
+force_calls_stddev 1.12321e+05
 nfailed 0
-date 03 Oct 2022
+date 13 Oct 2022
 algorithm core orbits symmetrisation scheme
 code GMIN
 contributor David Wales

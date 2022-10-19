@@ -1,0 +1,10 @@
+basin_hopping_steps_mean 1.28200e+03
+basin_hopping_steps_stddev 1.05800e+03
+force_calls_mean 2.49538e+05
+force_calls_stddev 2.04758e+05
+nfailed 0
+date 13 Oct 2022
+algorithm core orbits symmetrisation scheme
+code GMIN
+contributor David Wales
+

@@ -3,8 +3,9 @@
 if [ -e simulation ]; then
     rm -rf simulation
 fi
+
 mkdir simulation && cd simulation
-source_dir="ljj8_clusters"
+source_dir="lj98_clusters"
 tar xzf ../../${source_dir}.tgz
 
 for i in {1..200}
@@ -15,7 +16,8 @@ do
     cp ../../data .
     #awk '(NR>2){print $2,$3,$4}' $file | sed 's/[eE]/D/g' > coords
     cp $file coords
-    ../../run_gmin.sh $file
+    ../../run_gmin.sh $file > output 2> gmin_err &
+    disown
     cd ..
 done
 

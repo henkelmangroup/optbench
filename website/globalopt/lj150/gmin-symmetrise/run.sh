@@ -3,8 +3,9 @@
 if [ -e simulation ]; then
     rm -rf simulation
 fi
+
 mkdir simulation && cd simulation
-source_dir="ljj8_clusters"
+source_dir="lj150_clusters"
 tar xzf ../../${source_dir}.tgz
 
 for i in {1..200}

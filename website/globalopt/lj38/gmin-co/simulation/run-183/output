@@ -1,0 +1,1128 @@
+Starting serial execution
+keyword> WARNING - temperature unspecified for NEWRESTART. Default for high T MD is 1000K
+ reallocating MSBCOORDS
+ reallocating MSBE
+ keyword> Distance tolerance for distinguising atoms in the same orbit=        0.00500
+ keyword> Maximum number of secondary sets in perm.allow file= 70
+ keyword> Number of groups of permutable atoms=     1
+ keyword> group      1 contains     38 atoms with      0 additional atom sets:
+     1     2     3     4     5     6     7     8     9    10    11    12    13    14    15    16    17    18    19    20    21    22
+    23    24    25    26    27    28    29    30    31    32    33    34    35    36    37    38 
+io1> Initial coordinates:
+       50.0000000000       50.0000000000       50.0000000000
+       50.6627100077       49.9274813821       49.8902071631
+       51.0520555384       50.2370205353       50.4306487505
+       50.2310648497       50.4357790989       50.5355866238
+       50.9771436620       49.7358829088       50.4893512241
+       50.4922961276       49.7063768074       50.3134431493
+       50.6366246627       50.7932122398       50.8398642778
+       50.2726498391       50.3182898398       49.4604717885
+       49.7129142842       51.0348173794       50.4909134653
+       50.5028859243       51.0024680403       51.3247203406
+       50.3721498673       49.3641385210       49.7367032798
+       50.9609424637       50.2699675102       49.4776593910
+       49.6348325037       51.1367591409       49.8835715133
+       51.4289081203       50.5554308335       49.0819656377
+       49.9367727090       50.1873888737       51.0050991091
+       49.5266963124       49.4288421523       50.2112888638
+       50.6626324728       50.1612118543       50.8980451988
+       51.3525278698       50.9079818221       49.6966173194
+       49.4804485076       49.7389410730       51.0466059547
+       51.0764886295       50.6360972559       50.0204563683
+       49.6385528902       50.3253032355       51.5325876739
+       49.9500999558       50.8509493698       49.5845875918
+       49.3459656962       48.9083414955       50.5544718664
+       49.4433318769       49.1976955446       51.1869695275
+       49.5290320315       50.9230028785       51.9521367625
+       49.4120583857       49.0604686250       49.8141799705
+       48.8814802531       50.6613520107       51.5746743949
+       49.3118877815       51.6971025365       49.7747858641
+       50.9601425702       50.2566143290       51.5966089009
+       50.0453067885       49.4542426108       50.2431939704
+       51.7658174129       50.8597648303       50.2876352094
+       51.6803697387       49.5781316923       50.5942309974
+       50.8715411842       51.2867799820       49.5458092130
+       50.6826418341       49.3856877948       49.0807148822
+       51.5614591165       49.5568081617       49.9007899667
+       50.8045876041       51.5520872668       51.0932306158
+       49.6616191481       50.6038429043       49.0900791585
+       49.5216163934       50.3131563940       50.1130069985
+  38 LJ atoms
+Searching for approximate symmetry elements every      1 steps
+Distance tolerances:         0.04000        0.03000        0.09000        0.09000        0.40000
+Threshold for distinguishing transformation matrices:         0.40000
+Exponential factor in core-weighted centre of mass calculation:         1.70000
+Maximum number of quenches for floater/hole permutations=   18
+io1> Container radius=        4.3305271907
+In run   1 temperature will be fixed - see below for value
+Step size and angular threshold will be adjusted for acceptance ratio       0.5000 initial values=      0.4300      0.5200
+Configuration will be reset to quench geometry
+Sampling using Boltzmann weights
+Nocedal LBFGS minimisation
+Number of updates before reset in LBFGS=     4
+Maximum step size=        0.4000000000
+Guess for initial diagonal elements in LBFGS=  0.1000    
+Sloppy quench tolerance for RMS gradient     0.2000000000E-02
+Final  quench tolerance for RMS gradient     0.1000000000E-04
+Energy difference criterion for minima=        0.0030000000
+Maximum number of iterations: sloppy quenches  1000 final quenches  1000
+Run   1:  90000000 steps with temperature scaled by  0.10000000E+01
+Maximum allowed energy rise during a minimisation=    0.1000000000E-09
+Target energies:      -173.9284264418 
+Runs will be reseeded if the energy does not decrease by at least      0.00300 within     13 steps
+Runs will be reseeded if the current minimum comes within       1.25 of up to     20 previous minima
+mc> Calculating initial energy
+mc calling initial quench
+saveit> putting this minimum into the list at position       1 EREAL,QMIN=    -166.6536631        0.1000000000E+11
+ Qu          0 E=    -166.6536631     steps=  187 RMS= 0.18589E-02 Markov E=    -166.6536631     t=        0.0
+ mc> Starting run of   90000000 BH steps
+ mc> Temperature will be multiplied by      1.00000000 at every step
+saveit> putting this minimum into the list at position       1 EREAL,QMIN=    -167.7339034        -166.6536631    
+ Qu          1 E=    -167.7339034     steps=  147 RMS= 0.13203E-02 Markov E=    -166.6536631     t=        0.0
+symmetry> symmetry analysis for point group C s number of generators=   2
+symmetry> using point group of order     4 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     6 was     3
+symmetry> no possibilities with complete orbits filled, number in core=      29
+symmetry> number of core atoms=      17 core symmetry C s  after        1 quenches
+saveit> putting this minimum into the list at position       1 EREAL,QMIN=    -169.3749977        -167.7339034    
+ Qu          2 E=    -169.3749977     steps=  140 RMS= 0.11378E-02 Markov E=    -167.7339034     t=        0.0
+symmetry> initialising origin for     17 atoms
+symmetry> symmetry analysis for point group C s number of generators=   1
+symmetry> using point group of order     2 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     4 was     1
+Qu          3 E=     -167.6904461766 steps=  111 RMS= 0.13587E-02                               t=        0.0
+Qu          4 E=     -167.6904456032 steps=  106 RMS= 0.13897E-02                               t=        0.0
+Qu          5 E=     -167.6202479139 steps=  112 RMS= 0.17368E-02                               t=        0.0
+Qu          6 E=     -167.6202449799 steps=  112 RMS= 0.17961E-02                               t=        0.0
+Qu          7 E=     -167.2021920191 steps=  112 RMS= 0.18393E-02                               t=        0.1
+Qu          8 E=     -167.2021886958 steps=  122 RMS= 0.18216E-02                               t=        0.1
+Qu          9 E=     -166.6016631453 steps=   80 RMS= 0.17202E-02                               t=        0.1
+Qu         10 E=     -168.9231140150 steps=   77 RMS= 0.19520E-02                               t=        0.1
+Qu         11 E=     -168.8308596106 steps=  102 RMS= 0.16673E-02                               t=        0.1
+Qu         12 E=     -168.2700454042 steps=  184 RMS= 0.17359E-02                               t=        0.1
+Qu         13 E=     -168.6023752777 steps=  121 RMS= 0.17830E-02                               t=        0.1
+Qu         14 E=     -166.7564393521 steps=   99 RMS= 0.17793E-02                               t=        0.1
+Qu         15 E=     -166.8359741499 steps=  112 RMS= 0.17238E-02                               t=        0.1
+Qu         16 E=     -166.5556849488 steps=  102 RMS= 0.17861E-02                               t=        0.1
+Qu         17 E=     -166.3791643034 steps=   96 RMS= 0.18394E-02                               t=        0.1
+Qu         18 E=     -166.8837965306 steps=  178 RMS= 0.16339E-02                               t=        0.1
+Qu         19 E=     -166.2463767866 steps=  146 RMS= 0.17815E-02                               t=        0.1
+Qu         20 E=     -164.6423550520 steps=  141 RMS= 0.15484E-02                               t=        0.1
+symmetry> number of core atoms=       5 core symmetry C s  after       20 quenches
+ Qu         21 E=    -168.2283999     steps=  115 RMS= 0.17331E-02 Markov E=    -169.3749977     t=        0.1
+ Qu         22 E=    -166.1077337     steps=  185 RMS= 0.12816E-02 Markov E=    -168.2283999     t=        0.1
+ Qu         23 E=    -168.7100244     steps=  112 RMS= 0.17605E-02 Markov E=    -168.2283999     t=        0.1
+ Qu         24 E=    -168.2283967     steps=  140 RMS= 0.17894E-02 Markov E=    -168.7100244     t=        0.1
+saveit> putting this minimum into the list at position       1 EREAL,QMIN=    -169.5475721        -169.3749977    
+ Qu         25 E=    -169.5475721     steps=  171 RMS= 0.19980E-02 Markov E=    -168.7100244     t=        0.2
+ Qu         26 E=    -168.7282587     steps=  119 RMS= 0.18754E-02 Markov E=    -169.5475721     t=        0.2
+ Qu         27 E=    -167.7875723     steps=  202 RMS= 0.18329E-02 Markov E=    -168.7282587     t=        0.2
+ Qu         28 E=    -168.2751612     steps=  138 RMS= 0.17087E-02 Markov E=    -167.7875723     t=        0.2
+ Qu         29 E=    -166.2325032     steps=  170 RMS= 0.19757E-02 Markov E=    -168.2751612     t=        0.2
+saveit> putting this minimum into the list at position       1 EREAL,QMIN=    -169.8318295        -169.5475721    
+ Qu         30 E=    -169.8318295     steps=  137 RMS= 0.15081E-02 Markov E=    -168.2751612     t=        0.2
+ Qu         31 E=    -168.0241723     steps=  191 RMS= 0.17193E-02 Markov E=    -169.8318295     t=        0.2
+ Qu         32 E=    -169.2796399     steps=  130 RMS= 0.16987E-02 Markov E=    -168.0241723     t=        0.2
+ Qu         33 E=    -168.7637294     steps=  150 RMS= 0.18728E-02 Markov E=    -169.2796399     t=        0.2
+ Qu         34 E=    -169.7420845     steps=  135 RMS= 0.17414E-02 Markov E=    -168.7637294     t=        0.2
+ Qu         35 E=    -167.8731224     steps=  136 RMS= 0.14804E-02 Markov E=    -169.7420845     t=        0.2
+ Qu         36 E=    -167.4344891     steps=  286 RMS= 0.16499E-02 Markov E=    -169.7420845     t=        0.2
+ Qu         37 E=    -169.7824695     steps=  184 RMS= 0.16497E-02 Markov E=    -169.7420845     t=        0.3
+symmetry> symmetry analysis for point group D5h number of generators=   4
+symmetry> using point group of order    20 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     5 was    19
+symmetry> no possibilities with complete orbits filled, number in core=      29
+symmetry> number of core atoms=      29 core symmetry D5h  after       37 quenches
+saveit> putting this minimum into the list at position       1 EREAL,QMIN=    -169.8651498        -169.8318295    
+ Qu         38 E=    -169.8651498     steps=  104 RMS= 0.16485E-02 Markov E=    -169.7824695     t=        0.3
+symmetry> initialising origin for     29 atoms
+symmetry> symmetry analysis for point group D5h number of generators=   4
+symmetry> using point group of order    20 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     5 was    19
+symmetry> no possibilities with complete orbits filled, number in core=      29
+symmetry> number of core atoms=      29 core symmetry D5h  after       38 quenches
+saveit> putting this minimum into the list at position       1 EREAL,QMIN=    -170.9758907        -169.8651498    
+ Qu         39 E=    -170.9758907     steps=   99 RMS= 0.17206E-02 Markov E=    -169.8651498     t=        0.3
+symmetry> initialising origin for     29 atoms
+symmetry> symmetry analysis for point group D5h number of generators=   4
+symmetry> using point group of order    20 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     7 was     1
+saveit> putting this minimum into the list at position       1 EREAL,QMIN=    -172.2981234        -170.9758907    
+Qu         40 E=     -172.2981234308 steps=   22 RMS= 0.13879E-02                               t=        0.3
+symmetry> no possibilities with complete orbits filled, number in core=      37
+symmetry> number of core atoms=      29 core symmetry D5h  after       40 quenches
+ Qu         41 E=    -171.0063672     steps=   61 RMS= 0.19475E-02 Markov E=    -172.2981234     t=        0.3
+symmetry> initialising origin for     29 atoms
+symmetry> symmetry analysis for point group D5h number of generators=   4
+symmetry> using point group of order    20 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     6 was     2
+Qu         42 E=     -172.2981230818 steps=   19 RMS= 0.17545E-02                               t=        0.3
+symmetry> no possibilities with complete orbits filled, number in core=      37
+symmetry> number of core atoms=      29 core symmetry D5h  after       42 quenches
+ Qu         43 E=    -171.8985709     steps=   71 RMS= 0.15426E-02 Markov E=    -172.2981231     t=        0.3
+symmetry> initialising origin for     29 atoms
+symmetry> symmetry analysis for point group D5h number of generators=   4
+symmetry> using point group of order    20 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     7 was     2
+Qu         44 E=     -172.2981267215 steps=   21 RMS= 0.80003E-03                               t=        0.3
+symmetry> after adding the remaining     1 non-identity elements there are     3 in total
+symmetry> no possibilities with complete orbits filled, number in core=      37
+symmetry> number of core atoms=      29 core symmetry D5h  after       44 quenches
+ Qu         45 E=    -171.1081653     steps=   55 RMS= 0.18717E-02 Markov E=    -172.2981267     t=        0.3
+symmetry> initialising origin for     29 atoms
+symmetry> symmetry analysis for point group D5h number of generators=   4
+symmetry> using point group of order    20 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     7 was     3
+Qu         46 E=     -172.2981251311 steps=   19 RMS= 0.15560E-02                               t=        0.3
+symmetry> no possibilities with complete orbits filled, number in core=      37
+symmetry> number of core atoms=      29 core symmetry D5h  after       46 quenches
+ Qu         47 E=    -170.8908707     steps=   80 RMS= 0.15730E-02 Markov E=    -172.2981251     t=        0.3
+symmetry> initialising origin for     29 atoms
+symmetry> symmetry analysis for point group D5h number of generators=   4
+symmetry> using point group of order    20 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     7 was     3
+Qu         48 E=     -172.2981148867 steps=   21 RMS= 0.16735E-02                               t=        0.3
+symmetry> no possibilities with complete orbits filled, number in core=      37
+symmetry> number of core atoms=      29 core symmetry D5h  after       48 quenches
+ Qu         49 E=    -172.2981251     steps=  107 RMS= 0.19252E-02 Markov E=    -172.2981149     t=        0.3
+symmetry> initialising origin for     29 atoms
+symmetry> symmetry analysis for point group D5h number of generators=   4
+symmetry> using point group of order    20 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     6 was    18
+Qu         50 E=     -172.2981244470 steps=   18 RMS= 0.18001E-02                               t=        0.3
+symmetry> after adding the remaining     1 non-identity elements there are    19 in total
+symmetry> no possibilities with complete orbits filled, number in core=      29
+symmetry> number of core atoms=      29 core symmetry D5h  after       50 quenches
+ Qu         51 E=    -171.0910774     steps=   42 RMS= 0.10544E-02 Markov E=    -172.2981251     t=        0.3
+symmetry> initialising origin for     29 atoms
+symmetry> symmetry analysis for point group D5h number of generators=   4
+symmetry> using point group of order    20 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     7 was     2
+Qu         52 E=     -172.2981252383 steps=   20 RMS= 0.18537E-02                               t=        0.3
+symmetry> after adding the remaining     1 non-identity elements there are     3 in total
+symmetry> no possibilities with complete orbits filled, number in core=      37
+symmetry> number of core atoms=      29 core symmetry D5h  after       52 quenches
+ Qu         53 E=    -171.8985713     steps=   52 RMS= 0.18512E-02 Markov E=    -172.2981252     t=        0.3
+symmetry> initialising origin for     29 atoms
+symmetry> symmetry analysis for point group D5h number of generators=   4
+symmetry> using point group of order    20 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     7 was     2
+Qu         54 E=     -172.2981271480 steps=   21 RMS= 0.97068E-03                               t=        0.3
+symmetry> after adding the remaining     1 non-identity elements there are     3 in total
+symmetry> no possibilities with complete orbits filled, number in core=      37
+symmetry> number of core atoms=      29 core symmetry D5h  after       54 quenches
+ Qu         55 E=    -171.7511179     steps=   66 RMS= 0.13483E-02 Markov E=    -172.2981271     t=        0.3
+symmetry> initialising origin for     29 atoms
+symmetry> symmetry analysis for point group D5h number of generators=   4
+symmetry> using point group of order    20 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     7 was     2
+Qu         56 E=     -172.2981247207 steps=   19 RMS= 0.17968E-02                               t=        0.3
+symmetry> after adding the remaining     1 non-identity elements there are     3 in total
+symmetry> no possibilities with complete orbits filled, number in core=      37
+symmetry> number of core atoms=      29 core symmetry D5h  after       56 quenches
+ Qu         57 E=    -171.7511190     steps=   60 RMS= 0.95321E-03 Markov E=    -172.2981247     t=        0.3
+ Qu         58 E=    -171.8914359     steps=   81 RMS= 0.11827E-02 Markov E=    -171.7511190     t=        0.3
+symmetry> initialising origin for     29 atoms
+symmetry> symmetry analysis for point group D5h number of generators=   4
+symmetry> using point group of order    20 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     7 was     2
+Qu         59 E=     -172.2981267209 steps=   20 RMS= 0.10682E-02                               t=        0.3
+symmetry> after adding the remaining     1 non-identity elements there are     3 in total
+symmetry> no possibilities with complete orbits filled, number in core=      37
+symmetry> number of core atoms=      29 core symmetry D5h  after       59 quenches
+ Qu         60 E=    -171.8986700     steps=   66 RMS= 0.11744E-02 Markov E=    -172.2981267     t=        0.3
+symmetry> initialising origin for     29 atoms
+symmetry> symmetry analysis for point group D5h number of generators=   4
+symmetry> using point group of order    20 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     7 was     2
+Qu         61 E=     -172.2981252528 steps=   18 RMS= 0.18290E-02                               t=        0.3
+symmetry> after adding the remaining     1 non-identity elements there are     3 in total
+symmetry> no possibilities with complete orbits filled, number in core=      37
+symmetry> number of core atoms=      29 core symmetry D5h  after       61 quenches
+ Qu         62 E=    -171.1081572     steps=   69 RMS= 0.18378E-02 Markov E=    -172.2981253     t=        0.3
+symmetry> initialising origin for     29 atoms
+symmetry> symmetry analysis for point group D5h number of generators=   4
+symmetry> using point group of order    20 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     7 was     3
+Qu         63 E=     -172.2981282347 steps=   22 RMS= 0.52746E-03                               t=        0.3
+symmetry> no possibilities with complete orbits filled, number in core=      37
+symmetry> number of core atoms=      29 core symmetry D5h  after       63 quenches
+ Qu         64 E=    -172.2981253     steps=   70 RMS= 0.18370E-02 Markov E=    -172.2981282     t=        0.3
+symmetry> initialising origin for     29 atoms
+symmetry> symmetry analysis for point group D5h number of generators=   4
+symmetry> using point group of order    20 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     6 was    18
+Qu         65 E=     -172.2981264807 steps=   20 RMS= 0.10524E-02                               t=        0.3
+symmetry> after adding the remaining     1 non-identity elements there are    19 in total
+symmetry> no possibilities with complete orbits filled, number in core=      29
+symmetry> number of core atoms=      29 core symmetry D5h  after       65 quenches
+ Qu         66 E=    -171.8986626     steps=   87 RMS= 0.19775E-02 Markov E=    -172.2981253     t=        0.3
+symmetry> initialising origin for     29 atoms
+symmetry> symmetry analysis for point group D5h number of generators=   4
+symmetry> using point group of order    20 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     7 was     2
+Qu         67 E=     -172.2981240424 steps=   20 RMS= 0.10505E-02                               t=        0.3
+symmetry> after adding the remaining     1 non-identity elements there are     3 in total
+symmetry> no possibilities with complete orbits filled, number in core=      37
+symmetry> number of core atoms=      29 core symmetry D5h  after       67 quenches
+newres> Moving current best minimum to position      1 in the AVOID list E=    -172.2981282    
+newres> Energy has not improved since step       22 - reseeding
+newres> Parallel run      1 has the highest energy      -172.2981282347
+newres> Full reseeding
+ Qu         68 E=    -166.2886292     steps=  224 RMS= 0.16522E-02 Markov E=    -159.8888706     t=        0.4
+ Qu         69 E=    -169.3056322     steps=  244 RMS= 0.12699E-02 Markov E=    -166.2886292     t=        0.4
+ Qu         70 E=    -167.5265716     steps=  144 RMS= 0.17592E-02 Markov E=    -169.3056322     t=        0.4
+ Qu         71 E=    -166.9725812     steps=  205 RMS= 0.18580E-02 Markov E=    -169.3056322     t=        0.4
+ Qu         72 E=    -168.6918281     steps=  138 RMS= 0.14891E-02 Markov E=    -166.9725812     t=        0.4
+ Qu         73 E=    -168.2796699     steps=  188 RMS= 0.19823E-02 Markov E=    -168.6918281     t=        0.4
+ Qu         74 E=    -168.7280142     steps=  150 RMS= 0.18302E-02 Markov E=    -168.2796699     t=        0.4
+ Qu         75 E=    -169.2646191     steps=  218 RMS= 0.17560E-02 Markov E=    -168.7280142     t=        0.4
+ Qu         76 E=    -168.2197837     steps=  146 RMS= 0.17221E-02 Markov E=    -169.2646191     t=        0.4
+ Qu         77 E=    -167.8073431     steps=  141 RMS= 0.17455E-02 Markov E=    -168.2197837     t=        0.4
+ Qu         78 E=    -168.7316382     steps=  155 RMS= 0.19759E-02 Markov E=    -167.8073431     t=        0.4
+ Qu         79 E=    -168.9285678     steps=  217 RMS= 0.16867E-02 Markov E=    -168.7316382     t=        0.5
+ Qu         80 E=    -168.8246024     steps=  106 RMS= 0.17265E-02 Markov E=    -168.9285678     t=        0.5
+ Qu         81 E=    -167.8799007     steps=  105 RMS= 0.17655E-02 Markov E=    -168.9285678     t=        0.5
+ Qu         82 E=    -168.1725397     steps=  171 RMS= 0.18027E-02 Markov E=    -167.8799007     t=        0.5
+Acceptance ratio for previous     50 steps=  0.8667  FAC=  1.0500
+Steps are now:  STEP=    0.4515  ASTEP=    0.5460 Temperature is now:    3.2000
+symmetry> symmetry analysis for point group C s number of generators=   1
+symmetry> using point group of order     2 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     5 was     1
+Qu         83 E=     -170.2962672796 steps=  134 RMS= 0.19601E-02                               t=        0.5
+Qu         84 E=     -168.0182539362 steps=  143 RMS= 0.18923E-02                               t=        0.5
+Qu         85 E=     -167.9777848190 steps=  131 RMS= 0.19284E-02                               t=        0.5
+Qu         86 E=     -168.6384269101 steps=  192 RMS= 0.17354E-02                               t=        0.5
+Qu         87 E=     -169.3195170372 steps=  165 RMS= 0.19338E-02                               t=        0.5
+Qu         88 E=     -166.9453562985 steps=  197 RMS= 0.17541E-02                               t=        0.5
+Qu         89 E=     -166.7707733564 steps=  147 RMS= 0.18104E-02                               t=        0.5
+Qu         90 E=     -166.9320128272 steps=  241 RMS= 0.17694E-02                               t=        0.5
+Qu         91 E=     -168.7736673878 steps=  205 RMS= 0.16733E-02                               t=        0.5
+Qu         92 E=     -165.7337473562 steps=  171 RMS= 0.19695E-02                               t=        0.6
+Qu         93 E=     -169.1318258338 steps=  183 RMS= 0.18299E-02                               t=        0.6
+Qu         94 E=     -168.4619867375 steps=  190 RMS= 0.16012E-02                               t=        0.6
+Qu         95 E=     -169.8312404902 steps=  162 RMS= 0.16940E-02                               t=        0.6
+Qu         96 E=     -164.6471334200 steps=  160 RMS= 0.14184E-02                               t=        0.6
+Qu         97 E=     -167.6400945469 steps=  145 RMS= 0.16458E-02                               t=        0.6
+Qu         98 E=     -165.0731856664 steps=  222 RMS= 0.16179E-02                               t=        0.6
+Qu         99 E=     -167.8342656300 steps=  202 RMS= 0.18167E-02                               t=        0.6
+Qu        100 E=     -164.6527412124 steps=  109 RMS= 0.16153E-02                               t=        0.6
+symmetry> number of core atoms=       6 core symmetry C s  after      100 quenches
+ Qu        101 E=    -167.2336075     steps=  119 RMS= 0.16972E-02 Markov E=    -170.2962673     t=        0.6
+symmetry> symmetry analysis for point group C s number of generators=   1
+symmetry> using point group of order     2 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     4 was     1
+Qu        102 E=     -167.0418331820 steps=  130 RMS= 0.19885E-02                               t=        0.6
+Qu        103 E=     -168.5883168031 steps=  132 RMS= 0.13954E-02                               t=        0.6
+Qu        104 E=     -164.8483340432 steps=  142 RMS= 0.16424E-02                               t=        0.6
+Qu        105 E=     -166.2579016486 steps=  107 RMS= 0.11805E-02                               t=        0.6
+Qu        106 E=     -168.3111850957 steps=  150 RMS= 0.16664E-02                               t=        0.7
+Qu        107 E=     -168.4817092150 steps=  203 RMS= 0.19240E-02                               t=        0.7
+Qu        108 E=     -170.4938255922 steps=  121 RMS= 0.19332E-02                               t=        0.7
+Qu        109 E=     -167.3565560479 steps=  232 RMS= 0.16158E-02                               t=        0.7
+Qu        110 E=     -166.8604330762 steps=  314 RMS= 0.19197E-02                               t=        0.7
+Qu        111 E=     -164.7492862290 steps=   96 RMS= 0.17614E-02                               t=        0.7
+Qu        112 E=     -168.2734352916 steps=  157 RMS= 0.14826E-02                               t=        0.7
+Qu        113 E=     -170.4938180850 steps=  105 RMS= 0.19167E-02                               t=        0.7
+Qu        114 E=     -167.1161959130 steps=  165 RMS= 0.19944E-02                               t=        0.7
+Qu        115 E=     -164.4729459802 steps=  103 RMS= 0.18731E-02                               t=        0.7
+Qu        116 E=     -169.1896664203 steps=  175 RMS= 0.14946E-02                               t=        0.7
+Qu        117 E=     -164.7492906510 steps=  105 RMS= 0.13528E-02                               t=        0.7
+Qu        118 E=     -167.2334452893 steps=  130 RMS= 0.18586E-02                               t=        0.7
+Qu        119 E=     -169.3303332846 steps=  168 RMS= 0.18760E-02                               t=        0.7
+symmetry> number of core atoms=       7 core symmetry C s  after      119 quenches
+ Qu        120 E=    -169.5917823     steps=  173 RMS= 0.10509E-02 Markov E=    -170.4938256     t=        0.8
+ Qu        121 E=    -166.4982591     steps=  156 RMS= 0.18828E-02 Markov E=    -169.5917823     t=        0.8
+ Qu        122 E=    -168.1560040     steps=  182 RMS= 0.16926E-02 Markov E=    -166.4982591     t=        0.8
+ Qu        123 E=    -167.4073090     steps=  151 RMS= 0.12905E-02 Markov E=    -168.1560040     t=        0.8
+ Qu        124 E=    -167.3021613     steps=  237 RMS= 0.17749E-02 Markov E=    -167.4073090     t=        0.8
+ Qu        125 E=    -168.3313075     steps=  154 RMS= 0.15096E-02 Markov E=    -167.3021613     t=        0.8
+ Qu        126 E=    -168.9674453     steps=  182 RMS= 0.19569E-02 Markov E=    -168.3313075     t=        0.8
+ Qu        127 E=    -167.5374350     steps=  190 RMS= 0.15671E-02 Markov E=    -168.9674453     t=        0.8
+ Qu        128 E=    -168.1640367     steps=  147 RMS= 0.16553E-02 Markov E=    -167.5374350     t=        0.8
+ Qu        129 E=    -168.3126504     steps=  277 RMS= 0.15457E-02 Markov E=    -168.1640367     t=        0.8
+ Qu        130 E=    -167.5499985     steps=  166 RMS= 0.19601E-02 Markov E=    -168.3126504     t=        0.8
+ Qu        131 E=    -165.1418729     steps=  192 RMS= 0.17907E-02 Markov E=    -168.3126504     t=        0.8
+ Qu        132 E=    -169.4309564     steps=  267 RMS= 0.16755E-02 Markov E=    -168.3126504     t=        0.9
+ Qu        133 E=    -168.9917185     steps=  109 RMS= 0.14476E-02 Markov E=    -169.4309564     t=        0.9
+ Qu        134 E=    -169.3756205     steps=  205 RMS= 0.11225E-02 Markov E=    -168.9917185     t=        0.9
+newres> Moving current best minimum to position      2 in the AVOID list E=    -170.4938256    
+newres> Energy has not improved since step       52 - reseeding
+newres> Parallel run      1 has the highest energy      -170.4938255922
+newres> Full reseeding
+ Qu        135 E=    -166.5286699     steps=  232 RMS= 0.16031E-02 Markov E=    -159.5278217     t=        0.9
+ Qu        136 E=    -165.5189294     steps=  247 RMS= 0.16942E-02 Markov E=    -166.5286699     t=        0.9
+ Qu        137 E=    -166.7571030     steps=  157 RMS= 0.16835E-02 Markov E=    -165.5189294     t=        0.9
+ Qu        138 E=    -163.7062358     steps=  156 RMS= 0.10241E-02 Markov E=    -166.7571030     t=        0.9
+ Qu        139 E=    -167.4153550     steps=  138 RMS= 0.13088E-02 Markov E=    -166.7571030     t=        0.9
+ Qu        140 E=    -167.2110193     steps=  208 RMS= 0.15633E-02 Markov E=    -167.4153550     t=        0.9
+ Qu        141 E=    -169.0838848     steps=  259 RMS= 0.18367E-02 Markov E=    -167.2110193     t=        1.0
+ Qu        142 E=    -166.3970977     steps=  177 RMS= 0.14770E-02 Markov E=    -169.0838848     t=        1.0
+ Qu        143 E=    -167.4430628     steps=  210 RMS= 0.18808E-02 Markov E=    -169.0838848     t=        1.0
+ Qu        144 E=    -165.8147362     steps=  135 RMS= 0.18493E-02 Markov E=    -167.4430628     t=        1.0
+ Qu        145 E=    -165.6172296     steps=  241 RMS= 0.16771E-02 Markov E=    -167.4430628     t=        1.0
+ Qu        146 E=    -166.2619884     steps=  111 RMS= 0.19859E-02 Markov E=    -167.4430628     t=        1.0
+ Qu        147 E=    -166.2309443     steps=  125 RMS= 0.15586E-02 Markov E=    -167.4430628     t=        1.0
+ Qu        148 E=    -167.2447642     steps=  213 RMS= 0.16851E-02 Markov E=    -166.2309443     t=        1.0
+ Qu        149 E=    -169.0640616     steps=  225 RMS= 0.17427E-02 Markov E=    -167.2447642     t=        1.0
+ Qu        150 E=    -168.2949100     steps=  115 RMS= 0.17492E-02 Markov E=    -169.0640616     t=        1.0
+ Qu        151 E=    -169.2039494     steps=  143 RMS= 0.16857E-02 Markov E=    -168.2949100     t=        1.0
+ Qu        152 E=    -168.1454300     steps=  306 RMS= 0.17764E-02 Markov E=    -169.2039494     t=        1.1
+ Qu        153 E=    -167.0068334     steps=  224 RMS= 0.17912E-02 Markov E=    -168.1454300     t=        1.1
+ Qu        154 E=    -166.3850616     steps=  164 RMS= 0.19705E-02 Markov E=    -167.0068334     t=        1.1
+ Qu        155 E=    -165.6858296     steps=  160 RMS= 0.12169E-02 Markov E=    -166.3850616     t=        1.1
+ Qu        156 E=    -164.0550670     steps=  219 RMS= 0.17814E-02 Markov E=    -165.6858296     t=        1.1
+ Qu        157 E=    -169.0409366     steps=  148 RMS= 0.13872E-02 Markov E=    -165.6858296     t=        1.1
+symmetry> symmetry analysis for point group D5h number of generators=   4
+symmetry> using point group of order    20 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     5 was    19
+symmetry> no possibilities with complete orbits filled, number in core=      29
+symmetry> number of core atoms=      29 core symmetry D5h  after      157 quenches
+ Qu        158 E=    -169.7258356     steps=  131 RMS= 0.95049E-03 Markov E=    -169.0409366     t=        1.1
+symmetry> initialising origin for     29 atoms
+symmetry> symmetry analysis for point group D5h number of generators=   4
+symmetry> using point group of order    20 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     5 was    19
+symmetry> no possibilities with complete orbits filled, number in core=      29
+symmetry> number of core atoms=      29 core symmetry D5h  after      158 quenches
+ Qu        159 E=    -168.9609102     steps=   86 RMS= 0.13292E-02 Markov E=    -169.7258356     t=        1.1
+symmetry> initialising origin for     29 atoms
+symmetry> symmetry analysis for point group D5h number of generators=   4
+symmetry> using point group of order    20 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     5 was    19
+symmetry> no possibilities with complete orbits filled, number in core=      29
+symmetry> number of core atoms=      29 core symmetry D5h  after      159 quenches
+ Qu        160 E=    -168.8746519     steps=   72 RMS= 0.19571E-02 Markov E=    -168.9609102     t=        1.1
+symmetry> initialising origin for     29 atoms
+symmetry> symmetry analysis for point group D5h number of generators=   4
+symmetry> using point group of order    20 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     5 was    19
+symmetry> no possibilities with complete orbits filled, number in core=      29
+symmetry> number of core atoms=      29 core symmetry D5h  after      160 quenches
+ Qu        161 E=    -169.6765820     steps=  132 RMS= 0.13605E-02 Markov E=    -168.8746519     t=        1.1
+symmetry> initialising origin for     29 atoms
+symmetry> symmetry analysis for point group D5h number of generators=   4
+symmetry> using point group of order    20 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     5 was    19
+symmetry> no possibilities with complete orbits filled, number in core=      29
+symmetry> number of core atoms=      29 core symmetry D5h  after      161 quenches
+ Qu        162 E=    -169.6765797     steps=  105 RMS= 0.14355E-02 Markov E=    -169.6765820     t=        1.1
+ Qu        163 E=    -166.6212446     steps=  123 RMS= 0.19589E-02 Markov E=    -169.6765797     t=        1.1
+symmetry> initialising origin for     29 atoms
+symmetry> symmetry analysis for point group D5h number of generators=   4
+symmetry> using point group of order    20 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     5 was    19
+symmetry> no possibilities with complete orbits filled, number in core=      29
+symmetry> number of core atoms=      29 core symmetry D5h  after      163 quenches
+ Qu        164 E=    -166.9769480     steps=   70 RMS= 0.15298E-02 Markov E=    -166.6212446     t=        1.1
+symmetry> initialising origin for     29 atoms
+symmetry> symmetry analysis for point group D5h number of generators=   4
+symmetry> using point group of order    20 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     6 was     1
+Qu        165 E=     -167.2885481803 steps=   23 RMS= 0.17540E-02                               t=        1.1
+Qu        166 E=     -167.2885481803 steps=   23 RMS= 0.17540E-02                               t=        1.1
+Qu        167 E=     -166.7754640911 steps=   28 RMS= 0.12988E-02                               t=        1.1
+symmetry> number of core atoms=      29 core symmetry D5h  after      167 quenches
+ Qu        168 E=    -169.1613564     steps=  157 RMS= 0.17544E-02 Markov E=    -167.2885482     t=        1.1
+symmetry> initialising origin for     29 atoms
+symmetry> symmetry analysis for point group D5h number of generators=   4
+symmetry> using point group of order    20 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     5 was    19
+symmetry> no possibilities with complete orbits filled, number in core=      29
+symmetry> number of core atoms=      29 core symmetry D5h  after      168 quenches
+ Qu        169 E=    -168.8826297     steps=   68 RMS= 0.11187E-02 Markov E=    -169.1613564     t=        1.2
+ Qu        170 E=    -170.0466743     steps=   90 RMS= 0.13887E-02 Markov E=    -169.1613564     t=        1.2
+symmetry> initialising origin for     29 atoms
+symmetry> symmetry analysis for point group D5h number of generators=   4
+symmetry> using point group of order    20 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     6 was     1
+Qu        171 E=     -172.2981239456 steps=   19 RMS= 0.16239E-02                               t=        1.2
+symmetry> no possibilities with complete orbits filled, number in core=      37
+symmetry> number of core atoms=      29 core symmetry D5h  after      171 quenches
+newres> Minimum energy     -172.2981239     is too close to saved structure      1 with energy     -172.2981282     dist=     0.001
+newres> Moving previous best minimum to position      3 in the AVOID list E=    -170.0466743    
+newres> Reseeding due to taboo condition
+newres> Parallel run      1 has the highest energy      -172.2981239456
+newres> Full reseeding
+ Qu        172 E=    -165.3075179     steps=  231 RMS= 0.15792E-02 Markov E=    -160.4642216     t=        1.2
+Acceptance ratio for previous     50 steps=  1.0000  FAC=  1.0500
+Steps are now:  STEP=    0.4741  ASTEP=    0.5733 Temperature is now:    3.2000
+ Qu        173 E=    -168.6924231     steps=  368 RMS= 0.17062E-02 Markov E=    -165.3075179     t=        1.2
+ Qu        174 E=    -166.0305345     steps=  136 RMS= 0.19523E-02 Markov E=    -168.6924231     t=        1.2
+ Qu        175 E=    -167.9650769     steps=  209 RMS= 0.15209E-02 Markov E=    -168.6924231     t=        1.2
+ Qu        176 E=    -169.2750342     steps=  209 RMS= 0.19590E-02 Markov E=    -168.6924231     t=        1.2
+ Qu        177 E=    -165.7765180     steps=  253 RMS= 0.19597E-02 Markov E=    -169.2750342     t=        1.2
+ Qu        178 E=    -168.0762848     steps=  190 RMS= 0.16291E-02 Markov E=    -169.2750342     t=        1.3
+ Qu        179 E=    -166.3468426     steps=  180 RMS= 0.13052E-02 Markov E=    -169.2750342     t=        1.3
+ Qu        180 E=    -169.1773040     steps=  246 RMS= 0.19891E-02 Markov E=    -169.2750342     t=        1.3
+ Qu        181 E=    -169.8585000     steps=  175 RMS= 0.17946E-02 Markov E=    -169.1773040     t=        1.3
+ Qu        182 E=    -168.7254393     steps=  216 RMS= 0.18114E-02 Markov E=    -169.8585000     t=        1.3
+ Qu        183 E=    -167.2229614     steps=  202 RMS= 0.18552E-02 Markov E=    -168.7254393     t=        1.3
+ Qu        184 E=    -162.5994477     steps=  134 RMS= 0.16424E-02 Markov E=    -167.2229614     t=        1.3
+ Qu        185 E=    -168.0447595     steps=  242 RMS= 0.18216E-02 Markov E=    -167.2229614     t=        1.3
+ Qu        186 E=    -165.7358273     steps=  187 RMS= 0.17730E-02 Markov E=    -168.0447595     t=        1.3
+ Qu        187 E=    -167.5092892     steps=  220 RMS= 0.16955E-02 Markov E=    -165.7358273     t=        1.3
+ Qu        188 E=    -166.7713597     steps=  156 RMS= 0.17755E-02 Markov E=    -167.5092892     t=        1.3
+ Qu        189 E=    -169.1082123     steps=  239 RMS= 0.10491E-02 Markov E=    -166.7713597     t=        1.4
+ Qu        190 E=    -165.2623198     steps=  166 RMS= 0.16245E-02 Markov E=    -169.1082123     t=        1.4
+ Qu        191 E=    -166.4046793     steps=  180 RMS= 0.17206E-02 Markov E=    -169.1082123     t=        1.4
+ Qu        192 E=    -163.9914856     steps=  189 RMS= 0.19477E-02 Markov E=    -169.1082123     t=        1.4
+ Qu        193 E=    -167.6394566     steps=  244 RMS= 0.17466E-02 Markov E=    -169.1082123     t=        1.4
+ Qu        194 E=    -168.2101244     steps=  202 RMS= 0.19897E-02 Markov E=    -169.1082123     t=        1.4
+ Qu        195 E=    -166.3119313     steps=  158 RMS= 0.19123E-02 Markov E=    -168.2101244     t=        1.4
+newres> Moving current best minimum to position      4 in the AVOID list E=    -169.8585000    
+newres> Energy has not improved since step      109 - reseeding
+newres> Parallel run      1 has the highest energy      -169.8585000193
+newres> Full reseeding
+ Qu        196 E=    -165.7647782     steps=  213 RMS= 0.14831E-02 Markov E=    -161.4253395     t=        1.4
+ Qu        197 E=    -169.7622924     steps=  254 RMS= 0.14530E-02 Markov E=    -165.7647782     t=        1.4
+symmetry> symmetry analysis for point group C s number of generators=   1
+symmetry> using point group of order     2 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     8 was     1
+Qu        198 E=     -169.4670069812 steps=   37 RMS= 0.11315E-02                               t=        1.5
+Qu        199 E=     -167.5808012958 steps=   38 RMS= 0.16877E-02                               t=        1.5
+Qu        200 E=     -170.2612649281 steps=   82 RMS= 0.19356E-02                               t=        1.5
+Qu        201 E=     -170.3911654809 steps=   85 RMS= 0.18767E-02                               t=        1.5
+Qu        202 E=     -166.4415546446 steps=   40 RMS= 0.13142E-02                               t=        1.5
+Qu        203 E=     -170.3345928891 steps=   84 RMS= 0.16826E-02                               t=        1.5
+Qu        204 E=     -168.7403072508 steps=   33 RMS= 0.10160E-02                               t=        1.5
+Qu        205 E=     -170.4192667013 steps=  137 RMS= 0.19412E-02                               t=        1.5
+Qu        206 E=     -169.9556243118 steps=   99 RMS= 0.13744E-02                               t=        1.5
+Qu        207 E=     -169.9556187445 steps=   80 RMS= 0.19745E-02                               t=        1.5
+Qu        208 E=     -165.7647199295 steps=   38 RMS= 0.19214E-02                               t=        1.5
+Qu        209 E=     -165.1515610749 steps=   39 RMS= 0.19976E-02                               t=        1.5
+Qu        210 E=     -168.3668254346 steps=   39 RMS= 0.14836E-02                               t=        1.5
+Qu        211 E=     -167.2734059229 steps=  109 RMS= 0.13562E-02                               t=        1.5
+Qu        212 E=     -168.8966486455 steps=  127 RMS= 0.14109E-02                               t=        1.5
+Qu        213 E=     -166.3101070349 steps=  156 RMS= 0.18575E-02                               t=        1.5
+Qu        214 E=     -169.4670053313 steps=   86 RMS= 0.18105E-02                               t=        1.5
+Qu        215 E=     -167.8975617483 steps=   62 RMS= 0.12079E-02                               t=        1.5
+symmetry> number of core atoms=       7 core symmetry C s  after      215 quenches
+ Qu        216 E=    -166.9511443     steps=  164 RMS= 0.19799E-02 Markov E=    -170.4192667     t=        1.5
+symmetry> symmetry analysis for point group C s number of generators=   1
+symmetry> using point group of order     2 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     7 was     1
+Qu        217 E=     -170.4192658971 steps=   20 RMS= 0.19965E-02                               t=        1.5
+Qu        218 E=     -168.9327419733 steps=   22 RMS= 0.15222E-02                               t=        1.5
+symmetry> number of core atoms=      28 core symmetry C s  after      218 quenches
+ Qu        219 E=    -170.6508670     steps=  113 RMS= 0.19938E-02 Markov E=    -170.4192667     t=        1.5
+symmetry> initialising origin for     28 atoms
+symmetry> symmetry analysis for point group C s number of generators=   1
+symmetry> using point group of order     2 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     6 was     1
+Qu        220 E=     -170.6508695630 steps=   23 RMS= 0.16989E-02                               t=        1.5
+Qu        221 E=     -169.3337393376 steps=   22 RMS= 0.16347E-02                               t=        1.5
+symmetry> number of core atoms=      28 core symmetry C s  after      221 quenches
+ Qu        222 E=    -170.5141136     steps=   80 RMS= 0.13783E-02 Markov E=    -170.6508670     t=        1.5
+symmetry> initialising origin for     28 atoms
+symmetry> symmetry analysis for point group C s number of generators=   1
+symmetry> using point group of order     2 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     7 was     1
+Qu        223 E=     -170.5141111561 steps=   23 RMS= 0.15678E-02                               t=        1.5
+symmetry> no possibilities with complete orbits filled, number in core=      37
+symmetry> number of core atoms=      37 core symmetry C s  after      223 quenches
+ Qu        224 E=    -170.2896273     steps=   60 RMS= 0.14448E-02 Markov E=    -170.5141136     t=        1.5
+symmetry> initialising origin for     37 atoms
+symmetry> symmetry analysis for point group C4v number of generators=   3
+symmetry> using point group of order     8 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit    16 was     1
+Qu        225 E=     -170.2896251977 steps=   19 RMS= 0.16811E-02                               t=        1.6
+symmetry> no possibilities with complete orbits filled, number in core=      37
+symmetry> number of core atoms=       5 core symmetry C4v  after      225 quenches
+ Qu        226 E=    -170.5296032     steps=   91 RMS= 0.19595E-02 Markov E=    -170.2896273     t=        1.6
+ Qu        227 E=    -167.1758157     steps=  214 RMS= 0.12033E-02 Markov E=    -170.5296032     t=        1.6
+ Qu        228 E=    -167.9562029     steps=  140 RMS= 0.11048E-02 Markov E=    -170.5296032     t=        1.6
+ Qu        229 E=    -167.8231917     steps=  220 RMS= 0.14764E-02 Markov E=    -167.9562029     t=        1.6
+ Qu        230 E=    -167.3920990     steps=  182 RMS= 0.13417E-02 Markov E=    -167.8231917     t=        1.6
+symmetry> symmetry analysis for point group C2 number of generators=   1
+symmetry> using point group of order     2 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     3 was     1
+Qu        231 E=     -167.6523371821 steps=  104 RMS= 0.17964E-02                               t=        1.6
+Qu        232 E=     -168.7713087891 steps=   98 RMS= 0.14013E-02                               t=        1.6
+Qu        233 E=     -167.0355241384 steps=   60 RMS= 0.19333E-02                               t=        1.6
+symmetry> number of core atoms=       4 core symmetry C2   after      233 quenches
+ Qu        234 E=    -168.7663647     steps=   94 RMS= 0.14892E-02 Markov E=    -168.7713088     t=        1.6
+symmetry> symmetry analysis for point group C2v number of generators=   3
+symmetry> using point group of order     4 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     8 was     3
+symmetry> no possibilities with complete orbits filled, number in core=      36
+symmetry> number of core atoms=      36 core symmetry C2v  after      234 quenches
+ Qu        235 E=    -168.3607471     steps=   70 RMS= 0.17508E-02 Markov E=    -168.7663647     t=        1.6
+symmetry> initialising origin for     36 atoms
+symmetry> symmetry analysis for point group C2v number of generators=   3
+symmetry> using point group of order     4 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     8 was     3
+Qu        236 E=     -168.8384135446 steps=   30 RMS= 0.15209E-02                               t=        1.6
+Qu        237 E=     -168.8384135446 steps=   30 RMS= 0.15209E-02                               t=        1.6
+Qu        238 E=     -167.8751040731 steps=   32 RMS= 0.17011E-02                               t=        1.6
+symmetry> number of core atoms=      36 core symmetry C2v  after      238 quenches
+ Qu        239 E=    -168.4557521     steps=  105 RMS= 0.19407E-02 Markov E=    -168.8384135     t=        1.6
+symmetry> initialising origin for     36 atoms
+symmetry> symmetry analysis for point group C2v number of generators=   3
+symmetry> using point group of order     4 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     7 was     3
+symmetry> no possibilities with complete orbits filled, number in core=      36
+symmetry> number of core atoms=      36 core symmetry C2v  after      239 quenches
+ Qu        240 E=    -169.5020466     steps=   74 RMS= 0.15968E-02 Markov E=    -168.4557521     t=        1.6
+symmetry> initialising origin for     36 atoms
+symmetry> symmetry analysis for point group C2v number of generators=   3
+symmetry> using point group of order     4 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     9 was     3
+Qu        241 E=     -170.0953338979 steps=   30 RMS= 0.15470E-02                               t=        1.6
+symmetry> number of core atoms=      36 core symmetry C2v  after      241 quenches
+ Qu        242 E=    -169.2092571     steps=   72 RMS= 0.13580E-02 Markov E=    -170.0953339     t=        1.6
+symmetry> initialising origin for     36 atoms
+symmetry> symmetry analysis for point group C2v number of generators=   3
+symmetry> using point group of order     4 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     9 was     1
+Qu        243 E=     -170.0953351891 steps=   27 RMS= 0.18894E-02                               t=        1.6
+symmetry> no possibilities with complete orbits filled, number in core=      37
+symmetry> number of core atoms=      36 core symmetry C2v  after      243 quenches
+ Qu        244 E=    -169.4555359     steps=   69 RMS= 0.19884E-02 Markov E=    -170.0953352     t=        1.6
+symmetry> initialising origin for     36 atoms
+symmetry> symmetry analysis for point group C2v number of generators=   3
+symmetry> using point group of order     4 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     8 was     3
+Qu        245 E=     -170.0953358573 steps=   28 RMS= 0.11361E-02                               t=        1.6
+symmetry> number of core atoms=      36 core symmetry C2v  after      245 quenches
+newres> Moving current best minimum to position      5 in the AVOID list E=    -170.6508670    
+newres> Energy has not improved since step      127 - reseeding
+newres> Parallel run      1 has the highest energy      -170.6508670070
+newres> Full reseeding
+ Qu        246 E=    -166.5528544     steps=  182 RMS= 0.12415E-02 Markov E=    -165.6108851     t=        1.7
+ Qu        247 E=    -166.5920244     steps=  109 RMS= 0.16259E-02 Markov E=    -166.5528544     t=        1.7
+ Qu        248 E=    -167.9101706     steps=  120 RMS= 0.11486E-02 Markov E=    -166.5920244     t=        1.7
+ Qu        249 E=    -167.6973614     steps=  236 RMS= 0.15228E-02 Markov E=    -167.9101706     t=        1.7
+ Qu        250 E=    -167.2761683     steps=  143 RMS= 0.16886E-02 Markov E=    -167.6973614     t=        1.7
+ Qu        251 E=    -165.3467454     steps=  251 RMS= 0.17694E-02 Markov E=    -167.2761683     t=        1.7
+ Qu        252 E=    -165.8852714     steps=  159 RMS= 0.15972E-02 Markov E=    -167.2761683     t=        1.7
+symmetry> symmetry analysis for point group C2 number of generators=   1
+symmetry> using point group of order     2 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     5 was     1
+Qu        253 E=     -167.5200885912 steps=  106 RMS= 0.15973E-02                               t=        1.7
+symmetry> no possibilities with complete orbits filled, number in core=      13
+symmetry> number of core atoms=       5 core symmetry C2   after      253 quenches
+ Qu        254 E=    -168.4352486     steps=  233 RMS= 0.18052E-02 Markov E=    -167.5200886     t=        1.7
+ Qu        255 E=    -169.6904029     steps=  162 RMS= 0.19181E-02 Markov E=    -168.4352486     t=        1.7
+ Qu        256 E=    -168.0430858     steps=  144 RMS= 0.17569E-02 Markov E=    -169.6904029     t=        1.7
+Acceptance ratio for previous     50 steps=  0.9000  FAC=  1.0500
+Steps are now:  STEP=    0.4978  ASTEP=    0.6020 Temperature is now:    3.2000
+ Qu        257 E=    -168.9701109     steps=  207 RMS= 0.17684E-02 Markov E=    -168.0430858     t=        1.8
+ Qu        258 E=    -167.1896125     steps=  164 RMS= 0.18005E-02 Markov E=    -168.9701109     t=        1.8
+ Qu        259 E=    -167.3406678     steps=  174 RMS= 0.16142E-02 Markov E=    -168.9701109     t=        1.8
+ Qu        260 E=    -164.3326182     steps=  236 RMS= 0.17835E-02 Markov E=    -167.3406678     t=        1.8
+ Qu        261 E=    -168.6525111     steps=  341 RMS= 0.16528E-02 Markov E=    -167.3406678     t=        1.8
+ Qu        262 E=    -167.3864051     steps=  157 RMS= 0.15992E-02 Markov E=    -168.6525111     t=        1.8
+ Qu        263 E=    -166.2369075     steps=  144 RMS= 0.17374E-02 Markov E=    -168.6525111     t=        1.8
+ Qu        264 E=    -165.0683849     steps=  148 RMS= 0.17299E-02 Markov E=    -168.6525111     t=        1.8
+ Qu        265 E=    -168.2575175     steps=  175 RMS= 0.17436E-02 Markov E=    -168.6525111     t=        1.8
+ Qu        266 E=    -166.2983446     steps=  275 RMS= 0.17177E-02 Markov E=    -168.2575175     t=        1.8
+ Qu        267 E=    -165.1671222     steps=  186 RMS= 0.17840E-02 Markov E=    -166.2983446     t=        1.9
+ Qu        268 E=    -166.5392654     steps=  166 RMS= 0.16147E-02 Markov E=    -165.1671222     t=        1.9
+ Qu        269 E=    -167.9887169     steps=  193 RMS= 0.18011E-02 Markov E=    -166.5392654     t=        1.9
+newres> Moving current best minimum to position      6 in the AVOID list E=    -169.6904029    
+newres> Energy has not improved since step      149 - reseeding
+newres> Parallel run      1 has the highest energy      -169.6904029385
+newres> Full reseeding
+ Qu        270 E=    -168.0197761     steps=  299 RMS= 0.19877E-02 Markov E=    -167.2586037     t=        1.9
+ Qu        271 E=    -168.7768404     steps=  320 RMS= 0.19423E-02 Markov E=    -168.0197761     t=        1.9
+symmetry> symmetry analysis for point group C s number of generators=   1
+symmetry> using point group of order     2 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     5 was     1
+Qu        272 E=     -169.2052806594 steps=  331 RMS= 0.18189E-02                               t=        1.9
+Qu        273 E=     -169.2746062283 steps=  255 RMS= 0.19397E-02                               t=        1.9
+Qu        274 E=     -163.2415162454 steps=  139 RMS= 0.18498E-02                               t=        2.0
+Qu        275 E=     -161.1422711649 steps=  252 RMS= 0.18389E-02                               t=        2.0
+Qu        276 E=     -165.7587963349 steps=  227 RMS= 0.14078E-02                               t=        2.0
+Qu        277 E=     -169.3477185249 steps=  220 RMS= 0.16403E-02                               t=        2.0
+Qu        278 E=     -163.6652714124 steps=  288 RMS= 0.18666E-02                               t=        2.0
+Qu        279 E=     -168.1107264684 steps=  222 RMS= 0.17318E-02                               t=        2.0
+Qu        280 E=     -166.8888624060 steps=  265 RMS= 0.13263E-02                               t=        2.0
+Qu        281 E=     -167.6061290573 steps=  157 RMS= 0.19288E-02                               t=        2.0
+Qu        282 E=     -169.7524375748 steps=  245 RMS= 0.12519E-02                               t=        2.0
+Qu        283 E=     -169.9405969084 steps=  189 RMS= 0.19270E-02                               t=        2.0
+Qu        284 E=     -165.9386625880 steps=  206 RMS= 0.19250E-02                               t=        2.1
+Qu        285 E=     -165.4755001467 steps=  213 RMS= 0.16262E-02                               t=        2.1
+Qu        286 E=     -166.5087827626 steps=  235 RMS= 0.17950E-02                               t=        2.1
+Qu        287 E=     -165.7567183379 steps=  229 RMS= 0.18871E-02                               t=        2.1
+Qu        288 E=     -166.3823809650 steps=  323 RMS= 0.18791E-02                               t=        2.1
+Qu        289 E=     -169.2432133718 steps=  235 RMS= 0.19203E-02                               t=        2.1
+symmetry> number of core atoms=       5 core symmetry C s  after      289 quenches
+ Qu        290 E=    -167.0931715     steps=  183 RMS= 0.19550E-02 Markov E=    -169.9405969     t=        2.1
+ Qu        291 E=    -165.7458632     steps=  118 RMS= 0.18740E-02 Markov E=    -167.0931715     t=        2.1
+ Qu        292 E=    -165.1559976     steps=  127 RMS= 0.14486E-02 Markov E=    -165.7458632     t=        2.1
+ Qu        293 E=    -166.5090829     steps=  243 RMS= 0.19628E-02 Markov E=    -165.1559976     t=        2.2
+ Qu        294 E=    -166.6611605     steps=  256 RMS= 0.19501E-02 Markov E=    -166.5090829     t=        2.2
+ Qu        295 E=    -168.0867499     steps=  223 RMS= 0.17649E-02 Markov E=    -166.6611605     t=        2.2
+ Qu        296 E=    -166.5229793     steps=  218 RMS= 0.19058E-02 Markov E=    -168.0867499     t=        2.2
+ Qu        297 E=    -167.0646626     steps=  326 RMS= 0.17616E-02 Markov E=    -168.0867499     t=        2.2
+ Qu        298 E=    -166.3285562     steps=  148 RMS= 0.17053E-02 Markov E=    -167.0646626     t=        2.2
+ Qu        299 E=    -169.1533335     steps=  277 RMS= 0.18840E-02 Markov E=    -166.3285562     t=        2.2
+ Qu        300 E=    -168.0704536     steps=  250 RMS= 0.17868E-02 Markov E=    -169.1533335     t=        2.2
+ Qu        301 E=    -162.8217703     steps=  166 RMS= 0.14633E-02 Markov E=    -168.0704536     t=        2.2
+ Qu        302 E=    -167.2663525     steps=  207 RMS= 0.19440E-02 Markov E=    -168.0704536     t=        2.3
+symmetry> symmetry analysis for point group C s number of generators=   1
+symmetry> using point group of order     2 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     5 was     1
+Qu        303 E=     -168.1723121926 steps=  168 RMS= 0.18547E-02                               t=        2.3
+Qu        304 E=     -170.2845385374 steps=  162 RMS= 0.16537E-02                               t=        2.3
+Qu        305 E=     -170.2845404046 steps=  173 RMS= 0.15052E-02                               t=        2.3
+Qu        306 E=     -164.8799399744 steps=  148 RMS= 0.16044E-02                               t=        2.3
+Qu        307 E=     -169.0408746952 steps=  211 RMS= 0.19967E-02                               t=        2.3
+Qu        308 E=     -164.2800902009 steps=  145 RMS= 0.15401E-02                               t=        2.3
+Qu        309 E=     -165.8188778511 steps=  148 RMS= 0.19277E-02                               t=        2.3
+Qu        310 E=     -168.1218355576 steps=  132 RMS= 0.11690E-02                               t=        2.3
+Qu        311 E=     -168.1691099298 steps=  136 RMS= 0.16134E-02                               t=        2.3
+Qu        312 E=     -170.1247975622 steps=  299 RMS= 0.19214E-02                               t=        2.3
+Qu        313 E=     -169.0235742306 steps=  261 RMS= 0.18074E-02                               t=        2.3
+Qu        314 E=     -167.5035394920 steps=  202 RMS= 0.18274E-02                               t=        2.4
+Qu        315 E=     -169.4666125971 steps=  238 RMS= 0.15599E-02                               t=        2.4
+Qu        316 E=     -169.2447798530 steps=  284 RMS= 0.15283E-02                               t=        2.4
+Qu        317 E=     -164.4150517504 steps=  128 RMS= 0.19716E-02                               t=        2.4
+Qu        318 E=     -166.0778992394 steps=  221 RMS= 0.11988E-02                               t=        2.4
+Qu        319 E=     -168.0448071492 steps=  193 RMS= 0.13942E-02                               t=        2.4
+Qu        320 E=     -167.4870033914 steps=  179 RMS= 0.17042E-02                               t=        2.4
+symmetry> number of core atoms=       9 core symmetry C s  after      320 quenches
+ Qu        321 E=    -165.7388758     steps=  184 RMS= 0.16126E-02 Markov E=    -170.2845385     t=        2.4
+symmetry> symmetry analysis for point group T number of generators=   4
+symmetry> using point group of order    12 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     4 was    11
+Qu        322 E=     -169.4348617340 steps=   42 RMS= 0.17245E-02                               t=        2.4
+Qu        323 E=     -169.4348631311 steps=   50 RMS= 0.17445E-02                               t=        2.4
+Qu        324 E=     -154.2239827142 steps=   85 RMS= 0.16916E-02                               t=        2.4
+Qu        325 E=     -169.4348602216 steps=   90 RMS= 0.18040E-02                               t=        2.4
+Qu        326 E=     -154.2239799574 steps=   53 RMS= 0.18224E-02                               t=        2.4
+Qu        327 E=     -169.4348594390 steps=   86 RMS= 0.19315E-02                               t=        2.4
+symmetry> number of core atoms=       4 core symmetry T    after      327 quenches
+ Qu        328 E=    -166.1431395     steps=  266 RMS= 0.19647E-02 Markov E=    -169.4348617     t=        2.5
+symmetry> symmetry analysis for point group T d number of generators=   8
+symmetry> using point group of order    24 constructed from generators, time taken=           0.00
+symmetry> symmetry of core is consistent with the overall symmetry
+ Qu        329 E=    -169.4348650     steps=   55 RMS= 0.15559E-02 Markov E=    -169.4348617     t=        2.5
+ Qu        330 E=    -169.4348648     steps=   53 RMS= 0.11658E-02 Markov E=    -169.4348650     t=        2.5
+ Qu        331 E=    -169.4348630     steps=   58 RMS= 0.17173E-02 Markov E=    -169.4348648     t=        2.5
+ Qu        332 E=    -169.4348635     steps=   59 RMS= 0.13900E-02 Markov E=    -169.4348630     t=        2.5
+ Qu        333 E=    -169.4348628     steps=   57 RMS= 0.16723E-02 Markov E=    -169.4348635     t=        2.5
+ Qu        334 E=    -169.4348605     steps=   46 RMS= 0.19534E-02 Markov E=    -169.4348628     t=        2.5
+ Qu        335 E=    -169.4348620     steps=   50 RMS= 0.17796E-02 Markov E=    -169.4348605     t=        2.5
+ Qu        336 E=    -169.4348615     steps=   50 RMS= 0.19167E-02 Markov E=    -169.4348620     t=        2.5
+ Qu        337 E=    -169.4348598     steps=   47 RMS= 0.17721E-02 Markov E=    -169.4348615     t=        2.5
+ Qu        338 E=    -169.4348602     steps=   55 RMS= 0.15135E-02 Markov E=    -169.4348598     t=        2.5
+ Qu        339 E=    -169.4348628     steps=   53 RMS= 0.19562E-02 Markov E=    -169.4348602     t=        2.5
+ Qu        340 E=    -169.4348646     steps=   51 RMS= 0.12230E-02 Markov E=    -169.4348628     t=        2.5
+ Qu        341 E=    -169.4348640     steps=   47 RMS= 0.14706E-02 Markov E=    -169.4348646     t=        2.5
+newres> Moving current best minimum to position      7 in the AVOID list E=    -170.2845385    
+newres> Energy has not improved since step      179 - reseeding
+newres> Parallel run      1 has the highest energy      -170.2845385374
+newres> Full reseeding
+symmetry> symmetry analysis for point group C s number of generators=   1
+symmetry> using point group of order     2 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     4 was     1
+Qu        342 E=     -168.2240991237 steps=  182 RMS= 0.18278E-02                               t=        2.5
+Qu        343 E=     -168.7013574471 steps=  107 RMS= 0.11887E-02                               t=        2.5
+Qu        344 E=     -170.4731863355 steps=  196 RMS= 0.15455E-02                               t=        2.5
+Qu        345 E=     -169.0983253960 steps=  113 RMS= 0.18773E-02                               t=        2.5
+Qu        346 E=     -166.1664102772 steps=  150 RMS= 0.19518E-02                               t=        2.5
+Qu        347 E=     -169.0904864180 steps=  156 RMS= 0.13154E-02                               t=        2.5
+Qu        348 E=     -169.1668081926 steps=  149 RMS= 0.16818E-02                               t=        2.5
+Qu        349 E=     -167.2504135452 steps=  119 RMS= 0.19422E-02                               t=        2.6
+Qu        350 E=     -168.5697258936 steps=  145 RMS= 0.17417E-02                               t=        2.6
+Qu        351 E=     -168.0426438917 steps=  133 RMS= 0.15165E-02                               t=        2.6
+Qu        352 E=     -168.0117942401 steps=  149 RMS= 0.19015E-02                               t=        2.6
+Qu        353 E=     -168.5432353114 steps=  161 RMS= 0.15874E-02                               t=        2.6
+Qu        354 E=     -170.3086783080 steps=  108 RMS= 0.19206E-02                               t=        2.6
+Qu        355 E=     -169.1057693786 steps=  140 RMS= 0.18674E-02                               t=        2.6
+Qu        356 E=     -167.9292435646 steps=  270 RMS= 0.16583E-02                               t=        2.6
+Qu        357 E=     -167.8903566210 steps=  146 RMS= 0.18465E-02                               t=        2.6
+Qu        358 E=     -166.7149388585 steps=  180 RMS= 0.19980E-02                               t=        2.6
+Qu        359 E=     -167.8833027389 steps=  157 RMS= 0.13578E-02                               t=        2.6
+symmetry> number of core atoms=       5 core symmetry C s  after      359 quenches
+ Qu        360 E=    -170.1111172     steps=  146 RMS= 0.18663E-02 Markov E=    -170.4731863     t=        2.6
+symmetry> symmetry analysis for point group T h number of generators=  14
+symmetry> using point group of order    48 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     7 was     1
+Qu        361 E=     -170.1111182963 steps=   20 RMS= 0.14558E-02                               t=        2.6
+symmetry> no possibilities with complete orbits filled, number in core=      37
+symmetry> number of core atoms=       6 core symmetry T h  after      361 quenches
+ Qu        362 E=    -170.0776519     steps=  117 RMS= 0.13497E-02 Markov E=    -170.1111172     t=        2.6
+symmetry> symmetry analysis for point group T h number of generators=  14
+symmetry> using point group of order    48 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     5 was     5
+symmetry> no possibilities with complete orbits filled, number in core=      35
+symmetry> number of core atoms=       6 core symmetry T h  after      362 quenches
+ Qu        363 E=    -167.7286983     steps=  251 RMS= 0.13938E-02 Markov E=    -170.0776519     t=        2.7
+ Qu        364 E=    -168.2767852     steps=  127 RMS= 0.19917E-02 Markov E=    -167.7286983     t=        2.7
+ Qu        365 E=    -166.8862422     steps=  155 RMS= 0.19394E-02 Markov E=    -168.2767852     t=        2.7
+ Qu        366 E=    -164.8684681     steps=  209 RMS= 0.16576E-02 Markov E=    -166.8862422     t=        2.7
+ Qu        367 E=    -166.9408345     steps=  191 RMS= 0.16113E-02 Markov E=    -164.8684681     t=        2.7
+Acceptance ratio for previous     50 steps=  1.0000  FAC=  1.0500
+Steps are now:  STEP=    0.5227  ASTEP=    0.6321 Temperature is now:    3.2000
+ Qu        368 E=    -168.9189514     steps=  195 RMS= 0.15552E-02 Markov E=    -166.9408345     t=        2.7
+symmetry> symmetry analysis for point group C2v number of generators=   3
+symmetry> using point group of order     4 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     9 was     3
+Qu        369 E=     -171.3036217338 steps=   27 RMS= 0.17027E-02                               t=        2.7
+Qu        370 E=     -172.2375602001 steps=   25 RMS= 0.19200E-02                               t=        2.7
+Qu        371 E=     -167.7117282504 steps=   28 RMS= 0.10180E-02                               t=        2.7
+Qu        372 E=     -164.7513449524 steps=   33 RMS= 0.19330E-02                               t=        2.7
+symmetry> number of core atoms=      28 core symmetry C2v  after      372 quenches
+ Qu        373 E=    -169.7145994     steps=   70 RMS= 0.14563E-02 Markov E=    -172.2375602     t=        2.7
+symmetry> initialising origin for     28 atoms
+symmetry> symmetry analysis for point group C s number of generators=   1
+symmetry> using point group of order     2 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit    14 was     1
+Qu        374 E=     -169.7145989462 steps=   21 RMS= 0.15804E-02                               t=        2.7
+symmetry> no possibilities with complete orbits filled, number in core=      37
+symmetry> number of core atoms=      37 core symmetry C s  after      374 quenches
+ Qu        375 E=    -170.2928587     steps=   63 RMS= 0.17410E-02 Markov E=    -169.7145994     t=        2.7
+symmetry> initialising origin for     37 atoms
+symmetry> symmetry analysis for point group C s number of generators=   1
+symmetry> using point group of order     2 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit    10 was     1
+Qu        376 E=     -170.2928628607 steps=   33 RMS= 0.18211E-02                               t=        2.7
+symmetry> no possibilities with complete orbits filled, number in core=      37
+symmetry> number of core atoms=      37 core symmetry C s  after      376 quenches
+ Qu        377 E=    -169.7722635     steps=   57 RMS= 0.17993E-02 Markov E=    -170.2928587     t=        2.7
+symmetry> initialising origin for     37 atoms
+symmetry> symmetry analysis for point group C s number of generators=   1
+symmetry> using point group of order     2 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit    14 was     1
+Qu        378 E=     -169.7722615374 steps=   18 RMS= 0.18212E-02                               t=        2.7
+symmetry> no possibilities with complete orbits filled, number in core=      37
+symmetry> number of core atoms=      37 core symmetry C s  after      378 quenches
+ Qu        379 E=    -170.2928649     steps=   78 RMS= 0.14614E-02 Markov E=    -169.7722635     t=        2.7
+symmetry> initialising origin for     37 atoms
+symmetry> symmetry analysis for point group C s number of generators=   1
+symmetry> using point group of order     2 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit    10 was     1
+Qu        380 E=     -170.2928657623 steps=   33 RMS= 0.18929E-02                               t=        2.7
+symmetry> no possibilities with complete orbits filled, number in core=      37
+symmetry> number of core atoms=      37 core symmetry C s  after      380 quenches
+ Qu        381 E=    -171.2290816     steps=   51 RMS= 0.14152E-02 Markov E=    -170.2928649     t=        2.7
+symmetry> initialising origin for     37 atoms
+symmetry> symmetry analysis for point group C2v number of generators=   3
+symmetry> using point group of order     4 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit    11 was     1
+Qu        382 E=     -172.2375578340 steps=   21 RMS= 0.19568E-02                               t=        2.7
+symmetry> no possibilities with complete orbits filled, number in core=      37
+symmetry> number of core atoms=      34 core symmetry C2v  after      382 quenches
+ Qu        383 E=    -169.7145992     steps=   46 RMS= 0.13851E-02 Markov E=    -172.2375578     t=        2.7
+symmetry> initialising origin for     34 atoms
+symmetry> symmetry analysis for point group C2v number of generators=   3
+symmetry> using point group of order     4 constructed from generators, time taken=           0.00
+symmetry> symmetry of core is consistent with the overall symmetry
+ Qu        384 E=    -172.2375587     steps=   49 RMS= 0.19837E-02 Markov E=    -172.2375578     t=        2.7
+ Qu        385 E=    -172.2375616     steps=   44 RMS= 0.15295E-02 Markov E=    -172.2375587     t=        2.7
+ Qu        386 E=    -172.2375609     steps=   66 RMS= 0.16567E-02 Markov E=    -172.2375616     t=        2.7
+ Qu        387 E=    -172.2375600     steps=   37 RMS= 0.18624E-02 Markov E=    -172.2375609     t=        2.7
+ Qu        388 E=    -172.2375598     steps=   39 RMS= 0.19762E-02 Markov E=    -172.2375600     t=        2.7
+ Qu        389 E=    -167.1928652     steps=  135 RMS= 0.16222E-02 Markov E=    -172.2375598     t=        2.8
+ Qu        390 E=    -172.2375594     steps=   51 RMS= 0.17307E-02 Markov E=    -172.2375598     t=        2.8
+ Qu        391 E=    -169.7145963     steps=  101 RMS= 0.18342E-02 Markov E=    -172.2375594     t=        2.8
+ Qu        392 E=    -172.2375615     steps=   35 RMS= 0.11958E-02 Markov E=    -172.2375594     t=        2.8
+newres> Moving current best minimum to position      8 in the AVOID list E=    -172.2375616    
+newres> Energy has not improved since step      202 - reseeding
+newres> Parallel run      1 has the highest energy      -172.2375615977
+newres> Full reseeding
+ Qu        393 E=    -163.7199692     steps=  145 RMS= 0.13239E-02 Markov E=    -166.4688009     t=        2.8
+symmetry> symmetry analysis for point group C s number of generators=   1
+symmetry> using point group of order     2 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     4 was     1
+Qu        394 E=     -165.5523707172 steps=  144 RMS= 0.17456E-02                               t=        2.8
+Qu        395 E=     -167.6686655174 steps=  165 RMS= 0.18250E-02                               t=        2.8
+Qu        396 E=     -167.5474000477 steps=  145 RMS= 0.18590E-02                               t=        2.8
+Qu        397 E=     -166.3037227457 steps=  204 RMS= 0.18335E-02                               t=        2.8
+Qu        398 E=     -166.0062624743 steps=  133 RMS= 0.18397E-02                               t=        2.8
+Qu        399 E=     -167.3156715634 steps=  266 RMS= 0.16601E-02                               t=        2.8
+Qu        400 E=     -166.9853451493 steps=  141 RMS= 0.15766E-02                               t=        2.8
+Qu        401 E=     -166.0888795453 steps=  138 RMS= 0.19603E-02                               t=        2.8
+Qu        402 E=     -166.9753286012 steps=  137 RMS= 0.19140E-02                               t=        2.9
+Qu        403 E=     -166.9853425225 steps=  124 RMS= 0.19574E-02                               t=        2.9
+Qu        404 E=     -164.4890067652 steps=  183 RMS= 0.15659E-02                               t=        2.9
+Qu        405 E=     -167.6686673662 steps=  141 RMS= 0.15202E-02                               t=        2.9
+Qu        406 E=     -166.0628210003 steps=  133 RMS= 0.19374E-02                               t=        2.9
+Qu        407 E=     -166.7424584094 steps=  182 RMS= 0.16030E-02                               t=        2.9
+Qu        408 E=     -166.5309458762 steps=  184 RMS= 0.15998E-02                               t=        2.9
+Qu        409 E=     -166.4154664598 steps=  218 RMS= 0.18271E-02                               t=        2.9
+Qu        410 E=     -165.6421160953 steps=  194 RMS= 0.19413E-02                               t=        2.9
+Qu        411 E=     -167.6686678608 steps=  134 RMS= 0.16464E-02                               t=        2.9
+symmetry> number of core atoms=       5 core symmetry C s  after      411 quenches
+ Qu        412 E=    -168.1839572     steps=  168 RMS= 0.18631E-02 Markov E=    -167.6686655     t=        2.9
+ Qu        413 E=    -165.7946409     steps=  165 RMS= 0.11017E-02 Markov E=    -168.1839572     t=        2.9
+ Qu        414 E=    -166.8668633     steps=  199 RMS= 0.16497E-02 Markov E=    -165.7946409     t=        2.9
+ Qu        415 E=    -164.7531093     steps=  191 RMS= 0.17553E-02 Markov E=    -166.8668633     t=        3.0
+ Qu        416 E=    -164.1413903     steps=  123 RMS= 0.19778E-02 Markov E=    -166.8668633     t=        3.0
+ Qu        417 E=    -161.5546764     steps=  230 RMS= 0.18755E-02 Markov E=    -166.8668633     t=        3.0
+ Qu        418 E=    -165.5968804     steps=  372 RMS= 0.14088E-02 Markov E=    -161.5546764     t=        3.0
+ Qu        419 E=    -167.2015215     steps=  384 RMS= 0.14700E-02 Markov E=    -165.5968804     t=        3.0
+ Qu        420 E=    -165.8038163     steps=  195 RMS= 0.18105E-02 Markov E=    -167.2015215     t=        3.0
+ Qu        421 E=    -166.6188391     steps=  132 RMS= 0.19321E-02 Markov E=    -165.8038163     t=        3.0
+ Qu        422 E=    -164.7178793     steps=  218 RMS= 0.17138E-02 Markov E=    -166.6188391     t=        3.0
+ Qu        423 E=    -171.2035002     steps=  204 RMS= 0.88789E-03 Markov E=    -166.6188391     t=        3.0
+symmetry> symmetry analysis for point group C s number of generators=   1
+symmetry> using point group of order     2 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit    11 was     1
+Qu        424 E=     -171.2034994665 steps=   20 RMS= 0.12919E-02                               t=        3.0
+symmetry> no possibilities with complete orbits filled, number in core=      37
+symmetry> number of core atoms=      37 core symmetry C s  after      424 quenches
+ Qu        425 E=    -169.7850441     steps=   73 RMS= 0.10377E-02 Markov E=    -171.2035002     t=        3.0
+ Qu        426 E=    -171.2034993     steps=   43 RMS= 0.16755E-02 Markov E=    -171.2035002     t=        3.1
+ Qu        427 E=    -169.8984624     steps=   76 RMS= 0.15439E-02 Markov E=    -171.2034993     t=        3.1
+symmetry> initialising origin for     37 atoms
+symmetry> symmetry analysis for point group C s number of generators=   1
+symmetry> using point group of order     2 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit    11 was     1
+Qu        428 E=     -169.8984621216 steps=   20 RMS= 0.13018E-02                               t=        3.1
+symmetry> no possibilities with complete orbits filled, number in core=      37
+symmetry> number of core atoms=      37 core symmetry C s  after      428 quenches
+ Qu        429 E=    -172.2375614     steps=   66 RMS= 0.15106E-02 Markov E=    -169.8984624     t=        3.1
+newres> Minimum energy     -172.2375614     is too close to saved structure      8 with energy     -172.2375616     dist=     0.000
+newres> Moving previous best minimum to position      9 in the AVOID list E=    -171.2035002    
+newres> Reseeding due to taboo condition
+newres> Parallel run      1 has the highest energy      -172.2375613534
+newres> Full reseeding
+ Qu        430 E=    -165.3198358     steps=  222 RMS= 0.16411E-02 Markov E=    -166.7529571     t=        3.1
+ Qu        431 E=    -168.4433098     steps=  281 RMS= 0.88055E-03 Markov E=    -166.7529571     t=        3.1
+symmetry> symmetry analysis for point group C2h number of generators=   3
+symmetry> using point group of order     2 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     3 was     1
+Qu        432 E=     -169.8756468363 steps=   97 RMS= 0.19292E-02                               t=        3.1
+Qu        433 E=     -163.9006837602 steps=  224 RMS= 0.19636E-02                               t=        3.1
+Qu        434 E=     -164.2448508618 steps=  204 RMS= 0.19673E-02                               t=        3.1
+Qu        435 E=     -166.2616357050 steps=  230 RMS= 0.19289E-02                               t=        3.1
+Qu        436 E=     -166.6854062982 steps=  490 RMS= 0.17045E-02                               t=        3.2
+Qu        437 E=     -162.4050212299 steps=  239 RMS= 0.15101E-02                               t=        3.2
+Qu        438 E=     -164.7317521498 steps=  328 RMS= 0.16020E-02                               t=        3.2
+Qu        439 E=     -160.9396383691 steps=  149 RMS= 0.19905E-02                               t=        3.2
+Qu        440 E=     -163.1170207984 steps=  168 RMS= 0.19026E-02                               t=        3.2
+Qu        441 E=     -165.4114858568 steps=  299 RMS= 0.18303E-02                               t=        3.2
+Qu        442 E=     -162.7460999084 steps=  118 RMS= 0.19699E-02                               t=        3.2
+Qu        443 E=     -162.7046567683 steps=  196 RMS= 0.19550E-02                               t=        3.2
+Qu        444 E=     -161.1073164918 steps=  274 RMS= 0.15662E-02                               t=        3.2
+Qu        445 E=     -162.3484490261 steps=  157 RMS= 0.19848E-02                               t=        3.3
+Qu        446 E=     -162.9743468026 steps=  191 RMS= 0.16526E-02                               t=        3.3
+Qu        447 E=     -160.0214425633 steps=  200 RMS= 0.19606E-02                               t=        3.3
+Qu        448 E=     -165.1735485769 steps=  187 RMS= 0.15280E-02                               t=        3.3
+Qu        449 E=     -163.5396863460 steps=  165 RMS= 0.17227E-02                               t=        3.3
+symmetry> number of core atoms=       4 core symmetry C2h  after      449 quenches
+ Qu        450 E=    -167.3498914     steps=  218 RMS= 0.14620E-02 Markov E=    -169.8756468     t=        3.3
+ Qu        451 E=    -165.4846923     steps=  186 RMS= 0.16518E-02 Markov E=    -167.3498914     t=        3.3
+ Qu        452 E=    -165.0896101     steps=  147 RMS= 0.17126E-02 Markov E=    -167.3498914     t=        3.3
+ Qu        453 E=    -162.5021078     steps=  269 RMS= 0.17823E-02 Markov E=    -165.0896101     t=        3.3
+ Qu        454 E=    -165.2919349     steps=  294 RMS= 0.15610E-02 Markov E=    -165.0896101     t=        3.3
+symmetry> symmetry analysis for point group C2v number of generators=   3
+symmetry> using point group of order     4 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     3 was     3
+Qu        455 E=     -162.5131300474 steps=  126 RMS= 0.10403E-02                               t=        3.4
+Qu        456 E=     -166.8848434364 steps=  272 RMS= 0.19050E-02                               t=        3.4
+Qu        457 E=     -165.9198990543 steps=  147 RMS= 0.17973E-02                               t=        3.4
+Qu        458 E=     -164.0853082051 steps=  199 RMS= 0.19967E-02                               t=        3.4
+Qu        459 E=     -165.1540187983 steps=  130 RMS= 0.18581E-02                               t=        3.4
+Qu        460 E=     -166.6488390572 steps=  137 RMS= 0.19641E-02                               t=        3.4
+Qu        461 E=     -168.8176113939 steps=  245 RMS= 0.16458E-02                               t=        3.4
+Qu        462 E=     -167.2886495601 steps=  251 RMS= 0.18310E-02                               t=        3.4
+Qu        463 E=     -165.8514659909 steps=  150 RMS= 0.14160E-02                               t=        3.4
+Qu        464 E=     -166.5321570927 steps=  165 RMS= 0.96494E-03                               t=        3.4
+Qu        465 E=     -167.9230638470 steps=  241 RMS= 0.16004E-02                               t=        3.4
+Qu        466 E=     -167.9200455954 steps=  176 RMS= 0.16063E-02                               t=        3.5
+Qu        467 E=     -165.4046536652 steps=  259 RMS= 0.18312E-02                               t=        3.5
+Qu        468 E=     -169.6255466131 steps=  414 RMS= 0.19074E-02                               t=        3.5
+Qu        469 E=     -161.7793922108 steps=  116 RMS= 0.19291E-02                               t=        3.5
+Qu        470 E=     -165.1043975166 steps=  114 RMS= 0.15180E-02                               t=        3.5
+Qu        471 E=     -169.5140802515 steps=  505 RMS= 0.18595E-02                               t=        3.5
+Qu        472 E=     -165.8439911504 steps=  152 RMS= 0.16957E-02                               t=        3.5
+symmetry> number of core atoms=       4 core symmetry C2v  after      472 quenches
+ Qu        473 E=    -167.3082086     steps=  156 RMS= 0.15770E-02 Markov E=    -169.6255466     t=        3.5
+ Qu        474 E=    -163.5916834     steps=  217 RMS= 0.19151E-02 Markov E=    -167.3082086     t=        3.5
+ Qu        475 E=    -165.3297974     steps=  149 RMS= 0.18887E-02 Markov E=    -167.3082086     t=        3.5
+ Qu        476 E=    -164.9066777     steps=  188 RMS= 0.19344E-02 Markov E=    -167.3082086     t=        3.6
+ Qu        477 E=    -168.8482110     steps=  213 RMS= 0.15498E-02 Markov E=    -167.3082086     t=        3.6
+ Qu        478 E=    -165.8434715     steps=  208 RMS= 0.15470E-02 Markov E=    -168.8482110     t=        3.6
+ Qu        479 E=    -166.7464121     steps=  144 RMS= 0.17169E-02 Markov E=    -165.8434715     t=        3.6
+ Qu        480 E=    -164.9747601     steps=  173 RMS= 0.16640E-02 Markov E=    -166.7464121     t=        3.6
+ Qu        481 E=    -165.4455505     steps=  223 RMS= 0.14175E-02 Markov E=    -166.7464121     t=        3.6
+symmetry> symmetry analysis for point group C s number of generators=   1
+symmetry> using point group of order     2 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     6 was     1
+Qu        482 E=     -169.1583045623 steps=  152 RMS= 0.17848E-02                               t=        3.6
+Qu        483 E=     -164.6434794220 steps=  136 RMS= 0.17567E-02                               t=        3.6
+Qu        484 E=     -166.5245870317 steps=  115 RMS= 0.19457E-02                               t=        3.6
+Qu        485 E=     -166.6010944789 steps=  210 RMS= 0.16222E-02                               t=        3.6
+Qu        486 E=     -164.5369021271 steps=  119 RMS= 0.16792E-02                               t=        3.6
+Qu        487 E=     -165.3616958580 steps=  136 RMS= 0.15591E-02                               t=        3.6
+Qu        488 E=     -167.9350361345 steps=  195 RMS= 0.15781E-02                               t=        3.7
+Qu        489 E=     -167.2142255430 steps=  201 RMS= 0.19722E-02                               t=        3.7
+Qu        490 E=     -167.8681644909 steps=  310 RMS= 0.15085E-02                               t=        3.7
+Qu        491 E=     -167.8681640257 steps=  259 RMS= 0.15906E-02                               t=        3.7
+Qu        492 E=     -163.7786082559 steps=  141 RMS= 0.14006E-02                               t=        3.7
+Qu        493 E=     -165.1630989446 steps=  154 RMS= 0.17737E-02                               t=        3.7
+Qu        494 E=     -168.3270836070 steps=  188 RMS= 0.19707E-02                               t=        3.7
+Qu        495 E=     -165.9755376369 steps=   95 RMS= 0.16910E-02                               t=        3.7
+Qu        496 E=     -166.9998289476 steps=  129 RMS= 0.15983E-02                               t=        3.7
+Qu        497 E=     -165.9237526722 steps=  135 RMS= 0.15875E-02                               t=        3.7
+Qu        498 E=     -164.4025332496 steps=  136 RMS= 0.13277E-02                               t=        3.7
+Qu        499 E=     -164.6536318665 steps=  202 RMS= 0.17642E-02                               t=        3.7
+symmetry> number of core atoms=       6 core symmetry C s  after      499 quenches
+newres> Moving current best minimum to position     10 in the AVOID list E=    -169.8756468    
+newres> Energy has not improved since step      236 - reseeding
+newres> Parallel run      1 has the highest energy      -169.8756468363
+newres> Full reseeding
+ Qu        500 E=    -159.1679670     steps=  154 RMS= 0.17499E-02 Markov E=    -165.2469226     t=        3.8
+Acceptance ratio for previous     50 steps=  0.0000  FAC=  1.0500
+Steps are now:  STEP=    0.4978  ASTEP=    0.6020 Temperature is now:    3.2000
+ Qu        501 E=    -167.5045852     steps=  231 RMS= 0.18334E-02 Markov E=    -165.2469226     t=        3.8
+ Qu        502 E=    -167.9745240     steps=  339 RMS= 0.14634E-02 Markov E=    -167.5045852     t=        3.8
+ Qu        503 E=    -161.5540271     steps=  144 RMS= 0.15650E-02 Markov E=    -167.9745240     t=        3.8
+ Qu        504 E=    -168.7907882     steps=  218 RMS= 0.18762E-02 Markov E=    -167.9745240     t=        3.8
+ Qu        505 E=    -165.9290295     steps=  282 RMS= 0.16647E-02 Markov E=    -168.7907882     t=        3.8
+ Qu        506 E=    -168.5901427     steps=  176 RMS= 0.17020E-02 Markov E=    -168.7907882     t=        3.8
+ Qu        507 E=    -170.7130931     steps=  249 RMS= 0.17084E-02 Markov E=    -168.5901427     t=        3.9
+ Qu        508 E=    -165.4929312     steps=  188 RMS= 0.19835E-02 Markov E=    -170.7130931     t=        3.9
+ Qu        509 E=    -167.7495748     steps=  177 RMS= 0.17516E-02 Markov E=    -170.7130931     t=        3.9
+ Qu        510 E=    -167.9969337     steps=  181 RMS= 0.17092E-02 Markov E=    -170.7130931     t=        3.9
+symmetry> symmetry analysis for point group C2v number of generators=   3
+symmetry> using point group of order     4 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     7 was     1
+Qu        511 E=     -169.0923666571 steps=  101 RMS= 0.17018E-02                               t=        3.9
+Qu        512 E=     -167.9191032325 steps=   25 RMS= 0.16561E-02                               t=        3.9
+Qu        513 E=     -168.7311647674 steps=   27 RMS= 0.12716E-02                               t=        3.9
+Qu        514 E=     -168.3117952256 steps=   26 RMS= 0.15685E-02                               t=        3.9
+Qu        515 E=     -166.7150465422 steps=   27 RMS= 0.16766E-02                               t=        3.9
+Qu        516 E=     -166.7654563489 steps=   27 RMS= 0.12449E-02                               t=        3.9
+Qu        517 E=     -169.7110812662 steps=   27 RMS= 0.13725E-02                               t=        3.9
+Qu        518 E=     -170.3512410890 steps=   28 RMS= 0.95646E-03                               t=        3.9
+Qu        519 E=     -168.1483711585 steps=   29 RMS= 0.14383E-02                               t=        3.9
+Qu        520 E=     -168.4918226777 steps=   27 RMS= 0.18135E-02                               t=        3.9
+Qu        521 E=     -166.8433178595 steps=   36 RMS= 0.93269E-03                               t=        3.9
+Qu        522 E=     -169.9444357168 steps=   27 RMS= 0.15753E-02                               t=        3.9
+Qu        523 E=     -170.2477716403 steps=   28 RMS= 0.15429E-02                               t=        3.9
+Qu        524 E=     -168.0628493654 steps=   33 RMS= 0.11227E-02                               t=        3.9
+Qu        525 E=     -168.3168221290 steps=   28 RMS= 0.14594E-02                               t=        3.9
+Qu        526 E=     -166.7407042366 steps=   35 RMS= 0.14626E-02                               t=        3.9
+Qu        527 E=     -167.8101725601 steps=   24 RMS= 0.16412E-02                               t=        3.9
+Qu        528 E=     -168.4761172089 steps=   26 RMS= 0.15847E-02                               t=        3.9
+symmetry> number of core atoms=       4 core symmetry C2v  after      528 quenches
+ Qu        529 E=    -166.7614438     steps=  137 RMS= 0.16775E-02 Markov E=    -170.3512411     t=        3.9
+symmetry> symmetry analysis for point group C2v number of generators=   3
+symmetry> using point group of order     4 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     5 was     3
+Qu        530 E=     -163.0259204167 steps=  215 RMS= 0.18518E-02                               t=        3.9
+Qu        531 E=     -165.4041485725 steps=  175 RMS= 0.18519E-02                               t=        3.9
+Qu        532 E=     -169.0104809847 steps=  279 RMS= 0.18077E-02                               t=        3.9
+Qu        533 E=     -169.0894161889 steps=  150 RMS= 0.19954E-02                               t=        4.0
+Qu        534 E=     -165.7553376668 steps=  240 RMS= 0.17221E-02                               t=        4.0
+Qu        535 E=     -166.5186802088 steps=  222 RMS= 0.19171E-02                               t=        4.0
+Qu        536 E=     -167.0545873666 steps=  274 RMS= 0.15573E-02                               t=        4.0
+Qu        537 E=     -169.7132407286 steps=  334 RMS= 0.15497E-02                               t=        4.0
+Qu        538 E=     -167.5158062300 steps=  228 RMS= 0.17435E-02                               t=        4.0
+Qu        539 E=     -168.2686538385 steps=  193 RMS= 0.19587E-02                               t=        4.0
+Qu        540 E=     -164.6159012864 steps=  263 RMS= 0.17387E-02                               t=        4.0
+Qu        541 E=     -164.2607799440 steps=  230 RMS= 0.19014E-02                               t=        4.0
+Qu        542 E=     -163.8755128795 steps=  185 RMS= 0.17185E-02                               t=        4.1
+Qu        543 E=     -165.3553506505 steps=  208 RMS= 0.15412E-02                               t=        4.1
+Qu        544 E=     -166.5796467491 steps=  214 RMS= 0.18409E-02                               t=        4.1
+Qu        545 E=     -167.4629687932 steps=  277 RMS= 0.14522E-02                               t=        4.1
+Qu        546 E=     -166.9612272000 steps=  411 RMS= 0.15405E-02                               t=        4.1
+Qu        547 E=     -165.4555240410 steps=  201 RMS= 0.18483E-02                               t=        4.1
+symmetry> number of core atoms=       4 core symmetry C2v  after      547 quenches
+ Qu        548 E=    -166.3656137     steps=  119 RMS= 0.16567E-02 Markov E=    -169.7132407     t=        4.1
+ Qu        549 E=    -166.9647716     steps=  202 RMS= 0.13800E-02 Markov E=    -166.3656137     t=        4.1
+ Qu        550 E=    -163.6512501     steps=  123 RMS= 0.15041E-02 Markov E=    -166.9647716     t=        4.1
+ Qu        551 E=    -166.8975754     steps=  183 RMS= 0.18810E-02 Markov E=    -166.9647716     t=        4.1
+ Qu        552 E=    -166.1478960     steps=  195 RMS= 0.14269E-02 Markov E=    -166.8975754     t=        4.2
+ Qu        553 E=    -168.7901578     steps=  230 RMS= 0.19907E-02 Markov E=    -166.1478960     t=        4.2
+ Qu        554 E=    -165.7598175     steps=  175 RMS= 0.15934E-02 Markov E=    -168.7901578     t=        4.2
+ Qu        555 E=    -163.5983192     steps=  175 RMS= 0.18466E-02 Markov E=    -168.7901578     t=        4.2
+ Qu        556 E=    -166.5481406     steps=  133 RMS= 0.19322E-02 Markov E=    -168.7901578     t=        4.2
+ Qu        557 E=    -165.8414850     steps=  145 RMS= 0.18748E-02 Markov E=    -168.7901578     t=        4.2
+newres> Moving current best minimum to position     11 in the AVOID list E=    -170.7130931    
+newres> Energy has not improved since step      257 - reseeding
+newres> Parallel run      1 has the highest energy      -170.7130931139
+newres> Full reseeding
+ Qu        558 E=    -164.3573423     steps=  187 RMS= 0.14971E-02 Markov E=    -161.8009597     t=        4.2
+ Qu        559 E=    -162.9239343     steps=  247 RMS= 0.19235E-02 Markov E=    -164.3573423     t=        4.2
+ Qu        560 E=    -167.0521147     steps=  330 RMS= 0.15693E-02 Markov E=    -162.9239343     t=        4.3
+ Qu        561 E=    -165.4186277     steps=  217 RMS= 0.13987E-02 Markov E=    -167.0521147     t=        4.3
+ Qu        562 E=    -170.9494562     steps=  183 RMS= 0.11707E-02 Markov E=    -165.4186277     t=        4.3
+ Qu        563 E=    -170.4999870     steps=  188 RMS= 0.19897E-02 Markov E=    -170.9494562     t=        4.3
+ Qu        564 E=    -165.4603837     steps=  245 RMS= 0.18456E-02 Markov E=    -170.9494562     t=        4.3
+ Qu        565 E=    -162.8376132     steps=  126 RMS= 0.17192E-02 Markov E=    -170.9494562     t=        4.3
+ Qu        566 E=    -164.9562532     steps=  213 RMS= 0.19045E-02 Markov E=    -170.9494562     t=        4.3
+ Qu        567 E=    -164.5268051     steps=  164 RMS= 0.15669E-02 Markov E=    -170.9494562     t=        4.3
+ Qu        568 E=    -162.6258883     steps=  158 RMS= 0.17182E-02 Markov E=    -170.9494562     t=        4.3
+ Qu        569 E=    -164.9169462     steps=  214 RMS= 0.14447E-02 Markov E=    -162.6258883     t=        4.3
+symmetry> symmetry analysis for point group C s number of generators=   1
+symmetry> using point group of order     2 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     6 was     1
+Qu        570 E=     -168.5013944717 steps=   89 RMS= 0.19235E-02                               t=        4.3
+Qu        571 E=     -168.6191175651 steps=   85 RMS= 0.18675E-02                               t=        4.3
+Qu        572 E=     -166.2949964266 steps=   93 RMS= 0.15745E-02                               t=        4.4
+Qu        573 E=     -168.6082302659 steps=  125 RMS= 0.18972E-02                               t=        4.4
+Qu        574 E=     -167.8961689165 steps=  118 RMS= 0.18738E-02                               t=        4.4
+Qu        575 E=     -168.6082218311 steps=  117 RMS= 0.18763E-02                               t=        4.4
+Qu        576 E=     -167.6754083890 steps=   88 RMS= 0.14868E-02                               t=        4.4
+Qu        577 E=     -167.8560108195 steps=   70 RMS= 0.16834E-02                               t=        4.4
+Qu        578 E=     -167.2992056800 steps=   91 RMS= 0.15642E-02                               t=        4.4
+Qu        579 E=     -168.3500797327 steps=  211 RMS= 0.19801E-02                               t=        4.4
+Qu        580 E=     -166.5448919322 steps=   69 RMS= 0.18069E-02                               t=        4.4
+Qu        581 E=     -168.8673149317 steps=  120 RMS= 0.19708E-02                               t=        4.4
+Qu        582 E=     -168.6191174747 steps=   89 RMS= 0.15661E-02                               t=        4.4
+Qu        583 E=     -168.8673180580 steps=  142 RMS= 0.16416E-02                               t=        4.4
+Qu        584 E=     -167.6263971159 steps=  184 RMS= 0.12049E-02                               t=        4.4
+Qu        585 E=     -168.6562400591 steps=  145 RMS= 0.19874E-02                               t=        4.4
+Qu        586 E=     -169.6049062225 steps=  106 RMS= 0.13273E-02                               t=        4.4
+Qu        587 E=     -167.0648648677 steps=   86 RMS= 0.17564E-02                               t=        4.4
+symmetry> number of core atoms=       7 core symmetry C s  after      587 quenches
+ Qu        588 E=    -168.7668476     steps=  171 RMS= 0.18587E-02 Markov E=    -169.6049062     t=        4.4
+ Qu        589 E=    -168.0317796     steps=  314 RMS= 0.18889E-02 Markov E=    -169.6049062     t=        4.5
+ Qu        590 E=    -166.9316303     steps=  141 RMS= 0.18299E-02 Markov E=    -168.0317796     t=        4.5
+ Qu        591 E=    -168.7956964     steps=  284 RMS= 0.15276E-02 Markov E=    -166.9316303     t=        4.5
+ Qu        592 E=    -166.6945807     steps=  129 RMS= 0.12915E-02 Markov E=    -168.7956964     t=        4.5
+ Qu        593 E=    -168.0993666     steps=  268 RMS= 0.15471E-02 Markov E=    -166.6945807     t=        4.5
+ Qu        594 E=    -165.8461104     steps=  145 RMS= 0.13988E-02 Markov E=    -168.0993666     t=        4.5
+newres> Moving current best minimum to position     12 in the AVOID list E=    -170.9494562    
+newres> Energy has not improved since step      276 - reseeding
+newres> Parallel run      1 has the highest energy      -170.9494561741
+newres> Full reseeding
+ Qu        595 E=    -165.9516747     steps=  162 RMS= 0.12735E-02 Markov E=    -166.0248889     t=        4.5
+ Qu        596 E=    -162.1360309     steps=  121 RMS= 0.13543E-02 Markov E=    -165.9516747     t=        4.5
+ Qu        597 E=    -167.1274568     steps=  215 RMS= 0.18006E-02 Markov E=    -165.9516747     t=        4.5
+symmetry> symmetry analysis for point group C s number of generators=   1
+symmetry> using point group of order     2 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     5 was     1
+Qu        598 E=     -168.9504607436 steps=   62 RMS= 0.19853E-02                               t=        4.5
+Qu        599 E=     -165.2780532782 steps=  149 RMS= 0.19211E-02                               t=        4.6
+Qu        600 E=     -166.5661340281 steps=  176 RMS= 0.18087E-02                               t=        4.6
+Qu        601 E=     -167.9749987083 steps=  231 RMS= 0.19610E-02                               t=        4.6
+Qu        602 E=     -169.3822425712 steps=  153 RMS= 0.18450E-02                               t=        4.6
+Qu        603 E=     -170.6230950418 steps=  204 RMS= 0.12055E-02                               t=        4.6
+Qu        604 E=     -169.6625531766 steps=  287 RMS= 0.18851E-02                               t=        4.6
+Qu        605 E=     -165.2780502916 steps=  160 RMS= 0.17073E-02                               t=        4.6
+Qu        606 E=     -168.8405963937 steps=  233 RMS= 0.18585E-02                               t=        4.6
+Qu        607 E=     -167.8723632804 steps=  200 RMS= 0.16354E-02                               t=        4.6
+Qu        608 E=     -168.5352892549 steps=  181 RMS= 0.18691E-02                               t=        4.6
+Qu        609 E=     -168.6171357392 steps=  149 RMS= 0.12899E-02                               t=        4.6
+Qu        610 E=     -169.6150640039 steps=  349 RMS= 0.18301E-02                               t=        4.7
+Qu        611 E=     -169.7624149741 steps=  151 RMS= 0.19854E-02                               t=        4.7
+Qu        612 E=     -167.6361884703 steps=  156 RMS= 0.14659E-02                               t=        4.7
+Qu        613 E=     -169.7185668556 steps=  237 RMS= 0.14492E-02                               t=        4.7
+Qu        614 E=     -169.9156452475 steps=  185 RMS= 0.18464E-02                               t=        4.7
+Qu        615 E=     -165.3690307710 steps=  187 RMS= 0.17277E-02                               t=        4.7
+symmetry> number of core atoms=       4 core symmetry C s  after      615 quenches
+ Qu        616 E=    -170.7752386     steps=   95 RMS= 0.14725E-02 Markov E=    -170.6230950     t=        4.7
+symmetry> symmetry analysis for point group T h number of generators=  13
+symmetry> using point group of order    48 constructed from generators, time taken=           0.00
+symmetry> number of symmetry elements lost in last change for orbit     5 was     2
+saveit> putting this minimum into the list at position       1 EREAL,QMIN=    -173.9284225        -172.2981282    
+saveit> Target hit after             617 quenches          104702 function calls.
+saveit> Energy=     -173.9284224636 target=     -173.9284264418
+Qu        617 E=     -173.9284224636 steps=   58 RMS= 0.19460E-02                               t=        4.7
+Acceptance ratio for run=     0.88571 Step=     0.49778 Angular step factor=     0.60197 T=     3.20000
+1 618 104702         4.7216360000
+Tightly converging the SAVE lowest energy minima found
+NOTE: these may NOT match the other output files - see below for a sorted list of Lowest minima
+Final Quench      1 energy=    -173.9284266     steps=   21 RMS force=  0.6523652E-05 time=        4.72
+After re-sorting, the lowest found minima are (lowest free energy subtracted if applicable):
+Lowest Minimum      1 Energy=     -173.9284266    
+time elapsed                4.7 seconds
+Number of potential calls             104726
