@@ -4,18 +4,17 @@
 <h2>Machine Learning Optimization Benchmarks</h2>
 
 <p>
-Entries for these benchmarks must record the average number number of force
-calls as <i>force_calls</i> in <tt>benchmark.dat</tt>, the maximum number of
-force calls as <i>force_calls_max</i>, the minimum number of force calls as
-<i>force_calls_min</i>, and the number of failed minimizations as
+Entries for these benchmarks must record the average number number of epochs
+ <i>epochs</i> in <tt>benchmark.dat</tt>, the median number of epochs <i>epochs_median</i>, and the minimum number of epochs as
+<i>epochs_min</i>, and the number of failed minimizations (or if optimizer reached maximum epochs) as
 <i>nfailed</i>
 </p>
 
-<h3><a id="lj38" href="#lj38">Lennard-Jones 38 Clusters</a></h3>
+<h3><a id="lj38" href="#lj38">Effective-Medium-Theory Pt 38 Nanoparticle</a></h3>
 
-<p>This benchmark tests the performance of optimizers starting from 1000
-randomly generated Lennard-Jones 38 clusters. A tar file containing the
-structures is here: <a href="minimization/lj38/lj38-clusters.tgz">lj38.tgz</a>.</p>
+<p>This benchmark tests the performance of optimizers starting from 50 random initializations of 
+neural network training. A trajetory file containing the
+structures is here: <a href="mlopt/pt38/pt_md.traj">pt38_md.traj</a>.</p>
 
 
 <p>The L2 norm of the force must be reduced to at least 0.01 energy /
