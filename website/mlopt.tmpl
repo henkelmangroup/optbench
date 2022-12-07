@@ -35,14 +35,11 @@ any other reason are considered failed.</p>
   <thead>
     <th>Entry</th>
     <th>&lt;N&gt;</th>
-    <th>median N</th>
-    <th>&lt;Ermse&gt;</th>
-    <th>median Ermse</th>
-    <th>&lt;Frmse&gt;</th>
-    <th>median Frmse</th>
+    <th>min N</th>
+    <th>max N</th>
     <th>Failed</th>
   </thead>
-  {% for entry in benchmarks['emt-pt38']|sort(attribute='epochs') %}
+  {% for entry in benchmarks['pt38']|sort(attribute='epochs') %}
     {% if entry.hidden == False %}
     <tr>
     {% else %}
