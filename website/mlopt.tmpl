@@ -34,21 +34,27 @@ any other reason are considered failed.</p>
 <table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
   <thead>
     <th>Entry</th>
-    <th>&lt;N&gt;</th>
-    <th>min N</th>
-    <th>max N</th>
+    <th>Mean Epochs</th>
+    <th>Median Epochs</th>
+    <th>Mean E_rmse</th>
+    <th>Median E_rmse</th>
+    <th>Mean F_rmse</th>
+    <th>Median F_rmse</th>
     <th>Failed</th>
   </thead>
-  {% for entry in benchmarks['emt-pt38']|sort(attribute='force_calls') %}
+  {% for entry in benchmarks['emt-pt38'] %}
     {% if entry.hidden == False %}
     <tr>
     {% else %}
     <tr class="hidden-emt-pt38" style="display: none;">
     {% endif %}
       <td>{% include 'templates/entry-details.tmpl' %}</td>
-      <td>{{ '%.0f' % entry.force_calls }}</td>
-      <td>{{ '%.0f' % entry.force_calls_min }}</td>
-      <td>{{ '%.0f' % entry.force_calls_max }}</td>
+      <td>{{ '%.0f' % entry.mean_epoch }}</td>
+      <td>{{ '%.0f' % entry.median_epoch }}</td>
+      <td>{{ '%.0f' % entry.mean_energy_rmse }}</td>
+      <td>{{ '%.0f' % entry.median_energy_rmse }}</td>
+      <td>{{ '%.0f' % entry.mean_force_rmse }}</td>
+      <td>{{ '%.0f' % entry.median_force_rmse }}</td>
       <td>{{ '%.0f' % entry.nfailed }}</td>
     </tr>
   {% endfor %}

@@ -180,6 +180,7 @@ def write_all_results(main_path,mode='no_scan'):
         benchmark.write('median_energy_rmse '+str(np.median(opt_wise_data[key][2]))+'\n')
         benchmark.write('mean_force_rmse -1.0\n')
         benchmark.write('median_force_rmse -1.0\n')
+        benchmark.write('nfailed '+str(len(opt_wise_data[key][4]))+" \n")
         #benchmark.write('code pyamff\n')
         #benchmark.write('code_verison pyamff\n')
         #benchmark.write('date pyamff\n')
