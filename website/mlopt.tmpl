@@ -39,11 +39,11 @@ any other reason are considered failed.</p>
     <th>max N</th>
     <th>Failed</th>
   </thead>
-  {% for entry in benchmarks['pt38']|sort(attribute='epochs') %}
+  {% for entry in benchmarks['emt-pt38']|sort(attribute='force_calls') %}
     {% if entry.hidden == False %}
     <tr>
     {% else %}
-    <tr class="hidden-lj38" style="display: none;">
+    <tr class="hidden-emt-pt38" style="display: none;">
     {% endif %}
       <td>{% include 'templates/entry-details.tmpl' %}</td>
       <td>{{ '%.0f' % entry.force_calls }}</td>
@@ -55,7 +55,7 @@ any other reason are considered failed.</p>
 
   <tr>
     <td colspan="5">
-      <a href="#" onclick="$('.hidden-lj38').toggle();return false;">Show/Hide Additional Entries...</a>
+      <a href="#" onclick="$('.emt-pt38').toggle();return false;">Show/Hide Additional Entries...</a>
     </td>
   </tr>
 
