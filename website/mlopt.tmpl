@@ -49,12 +49,12 @@ any other reason are considered failed.</p>
     <tr class="hidden-emt-pt38" style="display: none;">
     {% endif %}
       <td>{% include 'templates/entry-details.tmpl' %}</td>
-      <td>{{ '%.0f' % entry.mean_epoch }}</td>
-      <td>{{ '%.0f' % entry.median_epoch }}</td>
-      <td>{{ '%.0f' % entry.mean_energy_rmse }}</td>
-      <td>{{ '%.0f' % entry.median_energy_rmse }}</td>
-      <td>{{ '%.0f' % entry.mean_force_rmse }}</td>
-      <td>{{ '%.0f' % entry.median_force_rmse }}</td>
+      <td>{{ '%.5f' % entry.mean_epoch }}</td>
+      <td>{{ '%.5f' % entry.median_epoch }}</td>
+      <td>{{ '%.5f' % entry.mean_energy_rmse }}</td>
+      <td>{{ '%.5f' % entry.median_energy_rmse }}</td>
+      <td>{{ '%.5f' % entry.mean_force_rmse }}</td>
+      <td>{{ '%.5f' % entry.median_force_rmse }}</td>
       <td>{{ '%.0f' % entry.nfailed }}</td>
     </tr>
   {% endfor %}
