@@ -29,7 +29,7 @@ algorithms (e.g like that of scipy's StandardScaler). The activation function is
 
 Runs that exceed the maximum number of epochs or fail to converge for 
 any other reason are considered failed.</p>
-<br> A mean/median frmse value of -1.0 implies only energies were trained for that model. 
+<br> A mean/median frmse value of -1.0 implies only energies were trained for that model.<br>
 
 <table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
   <thead>
@@ -67,13 +67,17 @@ any other reason are considered failed.</p>
 
 </table>
 
-<!--
-<h3><a id="morse-bulk" href="#morse-bulk">Morse Bulk</a></h3>
+<br>
 
-<p>This benchmark tests the performance of optimizers starting from 100 FCC
-bulk Morse structures that have been slightly perturbed from their equilibrium
-lattice positions. A tar file containing the structures is here: 
-<a href="minimization/morse-bulk/morse-bulk.tgz">morse-bulk.tgz</a>.</p>
+<h3><a id="C2H4" href="C2H4">DFT Ethylene(C2H4)</a></h3>
+
+<p>This benchmark is very similar to the Pt nanoparticle benchmark, above.
+This tests the performance of optimizers training on 570 strucutres of ethylene
+extracted from a density functional theory (DFT) molecular dynamics simulation.
+A trajectory file containing the structures is here: 
+<a href="mlopt/C2H4/C2H4_md.traj">C2H4_md.traj</a>.</p>
+
+<!--
 
 $$ U(r) = D_e ( 1 - e^{-a(r-r_e)})^2 $$
 <p>where $D_e=0.7102$ eV, $r_e=2.8970$ Ang, and $a=1.6047$ Ang$^{-1}$.</p>
