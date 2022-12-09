@@ -75,43 +75,41 @@ This tests the performance of optimizers training on 570 strucutres of ethylene
 extracted from a density functional theory (DFT) molecular dynamics simulation.
 A trajectory file containing the structures is here: 
 <a href="mlopt/C2H4/C2H4_md.traj">C2H4_md.traj</a>.</p>
-
-<!--
-
-$$ U(r) = D_e ( 1 - e^{-a(r-r_e)})^2 $$
-<p>where $D_e=0.7102$ eV, $r_e=2.8970$ Ang, and $a=1.6047$ Ang$^{-1}$.</p>
-
-
-<p>The norm of the force must be reduced to at least 1e-3 eV/Ang</p>
+<br>
 
 <table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
   <thead>
     <th>Entry</th>
-    <th>&lt;N&gt;</th>
-    <th>min N</th>
-    <th>max N</th>
+    <th>Mean Epochs</th>
+    <th>Median Epochs</th>
+    <th>Mean E_rmse</th>
+    <th>Median E_rmse</th>
+    <th>Mean F_rmse</th>
+    <th>Median F_rmse</th>
+    <th>Failed</th>
   </thead>
-  {% set any_hidden = False %}
-  {% for entry in benchmarks['morse-bulk']|sort(attribute='force_calls') %}
+  {% for entry in benchmarks['C2H4'] %}
     {% if entry.hidden == False %}
     <tr>
     {% else %}
-    {% set any_hidden = True %}
-    <tr class="hidden-morse" style="display: none;">
+    <tr class="hidden-C2H4" style="display: none;">
     {% endif %}
       <td>{% include 'templates/entry-details.tmpl' %}</td>
-      <td>{{ '%.0f' % entry.force_calls }}</td>
-      <td>{{ '%.0f' % entry.force_calls_min }}</td>
-      <td>{{ '%.0f' % entry.force_calls_max }}</td>
+      <td>{{ '%.5f' % entry.mean_epoch }}</td>
+      <td>{{ '%.5f' % entry.median_epoch }}</td>
+      <td>{{ '%.5f' % entry.mean_energy_rmse }}</td>
+      <td>{{ '%.5f' % entry.median_energy_rmse }}</td>
+      <td>{{ '%.5f' % entry.mean_force_rmse }}</td>
+      <td>{{ '%.5f' % entry.median_force_rmse }}</td>
+      <td>{{ '%.0f' % entry.nfailed }}</td>
     </tr>
   {% endfor %}
-  {% if any_hidden %}
+
   <tr>
     <td colspan="5">
-      <a href="#" onclick="$('.hidden-morse').toggle();return false;">Show/Hide Additional Entries...</a>
+      <a href="#" onclick="$('.C2H4').toggle();return false;">Show/Hide Additional Entries...</a>
     </td>
   </tr>
-  {% endif %}
+
 </table>
-{% endblock %}
--->
+<br>
