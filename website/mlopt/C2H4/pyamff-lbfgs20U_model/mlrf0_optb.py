@@ -227,7 +227,7 @@ def main():
         if sys.argv[1] =="-r":  # if the user gives a -r 
             run_only_no_queue = True 
     traj_name = config.config['trajectory_file']# get the traj filename from config.ini
-    opt_list = ['Rprop','ADAM','LBFGS'] #SGD is very shady
+    opt_list = ['LBFGS']
     if run_only == True: # run pre-set up calculations
         print ("submitting set up models to train")
         run_models(opt_list, sub_file=run_file_name,num_dirs=None)    
