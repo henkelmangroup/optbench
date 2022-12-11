@@ -80,9 +80,14 @@ A trajectory file containing the structures is here:
 <table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
   <thead>
     <th>Entry</th>
-    <th>&lt;N&gt;</th>
-    <th>min N</th>
-    <th>max N</th>
+    <th>Entry</th>
+    <th>Mean Epochs</th>
+    <th>Median Epochs</th>
+    <th>Mean E_rmse</th>
+    <th>Median E_rmse</th>
+    <th>Mean F_rmse</th>
+    <th>Median F_rmse</th>
+    <th>Failed</th>
   </thead>
   {% set any_hidden = False %}
   {% for entry in benchmarks['morse-bulk']|sort(attribute='force_calls') %}
