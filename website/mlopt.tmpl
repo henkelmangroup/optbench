@@ -8,15 +8,17 @@ Entries for these benchmarks must record the mean number number of epochs
  <i>mean_epochs</i> in <tt>benchmark.dat</tt>, the median number of epochs <i>median_epochs</i>, the mean energy rmse as
 <i>mean_energy_rmse</i>, the median energy rmse as <i>median_energy_rmse</i>, mean force rmse as <i>mean_force_rmse</i>,
  median force rmse as <i>median_force_rmse</i> , and the number of failed minimizations as <i>nfailed</i>
-<br>A mean/median frmse value of -1.0 implies only energies were trained for that model.
+<br>A mean and median F_rmse value of -1.0 implies only energies were trained for that model.
 
 </p>
 
 <h3><a id="pt38-nanoparticle" href="#pt38-nanoparticle">Effective-Medium-Theory Pt 38 Nanoparticle</a></h3>
 
 <p>This benchmark tests the performance of optimizers starting from 50 random uniform in range [-1,1) initializations of 
-neural network models. A trajetory file containing the structures is here: <a href="mlopt/emt-pt38/pt_md.traj">pt_md.traj</a>.</p>
-This is a molecular dynamics simulation(MD) of a 38 atom platinum nanoparticle, as implemented in the atomic simulation environment(ASE)<sup>1</sup>.
+neural network models. A trajetory file containing the structures is here: <a href="mlopt/emt-pt38/pt_md.traj">pt_md.traj</a>.
+The structures are from a molecular dynamics simulation(MD) of a 38 atom platinum nanoparticle,
+as implemented in the atomic simulation environment(ASE)<sup>1</sup>.</p>
+
 <p>The L2 norm of the loss gradients per parameter set (e.g a parameter set may be the set of all input layer
 biases), must be reduced to at least 0.02 energy/distance (if only energy training), or (0.1 energy/distance) 
 if training forces also. The maximum number of epoch that may be made cannot exceed 10,000 epochs
@@ -30,7 +32,6 @@ and the learning rate for all the optimizers is 0.01.
 
 Runs that exceed the maximum number of epochs or fail to converge for 
 any other reason are considered failed.</p>
-<br> 
 <br>
 <table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
   <thead>
@@ -118,7 +119,7 @@ A trajectory file containing the structures is here:
 <br>
 <br>
 <p><b>References</b>.</p> 
-<br>1. Larsen et. al,J. Phys.: Condens. Matter Vol. 29 273002, 2017
+1. Larsen et. al,J. Phys.: Condens. Matter Vol. 29 273002, 2017
 <br>
 {% endblock %}
 
