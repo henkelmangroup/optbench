@@ -15,25 +15,23 @@ Entries for these benchmarks must record the mean number number of epochs
 <h3><a id="pt38-nanoparticle" href="#pt38-nanoparticle">Effective-Medium-Theory Pt 38 Nanoparticle</a></h3>
 
 <p>This benchmark tests the performance of optimizers starting from 50 random uniform in range [-1,1) initializations of 
-neural network models. A trajetory file containing the
-structures is here: <a href="mlopt/emt-pt38/pt_md.traj">pt_md.traj</a>.</p>
-
-
+neural network models. A trajetory file containing the structures is here: <a href="mlopt/emt-pt38/pt_md.traj">pt_md.traj</a>.</p>
+This is a molecular dynamics simulation(MD) of a 38 atom platinum nanoparticle, as implemented in the atomic simulation environment(ASE)<sup>1</sup>.
 <p>The L2 norm of the loss gradients per parameter set (e.g a parameter set may be the set of all input layer
-biases), must be reduced to at least 0.02 energy /
-distance (if only energy training), or (0.1 energy/distance) if training forces also.
-The maximum number of epoch that may be made cannot exceed 10,000 epochs (if training only energies)
-or 30,000 (for force training as well). The neural network architectures are : (20),(10,7). <br>
-So 1 layer with 20 neurons, or two layers with 10 and 7 neurons respectively. The energies fitted are not scaled by any feauture scaling 
-algorithms (e.g like that of scipy's StandardScaler). The activation function is tanh.
- All the data has been partitioned into one batch for training, and the learning rate for all the optimizers is 0.01. 
+biases), must be reduced to at least 0.02 energy/distance (if only energy training), or (0.1 energy/distance) 
+if training forces also. The maximum number of epoch that may be made cannot exceed 10,000 epochs
+(if training only energies) or 30,000 (for force training as well). 
+The neural network architectures are : (20),(10,7). <br>
+That is, 1 layer with 20 neurons, or two layers with 10 and 7 neurons respectively. 
+The energies fitted are not scaled by any feauture scaling algorithms (e.g like that of scipy's StandardScaler).
+The activation function is tanh. All the data has been partitioned into one batch for training,
+and the learning rate for all the optimizers is 0.01. 
 <br> If any of these defaults are changed, it will be determinable by the filename of the benchmark entry.
 
 Runs that exceed the maximum number of epochs or fail to converge for 
 any other reason are considered failed.</p>
 <br> 
 <br>
-
 <table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
   <thead>
     <th>Entry</th>
@@ -45,6 +43,7 @@ any other reason are considered failed.</p>
     <th>Median F_rmse</th>
     <th>Failed</th>
   </thead>
+  {% set any_hidden = False %}
   {% for entry in benchmarks['emt-pt38'] %}
     {% if entry.hidden == False %}
     <tr>
@@ -119,7 +118,8 @@ A trajectory file containing the structures is here:
 <br>
 <br>
 <p><b>References</b>.</p> 
-
+<br>1. Larsen et. al,J. Phys.: Condens. Matter Vol. 29 273002, 2017
+<br>
 {% endblock %}
 
 
