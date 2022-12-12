@@ -1,0 +1,12 @@
+mean_epoch 1620.32
+median_epoch 1447.0
+mean_energy_rmse 0.0006790834000000002
+median_energy_rmse 0.000657525
+mean_force_rmse 0.08797402500000001
+median_force_rmse 0.08626243
+nfailed 0 
+code Pyamff
+code_version 8037eb98
+date 12 Dec 2022
+contributor Henkelman Group
+code_file pyamff-8037eb98.tgz
