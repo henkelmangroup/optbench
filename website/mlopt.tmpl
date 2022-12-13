@@ -47,7 +47,7 @@ any other reason are considered failed.</p>
   </thead>
   {% set any_hidden = False %}
   {% for entry in benchmarks['emt-pt38'] %}
-    {% if entry.hidden == True %}
+    {% if entry.hidden == False %}
     <tr>
     {% else %}
     <tr class="hidden-emt-pt38" style="display: none;">
