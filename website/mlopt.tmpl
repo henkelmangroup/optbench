@@ -108,13 +108,11 @@ A trajectory file containing the structures is here:
       <td>{{ '%.0f' % entry.nfailed }}</td>
     </tr>
   {% endfor %}
-  {% if any_hidden %}
   <tr>
-    <td colspan="5">
+    <td colspan="8">
       <a href="#" onclick="$('.C2H4').toggle();return false;">Show/Hide Additional Entries...</a>
     </td>
   </tr>
-  {% endif %}
 </table>
 
 <br>
