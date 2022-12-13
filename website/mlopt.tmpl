@@ -47,7 +47,7 @@ any other reason are considered failed.</p>
   </thead>
   {% set any_hidden = False %}
   {% for entry in benchmarks['emt-pt38'] %}
-    {% if entry.hidden == False %}
+    {% if entry.hidden == True %}
     <tr>
     {% else %}
     <tr class="hidden-emt-pt38" style="display: none;">
@@ -64,7 +64,7 @@ any other reason are considered failed.</p>
   {% endfor %}
 
   <tr>
-    <td colspan="5">
+    <td colspan="8">
       <a href="#" onclick="$('.emt-pt38').toggle();return false;">Show/Hide Additional Entries...</a>
     </td>
   </tr>
