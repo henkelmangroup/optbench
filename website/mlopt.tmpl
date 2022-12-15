@@ -14,7 +14,6 @@ Entries for these benchmarks record the mean number number of epochs
 
 <h3><a id="pt38-nanoparticle" href="#pt38-nanoparticle">Effective-Medium-Theory Pt 38 Nanoparticle</a></h3>
 
-
 <p>This benchmark tests the performance of optimizers starting from 50 random uniform in range [-1,1) initializations of 
 neural network models. The structures are from a molecular dynamics simulation(MD) at 300K, of a 38 atom platinum nanoparticle.
 The atoms follow the effective medium theory (EMT) potential as implemented in the atomic simulation environment (ASE)<sup>1</sup>. <br>
@@ -25,8 +24,7 @@ A trajetory file containing the structures is here: <a href="mlopt/emt-pt38/pt_m
 biases), must be reduced to at least 0.02 energy/distance (if only energy training), or (0.1 energy/distance) 
 if training forces also. The maximum number of epoch that may be made cannot exceed 10,000 epochs
 (if training only energies) or 30,000 (for force training as well). 
-The neural network architectures are : (20),(10,7). <br>
-That is, 1 layer with 20 neurons, or two layers with 10 and 7 neurons respectively. 
+The neural network architecture  here is two layers with 10 and 7 neurons respectively. 
 The energies fitted are not scaled by any feauture scaling algorithms (e.g like that of scipy's StandardScaler).
 The activation function is tanh. All the data has been partitioned into one batch for training,
 and the learning rate for all the optimizers is 0.01. 
