@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <title>OptBench: Transition State Optimization Benchmark</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/sorttable.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+          processEscapes: true
+        },
+        "HTML-CSS": {scale: 95},
+      });
+    </script>
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+    </script>
+    
+    <script type="text/javascript">
+      $(function () {
+          $('[rel=tooltip]').tooltip();
+          
+          $('.collapse').hide();
+
+          $('.collapse').on('show', function () {
+            $(this).show();
+          }).on('hidden', function () {
+            $(this).hide();
+          });
+      });
+    </script>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <h1><a href="index.html" id="title">OptBench</a></h1>
+      </div>
+      
+<h1>Transition State Optimization</h1>
+
+<h2>Lennard-Jones 38</h2>
+
+<p>This benchmark tests the performance of algorithms for finding the nearest
+transition state.  The starting point are structures taken from the highest
+energy image in a DNEB run.  Idealy they should all be reasonably close to a
+transition state (Although there are a few structures which converge to states
+with positive lowest eigenvalue.  Should we delete these from the starting
+structure database?) A tar file containing the random and minimized structures
+is (will be) here <a href="tsopt/LJ38/lj38.tar.gz">lj38.tar.gz</a>. </p>
+
+<p>  The benchmark requires that each provided Lennard-Jones starting
+structures be optimized until the norm of the gradient is less that 0.001.  Runs that
+don't reach the required tolerance or those with positive zero eigenvalue are
+considered failures.  If a run was successful, the number of forcecalls
+necessary to reach the global minimum the first time is recorded.</p>
+
+<p> Avg FCs: Average number of force calls needed to find global minimum (average over successful runs) <p>
+<p> min(FCs): Minimum number of force calls needed to find global minimum (best successful run) <p>
+<p> max(FCs): Maximum number of forcecalls needed to find the global minimum(worst successful run) <p>
+
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
+  <thead>
+    <th>Algorithm</th>
+    <th>&lt;FCs&gt;</th>
+    <th>min(FCs)</th>
+    <th>median(FCs)</th>
+    <th>max(FCs)</th>
+    <th>nfailed</th>
+  </thead>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#LJ38-10" data-toggle="collapse">
+           sella</a>
+ 
+        <div id="LJ38-10" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 2019-12-10</span>
+            <span><b>Contributor:</b> Eric D. Hermes, Khachik Sargsyan, Habib Najm, Judit Zádor</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/Sella-0.1.1.tar.gz">
+                Sella-0.1.1.tar.gz
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="tsopt/LJ38/sella/sella.tgz">
+                sella.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>70</td>
+      <td>24</td>
+      <td>64</td>
+      <td>158</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#LJ38-14" data-toggle="collapse">
+           optim_ffd</a>
+ 
+        <div id="LJ38-14" class="collapse entry-details">
+          <p>
+            
+            <b>Comments:</b>
+            This uses Rayleigh-Ritz minimization to find the lowest eigenvector and
+moves using the hybrid eigenvector following method.  The Rayleigh-Ritz
+minimization uses a first order (forward finite differences) expansion.
+
+            <br>
+            
+
+            <span><b>Date:</b> 06 Aug 2014</span>
+            <span><b>Contributor:</b> Jacob Stevenson and Cheng Shang</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/wales-27058.tar.bz2">
+                wales-27058.tar.bz2
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="tsopt/LJ38/optim_ffd/optim_ffd.tgz">
+                optim_ffd.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>145</td>
+      <td>57</td>
+      <td>119</td>
+      <td>565</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#LJ38-7" data-toggle="collapse">
+           pele_ffd</a>
+ 
+        <div id="LJ38-7" class="collapse entry-details">
+          <p>
+            
+            <b>Comments:</b>
+            this uses Rayleigh-Ritz minimization to find the lowest eigenvector and
+moves using the hybrid eigenvector following method.  The Rayleigh-Ritz
+minimization uses a first order (forward finite differences) expansion.
+
+            <br>
+            
+
+            <span><b>Date:</b> 19 Sep 2014</span>
+            <span><b>Contributor:</b> Jacob Stevenson</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/pele-a68ec5.tgz">
+                pele-a68ec5.tgz
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="tsopt/LJ38/pele_ffd/pele_ffd.tgz">
+                pele_ffd.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>192</td>
+      <td>59</td>
+      <td>150</td>
+      <td>1488</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr class="hidden-lj38" style="display: none;">
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#LJ38-8" data-toggle="collapse">
+           optim_cd</a>
+ 
+        <div id="LJ38-8" class="collapse entry-details">
+          <p>
+            
+            <b>Comments:</b>
+            this uses Rayleigh-Ritz minimization to find the lowest eigenvector and moves
+using the hybrid eigenvector following method.  The Rayleigh-Ritz minimization
+uses a second order (central differences) expansion.
+
+            <br>
+            
+
+            <span><b>Date:</b> 06 Aug 2014</span>
+            <span><b>Contributor:</b> Jacob Stevenson and Cheng Shang</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/wales-27058.tar.bz2">
+                wales-27058.tar.bz2
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="tsopt/LJ38/optim_cd/optim_cd.tgz">
+                optim_cd.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>223</td>
+      <td>77</td>
+      <td>183</td>
+      <td>772</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#LJ38-12" data-toggle="collapse">
+           eon-lanczos-improved</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="LJ38-12" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 29 Aug 2013</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="tsopt/LJ38/eon-lanczos-improved/eon-lanczos-improved.tgz">
+                eon-lanczos-improved.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>237</td>
+      <td>65</td>
+      <td>181</td>
+      <td>1898</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr class="hidden-lj38" style="display: none;">
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#LJ38-11" data-toggle="collapse">
+           pele_cd</a>
+ 
+        <div id="LJ38-11" class="collapse entry-details">
+          <p>
+            
+            <b>Comments:</b>
+            this uses Rayleigh-Ritz minimization to find the lowest eigenvector and moves
+using the hybrid eigenvector following method.  The Rayleigh-Ritz minimization
+uses a second order (central differences) expansion.
+
+            <br>
+            
+
+            <span><b>Date:</b> 06 Aug 2014</span>
+            <span><b>Contributor:</b> Jacob Stevenson</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/pele-a68ec5.tgz">
+                pele-a68ec5.tgz
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="tsopt/LJ38/pele_cd/pele_cd.tgz">
+                pele_cd.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>254</td>
+      <td>80</td>
+      <td>193</td>
+      <td>1096</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#LJ38-9" data-toggle="collapse">
+           eon-lanczos</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="LJ38-9" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 29 Aug 2013</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="tsopt/LJ38/eon-lanczos/eon-lanczos.tgz">
+                eon-lanczos.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>321</td>
+      <td>83</td>
+      <td>220</td>
+      <td>8857</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#LJ38-13" data-toggle="collapse">
+           eon-dimer</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="LJ38-13" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 02 Jul 2013</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="tsopt/LJ38/eon-dimer/eon-dimer.tgz">
+                eon-dimer.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>528</td>
+      <td>92</td>
+      <td>388</td>
+      <td>3581</td>
+      <td>0</td>
+    </tr>
+  
+
+  <tr>
+    <td colspan="5"> 
+      <a href="#" onclick="$('.hidden-lj38').toggle();return false;">Show/Hide Additional Entries...</a>
+    </td>
+  </tr>
+
+</table>
+
+<h2>Pt(111) Heptamer Island</h2>
+
+This test is similar to that of the Lennard-Jones cluster above.  Starting
+strucures are provided which are near to known transition states.  The goal is
+to find those transition states.  The termination condition is that the norm of
+the gradient is less than 0.001.  The coordinates of a nearby minimum are also
+provided (reactant.con).  The vector between the starting structrure and
+reactant.con can be used to provide an initial guess for the lowest eigenvector.
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
+  <thead>
+    <th>Algorithm</th>
+    <th>&lt;FCs&gt;</th>
+    <th>min(FCs)</th>
+    <th>median(FCs)</th>
+    <th>max(FCs)</th>
+    <th>nfailed</th>
+  </thead>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#pt-island-2" data-toggle="collapse">
+           sella</a>
+ 
+        <div id="pt-island-2" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 2019-12-11</span>
+            <span><b>Contributor:</b> Eric D. Hermes, Khachik Sargsyan, Habib Najm, Judit Zádor</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/Sella-0.1.1.tar.gz">
+                Sella-0.1.1.tar.gz
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="tsopt/pt-island/sella/sella.tgz">
+                sella.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>53</td>
+      <td>31</td>
+      <td>51</td>
+      <td>108</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#pt-island-6" data-toggle="collapse">
+           optim_ffd</a>
+ 
+        <div id="pt-island-6" class="collapse entry-details">
+          <p>
+            
+            <b>Comments:</b>
+            The hybrid eigenvector following method. 
+This uses Rayleigh-Ritz minimization to find the lowest eigenvector and moves
+using the hybrid eigenvector following method. The Rayleigh-Ritz minimization
+uses a first order (forward finite differences) expansion.
+
+            <br>
+            
+
+            <span><b>Date:</b> 06 Aug 2014</span>
+            <span><b>Contributor:</b> Jacob Stevenson and Cheng Shang</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/wales-27058.tar.bz2">
+                wales-27058.tar.bz2
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="tsopt/pt-island/optim_ffd/optim_ffd.tgz">
+                optim_ffd.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>71</td>
+      <td>43</td>
+      <td>70</td>
+      <td>143</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#pt-island-5" data-toggle="collapse">
+           pele</a>
+ 
+        <div id="pt-island-5" class="collapse entry-details">
+          <p>
+            
+            <b>Comments:</b>
+            This uses Rayleigh-Ritz minimization to find the lowest eigenvector and
+moves towards the transition state using the hybrid eigenvector following
+method.  The Rayleigh-Ritz minimization uses a first order (forward finite
+differences) expansion.
+
+            <br>
+            
+
+            <span><b>Date:</b> 06 Aug 2014</span>
+            <span><b>Contributor:</b> Jacob Stevenson</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/pele-a68ec5.tgz">
+                pele-a68ec5.tgz
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="tsopt/pt-island/pele/pele.tgz">
+                pele.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>88</td>
+      <td>52</td>
+      <td>78</td>
+      <td>198</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#pt-island-0" data-toggle="collapse">
+           optim_cd</a>
+ 
+        <div id="pt-island-0" class="collapse entry-details">
+          <p>
+            
+            <b>Comments:</b>
+            The hybrid eigenvector following method. 
+This uses Rayleigh-Ritz minimization to find the lowest eigenvector and moves
+using the hybrid eigenvector following method. The Rayleigh-Ritz minimization
+uses a second order (central differences) expansion.
+
+            <br>
+            
+
+            <span><b>Date:</b> 06 Aug 2014</span>
+            <span><b>Contributor:</b> Jacob Stevenson and Cheng Shang</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/wales-27058.tar.bz2">
+                wales-27058.tar.bz2
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="tsopt/pt-island/optim_cd/optim_cd.tgz">
+                optim_cd.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>90</td>
+      <td>52</td>
+      <td>86</td>
+      <td>199</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#pt-island-3" data-toggle="collapse">
+           eon-lanczos-improved</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="pt-island-3" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 19 Jun 2014</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="tsopt/pt-island/eon-lanczos-improved/eon-lanczos-improved.tgz">
+                eon-lanczos-improved.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>106</td>
+      <td>71</td>
+      <td>100</td>
+      <td>163</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#pt-island-4" data-toggle="collapse">
+           eon-dimer</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="pt-island-4" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 20 Jun 2014</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="tsopt/pt-island/eon-dimer/eon-dimer.tgz">
+                eon-dimer.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>116</td>
+      <td>83</td>
+      <td>114</td>
+      <td>160</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#pt-island-1" data-toggle="collapse">
+           eon-lanczos</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="pt-island-1" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 29 Aug 2013</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="tsopt/pt-island/eon-lanczos/eon-lanczos.tgz">
+                eon-lanczos.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>143</td>
+      <td>106</td>
+      <td>139</td>
+      <td>292</td>
+      <td>0</td>
+    </tr>
+  
+
+  <tr>
+    <td colspan="5"> 
+      <a href="#" onclick="$('.hidden-pt').toggle();return false;">Show/Hide Additional Entries...</a>
+    </td>
+  </tr>
+
+</table>
+
+
+    </div>
+  </body>
+</html>

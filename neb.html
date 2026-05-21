@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <title>OptBench: NEB Optimizer Benchmark</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/sorttable.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+          processEscapes: true
+        },
+        "HTML-CSS": {scale: 95},
+      });
+    </script>
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+    </script>
+    
+    <script type="text/javascript">
+      $(function () {
+          $('[rel=tooltip]').tooltip();
+          
+          $('.collapse').hide();
+
+          $('.collapse').on('show', function () {
+            $(this).show();
+          }).on('hidden', function () {
+            $(this).hide();
+          });
+      });
+    </script>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <h1><a href="index.html" id="title">OptBench</a></h1>
+      </div>
+      
+<h2>NEB Optimizer Benchmarks</h2>
+
+<p>
+Entries for these benchmarks must record the average number number of force
+calls as <i>force_calls</i> in <tt>benchmark.dat</tt>, the maximum number of
+force calls as <i>force_calls_max</i>, the minimum number of force calls as
+<i>force_calls_min</i>.
+</p>
+
+<h3><a id="Pt" href="#Pt">Heptamer Island on Pt(111) Surface</a></h3>
+
+<p>The norm of the force on the climbing image must be reduced to at least 0.01 eV / &#x212b;.</p>
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
+  <thead>
+    <th>Entry</th>
+    <th>&lt;N&gt;</th>
+    <th>min N</th>
+    <th>max N</th>
+  </thead>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#Pt-heptamer-6" data-toggle="collapse">
+           eon-lbfgs</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="Pt-heptamer-6" class="collapse entry-details">
+          <p>
+            
+            <b>Comments:</b>
+            L-BFGS with an initial diagonal inverse hessian calculated via finite
+difference.
+At each step after the initial, 
+the initial inverse hessian, 
+which determines the scale of the problem, 
+is updated by calculating the curvature from the previous point.
+
+The memory length was set to 20 steps 
+and the maximum move distance was 0.2 distance units.
+The LBFGS history was reset when the angle
+between the descent direction and the force became greater than 90&#186;,
+a step greater than the max move was taken,
+or the curvature to the previous point was negative.
+
+            <br>
+            
+
+            <span><b>Date:</b> 03 Apr 2013</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="neb/Pt-heptamer/eon-lbfgs/eon-lbfgs.tgz">
+                eon-lbfgs.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>42</td>
+      <td>29</td>
+      <td>55</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#Pt-heptamer-4" data-toggle="collapse">
+           gman-glbfgs-hess</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="Pt-heptamer-4" class="collapse entry-details">
+          <p>
+            
+            <b>Comments:</b>
+            D. Sheppard, R. Terrell, and G. Henkelman, Optimization methods for finding minimum energy paths, J. Chem. Phys. 128, 134106 (2008).
+
+            <br>
+            
+
+            <span><b>Date:</b> Wed Apr 10 13:59:51 2013</span>
+            <span><b>Contributor:</b> Rye Terrell</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="neb/Pt-heptamer/gman-glbfgs-hess/gman-glbfgs-hess.tgz">
+                gman-glbfgs-hess.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>48</td>
+      <td>26</td>
+      <td>62</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#Pt-heptamer-2" data-toggle="collapse">
+           gman-fire</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="Pt-heptamer-2" class="collapse entry-details">
+          <p>
+            
+            <b>Comments:</b>
+            D. Sheppard, R. Terrell, and G. Henkelman, Optimization methods for finding minimum energy paths, J. Chem. Phys. 128, 134106 (2008).
+
+            <br>
+            
+
+            <span><b>Date:</b> Thu Apr 4 12:31:59 2013</span>
+            <span><b>Contributor:</b> Rye Terrell</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="neb/Pt-heptamer/gman-fire/gman-fire.tgz">
+                gman-fire.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>82</td>
+      <td>54</td>
+      <td>119</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#Pt-heptamer-7" data-toggle="collapse">
+           eon-fire</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="Pt-heptamer-7" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 03 Apr 2013</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="neb/Pt-heptamer/eon-fire/eon-fire.tgz">
+                eon-fire.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>86</td>
+      <td>66</td>
+      <td>102</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#Pt-heptamer-5" data-toggle="collapse">
+           gman-glbfgs-line</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="Pt-heptamer-5" class="collapse entry-details">
+          <p>
+            
+            <b>Comments:</b>
+            D. Sheppard, R. Terrell, and G. Henkelman, Optimization methods for finding minimum energy paths, J. Chem. Phys. 128, 134106 (2008).
+
+            <br>
+            
+
+            <span><b>Date:</b> Wed Apr 10 13:55:49 2013</span>
+            <span><b>Contributor:</b> Rye Terrell</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="neb/Pt-heptamer/gman-glbfgs-line/gman-glbfgs-line.tgz">
+                gman-glbfgs-line.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>100</td>
+      <td>57</td>
+      <td>135</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#Pt-heptamer-11" data-toggle="collapse">
+           gman-lbfgs-line</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="Pt-heptamer-11" class="collapse entry-details">
+          <p>
+            
+            <b>Comments:</b>
+            D. Sheppard, R. Terrell, and G. Henkelman, Optimization methods for finding minimum energy paths, J. Chem. Phys. 128, 134106 (2008).
+
+            <br>
+            
+
+            <span><b>Date:</b> Thu Apr 4 11:43:17 2013</span>
+            <span><b>Contributor:</b> Rye Terrell</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="neb/Pt-heptamer/gman-lbfgs-line/gman-lbfgs-line.tgz">
+                gman-lbfgs-line.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>108</td>
+      <td>63</td>
+      <td>155</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#Pt-heptamer-10" data-toggle="collapse">
+           gman-cg</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="Pt-heptamer-10" class="collapse entry-details">
+          <p>
+            
+            <b>Comments:</b>
+            D. Sheppard, R. Terrell, and G. Henkelman, Optimization methods for finding minimum energy paths, J. Chem. Phys. 128, 134106 (2008).
+
+            <br>
+            
+
+            <span><b>Date:</b> Wed Apr 10 13:47:22 2013</span>
+            <span><b>Contributor:</b> Rye Terrell</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="neb/Pt-heptamer/gman-cg/gman-cg.tgz">
+                gman-cg.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>111</td>
+      <td>57</td>
+      <td>215</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#Pt-heptamer-1" data-toggle="collapse">
+           eon-cg</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="Pt-heptamer-1" class="collapse entry-details">
+          <p>
+            
+            <b>Comments:</b>
+            Conjugate gradients with a max move of 0.20 Angstrom per atom and a 1d Newton's method line search.
+
+            <br>
+            
+
+            <span><b>Date:</b> 03 Apr 2013</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="neb/Pt-heptamer/eon-cg/eon-cg.tgz">
+                eon-cg.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>120</td>
+      <td>53</td>
+      <td>211</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#Pt-heptamer-0" data-toggle="collapse">
+           eon-qm</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="Pt-heptamer-0" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 03 Apr 2013</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="neb/Pt-heptamer/eon-qm/eon-qm.tgz">
+                eon-qm.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>164</td>
+      <td>89</td>
+      <td>227</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#Pt-heptamer-9" data-toggle="collapse">
+           gman-qm</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="Pt-heptamer-9" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> Thu Apr 4 12:16:39 2013</span>
+            <span><b>Contributor:</b> Rye Terrell</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="neb/Pt-heptamer/gman-qm/gman-qm.tgz">
+                gman-qm.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>190</td>
+      <td>103</td>
+      <td>316</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#Pt-heptamer-3" data-toggle="collapse">
+           gman-lbfgs-hess</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="Pt-heptamer-3" class="collapse entry-details">
+          <p>
+            
+            <b>Comments:</b>
+            D. Sheppard, R. Terrell, and G. Henkelman, Optimization methods for finding minimum energy paths, J. Chem. Phys. 128, 134106 (2008).
+
+            <br>
+            
+
+            <span><b>Date:</b> Wed Apr 10 14:10:04 2013</span>
+            <span><b>Contributor:</b> Rye Terrell</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="neb/Pt-heptamer/gman-lbfgs-hess/gman-lbfgs-hess.tgz">
+                gman-lbfgs-hess.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>217</td>
+      <td>108</td>
+      <td>704</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#Pt-heptamer-8" data-toggle="collapse">
+           gman-sd</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="Pt-heptamer-8" class="collapse entry-details">
+          <p>
+            
+            <b>Comments:</b>
+            D. Sheppard, R. Terrell, and G. Henkelman, Optimization methods for finding minimum energy paths, J. Chem. Phys. 128, 134106 (2008).
+
+            <br>
+            
+
+            <span><b>Date:</b> Thu Apr 4 12:06:22 2013</span>
+            <span><b>Contributor:</b> Rye Terrell</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="neb/Pt-heptamer/gman-sd/gman-sd.tgz">
+                gman-sd.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>412</td>
+      <td>214</td>
+      <td>697</td>
+    </tr>
+  
+</table>
+
+
+    </div>
+  </body>
+</html>

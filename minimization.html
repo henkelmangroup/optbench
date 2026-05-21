@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <title>OptBench: Minimization Benchmark</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/sorttable.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+          processEscapes: true
+        },
+        "HTML-CSS": {scale: 95},
+      });
+    </script>
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+    </script>
+    
+    <script type="text/javascript">
+      $(function () {
+          $('[rel=tooltip]').tooltip();
+          
+          $('.collapse').hide();
+
+          $('.collapse').on('show', function () {
+            $(this).show();
+          }).on('hidden', function () {
+            $(this).hide();
+          });
+      });
+    </script>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <h1><a href="index.html" id="title">OptBench</a></h1>
+      </div>
+      
+<h2>Minimization Benchmarks</h2>
+
+<p>
+Entries for these benchmarks must record the average number number of force
+calls as <i>force_calls</i> in <tt>benchmark.dat</tt>, the maximum number of
+force calls as <i>force_calls_max</i>, the minimum number of force calls as
+<i>force_calls_min</i>, and the number of failed minimizations as
+<i>nfailed</i>
+</p>
+
+<h3><a id="lj38" href="#lj38">Lennard-Jones 38 Clusters</a></h3>
+
+<p>This benchmark tests the performance of optimizers starting from 1000
+randomly generated Lennard-Jones 38 clusters. A tar file containing the
+structures is here: <a href="minimization/lj38/lj38-clusters.tgz">lj38.tgz</a>.</p>
+
+
+<p>The L2 norm of the force must be reduced to at least 0.01 energy /
+distance. The maximum number of force calls that may be made cannot exceed
+10,000. Runs that exceed the maximum number of force calls or fail to converge for 
+any other reason are considered failed.</p>
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
+  <thead>
+    <th>Entry</th>
+    <th>&lt;N&gt;</th>
+    <th>min N</th>
+    <th>max N</th>
+    <th>Failed</th>
+  </thead>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-32" data-toggle="collapse">
+           newton-method</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="lj38-32" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 30 May 2020</span>
+            <span><b>Contributor:</b> Naman Katyal</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="minimization/lj38/newton-method/newton-method.tgz">
+                newton-method.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>79</td>
+      <td>46</td>
+      <td>144</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-13" data-toggle="collapse">
+           tsase-sdlbfgs</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="lj38-13" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 26 Jun 2020</span>
+            <span><b>Contributor:</b> R Ciufo</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="minimization/lj38/tsase-sdlbfgs/tsase-sdlbfgs.tgz">
+                tsase-sdlbfgs.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>166</td>
+      <td>86</td>
+      <td>430</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-22" data-toggle="collapse">
+           optim</a>
+ 
+        <div id="lj38-22" class="collapse entry-details">
+          <p>
+            
+            <b>Comments:</b>
+            The L-BFGS memory length was set to 100 steps and the maximum move distance
+was 0.2 distance units.  Steps that increase energy are never accepted.  This
+is enforced by ensuring the step direction points downhill and, if necesary,
+reducing the step size.
+
+            <br>
+            
+
+            <span><b>Date:</b> 06 Aug 2014</span>
+            <span><b>Contributor:</b> Jacob Stevenson</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/wales-27058.tar.bz2">
+                wales-27058.tar.bz2
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="minimization/lj38/optim/optim.tgz">
+                optim.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>176</td>
+      <td>90</td>
+      <td>421</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-20" data-toggle="collapse">
+           pele-lbfgs-M100-maxstep0.2</a>
+ 
+        <div id="lj38-20" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 06 Aug 2014</span>
+            <span><b>Contributor:</b> </span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/pele-a68ec5.tgz">
+                pele-a68ec5.tgz
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="minimization/lj38/pele-lbfgs-M100-maxstep0.2/pele-lbfgs-M100-maxstep0.2.tgz">
+                pele-lbfgs-M100-maxstep0.2.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>179</td>
+      <td>90</td>
+      <td>540</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-17" data-toggle="collapse">
+           eon-lbfgs</a>
+ 
+        <div id="lj38-17" class="collapse entry-details">
+          <p>
+            
+            <b>Comments:</b>
+            L-BFGS with an initial diagonal inverse hessian equal to 0.004 distance squared
+per energy. The memory length was set to 100 steps and the maximum move
+distance was 0.2 distance units. The LBFGS history was reset when the angle
+between the descent direction and the force became greater than 90&#186; or a
+step greater than the max move was taken.
+
+            <br>
+            
+
+            <span><b>Date:</b> 27 Aug 2013</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/eon-r2025.tgz">
+                eon-r2025.tgz
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="minimization/lj38/eon-lbfgs/eon-lbfgs.tgz">
+                eon-lbfgs.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>181</td>
+      <td>90</td>
+      <td>405</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-34" data-toggle="collapse">
+           pele-lbfgs-M20-maxstep0.1</a>
+ 
+        <div id="lj38-34" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 06 Aug 2014</span>
+            <span><b>Contributor:</b> </span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/pele-a68ec5.tgz">
+                pele-a68ec5.tgz
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="minimization/lj38/pele-lbfgs-M20-maxstep0.1/pele-lbfgs-M20-maxstep0.1.tgz">
+                pele-lbfgs-M20-maxstep0.1.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>222</td>
+      <td>116</td>
+      <td>507</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-15" data-toggle="collapse">
+           pele-lbfgs-M4-maxstep0.2</a>
+ 
+        <div id="lj38-15" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 06 Aug 2014</span>
+            <span><b>Contributor:</b> </span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/pele-a68ec5.tgz">
+                pele-a68ec5.tgz
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="minimization/lj38/pele-lbfgs-M4-maxstep0.2/pele-lbfgs-M4-maxstep0.2.tgz">
+                pele-lbfgs-M4-maxstep0.2.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>230</td>
+      <td>100</td>
+      <td>620</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-26" data-toggle="collapse">
+           scipy-lbfgs</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="lj38-26" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 28 Aug 2013</span>
+            <span><b>Contributor:</b> Jacob Stevenson</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="minimization/lj38/scipy-lbfgs/scipy-lbfgs.tgz">
+                scipy-lbfgs.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>230</td>
+      <td>105</td>
+      <td>545</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-30" data-toggle="collapse">
+           pele-lbfgs-M10-maxstep0.1</a>
+ 
+        <div id="lj38-30" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 06 Aug 2014</span>
+            <span><b>Contributor:</b> </span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/pele-a68ec5.tgz">
+                pele-a68ec5.tgz
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="minimization/lj38/pele-lbfgs-M10-maxstep0.1/pele-lbfgs-M10-maxstep0.1.tgz">
+                pele-lbfgs-M10-maxstep0.1.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>235</td>
+      <td>115</td>
+      <td>523</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-25" data-toggle="collapse">
+           pele-lbfgs-M4-maxstep0.1</a>
+ 
+        <div id="lj38-25" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 06 Aug 2014</span>
+            <span><b>Contributor:</b> </span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/pele-a68ec5.tgz">
+                pele-a68ec5.tgz
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="minimization/lj38/pele-lbfgs-M4-maxstep0.1/pele-lbfgs-M4-maxstep0.1.tgz">
+                pele-lbfgs-M4-maxstep0.1.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>249</td>
+      <td>127</td>
+      <td>575</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-19" data-toggle="collapse">
+           pele-lbfgs-M1-maxstep0.1</a>
+ 
+        <div id="lj38-19" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 06 Aug 2014</span>
+            <span><b>Contributor:</b> </span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/pele-a68ec5.tgz">
+                pele-a68ec5.tgz
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="minimization/lj38/pele-lbfgs-M1-maxstep0.1/pele-lbfgs-M1-maxstep0.1.tgz">
+                pele-lbfgs-M1-maxstep0.1.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>287</td>
+      <td>132</td>
+      <td>712</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-31" data-toggle="collapse">
+           ase-lbfgs</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="lj38-31" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 27 Aug 2013</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="minimization/lj38/ase-lbfgs/ase-lbfgs.tgz">
+                ase-lbfgs.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>355</td>
+      <td>166</td>
+      <td>9317</td>
+      <td>1</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-23" data-toggle="collapse">
+           pele-lbfgs-M4-maxstep0.05</a>
+ 
+        <div id="lj38-23" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 06 Aug 2014</span>
+            <span><b>Contributor:</b> </span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/pele-a68ec5.tgz">
+                pele-a68ec5.tgz
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="minimization/lj38/pele-lbfgs-M4-maxstep0.05/pele-lbfgs-M4-maxstep0.05.tgz">
+                pele-lbfgs-M4-maxstep0.05.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>379</td>
+      <td>200</td>
+      <td>773</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-16" data-toggle="collapse">
+           ase-lbfgslinesearch</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="lj38-16" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 27 Aug 2013</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="minimization/lj38/ase-lbfgslinesearch/ase-lbfgslinesearch.tgz">
+                ase-lbfgslinesearch.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>417</td>
+      <td>239</td>
+      <td>862</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-12" data-toggle="collapse">
+           eon-cg</a>
+ 
+        <div id="lj38-12" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 24 Jun 2013</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/eon-r2025.tgz">
+                eon-r2025.tgz
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="minimization/lj38/eon-cg/eon-cg.tgz">
+                eon-cg.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>453</td>
+      <td>207</td>
+      <td>1153</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-24" data-toggle="collapse">
+           ase-BFGS</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="lj38-24" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 01 Jun 2020</span>
+            <span><b>Contributor:</b> R Ciufo</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="minimization/lj38/ase-BFGS/ase-BFGS.tgz">
+                ase-BFGS.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>463</td>
+      <td>243</td>
+      <td>8210</td>
+      <td>1</td>
+    </tr>
+  
+    
+    <tr class="hidden-lj38" style="display: none;">
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-33" data-toggle="collapse">
+           ase-bfgslinesearch</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="lj38-33" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 15 Oct 2012</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="minimization/lj38/ase-bfgslinesearch/ase-bfgslinesearch.tgz">
+                ase-bfgslinesearch.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>500</td>
+      <td>304</td>
+      <td>799</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-28" data-toggle="collapse">
+           eon-sd-twopoint</a>
+ 
+        <div id="lj38-28" class="collapse entry-details">
+          <p>
+            
+            <b>Comments:</b>
+            This steepest descent algoirthm uses the Barzilai and Borwein method for
+determining the step size. The next position is determinied by
+
+$$ x_{k+1} = x_k - \mathbf{S}_k g_k $$
+
+where the step size $\mathbf{S}_k$ is
+
+$$ S_k = \alpha_k \mathbf{I} $$
+
+where $\mathbf{I}$ is the identity matrix and $\alpha_k$ is given by
+
+$$ \alpha_k = \frac{\Delta x \cdot \Delta x}{\Delta x \cdot \Delta g} $$
+
+with $\Delta x = x_k - x_{k-1}$ and $\Delta g = g_k - g_{k-1}$. For this
+problem, $\alpha_0$ was set to 0.001. 
+
+<br>
+Barzilai, J.; Borwein, J. M. "<a href="http://pages.cs.wisc.edu/~swright/726/handouts/barzilai-borwein.pdf">Two-point step size gradient methods</a>" <i>IMA J. Numer. Anal.</i> <b>1988</b>, 8, 141-148.
+
+            <br>
+            
+
+            <span><b>Date:</b> 24 Jun 2013</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/eon-r2025.tgz">
+                eon-r2025.tgz
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="minimization/lj38/eon-sd-twopoint/eon-sd-twopoint.tgz">
+                eon-sd-twopoint.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>539</td>
+      <td>182</td>
+      <td>2502</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-27" data-toggle="collapse">
+           ase-fire</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="lj38-27" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 23 Aug 2013</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="minimization/lj38/ase-fire/ase-fire.tgz">
+                ase-fire.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>656</td>
+      <td>208</td>
+      <td>1000</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr class="hidden-lj38" style="display: none;">
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-29" data-toggle="collapse">
+           pele-fire</a>
+ 
+        <div id="lj38-29" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 06 Aug 2014</span>
+            <span><b>Contributor:</b> </span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/pele-a68ec5.tgz">
+                pele-a68ec5.tgz
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="minimization/lj38/pele-fire/pele-fire.tgz">
+                pele-fire.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>709</td>
+      <td>199</td>
+      <td>2079</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-21" data-toggle="collapse">
+           eon-fire</a>
+ 
+        <div id="lj38-21" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 24 Jun 2013</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/eon-r2025.tgz">
+                eon-r2025.tgz
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="minimization/lj38/eon-fire/eon-fire.tgz">
+                eon-fire.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>731</td>
+      <td>227</td>
+      <td>2918</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-18" data-toggle="collapse">
+           ase-preconlbfgs</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="lj38-18" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 16 Jun 2020</span>
+            <span><b>Contributor:</b> R Ciufo</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="minimization/lj38/ase-preconlbfgs/ase-preconlbfgs.tgz">
+                ase-preconlbfgs.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>2686</td>
+      <td>1194</td>
+      <td>6242</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-11" data-toggle="collapse">
+           eon-qm</a>
+ 
+        <div id="lj38-11" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 24 Jun 2013</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/eon-r2025.tgz">
+                eon-r2025.tgz
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="minimization/lj38/eon-qm/eon-qm.tgz">
+                eon-qm.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>3523</td>
+      <td>667</td>
+      <td>9929</td>
+      <td>23</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-14" data-toggle="collapse">
+           eon-sd</a>
+ 
+        <div id="lj38-14" class="collapse entry-details">
+          <p>
+            
+            <b>Comments:</b>
+            This steepest descent algoirthm calculates the step size by assuming a constant curvature
+of the potential energy:
+
+$$ x_{k+1} = x_k - \alpha g_k $$
+
+where $x_k$ is the current position, $g_k$ is the current gradient and $\alpha = 0.001$.
+
+            <br>
+            
+
+            <span><b>Date:</b> 24 Jun 2013</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/eon-r2025.tgz">
+                eon-r2025.tgz
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="minimization/lj38/eon-sd/eon-sd.tgz">
+                eon-sd.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>4901</td>
+      <td>1355</td>
+      <td>9982</td>
+      <td>96</td>
+    </tr>
+  
+
+  <tr>
+    <td colspan="5">
+      <a href="#" onclick="$('.hidden-lj38').toggle();return false;">Show/Hide Additional Entries...</a>
+    </td>
+  </tr>
+
+</table>
+
+<h3><a id="morse-bulk" href="#morse-bulk">Morse Bulk</a></h3>
+
+<p>This benchmark tests the performance of optimizers starting from 100 FCC
+bulk Morse structures that have been slightly perturbed from their equilibrium
+lattice positions. A tar file containing the structures is here: 
+<a href="minimization/morse-bulk/morse-bulk.tgz">morse-bulk.tgz</a>.</p>
+
+$$ U(r) = D_e ( 1 - e^{-a(r-r_e)})^2 $$
+<p>where $D_e=0.7102$ eV, $r_e=2.8970$ Ang, and $a=1.6047$ Ang$^{-1}$.</p>
+
+
+<p>The norm of the force must be reduced to at least 1e-3 eV/Ang</p>
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
+  <thead>
+    <th>Entry</th>
+    <th>&lt;N&gt;</th>
+    <th>min N</th>
+    <th>max N</th>
+  </thead>
+  
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#morse-bulk-2" data-toggle="collapse">
+           tsase-sdlbfgs</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="morse-bulk-2" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 26 Jun 2020</span>
+            <span><b>Contributor:</b> R Ciufo</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="minimization/morse-bulk/tsase-sdlbfgs/tsase-sdlbfgs.tgz">
+                tsase-sdlbfgs.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>19</td>
+      <td>11</td>
+      <td>25</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#morse-bulk-0" data-toggle="collapse">
+           ase-preconLBFGS</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="morse-bulk-0" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 17 Jun 2020</span>
+            <span><b>Contributor:</b> R Ciufo</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="minimization/morse-bulk/ase-preconLBFGS/ase-preconLBFGS.tgz">
+                ase-preconLBFGS.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>34</td>
+      <td>17</td>
+      <td>47</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#morse-bulk-6" data-toggle="collapse">
+           optim</a>
+ 
+        <div id="morse-bulk-6" class="collapse entry-details">
+          <p>
+            
+            <b>Comments:</b>
+            The L-BFGS memory length was set to 100 steps and the maximum move distance
+was 2.0 distance units.  Steps that increase energy are never accepted.  This
+is enforced by ensuring the step direction points downhill and, if necesary,
+reducing the step size.
+
+            <br>
+            
+
+            <span><b>Date:</b> 06 Aug 2014</span>
+            <span><b>Contributor:</b> Jacob Stevenson</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/wales-27058.tar.bz2">
+                wales-27058.tar.bz2
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="minimization/morse-bulk/optim/optim.tgz">
+                optim.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>46</td>
+      <td>21</td>
+      <td>80</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#morse-bulk-7" data-toggle="collapse">
+           pele-lbfgs</a>
+ 
+        <div id="morse-bulk-7" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 06 Aug 2014</span>
+            <span><b>Contributor:</b> </span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/pele-a68ec5.tgz">
+                pele-a68ec5.tgz
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="minimization/morse-bulk/pele-lbfgs/pele-lbfgs.tgz">
+                pele-lbfgs.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>51</td>
+      <td>24</td>
+      <td>84</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#morse-bulk-4" data-toggle="collapse">
+           eon-lbfgs</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="morse-bulk-4" class="collapse entry-details">
+          <p>
+            
+            <b>Comments:</b>
+            L-BFGS with an initial diagonal inverse hessian equal to 0.04 distance squared
+per energy. The memory length was set to 100 steps and the maximum move
+distance was 0.2 distance units. The LBFGS history was reset when the angle
+between the descent direction and the force became greater than 90&#186; or a
+step greater than the max move was taken.
+
+            <br>
+            
+
+            <span><b>Date:</b> 28 May 2014</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="minimization/morse-bulk/eon-lbfgs/eon-lbfgs.tgz">
+                eon-lbfgs.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>52</td>
+      <td>35</td>
+      <td>81</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#morse-bulk-10" data-toggle="collapse">
+           ase-lbfgs</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="morse-bulk-10" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 26 Aug 2013</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="minimization/morse-bulk/ase-lbfgs/ase-lbfgs.tgz">
+                ase-lbfgs.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>54</td>
+      <td>35</td>
+      <td>91</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#morse-bulk-9" data-toggle="collapse">
+           eon-sd-twopoint</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="morse-bulk-9" class="collapse entry-details">
+          <p>
+            
+            <b>Comments:</b>
+            This steepest descent algoirthm uses the Barzilai and Borwein method for
+determining the step size. The next position is determinied by
+
+$$ x_{k+1} = x_k - \mathbf{S}_k g_k $$
+
+where the step size $\mathbf{S}_k$ is
+
+$$ S_k = \alpha_k \mathbf{I} $$
+
+where $\mathbf{I}$ is the identity matrix and $\alpha_k$ is given by
+
+$$ \alpha_k = \frac{\Delta x \cdot \Delta x}{\Delta x \cdot \Delta g} $$
+
+with $\Delta x = x_k - x_{k-1}$ and $\Delta g = g_k - g_{k-1}$. For this
+problem, $\alpha_0$ was set to 0.04. 
+
+<br>
+Barzilai, J.; Borwein, J. M. "<a href="http://pages.cs.wisc.edu/~swright/726/handouts/barzilai-borwein.pdf">Two-point step size gradient methods</a>" <i>IMA J. Numer. Anal.</i> <b>1988</b>, 8, 141-148.
+
+            <br>
+            
+
+            <span><b>Date:</b> 23 Aug 2013</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="minimization/morse-bulk/eon-sd-twopoint/eon-sd-twopoint.tgz">
+                eon-sd-twopoint.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>64</td>
+      <td>28</td>
+      <td>138</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#morse-bulk-1" data-toggle="collapse">
+           eon-cg</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="morse-bulk-1" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 28 May 2014</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="minimization/morse-bulk/eon-cg/eon-cg.tgz">
+                eon-cg.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>106</td>
+      <td>67</td>
+      <td>183</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#morse-bulk-8" data-toggle="collapse">
+           ase-fire</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="morse-bulk-8" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 23 Aug 2013</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="minimization/morse-bulk/ase-fire/ase-fire.tgz">
+                ase-fire.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>147</td>
+      <td>102</td>
+      <td>216</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#morse-bulk-5" data-toggle="collapse">
+           eon-fire</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="morse-bulk-5" class="collapse entry-details">
+          <p>
+            
+            <b>Comments:</b>
+            L-BFGS with an initial diagonal inverse hessian equal to 0.01 distance squared
+per energy. At each step after the initial, the initial inverse hessian, which
+determines the scale of the problem, is updated according to:
+
+$$ H_0 = \frac{\Delta x \cdot \Delta x}{\Delta x \cdot \Delta g} $$
+
+with $\Delta x = x_k - x_{k-1}$ and $\Delta g = g_k - g_{k-1}$.
+
+The memory length was set to 100 steps and the maximum move
+distance was 0.2 distance units. The LBFGS history was reset when the angle
+between the descent direction and the force became greater than 90&#186; or a
+step greater than the max move was taken.
+
+            <br>
+            
+
+            <span><b>Date:</b> 28 May 2014</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="minimization/morse-bulk/eon-fire/eon-fire.tgz">
+                eon-fire.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>156</td>
+      <td>107</td>
+      <td>212</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#morse-bulk-3" data-toggle="collapse">
+           eon-sd</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="morse-bulk-3" class="collapse entry-details">
+          <p>
+            
+            <b>Comments:</b>
+            This steepest descent algoirthm calculates the step size by assuming a constant curvature
+of the potential energy:
+
+$$ x_{k+1} = x_k - \alpha g_k $$
+
+where $x_k$ is the current position, $g_k$ is the current gradient and $\alpha = 0.001$.
+
+            <br>
+            
+
+            <span><b>Date:</b> 23 Aug 2013</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="minimization/morse-bulk/eon-sd/eon-sd.tgz">
+                eon-sd.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>196</td>
+      <td>95</td>
+      <td>360</td>
+    </tr>
+  
+  
+</table>
+
+    </div>
+  </body>
+</html>

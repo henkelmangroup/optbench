@@ -1,0 +1,313 @@
+{% extends "templates/base.tmpl" %}
+{% block title %}Global Optimization Benchmark{% endblock %}
+{% block content %}
+<h2>Global Optimization</h2>
+Benchmarks for Global Optimization.
+
+<h3><a id="lj38" href="#lj38">Lennard-Jones 38</a></h3>
+
+<p> 
+
+This benchmark requires that the global optimization algorithm is run starting
+from the 100 randomly generated (minimized) Lennard-Jones structures.  Runs
+that are greater than 0.001 energy units from the known global minimum are
+considered failures. If a run was successful, the number of force calls needed
+to reach the global minimum is recorded.
+
+</p>
+
+<p>
+
+The starting structures can be downloaded <a href="globalopt/lj38/100_lj38.tar.gz">here</a>.
+
+</p>
+
+<p>
+
+Entries for this benchmark must record the average number number of force calls
+as <i>force_calls</i> in <tt>benchmark.dat</tt>, the maximum number of force
+calls as <i>force_calls_max</i>, and the minimum number of force calls as
+<i>force_calls_min</i>.
+
+</p>
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
+  <thead>
+    <th>Entry</th>
+    <th>Code</th>
+    <th>&lt;N&gt;</th>
+    <th>min N</th>
+    <th>max N</th>
+  </thead>
+  {% for entry in benchmarks['lj38']|sort(attribute='force_calls') %}
+    <tr>
+      <td>{% include 'templates/entry-details.tmpl' %}</td>
+      <td>{{ entry.code }}</td>
+      <td>{{ '%.3e' % entry.force_calls }}</td>
+      <td>{{ '%.3e' % entry.force_calls_min }}</td>
+      <td>{{ '%.3e' % entry.force_calls_max }}</td>
+    </tr>
+  {% endfor %}
+</table>
+
+<h3><a id="lj75" href="#lj75">Lennard-Jones 75</a></h3>
+
+<p> 
+
+This benchmark is a global optimization benchmark for a Lennard-Jones cluster
+with 75 atoms.  The same criterion apply as in the LJ38 benchmark above.
+
+</p>
+
+<p>
+
+The starting structures can be downloaded <a href="globalopt/lj75/lj75_clusters.tgz">here</a>.
+
+</p>
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
+  <thead>
+    <th>Entry</th>
+    <th>Code</th>
+    <th>&lt;N&gt;</th>
+    <th>min N</th>
+    <th>max N</th>
+  </thead>
+  {% for entry in benchmarks['lj75']|sort(attribute='force_calls') %}
+    <tr>
+      <td>{% include 'templates/entry-details.tmpl' %}</td>
+      <td>{{ entry.code }}</td>
+      <td>{{ '%.3e' % entry.force_calls }}</td>
+      <td>{{ '%.3e' % entry.force_calls_min }}</td>
+      <td>{{ '%.3e' % entry.force_calls_max }}</td>
+    </tr>
+  {% endfor %}
+</table>
+
+<h3><a id="lj98" href="#lj98">Lennard-Jones 98</a></h3>
+
+<p> 
+
+This benchmark is a global optimization benchmark for a Lennard-Jones cluster
+with 98 atoms. The criteria are similar to LJ38 and 75, but entries are benchmarked
+on the number of quenches [Q] and the number of energy steps [V].
+
+</p>
+
+<p>
+
+The starting structures can be downloaded <a href="globalopt/lj98/lj98_clusters.tgz">here</a>.
+
+</p>
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
+  <thead>
+    <th>Entry</th>
+    <th>Code</th>
+    <th>mean Q</th>
+    <th>stddev of Q</th>
+    <th>mean V</th>
+    <th>stddev of V</th>	
+  </thead>
+  {% for entry in benchmarks['lj98'] %}
+    <tr>
+      <td>{% include 'templates/entry-details.tmpl' %}</td>
+      <td>{{ entry.code }}</td>
+      <td>{{ '%.3e' % entry.basin_hopping_steps_mean }}</td>
+      <td>{{ '%.3e' % entry.basin_hopping_steps_stddev }}</td>
+      <td>{{ '%.3e' % entry.energy_calls_mean }}</td>
+      <td>{{ '%.3e' % entry.energy_calls_stddev }}</td>
+    </tr>
+  {% endfor %}
+</table>
+
+<h3><a id="lj150" href="#lj150">Lennard-Jones 150</a></h3>
+
+<p> 
+
+This benchmark is a global optimization benchmark for a Lennard-Jones cluster
+with 150 atoms. It is analogous to LJ98.
+
+</p>
+
+<p>
+
+The starting structures can be downloaded <a href="globalopt/lj150/lj150_clusters.tgz">here</a>.
+
+</p>
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
+  <thead>
+    <th>Entry</th>
+    <th>Code</th>
+    <th>mean Q</th>
+    <th>stddev of Q</th>
+    <th>mean V</th>
+    <th>stddev of V</th>	
+  </thead>
+  {% for entry in benchmarks['lj150'] %}
+    <tr>
+      <td>{% include 'templates/entry-details.tmpl' %}</td>
+      <td>{{ entry.code }}</td>
+      <td>{{ '%.3e' % entry.basin_hopping_steps_mean }}</td>
+      <td>{{ '%.3e' % entry.basin_hopping_steps_stddev }}</td>
+      <td>{{ '%.3e' % entry.energy_calls_mean }}</td>
+      <td>{{ '%.3e' % entry.energy_calls_stddev }}</td>
+    </tr>
+  {% endfor %}
+</table>
+
+<h3><a id="lj100" href="#lj100">Binary Lennard-Jones 100</a></h3>
+
+<p>
+
+This benchmark test the performance of global optimization algorithms on a
+binary Lennard-Jones A<sub>42</sub>B<sub>58</sub> system with a size ratio of 1.3. 
+The form of the potential is
+</p>
+
+$$
+E = 4 \sum_{i < j}
+  \left[
+    \left( \frac{\sigma_{\alpha \beta}}{r_{ij}} \right)^{12}
+        - \left( \frac{\sigma_{\alpha \beta}}{r_{ij}} \right)^{6}
+  \right]
+$$
+
+<p>
+where $\alpha$ and $\beta$ are the atom type of atoms $i$ and $j$, respectively.
+Here $\epsilon_{AA}$=$\epsilon_{AB}$=$\epsilon_{BB}$=1, $\sigma_{AA}$=1,
+$\sigma_{BB}$=1.3, and $\sigma_{AB}$=($\sigma_{AA}$+$\sigma_{BB}$)/2.
+Previous studies have reported a putative global minimum energy of -604.796307.
+</p>
+
+<p>
+This benchmark requires that the global optimization algorithm is run starting
+from the 100 randomly generated (minimized) Lennard-Jones structures.  The
+starting structures can be downloaded <a href="globalopt/lj100-binary/lj100-binary-con.tgz">here</a>.
+The global optimization algorithm will be run for not more than two million
+energy (force) evaluations for each starting structure.
+</p>
+
+<p>
+Entries for this benchmark must record the average lowest energy found at the
+end of each run as <i>average_energy</i> in <tt>benchmark.dat</tt> as well as
+the largest and smallest energies (<i>min_energy</i> and <i>max_energy</i>)
+found at the end of the 100 runs.
+</p>
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
+  <thead>
+    <th>Entry</th>
+    <th>Code</th>
+    <th>&lt;E&gt;</th>
+    <th>min E</th>
+    <th>max E</th>
+  </thead>
+  {% for entry in benchmarks['lj100-binary']|sort(attribute='avg_energy') %}
+    <tr>
+      <td>{% include 'templates/entry-details.tmpl' %}</td>
+      <td>{{ entry.code }}</td>
+      <td>{{ '%.3e' % entry.avg_energy }}</td>
+      <td>{{ '%.3e' % entry.min_energy }}</td>
+      <td>{{ '%.3e' % entry.max_energy }}</td>
+    </tr>
+  {% endfor %}
+</table>
+
+<h3><a id="tip4p" href="#tip4p">TIP4Pn(n=10,15,20)</a></h3>
+
+<center>
+	<img
+	src="img/tip4p20.png"
+	alt="global minimum of TIP4P<sub>20</sub>"
+	title="global minimum of TIP4P<sub>20</sub>"
+	style="width:500px;height:500px"
+	align="middle">
+</center>
+
+<p> 
+
+This benchmark requires that the global optimization algorithm is run starting
+from the supplied randomly generated (minimized) structures.  Runs
+that are greater than 0.001 energy units from the known global minimum are
+considered failures. If a run was successful, the number of force calls needed
+to reach the global minimum is recorded.
+
+</p>
+
+<p>
+
+The 10000, 500, and 100 starting structures for n = 10, 15, and 20 can be downloaded <a href="globalopt/tip4p10/10000_tip4p10.tar.gz">here</a>,
+<a href="globalopt/tip4p15/500_tip4p15.tar.gz">here</a>, and
+<a href="globalopt/tip4p20/100_tip4p20.tar.gz">here</a>.
+
+</p>
+
+<p>
+
+Entries for this benchmark must record the average number number of force calls
+as <i>force_calls</i> in <tt>benchmark.dat</tt>, the maximum number of force
+calls as <i>force_calls_max</i>, and the minimum number of force calls as
+<i>force_calls_min</i>.
+
+</p>
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
+  <thead>
+    <th>Entry</th>
+    <th>Code</th>
+    <th>&lt;N&gt;</th>
+    <th>min N</th>
+    <th>max N</th>
+  </thead>
+  {% for entry in benchmarks['tip4p10']|sort(attribute='force_calls') %}
+    <tr>
+      <td>{% include 'templates/entry-details.tmpl' %}</td>
+      <td>{{ entry.code }}</td>
+      <td>{{ '%.3e' % entry.force_calls }}</td>
+      <td>{{ '%.3e' % entry.force_calls_min }}</td>
+      <td>{{ '%.3e' % entry.force_calls_max }}</td>
+    </tr>
+  {% endfor %}
+</table>
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
+  <thead>
+    <th>Entry</th>
+    <th>Code</th>
+    <th>&lt;N&gt;</th>
+    <th>min N</th>
+    <th>max N</th>
+  </thead>
+  {% for entry in benchmarks['tip4p15']|sort(attribute='force_calls') %}
+    <tr>
+      <td>{% include 'templates/entry-details.tmpl' %}</td>
+      <td>{{ entry.code }}</td>
+      <td>{{ '%.3e' % entry.force_calls }}</td>
+      <td>{{ '%.3e' % entry.force_calls_min }}</td>
+      <td>{{ '%.3e' % entry.force_calls_max }}</td>
+    </tr>
+  {% endfor %}
+</table>
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
+  <thead>
+    <th>Entry</th>
+    <th>Code</th>
+    <th>&lt;N&gt;</th>
+    <th>min N</th>
+    <th>max N</th>
+  </thead>
+  {% for entry in benchmarks['tip4p20']|sort(attribute='force_calls') %}
+    <tr>
+      <td>{% include 'templates/entry-details.tmpl' %}</td>
+      <td>{{ entry.code }}</td>
+      <td>{{ '%.3e' % entry.force_calls }}</td>
+      <td>{{ '%.3e' % entry.force_calls_min }}</td>
+      <td>{{ '%.3e' % entry.force_calls_max }}</td>
+    </tr>
+  {% endfor %}
+</table>
+
+{% endblock %}

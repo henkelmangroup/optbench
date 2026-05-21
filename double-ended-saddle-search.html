@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <title>OptBench: Double Ended Saddle Search</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/sorttable.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+          processEscapes: true
+        },
+        "HTML-CSS": {scale: 95},
+      });
+    </script>
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+    </script>
+    
+    <script type="text/javascript">
+      $(function () {
+          $('[rel=tooltip]').tooltip();
+          
+          $('.collapse').hide();
+
+          $('.collapse').on('show', function () {
+            $(this).show();
+          }).on('hidden', function () {
+            $(this).hide();
+          });
+      });
+    </script>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <h1><a href="index.html" id="title">OptBench</a></h1>
+      </div>
+      
+<h1>Double Ended Saddle Search</h1>
+
+For this benchmark we require simply a refined saddle point that is in between
+the starting and ending minima.  The termination condition is that the norm of
+the gradient at the saddle point be less than 0.001.  An example method to find
+that saddle point is (D)NEB + climbing image or (D)NEB + hybrid eigenvector
+following.  The saddle point need not be a transition state directly separating
+the start and end minima.
+
+<h2>LJ 38</h2>
+<p>A tar file containing the structures between which a saddle should be computed
+is here: <a href="double-ended-saddle-search/lj38/coords.tgz">coords.tgz</a>
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
+  <thead>
+    <th>Algorithm</th>
+    <th>&lt;FCs&gt;</th>
+    <th>min(FCs)</th>
+    <th>median(FCs)</th>
+    <th>max(FCs)</th>
+    <th>nfailed</th>
+  </thead>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-15" data-toggle="collapse">
+           optim</a>
+ 
+        <div id="lj38-15" class="collapse entry-details">
+          <p>
+            
+            <b>Comments:</b>
+            This method uses DNEB to get an image close to the saddle point, then uses
+hybrid eigenvector following method to optimize to that saddle point.
+This uses Rayleigh-Ritz minimization to find the lowest eigenvector and moves
+using the hybrid eigenvector following method. The Rayleigh-Ritz minimization
+uses a first order (forward finite differences) expansion.
+
+            <br>
+            
+
+            <span><b>Date:</b> 06 Aug 2014</span>
+            <span><b>Contributor:</b> Jacob Stevenson & Cheng Shang</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/wales-27058.tar.bz2">
+                wales-27058.tar.bz2
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="double-ended-saddle-search/lj38/optim/optim.tgz">
+                optim.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>131</td>
+      <td>66</td>
+      <td>120</td>
+      <td>260</td>
+      <td>0</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-17" data-toggle="collapse">
+           eon-lanczos-improved</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="lj38-17" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 29 Aug 2013</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="double-ended-saddle-search/lj38/eon-lanczos-improved/eon-lanczos-improved.tgz">
+                eon-lanczos-improved.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>287</td>
+      <td>85</td>
+      <td>201</td>
+      <td>1623</td>
+      <td>0</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-20" data-toggle="collapse">
+           pele</a>
+ 
+        <div id="lj38-20" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 06 Aug 2014</span>
+            <span><b>Contributor:</b> Jacob Stevenson</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/pele-a68ec5.tgz">
+                pele-a68ec5.tgz
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="double-ended-saddle-search/lj38/pele/pele.tgz">
+                pele.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>293</td>
+      <td>107</td>
+      <td>222</td>
+      <td>782</td>
+      <td>0</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-19" data-toggle="collapse">
+           eon-dimer</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="lj38-19" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 22 Aug 2013</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="double-ended-saddle-search/lj38/eon-dimer/eon-dimer.tgz">
+                eon-dimer.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>337</td>
+      <td>89</td>
+      <td>204</td>
+      <td>2079</td>
+      <td>0</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-14" data-toggle="collapse">
+           eon-lanczos</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="lj38-14" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 29 Aug 2013</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="double-ended-saddle-search/lj38/eon-lanczos/eon-lanczos.tgz">
+                eon-lanczos.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>364</td>
+      <td>110</td>
+      <td>241</td>
+      <td>2794</td>
+      <td>0</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-18" data-toggle="collapse">
+           optim-cl-string</a>
+ 
+        <div id="lj38-18" class="collapse entry-details">
+          <p>
+            
+            <b>Comments:</b>
+            This method uses climbing-string method to get an image close to the saddle 
+point, then uses inexact newton method to accelerate the convergence.
+The final state is used as the inpute of the initial guessed saddle point for
+climbing-string. 
+
+            <br>
+            
+
+            <span><b>Date:</b> 06 Aug 2014</span>
+            <span><b>Contributor:</b> Cheng Shang</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/wales-27058.tar.bz2">
+                wales-27058.tar.bz2
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="double-ended-saddle-search/lj38/optim-cl-string/optim-cl-string.tgz">
+                optim-cl-string.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>786</td>
+      <td>274</td>
+      <td>625</td>
+      <td>2792</td>
+      <td>3</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-16" data-toggle="collapse">
+           eon-ci-neb</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="lj38-16" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 22 Aug 2013</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="double-ended-saddle-search/lj38/eon-ci-neb/eon-ci-neb.tgz">
+                eon-ci-neb.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>827</td>
+      <td>407</td>
+      <td>788</td>
+      <td>2347</td>
+      <td>7</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-13" data-toggle="collapse">
+           eon-ci-swdneb</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="lj38-13" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 22 Aug 2013</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="double-ended-saddle-search/lj38/eon-ci-swdneb/eon-ci-swdneb.tgz">
+                eon-ci-swdneb.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>861</td>
+      <td>407</td>
+      <td>794</td>
+      <td>2187</td>
+      <td>5</td>
+    </tr>
+  
+</table>
+
+<h2>Pt(111) Heptamer Island</h2>
+
+<p>A tar file containing the structures between which a saddle should be computed
+is here: <a href="double-ended-saddle-search/pt-island/pt-island-con.tgz">pt-island-con.tgz</a>
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
+  <thead>
+    <th>Algorithm</th>
+    <th>&lt;FCs&gt;</th>
+    <th>min(FCs)</th>
+    <th>median(FCs)</th>
+    <th>max(FCs)</th>
+    <th>nfailed</th>
+  </thead>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#pt-island-3" data-toggle="collapse">
+           optim</a>
+ 
+        <div id="pt-island-3" class="collapse entry-details">
+          <p>
+            
+            <b>Comments:</b>
+            This method uses DNEB to get an image close to the saddle point, then uses
+hybrid eigenvector following method to optimize to that saddle point.
+This uses Rayleigh-Ritz minimization to find the lowest eigenvector and moves
+using the hybrid eigenvector following method. The Rayleigh-Ritz minimization
+uses a first order (forward finite differences) expansion.
+
+            <br>
+            
+
+            <span><b>Date:</b> 06 Aug 2014</span>
+            <span><b>Contributor:</b> Jacob Stevenson & Cheng Shang</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/wales-27058.tar.bz2">
+                wales-27058.tar.bz2
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="double-ended-saddle-search/pt-island/optim/optim.tgz">
+                optim.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>103</td>
+      <td>59</td>
+      <td>98</td>
+      <td>194</td>
+      <td>0</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#pt-island-10" data-toggle="collapse">
+           eon-ci-neb-single</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="pt-island-10" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 23 Aug 2013</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="double-ended-saddle-search/pt-island/eon-ci-neb-single/eon-ci-neb-single.tgz">
+                eon-ci-neb-single.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>110</td>
+      <td>29</td>
+      <td>62</td>
+      <td>594</td>
+      <td>0</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#pt-island-0" data-toggle="collapse">
+           optim-6</a>
+ 
+        <div id="pt-island-0" class="collapse entry-details">
+          <p>
+            
+            <b>Comments:</b>
+            This method uses DNEB to get an image close to the saddle point, then uses
+hybrid eigenvector following method to optimize to that saddle point.
+This uses Rayleigh-Ritz minimization to find the lowest eigenvector and moves
+using the hybrid eigenvector following method. The Rayleigh-Ritz minimization
+uses a first order (forward finite differences) expansion.
+Six images are used in DNEB 
+
+            <br>
+            
+
+            <span><b>Date:</b> 06 Aug 2014</span>
+            <span><b>Contributor:</b> Jacob Stevenson & Cheng Shang</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/wales-27058.tar.bz2">
+                wales-27058.tar.bz2
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="double-ended-saddle-search/pt-island/optim-6/optim-6.tgz">
+                optim-6.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>117</td>
+      <td>60</td>
+      <td>115</td>
+      <td>201</td>
+      <td>0</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#pt-island-7" data-toggle="collapse">
+           eon-dimer</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="pt-island-7" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 23 Aug 2013</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="double-ended-saddle-search/pt-island/eon-dimer/eon-dimer.tgz">
+                eon-dimer.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>182</td>
+      <td>74</td>
+      <td>182</td>
+      <td>322</td>
+      <td>0</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#pt-island-5" data-toggle="collapse">
+           eon-lanczos-improved</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="pt-island-5" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 29 Aug 2013</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="double-ended-saddle-search/pt-island/eon-lanczos-improved/eon-lanczos-improved.tgz">
+                eon-lanczos-improved.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>222</td>
+      <td>72</td>
+      <td>157</td>
+      <td>2039</td>
+      <td>8</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#pt-island-4" data-toggle="collapse">
+           eon-ci-neb</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="pt-island-4" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 23 Aug 2013</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="double-ended-saddle-search/pt-island/eon-ci-neb/eon-ci-neb.tgz">
+                eon-ci-neb.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>248</td>
+      <td>86</td>
+      <td>211</td>
+      <td>761</td>
+      <td>0</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#pt-island-8" data-toggle="collapse">
+           pele</a>
+ 
+        <div id="pt-island-8" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 06 Aug 2014</span>
+            <span><b>Contributor:</b> Jacob Stevenson</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/pele-a68ec5.tgz">
+                pele-a68ec5.tgz
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="double-ended-saddle-search/pt-island/pele/pele.tgz">
+                pele.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>255</td>
+      <td>96</td>
+      <td>244</td>
+      <td>782</td>
+      <td>2</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#pt-island-1" data-toggle="collapse">
+           eon-ci-swdneb</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="pt-island-1" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 23 Aug 2013</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="double-ended-saddle-search/pt-island/eon-ci-swdneb/eon-ci-swdneb.tgz">
+                eon-ci-swdneb.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>256</td>
+      <td>92</td>
+      <td>219</td>
+      <td>956</td>
+      <td>0</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#pt-island-6" data-toggle="collapse">
+           optim-cl-string</a>
+ 
+        <div id="pt-island-6" class="collapse entry-details">
+          <p>
+            
+            <b>Comments:</b>
+            This method uses climbing-string method to get an image close to the saddle 
+point, then uses inexact newton method to accelerate the convergence.
+The final state is used as the inpute of the initial guessed saddle point for
+climbing-string. 
+
+            <br>
+            
+
+            <span><b>Date:</b> 06 Aug 2014</span>
+            <span><b>Contributor:</b> Cheng Shang</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/wales-27058.tar.bz2">
+                wales-27058.tar.bz2
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="double-ended-saddle-search/pt-island/optim-cl-string/optim-cl-string.tgz">
+                optim-cl-string.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>319</td>
+      <td>34</td>
+      <td>286</td>
+      <td>1076</td>
+      <td>0</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#pt-island-2" data-toggle="collapse">
+           eon-lanczos</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="pt-island-2" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 29 Aug 2013</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="double-ended-saddle-search/pt-island/eon-lanczos/eon-lanczos.tgz">
+                eon-lanczos.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>325</td>
+      <td>95</td>
+      <td>208</td>
+      <td>2660</td>
+      <td>5</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#pt-island-9" data-toggle="collapse">
+           eon-ci-neb-5</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="pt-island-9" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 23 Aug 2013</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="double-ended-saddle-search/pt-island/eon-ci-neb-5/eon-ci-neb-5.tgz">
+                eon-ci-neb-5.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>391</td>
+      <td>162</td>
+      <td>395</td>
+      <td>797</td>
+      <td>0</td>
+    </tr>
+  
+</table>
+
+<h2>LJ 38 with one intermediate minimum</h2>
+<p>For this benchmark we require a connected path of minima and transition states
+between the starting and ending points.  For this benchmark the starting and
+ending point are not directly connected.  There exists a path with one
+intermediate minimum, however we do not require this path to be found. A
+successful benchmark is one which finds any path between the starting and
+ending minima.  Because the final path is not specified, we require the number
+of transition states in the found path to be reported.
+(note: this benchmark should be separated from those above.  perhaps in "double ended pathway search")
+
+<p>A tar file containing the structures between which a saddle should be computed
+is here: <a href="double-ended-saddle-search/lj38_2ts_separation/coords.tgz">coords.tgz</a>
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
+  <thead>
+    <th>Algorithm</th>
+    <th>&lt;FCs&gt;</th>
+    <th>min(FCs)</th>
+    <th>median(FCs)</th>
+    <th>max(FCs)</th>
+    <th>&lt;TSs&gt;</th>
+    <th>nfailed</th>
+  </thead>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38_2ts_separation-11" data-toggle="collapse">
+           optim</a>
+ 
+        <div id="lj38_2ts_separation-11" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 06 Aug 2014</span>
+            <span><b>Contributor:</b> Jacob Stevenson & Cheng Shang</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/wales-27058.tar.bz2">
+                wales-27058.tar.bz2
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="double-ended-saddle-search/lj38_2ts_separation/optim/optim.tgz">
+                optim.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>2885</td>
+      <td>665</td>
+      <td>2565</td>
+      <td>7138</td>
+      <td>5</td>
+      <td>0</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38_2ts_separation-12" data-toggle="collapse">
+           pele</a>
+ 
+        <div id="lj38_2ts_separation-12" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 06 Aug 2014</span>
+            <span><b>Contributor:</b> Jacob Stevenson</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/pele-a68ec5.tgz">
+                pele-a68ec5.tgz
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="double-ended-saddle-search/lj38_2ts_separation/pele/pele.tgz">
+                pele.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>25022</td>
+      <td>1069</td>
+      <td>20638</td>
+      <td>114490</td>
+      <td>7</td>
+      <td>3</td>
+    </tr>
+  
+</table>
+
+
+    </div>
+  </body>
+</html>

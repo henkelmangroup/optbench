@@ -1,0 +1,42 @@
+{% extends "templates/base.tmpl" %}
+{% block title %}True Rate Benchmark{% endblock %}
+{% block content %}
+<h2>True Escape Rate</h2>
+Benchmark for calculating true rates of chemical reactions.
+
+<h3>Adatom on Al(100) Surface</h3>
+
+<p>This benchmark tests various methods of calculating the true rate of escape. A tar file containing the minimized reactant state is found here:
+
+<a href="accelerated-md/reactant.tar.gz">reactant.tar.gz</a>.</p>
+
+<p>  This benchmark requires that rates are calculated at 150K with the langevin thermostat and the Verlet algorithm using a friction coefficient of 0.001 1/fs. Calculated rates will be compared with a standard true rate shown below. </p>
+
+<h3>Standard True Rate of Escape</h3>
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
+  <thead>
+    <th>Algorithm</th>
+    <th>Code</th>
+    <th>Thermostat</th>
+    <th>Escape rate(1/s)</th>
+    <th>Uncertainty(1/s)</th>
+    <th>Percent Uncertainty</th>
+    <th>Date</th>
+    <th>Contributer</th>
+  </thead>
+  {% for entry in benchmarks['standard_aladatom']|sort(attribute='true_rate') %}
+   <tr>
+      <td>{{ entry.algorithm }}</td>
+      <td>{{ entry.code }}</td>
+      <td>{{ entry.thermostat }}</td>
+      <td>{{ '%.3e' % entry.true_rate }}</td>
+      <td>{{ '%.3e' % entry.uncertainty }}</td>
+      <td>{{ '%.1e' % entry.percent_uncertainty}}</td>
+      <td>{{ entry.date }}</td>
+      <td>{{ entry.contributer }}</td>
+    </tr>
+  {% endfor %}
+</table>
+
+{% endblock %}

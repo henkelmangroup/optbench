@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <title>OptBench: Home</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/sorttable.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+          processEscapes: true
+        },
+        "HTML-CSS": {scale: 95},
+      });
+    </script>
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+    </script>
+    
+    <script type="text/javascript">
+      $(function () {
+          $('[rel=tooltip]').tooltip();
+          
+          $('.collapse').hide();
+
+          $('.collapse').on('show', function () {
+            $(this).show();
+          }).on('hidden', function () {
+            $(this).hide();
+          });
+      });
+    </script>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <h1><a href="index.html" id="title">OptBench</a></h1>
+      </div>
+      
+<h2>Benchmark Suites</h2>
+<ul>
+  <li><a href="minimization.html">Minimization</a></li>
+  <ul>
+    <li><a href="minimization.html#lj38">Lennard-Jones 38</a></li>
+    <li><a href="minimization.html#morse-bulk">Morse Bulk</a></li>
+  </ul>
+
+  <li><a href="saddle-search.html">Saddle Search</a></li>
+    <ul>
+      <li><a href="saddle-search.html#pt-heptamer-island">Heptamer Island on Pt(111) Surface</a></li>
+    </ul>
+
+  <li><a href="mlopt.html">Machine Learning Optimization</a></li>
+    <ul>
+      <li><a href="mlopt.html#pt38-nanoparticle">Pt 38 Atoms Nanoparticle</a></li>
+      <li><a href="mlopt.html#C2H4">DFT-MD C2H4</a></li>
+    </ul>
+    
+  <li><a href="globalopt.html">Global Optimization</a></li>
+  <ul>
+    <li><a href="globalopt.html#lj38">Lennard-Jones 38</a></li>	
+    <li><a href="globalopt.html#lj75">Lennard-Jones 75</a></li>
+    <li><a href="globalopt.html#lj98">Lennard-Jones 98</a></li>
+    <li><a href="globalopt.html#lj150">Lennard-Jones 150</a></li>	
+    <li><a href="globalopt.html#lj100binary">Binary Lennard-Jones 100</a></li>
+    <li><a href="globalopt.html#tip4p">TIP4P water 10, 15, 20</a></li>
+  </ul>
+
+  <li><a href="lowest-eigenvector.html">Lowest Eigenvector</a></li>
+  <li><a href="tsopt.html">Transition State Optimization</a></li>
+  <li><a href="double-ended-saddle-search.html">Double Ended Saddle Search</a></li>
+
+<!--  
+  <li><a href="htst.html">hTST Escape Rate</li>
+    <ul>
+      <li><a href="htst.html#Pt">Heptamer Island on Pt(111) Surface</a></li>
+      <li><a href="htst.html#Al">Adatom on Al(100) Surface</a></li>
+    </ul>
+
+  <li><a href="accelerated-md.html">Accelerated MD Escape Rate</li>
+  <li><a href="branchingratios.html">Accelerated MD Branching Ratios</li>
+-->
+</ul>
+
+<h2>How to submit an entry</h2>
+<p>
+
+Each entry to a benchmark should contain source code, a shell script named
+<tt>run.sh</tt> that will run the program to be benchmarked and
+that will examine the output of <tt>run.sh</tt> and
+write out the results to a file named <tt>benchmark.dat</tt>.  The
+<tt>benchmark.dat</tt> file describes the results for each of the metrics of
+the benchmark as well as other important data such as the name of the algorithm
+used, the name and version of the code, the date, and the name of the
+contributor to the benchmark. The file has a very simple format.  Each line
+contains a key value pair. The key and value are seperated by whitespace.
+Everything on the line after the first whitespace is considered the value. Here
+is an example:
+
+</p>
+
+<pre>
+force_calls 431
+force_calls_max 1139
+force_calls_min 197
+nfailed 0
+code Eon
+code_version r1789
+date 15 Oct 2012
+contributor Sam Chill
+</pre>
+
+<p>
+
+The required keys in the <tt>benchmark.dat</tt> file are defined by each
+benchmark.  Additionally the keys <i>code</i>, <i>code_version</i>,
+<i>date</i>, and <i>contributor</i> should be specified.  
+
+</p>
+
+<p>
+
+Entries may be submitted via email to <a href="mailto:henkelman@utexas.edu">Graeme Henkelman</a>.
+
+</p>
+
+<h2>Notes for maintainers</h2>
+
+<h3>How to obtain the benchmarks</h3>
+
+<p>
+
+This website, the output from the benchmark runs, and the code used to run each
+benchmark is stored in a subversion repository.
+
+Read-only access to the repository is provided with the command:
+</p>
+<pre>
+svn checkout http://optbench.org/svn/benchmarks
+</pre>
+
+If you have an account, you can checkout and modify the repository like so:
+
+</p>
+
+<pre>
+svn checkout svn+ssh://username@optbench.org/svn/benchmarks
+</pre>
+
+<h3>Description of benchmarks website and directory hierarchy</h3>
+
+<p>In the top level directory there are two folders</p>
+
+<pre>
+bin/
+website/
+</pre>
+
+<p>
+
+The <tt>bin</tt> directory has some helper programs and the website is in the
+<tt>website</tt> directory. In the <tt>website</tt> directory there are files
+that end in <tt>.tmpl</tt> these are template files that get rendered to html.
+To build the website one runs "make" in that directory and the templates get
+turned into html.
+</p>
+
+<p>
+
+Each suite of benchmarks has its own subdirectory and each benchmark has its
+own directory in the folder of the suite it belongs to. For example all of the
+minimization benchmarks are in the <tt>website/minimization</tt> folder. A
+minimization benchmark named "Lennard-Jones 38" is in the
+<tt>website/minimization/lj38</tt> folder.  Each entry in the benchmark (a run
+of a code with particular settings) has its own folder in the benchmark folder:
+for example <tt>website/minimization/lj38/eon-cg</tt>.  All of the important
+information for each benchmark entry is stored in a file named
+<tt>benchmark.dat</tt>. So for this example the file is located at
+<tt>website/minimization/lj38/eon-cg/benchmark.dat</tt>. 
+
+</p>
+
+<p>
+
+When the website template files gets rendered by running "make", each template
+gets passed data from all of the <tt>benchmark.dat</tt> files in its suite.
+Once a template file has been written for a benchmark it does not need to be
+modified to add new entries. The template is designed to loop over all the
+entries in each benchmark.
+
+</p>
+
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+debug
+bfgssteps 1000
+comment convergence tolerance is norm(gradient)=1e-3, or that RMS(gradient)=1e-3 / sqrt(3*natoms) = 9.36585D-05
+comment bfgsconv 9.36585D-05
+nohess
+eigenonly 1D-13 0.99
+maxbfgs 0.2 1.0
+updates 4 100 
+usediag 2
+READVEC

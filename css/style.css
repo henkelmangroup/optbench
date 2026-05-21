@@ -1,0 +1,25 @@
+td {
+    font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+}
+
+th {
+    cursor: pointer;
+    -webkit-user-select: none;
+    white-space: nowrap;
+}
+
+.entry-details {
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.entry-details span {
+    white-space: nowrap;
+    padding-right: 5px;
+}
+
+.benchmark-table {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 60%;
+}

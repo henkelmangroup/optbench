@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <title>OptBench: Saddle Search Benchmark</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/sorttable.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+          processEscapes: true
+        },
+        "HTML-CSS": {scale: 95},
+      });
+    </script>
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+    </script>
+    
+    <script type="text/javascript">
+      $(function () {
+          $('[rel=tooltip]').tooltip();
+          
+          $('.collapse').hide();
+
+          $('.collapse').on('show', function () {
+            $(this).show();
+          }).on('hidden', function () {
+            $(this).hide();
+          });
+      });
+    </script>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <h1><a href="index.html" id="title">OptBench</a></h1>
+      </div>
+      
+<h2>Saddle Search Benchmark</h2>
+
+<p>
+Entries for these benchmarks must record the average number number of force
+calls as <i>force_calls</i> in <tt>benchmark.dat</tt>, the standard error of the mean force calls as <i>force_calls_mean_error</i>, 
+the average fraction of saddles that are connected to the initial minimum as <i>fraction_connected</i>,
+the average total number of saddle searches <i>total_searches</i>,
+and the average number of unique saddles found <i>unique_saddles</i>.
+</p>
+
+<h3><a id="pt-heptamer" href="#pt-heptamer">Pt Heptamer Island</a></h3>
+
+<p>This benchmark measure the effiency of finding saddles for a Pt heptamer
+island. The initial geometry is provided in <a href="saddle-search/pt-island/pt-island.con">con</a> and <a href="saddle-search/pt-island/POSCAR_pt_island">POSCAR</a> formats. The potential energy is
+given by a Morse potential:
+
+\[ V(r) = D(e^{-2\alpha(r-r_0)} - 2 e^{-\alpha(r-r_0)}) \]
+
+with $D=0.7102$, $\alpha=1.6047$, and $r_0=2.897$.</p>
+
+<p>The goal of the benchmark is to deterimine how many force calls it takes to
+find the 27 connected saddles with a barrier below 1.5 eV. A individual saddle search is
+considered complete when the norm of the force is reduced to below
+10<sup>-3</sup> eV/Angstrom.</p>
+
+<p>In the table below &rho; is the fraction of saddles found that were
+connected to the initial minimum, N<sub>u</sub> is the number of unique
+connected saddles, N<sub>s</sub> is the total number of saddle searches, and
+N<sub>f</sub> is the total number of force calls.</p>
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
+  <thead>
+    <th>Entry</th>
+    <th>N<sub>f</sub></th>
+    <th>&rho;</th>
+    <th>N<sub>s</sub></th>
+    <th>N<sub>u</sub></th>
+  </thead>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#pt-island-1" data-toggle="collapse">
+           adaptive_HSphere-lbfgs-davidson-sm50</a>
+ 
+        <div id="pt-island-1" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> April 2019</span>
+            <span><b>Contributor:</b> Manuel Plasencia Gutierrez</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/softsaddle.tar.gz">
+                softsaddle.tar.gz
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="saddle-search/pt-island/adaptive_HSphere-lbfgs-davidson-sm50/adaptive_HSphere-lbfgs-davidson-sm50.tgz">
+                adaptive_HSphere-lbfgs-davidson-sm50.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>4.2e+05 &plusmn; 1.8e+05</td>
+      <td>0.80</td>
+      <td>1738</td>
+      <td>115</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#pt-island-5" data-toggle="collapse">
+           adaptive_HSphere-lbfgs-lanczos-sm50</a>
+ 
+        <div id="pt-island-5" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> April 2019</span>
+            <span><b>Contributor:</b> Manuel Plasencia Gutierrez</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/softsaddle.tar.gz">
+                softsaddle.tar.gz
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="saddle-search/pt-island/adaptive_HSphere-lbfgs-lanczos-sm50/adaptive_HSphere-lbfgs-lanczos-sm50.tgz">
+                adaptive_HSphere-lbfgs-lanczos-sm50.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>8.1e+05 &plusmn; 3.1e+05</td>
+      <td>0.90</td>
+      <td>3072</td>
+      <td>143</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#pt-island-8" data-toggle="collapse">
+           adaptive_HSphere-lbfgs-lanczos-sm0</a>
+ 
+        <div id="pt-island-8" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> April 2019</span>
+            <span><b>Contributor:</b> Manuel Plasencia Gutierrez</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/softsaddle.tar.gz">
+                softsaddle.tar.gz
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="saddle-search/pt-island/adaptive_HSphere-lbfgs-lanczos-sm0/adaptive_HSphere-lbfgs-lanczos-sm0.tgz">
+                adaptive_HSphere-lbfgs-lanczos-sm0.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>1.0e+06 &plusmn; 4.2e+05</td>
+      <td>0.90</td>
+      <td>2752</td>
+      <td>130</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#pt-island-9" data-toggle="collapse">
+           eon-dimer-lbfgs-5-rotations-20-bowl_breakout</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="pt-island-9" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 13 Jun 2014</span>
+            <span><b>Contributor:</b> Andreas Pedersen</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="saddle-search/pt-island/eon-dimer-lbfgs-5-rotations-20-bowl_breakout/eon-dimer-lbfgs-5-rotations-20-bowl_breakout.tgz">
+                eon-dimer-lbfgs-5-rotations-20-bowl_breakout.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>1.3e+06 &plusmn; 4.1e+05</td>
+      <td>0.85</td>
+      <td>6560</td>
+      <td>126</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#pt-island-2" data-toggle="collapse">
+           eon-md</a>
+ 
+        <div id="pt-island-2" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 15 Jul 2014</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/eon-r2205.tgz">
+                eon-r2205.tgz
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="saddle-search/pt-island/eon-md/eon-md.tgz">
+                eon-md.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>1.5e+06 &plusmn; 1.2e+05</td>
+      <td>0.89</td>
+      <td>800</td>
+      <td>52</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#pt-island-11" data-toggle="collapse">
+           eon-dimer-lbfgs-5-rotations</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="pt-island-11" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 13 Jun 2014</span>
+            <span><b>Contributor:</b> Andreas Pedersen</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="saddle-search/pt-island/eon-dimer-lbfgs-5-rotations/eon-dimer-lbfgs-5-rotations.tgz">
+                eon-dimer-lbfgs-5-rotations.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>1.7e+06 &plusmn; 5.5e+05</td>
+      <td>0.75</td>
+      <td>4665</td>
+      <td>113</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#pt-island-10" data-toggle="collapse">
+           eon-dimer-lbfgs-20-rotations-20-bowl_breakout</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="pt-island-10" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 13 Jun 2014</span>
+            <span><b>Contributor:</b> Andreas Pedersen</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="saddle-search/pt-island/eon-dimer-lbfgs-20-rotations-20-bowl_breakout/eon-dimer-lbfgs-20-rotations-20-bowl_breakout.tgz">
+                eon-dimer-lbfgs-20-rotations-20-bowl_breakout.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>2.7e+06 &plusmn; 1.2e+06</td>
+      <td>0.80</td>
+      <td>7772</td>
+      <td>101</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#pt-island-4" data-toggle="collapse">
+           eon-dimer-lbfgs-20-rotations</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="pt-island-4" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 13 Jun 2014</span>
+            <span><b>Contributor:</b> Andreas Pedersen</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="saddle-search/pt-island/eon-dimer-lbfgs-20-rotations/eon-dimer-lbfgs-20-rotations.tgz">
+                eon-dimer-lbfgs-20-rotations.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>3.3e+06 &plusmn; 1.6e+06</td>
+      <td>0.75</td>
+      <td>9666</td>
+      <td>108</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#pt-island-6" data-toggle="collapse">
+           eon-dimer-cg-5-rotations-20-bowl_breakout</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="pt-island-6" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 13 Jun 2014</span>
+            <span><b>Contributor:</b> Andreas Pedersen</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="saddle-search/pt-island/eon-dimer-cg-5-rotations-20-bowl_breakout/eon-dimer-cg-5-rotations-20-bowl_breakout.tgz">
+                eon-dimer-cg-5-rotations-20-bowl_breakout.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>3.5e+06 &plusmn; 2.2e+06</td>
+      <td>0.70</td>
+      <td>5312</td>
+      <td>125</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#pt-island-7" data-toggle="collapse">
+           eon-dimer</a>
+ 
+        <div id="pt-island-7" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 15 Jul 2014</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/eon-r2205.tgz">
+                eon-r2205.tgz
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="saddle-search/pt-island/eon-dimer/eon-dimer.tgz">
+                eon-dimer.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>3.8e+06 &plusmn; 5.3e+05</td>
+      <td>0.75</td>
+      <td>11367</td>
+      <td>109</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#pt-island-3" data-toggle="collapse">
+           eon-dimer-cg-20-rotations-20-bowl_breakout</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="pt-island-3" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 13 Jun 2014</span>
+            <span><b>Contributor:</b> Andreas Pedersen</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="saddle-search/pt-island/eon-dimer-cg-20-rotations-20-bowl_breakout/eon-dimer-cg-20-rotations-20-bowl_breakout.tgz">
+                eon-dimer-cg-20-rotations-20-bowl_breakout.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>7.2e+06 &plusmn; 2.9e+06</td>
+      <td>0.75</td>
+      <td>11850</td>
+      <td>123</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#pt-island-0" data-toggle="collapse">
+           eon-dimer-cg-20-rotations</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="pt-island-0" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 13 Jun 2014</span>
+            <span><b>Contributor:</b> Andreas Pedersen</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="saddle-search/pt-island/eon-dimer-cg-20-rotations/eon-dimer-cg-20-rotations.tgz">
+                eon-dimer-cg-20-rotations.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>7.9e+06 &plusmn; 2.7e+06</td>
+      <td>0.63</td>
+      <td>12618</td>
+      <td>122</td>
+    </tr>
+  
+</table>
+
+
+    </div>
+  </body>
+</html>

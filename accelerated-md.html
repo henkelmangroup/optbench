@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <title>OptBench: True Rate Benchmark</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/sorttable.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+          processEscapes: true
+        },
+        "HTML-CSS": {scale: 95},
+      });
+    </script>
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+    </script>
+    
+    <script type="text/javascript">
+      $(function () {
+          $('[rel=tooltip]').tooltip();
+          
+          $('.collapse').hide();
+
+          $('.collapse').on('show', function () {
+            $(this).show();
+          }).on('hidden', function () {
+            $(this).hide();
+          });
+      });
+    </script>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <h1><a href="index.html" id="title">OptBench</a></h1>
+      </div>
+      
+<h2>True Escape Rate</h2>
+Benchmark for calculating true rates of chemical reactions.
+
+<h3>Adatom on Al(100) Surface</h3>
+
+<p>This benchmark tests various methods of calculating the true rate of escape. A tar file containing the minimized reactant state is found here:
+
+<a href="accelerated-md/reactant.tar.gz">reactant.tar.gz</a>.</p>
+
+<p>  This benchmark requires that rates are calculated at 150K with the langevin thermostat and the Verlet algorithm using a friction coefficient of 0.001 1/fs. Calculated rates will be compared with a standard true rate shown below. </p>
+
+<h3>Standard True Rate of Escape</h3>
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
+  <thead>
+    <th>Algorithm</th>
+    <th>Code</th>
+    <th>Thermostat</th>
+    <th>Escape rate(1/s)</th>
+    <th>Uncertainty(1/s)</th>
+    <th>Percent Uncertainty</th>
+    <th>Date</th>
+    <th>Contributer</th>
+  </thead>
+  
+   <tr>
+      <td>parallel replica</td>
+      <td>Eon</td>
+      <td>langevin_0.001</td>
+      <td>8.359e+05</td>
+      <td>7.211e+04</td>
+      <td>8.6e+00</td>
+      <td>26 Oct 2012</td>
+      <td>Juliana Duncan</td>
+    </tr>
+  
+</table>
+
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <title>OptBench: Lowest Eigenvector</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/sorttable.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+          processEscapes: true
+        },
+        "HTML-CSS": {scale: 95},
+      });
+    </script>
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+    </script>
+    
+    <script type="text/javascript">
+      $(function () {
+          $('[rel=tooltip]').tooltip();
+          
+          $('.collapse').hide();
+
+          $('.collapse').on('show', function () {
+            $(this).show();
+          }).on('hidden', function () {
+            $(this).hide();
+          });
+      });
+    </script>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <h1><a href="index.html" id="title">OptBench</a></h1>
+      </div>
+      
+<h2>Lowest Eigenvector Benchmarks</h2>
+
+<p>
+Entries for these benchmarks must record the average number number of force
+calls as <i>force_calls</i> in <tt>benchmark.dat</tt>, the maximum number of
+force calls as <i>force_calls_max</i>, the minimum number of force calls as
+<i>force_calls_min</i>, and the number of failed searches as
+<i>nfailed</i>
+</p>
+
+<h3><a id="lj38" href="#lj38">Lennard-Jones 38 Clusters</a></h3>
+
+<p>This benchmark tests the performance of methods for computing the lowest
+eigenvalues and eigenvectors (minimum modes) for Lennard Jones 38 clusters.  A
+tar file containing the structures at which the minimum mode should be computed
+is here: <a href="min_mode/lj38/coords.tar.gz">coords.tar.gz</a>.  This folder
+also contains the exact lowest eigenvectors and the initial guess for the mode.
+</p>
+
+<p>
+These structures are all in the
+vicinity of a saddle point and all have a negative lowest eigenvalue.  The
+termination condition is that the magnitude of the dot product of the estimated mode with the
+exact mode should be greater than 0.99 (both vectors should be normalized).
+</p>
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
+  <thead>
+    <th>Entry</th>
+    <th>&lt;N&gt;</th>
+    <th>min N</th>
+    <th>max N</th>
+    <th>Failed</th>
+  </thead>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-5" data-toggle="collapse">
+           sella</a>
+ 
+        <div id="lj38-5" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 2019-12-10</span>
+            <span><b>Contributor:</b> Eric D. Hermes, Khachik Sargsyan, Habib Najm, Judit Zádor</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/Sella-0.1.1.tar.gz">
+                Sella-0.1.1.tar.gz
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="lowest-eigenvector/lj38/sella/sella.tgz">
+                sella.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>18</td>
+      <td>4</td>
+      <td>37</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-0" data-toggle="collapse">
+           pele-first-order</a>
+ 
+        <div id="lj38-0" class="collapse entry-details">
+          <p>
+            
+            <b>Comments:</b>
+            This benchmark uses Rayleigh-Ritz minimization to find the lowest eigenvalue
+and eigenvector.  The eigenvalue and derivatives are computed using the
+first order (forward finite differences) expansion.
+
+            <br>
+            
+
+            <span><b>Date:</b> 06 Aug 2014</span>
+            <span><b>Contributor:</b> Jacob Stevenson</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/pele-a68ec5.tgz">
+                pele-a68ec5.tgz
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="lowest-eigenvector/lj38/pele-first-order/pele-first-order.tgz">
+                pele-first-order.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>25</td>
+      <td>12</td>
+      <td>61</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-6" data-toggle="collapse">
+           optim-first-order</a>
+ 
+        <div id="lj38-6" class="collapse entry-details">
+          <p>
+            
+            <b>Comments:</b>
+            This uses Rayleigh-Ritz minimization to find the lowest eigenvalue and eigenvector.
+The Rayleigh-Ritz minimization uses the first order (front finite differences) expansion.
+
+            <br>
+            
+
+            <span><b>Date:</b> 06 Aug 2014</span>
+            <span><b>Contributor:</b> Jacob Stevenson and Cheng Shang</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/wales-27058.tar.bz2">
+                wales-27058.tar.bz2
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="lowest-eigenvector/lj38/optim-first-order/optim-first-order.tgz">
+                optim-first-order.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>25</td>
+      <td>13</td>
+      <td>58</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-7" data-toggle="collapse">
+           tsase-lanczos</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="lj38-7" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 18 Jun 2014</span>
+            <span><b>Contributor:</b> Penghao Xiao</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="lowest-eigenvector/lj38/tsase-lanczos/tsase-lanczos.tgz">
+                tsase-lanczos.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>25</td>
+      <td>13</td>
+      <td>54</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-10" data-toggle="collapse">
+           tsase-dimer-bfgs</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="lj38-10" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 18 Jun 2014</span>
+            <span><b>Contributor:</b> Penghao Xiao</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="lowest-eigenvector/lj38/tsase-dimer-bfgs/tsase-dimer-bfgs.tgz">
+                tsase-dimer-bfgs.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>27</td>
+      <td>13</td>
+      <td>65</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-1" data-toggle="collapse">
+           eon-dimer-lbfgs</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="lj38-1" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 17 Jun 2014</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="lowest-eigenvector/lj38/eon-dimer-lbfgs/eon-dimer-lbfgs.tgz">
+                eon-dimer-lbfgs.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>28</td>
+      <td>14</td>
+      <td>70</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-4" data-toggle="collapse">
+           eon-lanczos</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="lj38-4" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 21 Aug 2013</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="lowest-eigenvector/lj38/eon-lanczos/eon-lanczos.tgz">
+                eon-lanczos.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>28</td>
+      <td>13</td>
+      <td>73</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-8" data-toggle="collapse">
+           tsase-dimer-cg</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="lj38-8" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 18 Jun 2014</span>
+            <span><b>Contributor:</b> Penghao Xiao</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="lowest-eigenvector/lj38/tsase-dimer-cg/tsase-dimer-cg.tgz">
+                tsase-dimer-cg.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>29</td>
+      <td>13</td>
+      <td>86</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr>
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-3" data-toggle="collapse">
+           eon-dimer-cg</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="lj38-3" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 17 Jun 2014</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="lowest-eigenvector/lj38/eon-dimer-cg/eon-dimer-cg.tgz">
+                eon-dimer-cg.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>30</td>
+      <td>14</td>
+      <td>93</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr class="hidden-lj38" style="display: none;">
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-2" data-toggle="collapse">
+           optim-second-order</a>
+ 
+        <div id="lj38-2" class="collapse entry-details">
+          <p>
+            
+            <b>Comments:</b>
+            This uses Rayleigh-Ritz minimization to find the lowest eigenvalue and eigenvector.
+The Rayleigh-Ritz minimization uses the second order (central differences) expansion.
+
+            <br>
+            
+
+            <span><b>Date:</b> 06 Aug 2014</span>
+            <span><b>Contributor:</b> Jacob Stevenson and Cheng Shang</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/wales-27058.tar.bz2">
+                wales-27058.tar.bz2
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="lowest-eigenvector/lj38/optim-second-order/optim-second-order.tgz">
+                optim-second-order.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>46</td>
+      <td>22</td>
+      <td>126</td>
+      <td>0</td>
+    </tr>
+  
+    
+    <tr class="hidden-lj38" style="display: none;">
+    
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-9" data-toggle="collapse">
+           pele-second-order</a>
+ 
+        <div id="lj38-9" class="collapse entry-details">
+          <p>
+            
+            <b>Comments:</b>
+            This benchmark uses Rayleigh-Ritz minimization to find the lowest eigenvalue
+and eigenvector.  The eigenvalue and derivatives are computed using the
+second order (central differences) expansion.
+
+            <br>
+            
+
+            <span><b>Date:</b> 06 Aug 2014</span>
+            <span><b>Contributor:</b> Jacob Stevenson</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/pele-a68ec5.tgz">
+                pele-a68ec5.tgz
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="lowest-eigenvector/lj38/pele-second-order/pele-second-order.tgz">
+                pele-second-order.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>47</td>
+      <td>22</td>
+      <td>116</td>
+      <td>0</td>
+    </tr>
+  
+
+  <tr>
+    <td colspan="5">
+      <a href="#" onclick="$('.hidden-lj38').toggle();return false;">Show/Hide Additional Entries...</a>
+    </td>
+  </tr>
+
+</table>
+
+
+    </div>
+  </body>
+</html>

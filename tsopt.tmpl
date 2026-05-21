@@ -1,0 +1,100 @@
+{% extends "templates/base.tmpl" %}
+{% block title %}Transition State Optimization Benchmark{% endblock %}
+{% block content %}
+<h1>Transition State Optimization</h1>
+
+<h2>Lennard-Jones 38</h2>
+
+<p>This benchmark tests the performance of algorithms for finding the nearest
+transition state.  The starting point are structures taken from the highest
+energy image in a DNEB run.  Idealy they should all be reasonably close to a
+transition state (Although there are a few structures which converge to states
+with positive lowest eigenvalue.  Should we delete these from the starting
+structure database?) A tar file containing the random and minimized structures
+is (will be) here <a href="tsopt/LJ38/lj38.tar.gz">lj38.tar.gz</a>. </p>
+
+<p>  The benchmark requires that each provided Lennard-Jones starting
+structures be optimized until the norm of the gradient is less that 0.001.  Runs that
+don't reach the required tolerance or those with positive zero eigenvalue are
+considered failures.  If a run was successful, the number of forcecalls
+necessary to reach the global minimum the first time is recorded.</p>
+
+<p> Avg FCs: Average number of force calls needed to find global minimum (average over successful runs) <p>
+<p> min(FCs): Minimum number of force calls needed to find global minimum (best successful run) <p>
+<p> max(FCs): Maximum number of forcecalls needed to find the global minimum(worst successful run) <p>
+
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
+  <thead>
+    <th>Algorithm</th>
+    <th>&lt;FCs&gt;</th>
+    <th>min(FCs)</th>
+    <th>median(FCs)</th>
+    <th>max(FCs)</th>
+    <th>nfailed</th>
+  </thead>
+  {% for entry in benchmarks['LJ38']|sort(attribute='force_calls') %}
+    {% if entry.hidden == False %}
+    <tr>
+    {% else %}
+    <tr class="hidden-lj38" style="display: none;">
+    {% endif %}
+      <td>{% include 'templates/entry-details.tmpl' %}</td>
+      <td>{{ '%.0f' % entry.force_calls }}</td>
+      <td>{{ '%.0f' % entry.force_calls_min }}</td>
+      <td>{{ '%.0f' % entry.force_calls_median }}</td>
+      <td>{{ '%.0f' % entry.force_calls_max }}</td>
+      <td>{{ '%d' % entry.nfailed }}</td>
+    </tr>
+  {% endfor %}
+
+  <tr>
+    <td colspan="5"> 
+      <a href="#" onclick="$('.hidden-lj38').toggle();return false;">Show/Hide Additional Entries...</a>
+    </td>
+  </tr>
+
+</table>
+
+<h2>Pt(111) Heptamer Island</h2>
+
+This test is similar to that of the Lennard-Jones cluster above.  Starting
+strucures are provided which are near to known transition states.  The goal is
+to find those transition states.  The termination condition is that the norm of
+the gradient is less than 0.001.  The coordinates of a nearby minimum are also
+provided (reactant.con).  The vector between the starting structrure and
+reactant.con can be used to provide an initial guess for the lowest eigenvector.
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
+  <thead>
+    <th>Algorithm</th>
+    <th>&lt;FCs&gt;</th>
+    <th>min(FCs)</th>
+    <th>median(FCs)</th>
+    <th>max(FCs)</th>
+    <th>nfailed</th>
+  </thead>
+  {% for entry in benchmarks['pt-island']|sort(attribute='force_calls') %}
+    {% if entry.hidden == False %}
+    <tr>
+    {% else %}
+    <tr class="hidden-pt" style="display: none;">
+    {% endif %}
+      <td>{% include 'templates/entry-details.tmpl' %}</td>
+      <td>{{ '%.0f' % entry.force_calls }}</td>
+      <td>{{ '%.0f' % entry.force_calls_min }}</td>
+      <td>{{ '%.0f' % entry.force_calls_median }}</td>
+      <td>{{ '%.0f' % entry.force_calls_max }}</td>
+      <td>{{ '%d' % entry.nfailed }}</td>
+    </tr>
+  {% endfor %}
+
+  <tr>
+    <td colspan="5"> 
+      <a href="#" onclick="$('.hidden-pt').toggle();return false;">Show/Hide Additional Entries...</a>
+    </td>
+  </tr>
+
+</table>
+
+{% endblock %}

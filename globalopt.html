@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <title>OptBench: Global Optimization Benchmark</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/sorttable.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+          processEscapes: true
+        },
+        "HTML-CSS": {scale: 95},
+      });
+    </script>
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+    </script>
+    
+    <script type="text/javascript">
+      $(function () {
+          $('[rel=tooltip]').tooltip();
+          
+          $('.collapse').hide();
+
+          $('.collapse').on('show', function () {
+            $(this).show();
+          }).on('hidden', function () {
+            $(this).hide();
+          });
+      });
+    </script>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <h1><a href="index.html" id="title">OptBench</a></h1>
+      </div>
+      
+<h2>Global Optimization</h2>
+Benchmarks for Global Optimization.
+
+<h3><a id="lj38" href="#lj38">Lennard-Jones 38</a></h3>
+
+<p> 
+
+This benchmark requires that the global optimization algorithm is run starting
+from the 100 randomly generated (minimized) Lennard-Jones structures.  Runs
+that are greater than 0.001 energy units from the known global minimum are
+considered failures. If a run was successful, the number of force calls needed
+to reach the global minimum is recorded.
+
+</p>
+
+<p>
+
+The starting structures can be downloaded <a href="globalopt/lj38/100_lj38.tar.gz">here</a>.
+
+</p>
+
+<p>
+
+Entries for this benchmark must record the average number number of force calls
+as <i>force_calls</i> in <tt>benchmark.dat</tt>, the maximum number of force
+calls as <i>force_calls_max</i>, and the minimum number of force calls as
+<i>force_calls_min</i>.
+
+</p>
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
+  <thead>
+    <th>Entry</th>
+    <th>Code</th>
+    <th>&lt;N&gt;</th>
+    <th>min N</th>
+    <th>max N</th>
+  </thead>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-15" data-toggle="collapse">
+           gmin-csm</a>
+ 
+        <div id="lj38-15" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 06 Aug 2014</span>
+            <span><b>Contributor:</b> Jacob Stevenson and David Wales</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/wales-27058.tar.bz2">
+                wales-27058.tar.bz2
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="globalopt/lj38/gmin-csm/gmin-csm.tgz">
+                gmin-csm.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>GMIN</td>
+      <td>6.421e+03</td>
+      <td>7.700e+01</td>
+      <td>2.698e+04</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-11" data-toggle="collapse">
+           gmin-symmetrise</a>
+ 
+        <div id="lj38-11" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 06 Aug 2014</span>
+            <span><b>Contributor:</b> Jacob Stevenson and David Wales</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/wales-27058.tar.bz2">
+                wales-27058.tar.bz2
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="globalopt/lj38/gmin-symmetrise/gmin-symmetrise.tgz">
+                gmin-symmetrise.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>GMIN</td>
+      <td>2.271e+04</td>
+      <td>7.200e+02</td>
+      <td>1.212e+05</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-14" data-toggle="collapse">
+           gmin-nosym</a>
+ 
+        <div id="lj38-14" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 06 Aug 2014</span>
+            <span><b>Contributor:</b> Jacob Stevenson and David Wales</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/wales-27058.tar.bz2">
+                wales-27058.tar.bz2
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="globalopt/lj38/gmin-nosym/gmin-nosym.tgz">
+                gmin-nosym.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>GMIN</td>
+      <td>2.660e+05</td>
+      <td>6.457e+03</td>
+      <td>1.170e+06</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-12" data-toggle="collapse">
+           eon-basinhopping</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="lj38-12" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 20 Aug 2013</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="globalopt/lj38/eon-basinhopping/eon-basinhopping.tgz">
+                eon-basinhopping.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>Eon</td>
+      <td>5.080e+05</td>
+      <td>4.579e+03</td>
+      <td>1.796e+06</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj38-13" data-toggle="collapse">
+           pele-basinhopping</a>
+ 
+        <div id="lj38-13" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 29 Aug 2013</span>
+            <span><b>Contributor:</b> Jacob Stevenson</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/pele-a68ec5.tgz">
+                pele-a68ec5.tgz
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="globalopt/lj38/pele-basinhopping/pele-basinhopping.tgz">
+                pele-basinhopping.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>pele</td>
+      <td>5.216e+05</td>
+      <td>9.447e+03</td>
+      <td>2.534e+06</td>
+    </tr>
+  
+</table>
+
+<h3><a id="lj75" href="#lj75">Lennard-Jones 75</a></h3>
+
+<p> 
+
+This benchmark is a global optimization benchmark for a Lennard-Jones cluster
+with 75 atoms.  The same criterion apply as in the LJ38 benchmark above.
+
+</p>
+
+<p>
+
+The starting structures can be downloaded <a href="globalopt/lj75/lj75_clusters.tgz">here</a>.
+
+</p>
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
+  <thead>
+    <th>Entry</th>
+    <th>Code</th>
+    <th>&lt;N&gt;</th>
+    <th>min N</th>
+    <th>max N</th>
+  </thead>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj75-4" data-toggle="collapse">
+           gmin</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="lj75-4" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 09 Jan 2014</span>
+            <span><b>Contributor:</b> David Wales</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="globalopt/lj75/gmin/gmin.tgz">
+                gmin.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>GMIN</td>
+      <td>6.069e+04</td>
+      <td>1.100e+03</td>
+      <td>3.101e+05</td>
+    </tr>
+  
+</table>
+
+<h3><a id="lj98" href="#lj98">Lennard-Jones 98</a></h3>
+
+<p> 
+
+This benchmark is a global optimization benchmark for a Lennard-Jones cluster
+with 98 atoms. The criteria are similar to LJ38 and 75, but entries are benchmarked
+on the number of quenches [Q] and the number of energy steps [V].
+
+</p>
+
+<p>
+
+The starting structures can be downloaded <a href="globalopt/lj98/lj98_clusters.tgz">here</a>.
+
+</p>
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
+  <thead>
+    <th>Entry</th>
+    <th>Code</th>
+    <th>mean Q</th>
+    <th>stddev of Q</th>
+    <th>mean V</th>
+    <th>stddev of V</th>	
+  </thead>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj98-9" data-toggle="collapse">
+           gmin-symmetrise</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="lj98-9" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 03 Oct 2022</span>
+            <span><b>Contributor:</b> David Wales</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="globalopt/lj98/gmin-symmetrise/gmin-symmetrise.tgz">
+                gmin-symmetrise.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>GMIN</td>
+      <td>1.282e+03</td>
+      <td>1.064e+03</td>
+      <td>2.495e+05</td>
+      <td>2.058e+05</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj98-10" data-toggle="collapse">
+           gmin-nosym</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="lj98-10" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 03 Oct 2022</span>
+            <span><b>Contributor:</b> David Wales</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="globalopt/lj98/gmin-nosym/gmin-nosym.tgz">
+                gmin-nosym.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>GMIN</td>
+      <td>4.382e+04</td>
+      <td>4.566e+04</td>
+      <td>5.989e+07</td>
+      <td>6.216e+07</td>
+    </tr>
+  
+</table>
+
+<h3><a id="lj150" href="#lj150">Lennard-Jones 150</a></h3>
+
+<p> 
+
+This benchmark is a global optimization benchmark for a Lennard-Jones cluster
+with 150 atoms. It is analogous to LJ98.
+
+</p>
+
+<p>
+
+The starting structures can be downloaded <a href="globalopt/lj150/lj150_clusters.tgz">here</a>.
+
+</p>
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
+  <thead>
+    <th>Entry</th>
+    <th>Code</th>
+    <th>mean Q</th>
+    <th>stddev of Q</th>
+    <th>mean V</th>
+    <th>stddev of V</th>	
+  </thead>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj150-7" data-toggle="collapse">
+           gmin-symmetrise</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="lj150-7" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 03 Oct 2022</span>
+            <span><b>Contributor:</b> David Wales</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="globalopt/lj150/gmin-symmetrise/gmin-symmetrise.tgz">
+                gmin-symmetrise.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>GMIN</td>
+      <td>6.674e+02</td>
+      <td>5.435e+02</td>
+      <td>1.276e+05</td>
+      <td>1.064e+05</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj150-8" data-toggle="collapse">
+           gmin-nosym</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="lj150-8" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 03 Oct 2022</span>
+            <span><b>Contributor:</b> David Wales</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="globalopt/lj150/gmin-nosym/gmin-nosym.tgz">
+                gmin-nosym.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>GMIN</td>
+      <td>3.281e+03</td>
+      <td>2.723e+03</td>
+      <td>6.960e+05</td>
+      <td>5.845e+05</td>
+    </tr>
+  
+</table>
+
+<h3><a id="lj100" href="#lj100">Binary Lennard-Jones 100</a></h3>
+
+<p>
+
+This benchmark test the performance of global optimization algorithms on a
+binary Lennard-Jones A<sub>42</sub>B<sub>58</sub> system with a size ratio of 1.3. 
+The form of the potential is
+</p>
+
+$$
+E = 4 \sum_{i < j}
+  \left[
+    \left( \frac{\sigma_{\alpha \beta}}{r_{ij}} \right)^{12}
+        - \left( \frac{\sigma_{\alpha \beta}}{r_{ij}} \right)^{6}
+  \right]
+$$
+
+<p>
+where $\alpha$ and $\beta$ are the atom type of atoms $i$ and $j$, respectively.
+Here $\epsilon_{AA}$=$\epsilon_{AB}$=$\epsilon_{BB}$=1, $\sigma_{AA}$=1,
+$\sigma_{BB}$=1.3, and $\sigma_{AB}$=($\sigma_{AA}$+$\sigma_{BB}$)/2.
+Previous studies have reported a putative global minimum energy of -604.796307.
+</p>
+
+<p>
+This benchmark requires that the global optimization algorithm is run starting
+from the 100 randomly generated (minimized) Lennard-Jones structures.  The
+starting structures can be downloaded <a href="globalopt/lj100-binary/lj100-binary-con.tgz">here</a>.
+The global optimization algorithm will be run for not more than two million
+energy (force) evaluations for each starting structure.
+</p>
+
+<p>
+Entries for this benchmark must record the average lowest energy found at the
+end of each run as <i>average_energy</i> in <tt>benchmark.dat</tt> as well as
+the largest and smallest energies (<i>min_energy</i> and <i>max_energy</i>)
+found at the end of the 100 runs.
+</p>
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
+  <thead>
+    <th>Entry</th>
+    <th>Code</th>
+    <th>&lt;E&gt;</th>
+    <th>min E</th>
+    <th>max E</th>
+  </thead>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj100-binary-1" data-toggle="collapse">
+           gmin</a>
+ 
+        <div id="lj100-binary-1" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 07 Aug 2014</span>
+            <span><b>Contributor:</b> David Wales and Jacob Stevenson</span>
+             
+            <span>
+              <b>Code:</b> 
+              <a href="codes/wales-27058.tar.bz2">
+                wales-27058.tar.bz2
+              </a>
+            </span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="globalopt/lj100-binary/gmin/gmin.tgz">
+                gmin.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>GMIN</td>
+      <td>-5.895e+02</td>
+      <td>-5.990e+02</td>
+      <td>-5.786e+02</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#lj100-binary-0" data-toggle="collapse">
+           eon-basinhopping</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="lj100-binary-0" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 21 May 2014</span>
+            <span><b>Contributor:</b> Sam Chill</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="globalopt/lj100-binary/eon-basinhopping/eon-basinhopping.tgz">
+                eon-basinhopping.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>Eon</td>
+      <td>-5.846e+02</td>
+      <td>-5.961e+02</td>
+      <td>-5.741e+02</td>
+    </tr>
+  
+</table>
+
+<h3><a id="tip4p" href="#tip4p">TIP4Pn(n=10,15,20)</a></h3>
+
+<center>
+	<img
+	src="img/tip4p20.png"
+	alt="global minimum of TIP4P<sub>20</sub>"
+	title="global minimum of TIP4P<sub>20</sub>"
+	style="width:500px;height:500px"
+	align="middle">
+</center>
+
+<p> 
+
+This benchmark requires that the global optimization algorithm is run starting
+from the supplied randomly generated (minimized) structures.  Runs
+that are greater than 0.001 energy units from the known global minimum are
+considered failures. If a run was successful, the number of force calls needed
+to reach the global minimum is recorded.
+
+</p>
+
+<p>
+
+The 10000, 500, and 100 starting structures for n = 10, 15, and 20 can be downloaded <a href="globalopt/tip4p10/10000_tip4p10.tar.gz">here</a>,
+<a href="globalopt/tip4p15/500_tip4p15.tar.gz">here</a>, and
+<a href="globalopt/tip4p20/100_tip4p20.tar.gz">here</a>.
+
+</p>
+
+<p>
+
+Entries for this benchmark must record the average number number of force calls
+as <i>force_calls</i> in <tt>benchmark.dat</tt>, the maximum number of force
+calls as <i>force_calls_max</i>, and the minimum number of force calls as
+<i>force_calls_min</i>.
+
+</p>
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
+  <thead>
+    <th>Entry</th>
+    <th>Code</th>
+    <th>&lt;N&gt;</th>
+    <th>min N</th>
+    <th>max N</th>
+  </thead>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#tip4p10-17" data-toggle="collapse">
+           gmin-tbp</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="tip4p10-17" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 05 May 2014</span>
+            <span><b>Contributor:</b> James Farrell</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="globalopt/tip4p10/gmin-tbp/gmin-tbp.tgz">
+                gmin-tbp.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>GMIN</td>
+      <td>1.610e+04</td>
+      <td>1.210e+02</td>
+      <td>1.451e+05</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#tip4p10-16" data-toggle="collapse">
+           gmin</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="tip4p10-16" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 05 May 2014</span>
+            <span><b>Contributor:</b> James Farrell</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="globalopt/tip4p10/gmin/gmin.tgz">
+                gmin.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>GMIN</td>
+      <td>1.624e+04</td>
+      <td>1.210e+02</td>
+      <td>1.484e+05</td>
+    </tr>
+  
+</table>
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
+  <thead>
+    <th>Entry</th>
+    <th>Code</th>
+    <th>&lt;N&gt;</th>
+    <th>min N</th>
+    <th>max N</th>
+  </thead>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#tip4p15-3" data-toggle="collapse">
+           gmin-tbp</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="tip4p15-3" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 05 May 2014</span>
+            <span><b>Contributor:</b> James Farrell</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="globalopt/tip4p15/gmin-tbp/gmin-tbp.tgz">
+                gmin-tbp.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>GMIN</td>
+      <td>6.254e+05</td>
+      <td>2.345e+03</td>
+      <td>6.177e+06</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#tip4p15-2" data-toggle="collapse">
+           gmin</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="tip4p15-2" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 05 May 2014</span>
+            <span><b>Contributor:</b> James Farrell</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="globalopt/tip4p15/gmin/gmin.tgz">
+                gmin.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>GMIN</td>
+      <td>6.706e+05</td>
+      <td>4.549e+03</td>
+      <td>5.026e+06</td>
+    </tr>
+  
+</table>
+
+<table class="sortable table table-striped table-condensed table-bordered table-hover benchmark-table">
+  <thead>
+    <th>Entry</th>
+    <th>Code</th>
+    <th>&lt;N&gt;</th>
+    <th>min N</th>
+    <th>max N</th>
+  </thead>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#tip4p20-6" data-toggle="collapse">
+           gmin-tbp</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="tip4p20-6" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 09 May 2014</span>
+            <span><b>Contributor:</b> James Farrell</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="globalopt/tip4p20/gmin-tbp/gmin-tbp.tgz">
+                gmin-tbp.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>GMIN</td>
+      <td>2.557e+07</td>
+      <td>5.973e+05</td>
+      <td>1.434e+08</td>
+    </tr>
+  
+    <tr>
+      <td>
+        <a href="#" onclick="return false;" 
+           data-target="#tip4p20-5" data-toggle="collapse">
+           gmin</a><a href="#" rel="tooltip" title="No source code available"><sup class="text-warning">1</sup></a>
+        
+ 
+        <div id="tip4p20-5" class="collapse entry-details">
+          <p>
+            
+
+            <span><b>Date:</b> 09 May 2014</span>
+            <span><b>Contributor:</b> James Farrell</span>
+            
+             
+            <span>
+              <b>Input files:</b>
+              <a href="globalopt/tip4p20/gmin/gmin.tgz">
+                gmin.tgz
+              </a>
+            </span>
+            
+          </p>
+        </div></td>
+      <td>GMIN</td>
+      <td>2.860e+07</td>
+      <td>4.412e+05</td>
+      <td>1.419e+08</td>
+    </tr>
+  
+</table>
+
+
+    </div>
+  </body>
+</html>
