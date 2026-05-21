@@ -16,6 +16,12 @@ jobs:
           sudo apt install python3 python3-pip
           python3 -m pip install --upgrade pip
           pip install sphinx
+
+      - name: Dereference symlinks
+        run: |
+          find ./website -type l | while read -r symlink; do
+            target=$(readlink -f "$symlink")
+            cp --remove-destination "$target" "$symlink"
       
       - name: Build documentation
         run: |
