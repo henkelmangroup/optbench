@@ -675,4 +675,7 @@ except SyntaxError:
 
 
 # Imported here because that's where it was in the past
-from markupsafe import Markup, escape, soft_unicode
+# from markupsafe import Markup, escape, soft_unicode
+# changed to correspond with MarkupSage > 2.1.0
+from markupsafe import Markup, escape
+from markupsafe import soft_str as soft_unicode # so, we don't need to change other files
