@@ -1,1 +1,7 @@
-../../../../bin/js850/get_pele_version.py
+try:
+    import pele.version
+    print pele.version.git_revision[:6]
+except ImportError:
+    print "unknown"
+
+
