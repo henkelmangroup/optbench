@@ -22,6 +22,7 @@ jobs:
           find ./website -type l | while read -r symlink; do
             target=$(readlink -f "$symlink")
             cp --remove-destination "$target" "$symlink"
+          done
       
       - name: Build documentation
         run: |
